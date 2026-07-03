@@ -58,3 +58,37 @@
 | P1 | 18_class_initialization_order | 运行时顺序和字段初始化风险 |
 | P2 | 12_object_literal | class 与结构类型/对象字面量兼容差异 |
 | P2 | 15_generic_class | 泛型类与类型擦除、约束、兼容 |
+
+<!-- CLASS_WATCH_CONSOLIDATION_V1 -->
+
+## Class Watch Consolidation
+
+Class 子目录已经完成分模块测试设计后，需要通过以下总控文件进行统一维护：
+
+| 文件 | 作用 |
+|---|---|
+| class_watch_review.md | Class 总体一致性审查 |
+| class_total_coverage_matrix.md | Class 总覆盖矩阵 |
+| class_duplicate_and_overlap_report.md | 重复与交叉覆盖报告 |
+| class_priority_index.md | 优先级索引 |
+| class_xts_generation_plan.md | 后续 XTS 生成计划 |
+| class_test262_total_mapping.md | test262 总映射 |
+| class_open_questions.md | 总待确认问题 |
+
+后续生成 XTS 用例时，应优先参考：
+
+1. `class_total_coverage_matrix.md`
+2. `class_priority_index.md`
+3. `class_xts_generation_plan.md`
+
+## XTS Case Location
+
+Class XTS cases are stored in each feature directory:
+
+`01_language_foundation/02_class/<feature>/xts/<case_type>/`
+
+The old centralized path:
+
+`10_xts_cases/class/`
+
+is deprecated for Class watch cases and kept only for migration traceability.
