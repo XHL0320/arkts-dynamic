@@ -173,3 +173,54 @@
 | DECORATOR-METHOD-0157 | method decorator 是否存在类似 binder context pollution | ArkTS-specific | regression | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/03_method_decorator/xts/regression/decorator_method_basic_regression.ets | P1 | 05_decorator_transform | PR 10632 reference only; Related: 05_decorator_transform; Not from test262 |
 | DECORATOR-METHOD-0158 | method decorator transform 与 bytecode expected 需要后续确认 | ArkTS-specific | regression | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/03_method_decorator/xts/regression/decorator_method_basic_regression.ets | P1 | 05_decorator_transform | Related: 05_decorator_transform; Not from test262 |
 | DECORATOR-METHOD-0159 | sendable-specific 扩展转交 07_decorator_with_sendable | ArkTS-specific | regression | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/03_method_decorator/xts/regression/decorator_method_basic_regression.ets | P1 | 07_decorator_with_sendable | Related: 07_decorator_with_sendable; Not from test262 |
+
+## Stage 3 Generated Status
+
+| Coverage ID | Test Point | Status | Generated Path | Notes |
+|---|---|---|---|---|
+| DECORATOR-METHOD-0001 | instance method decorator | generated | xts/pass/decorator_method_instance_pass.ets | Stage 3 first batch |
+| DECORATOR-METHOD-0002 | static method decorator | generated | xts/pass/decorator_method_static_pass.ets | Stage 3 first batch |
+| DECORATOR-METHOD-0003 | method decorator identifier form | generated | xts/pass/decorator_method_instance_pass.ets | Stage 3 first batch |
+| DECORATOR-METHOD-0004 | method decorator factory call | generated | xts/pass/decorator_method_factory_pass.ets | Related: 04_decorator_factory |
+| DECORATOR-METHOD-0008 | method decorator literal arguments | generated | xts/pass/decorator_method_argument_literal_pass.ets | string / number / boolean |
+| DECORATOR-METHOD-0010 | method decorator function argument | generated | xts/pass/decorator_method_argument_function_pass.ets | ordinary class only |
+| DECORATOR-METHOD-0011 | unresolved method decorator | generated | xts/fail_compile/decorator_method_unresolved_fail_compile.ets | fail_compile |
+| DECORATOR-METHOD-0012 | non-callable method decorator | generated | xts/fail_compile/decorator_method_non_callable_fail_compile.ets | fail_compile |
+| DECORATOR-METHOD-0019 | instance method target | candidate created | compiler_expected_candidates/method_decorator_target_key_descriptor_candidates.md | no expected output generated |
+| DECORATOR-METHOD-0020 | static method target | candidate created | compiler_expected_candidates/method_decorator_target_key_descriptor_candidates.md | no expected output generated |
+| DECORATOR-METHOD-0025 | descriptor exists / equivalent structure | candidate created | compiler_expected_candidates/method_decorator_target_key_descriptor_candidates.md | no expected output generated |
+| DECORATOR-METHOD-0027 | descriptor writable boundary | generated | xts/boundary/decorator_method_descriptor_boundary.ets | no strong descriptor assertion |
+| DECORATOR-METHOD-0028 | descriptor enumerable/configurable boundary | generated | xts/boundary/decorator_method_descriptor_boundary.ets | no strong descriptor assertion |
+| DECORATOR-METHOD-0034 | multiple methods target/key | generated | xts/pass/decorator_method_multiple_methods_pass.ets | smoke |
+| DECORATOR-METHOD-0035 | multiple decorators target/key | generated | xts/pass/decorator_method_multiple_decorators_pass.ets | order not asserted |
+| DECORATOR-METHOD-0056 | parameter type mismatch + decorator | generated | xts/fail_compile/decorator_method_parameter_mismatch_fail_compile.ets | fail_compile |
+| DECORATOR-METHOD-0057 | return type mismatch + decorator | generated | xts/fail_compile/decorator_method_return_mismatch_fail_compile.ets | fail_compile |
+| DECORATOR-METHOD-0059 | static method decorator | generated | xts/pass/decorator_method_static_pass.ets | Stage 3 first batch |
+| DECORATOR-METHOD-0063 | override method decorator | generated | xts/integration/decorator_method_override_smoke_integration.ets | integration smoke |
+| DECORATOR-METHOD-0064 | decorated override parameter mismatch | generated | xts/fail_compile/decorator_method_override_parameter_mismatch_fail_compile.ets | fail_compile |
+| DECORATOR-METHOD-0065 | decorated override return mismatch | generated | xts/fail_compile/decorator_method_override_return_mismatch_fail_compile.ets | fail_compile |
+| DECORATOR-METHOD-0067 | static decorated method class access | generated | xts/pass/decorator_method_static_pass.ets | smoke |
+| DECORATOR-METHOD-0069 | decorated method inheritance | generated | xts/pass/decorator_method_inheritance_smoke_pass.ets | smoke |
+| DECORATOR-METHOD-0070 | decorated method override | generated | xts/integration/decorator_method_override_smoke_integration.ets | smoke |
+| DECORATOR-METHOD-0071 | decorated method super call | generated | xts/integration/decorator_method_override_smoke_integration.ets | smoke |
+| DECORATOR-METHOD-0078 | factory string argument | generated | xts/pass/decorator_method_argument_literal_pass.ets | Related: 04_decorator_factory |
+| DECORATOR-METHOD-0079 | factory number argument | generated | xts/pass/decorator_method_argument_literal_pass.ets | Related: 04_decorator_factory |
+| DECORATOR-METHOD-0080 | factory boolean argument | generated | xts/pass/decorator_method_argument_literal_pass.ets | Related: 04_decorator_factory |
+| DECORATOR-METHOD-0082 | factory arrow function argument | generated | xts/pass/decorator_method_argument_function_pass.ets | no sendable |
+| DECORATOR-METHOD-0087 | factory returns method decorator function | generated | xts/pass/decorator_method_factory_pass.ets | Related: 04_decorator_factory |
+| DECORATOR-METHOD-0092 | factory with multiple method decorators | generated | xts/pass/decorator_method_multiple_decorators_pass.ets | order not asserted |
+| DECORATOR-METHOD-0095 | method decorator lowering | candidate created | compiler_expected_candidates/method_decorator_lowering_candidates.md | no expected output generated |
+| DECORATOR-METHOD-0096 | instance method decorator lowering target | candidate created | compiler_expected_candidates/method_decorator_lowering_candidates.md | no expected output generated |
+| DECORATOR-METHOD-0097 | static method decorator lowering target | candidate created | compiler_expected_candidates/method_decorator_lowering_candidates.md | no expected output generated |
+| DECORATOR-METHOD-0099 | descriptor lowering | candidate created | compiler_expected_candidates/method_decorator_lowering_candidates.md | no expected output generated |
+| DECORATOR-METHOD-0100 | factory call lowering | candidate created | compiler_expected_candidates/method_decorator_lowering_candidates.md | no expected output generated |
+| DECORATOR-METHOD-0116 | overloaded method decorator | generated | xts/boundary/decorator_method_overload_boundary.ets | Pending boundary |
+| DECORATOR-METHOD-0117 | getter decorator boundary | generated | xts/boundary/decorator_method_accessor_boundary.ets | Pending boundary |
+| DECORATOR-METHOD-0118 | setter decorator boundary | generated | xts/boundary/decorator_method_accessor_boundary.ets | Pending boundary |
+| DECORATOR-METHOD-0119 | accessor decorator boundary | generated | xts/boundary/decorator_method_accessor_boundary.ets | Pending boundary |
+
+Stage 3 notes:
+
+- PR 10632 reference coverage was not generated as Stage 3 XTS.
+- No sendable-specific method decorator case was generated.
+- Method descriptor/equivalent structure remains Pending and is represented by compiler expected candidates only.

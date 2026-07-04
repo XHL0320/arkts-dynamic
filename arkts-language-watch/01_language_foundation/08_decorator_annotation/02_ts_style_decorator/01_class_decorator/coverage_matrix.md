@@ -177,3 +177,68 @@
 | DECORATOR-CLASS-0161 | class decorator 是否存在类似 binder context pollution | ArkTS-specific | regression | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/01_class_decorator/xts/regression/decorator_class_0161_class_decorator_binder_context_pollution_regression.ets | P1 | 05_decorator_transform | PR 10632 reference only; Related: 05_decorator_transform; Not from test262 |
 | DECORATOR-CLASS-0162 | class decorator transform 与 bytecode expected 需要后续确认 | ArkTS-specific | regression | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/01_class_decorator/xts/regression/decorator_class_0162_class_decorator_transform_bytecode_expected_regression.ets | P1 | 05_decorator_transform | bytecode regression; Related: 05_decorator_transform; Not from test262 |
 | DECORATOR-CLASS-0163 | sendable-specific 扩展转交 07_decorator_with_sendable | ArkTS-specific | regression | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/01_class_decorator/xts/regression/decorator_class_0163_sendable_specific_07_decorator_with_sendable_regression.ets | P1 | 07_decorator_with_sendable | Related: 07_decorator_with_sendable; Not from test262 |
+
+## Stage 4 Generated Status
+
+This section records the actual Stage 4 artifacts generated for the first batch. It does not convert compiler expected candidates into completed expected-output tests.
+
+| Coverage ID | 测试点 | 生成状态 | 生成文件 | 备注 |
+|---|---|---|---|---|
+| DECORATOR-CLASS-0001 | class decorator | generated | xts/pass/decorator_class_basic_pass.ets | ordinary class only |
+| DECORATOR-CLASS-0002 | class decorator identifier form | generated | xts/pass/decorator_class_basic_pass.ets | ordinary class only |
+| DECORATOR-CLASS-0003 | class decorator factory call | generated | xts/pass/decorator_class_factory_pass.ets | Related: 04_decorator_factory |
+| DECORATOR-CLASS-0007 | class decorator argument expression | generated | xts/pass/decorator_class_argument_literal_pass.ets | literal args |
+| DECORATOR-CLASS-0009 | class decorator function argument | generated | xts/pass/decorator_class_argument_function_pass.ets | ordinary class only |
+| DECORATOR-CLASS-0010 | unresolved class decorator | generated | xts/fail_compile/decorator_class_unresolved_fail_compile.ets | fail_compile |
+| DECORATOR-CLASS-0011 | non-callable class decorator | generated | xts/fail_compile/decorator_class_non_callable_fail_compile.ets | fail_compile |
+| DECORATOR-CLASS-0012 | class decorator illegal return value boundary | generated | xts/boundary/decorator_class_return_value_boundary.ets | Pending boundary |
+| DECORATOR-CLASS-0013 | class decorator with constructor | generated | xts/pass/decorator_class_constructor_pass.ets | constructor smoke |
+| DECORATOR-CLASS-0015 | class decorator with instance method | generated | xts/pass/decorator_class_instance_method_pass.ets | method smoke |
+| DECORATOR-CLASS-0016 | class decorator with static member | generated | xts/pass/decorator_class_static_member_pass.ets | static smoke |
+| DECORATOR-CLASS-0017 | class decorator does not change visible behavior | generated | xts/pass/decorator_class_basic_pass.ets | basic smoke |
+| DECORATOR-CLASS-0019 | class decorator target | candidate created | compiler_expected_candidates/class_decorator_target_constructor_candidates.md | no expected output generated |
+| DECORATOR-CLASS-0020 | target is class constructor / class value | candidate created | compiler_expected_candidates/class_decorator_target_constructor_candidates.md | no expected output generated |
+| DECORATOR-CLASS-0021 | target distinguishes class | candidate created | compiler_expected_candidates/class_decorator_target_constructor_candidates.md | no expected output generated |
+| DECORATOR-CLASS-0022 | target is not instance/prototype | candidate created | compiler_expected_candidates/class_decorator_target_constructor_candidates.md | no expected output generated |
+| DECORATOR-CLASS-0025 | multiple class decorators target consistency | generated | xts/pass/decorator_class_multiple_decorators_pass.ets | order not asserted |
+| DECORATOR-CLASS-0028 | default export class decorator boundary | generated | xts/boundary/decorator_class_default_export_boundary.ets | Pending boundary |
+| DECORATOR-CLASS-0032 | generic class decorator boundary | generated | xts/boundary/decorator_class_generic_boundary.ets | Pending boundary |
+| DECORATOR-CLASS-0033 | abstract class decorator boundary | generated | xts/boundary/decorator_class_abstract_boundary.ets | Pending boundary |
+| DECORATOR-CLASS-0034 | class decorator target boundary | generated | xts/boundary/decorator_class_target_boundary.ets | no strong target assertion |
+| DECORATOR-CLASS-0036 | string literal arg | generated | xts/pass/decorator_class_argument_literal_pass.ets | literal args |
+| DECORATOR-CLASS-0037 | number literal arg | generated | xts/pass/decorator_class_argument_literal_pass.ets | literal args |
+| DECORATOR-CLASS-0038 | boolean literal arg | generated | xts/pass/decorator_class_argument_literal_pass.ets | literal args |
+| DECORATOR-CLASS-0039 | multiple factory args | generated | xts/pass/decorator_class_argument_literal_pass.ets | literal args |
+| DECORATOR-CLASS-0040 | arrow function arg | generated | xts/pass/decorator_class_argument_function_pass.ets | ordinary class only |
+| DECORATOR-CLASS-0045 | factory returns class decorator function | generated | xts/pass/decorator_class_factory_pass.ets | Related: 04_decorator_factory |
+| DECORATOR-CLASS-0050 | multiple class decorators | generated | xts/pass/decorator_class_multiple_decorators_pass.ets | execution order not asserted |
+| DECORATOR-CLASS-0054 | export class + class decorator | generated | xts/integration/decorator_class_export_integration.ets | single-file export smoke |
+| DECORATOR-CLASS-0055 | default export class + class decorator | generated | xts/boundary/decorator_class_default_export_boundary.ets | Pending boundary |
+| DECORATOR-CLASS-0068 | decorated constructor body semantics | generated | xts/pass/decorator_class_constructor_pass.ets | constructor smoke |
+| DECORATOR-CLASS-0070 | constructor parameter mismatch | generated | xts/fail_compile/decorator_class_constructor_parameter_mismatch_fail_compile.ets | fail_compile |
+| DECORATOR-CLASS-0072 | field initializer mismatch | generated | xts/fail_compile/decorator_class_field_type_mismatch_fail_compile.ets | fail_compile |
+| DECORATOR-CLASS-0073 | static field type with decorator | generated | xts/pass/decorator_class_static_member_pass.ets | static smoke |
+| DECORATOR-CLASS-0075 | method parameter/this access with decorator | generated | xts/pass/decorator_class_instance_method_pass.ets | instance method smoke |
+| DECORATOR-CLASS-0076 | static method with decorator | generated | xts/pass/decorator_class_static_member_pass.ets | static smoke |
+| DECORATOR-CLASS-0079 | implements interface with decorator | generated | xts/fail_compile/decorator_class_implements_mismatch_fail_compile.ets | fail_compile |
+| DECORATOR-CLASS-0086 | invalid class semantics still reported | generated | xts/fail_compile/decorator_class_method_return_mismatch_fail_compile.ets | fail_compile |
+| DECORATOR-CLASS-0094 | missing interface member still error | generated | xts/fail_compile/decorator_class_implements_mismatch_fail_compile.ets | fail_compile |
+| DECORATOR-CLASS-0101 | class decorator returns void | generated | xts/boundary/decorator_class_return_value_boundary.ets | only void smoke |
+| DECORATOR-CLASS-0103 | class decorator returns original class | candidate created | compiler_expected_candidates/class_decorator_return_value_candidates.md | no expected output generated |
+| DECORATOR-CLASS-0104 | class decorator returns subclass boundary | candidate created | compiler_expected_candidates/class_decorator_return_value_candidates.md | Pending boundary |
+| DECORATOR-CLASS-0105 | class decorator returns new class boundary | candidate created | compiler_expected_candidates/class_decorator_return_value_candidates.md | Pending boundary |
+| DECORATOR-CLASS-0109 | invalid return value boundary | candidate created | compiler_expected_candidates/class_decorator_return_value_candidates.md | Pending boundary |
+| DECORATOR-CLASS-0123 | export binding lowering | candidate created | compiler_expected_candidates/class_decorator_export_lowering_candidates.md | no expected output generated |
+| DECORATOR-CLASS-0124 | default export binding lowering | candidate created | compiler_expected_candidates/class_decorator_export_lowering_candidates.md | no expected output generated |
+| DECORATOR-CLASS-0136 | export decorated class | generated | xts/integration/decorator_class_export_integration.ets | single-file export smoke |
+| DECORATOR-CLASS-0137 | default export decorated class | generated | xts/boundary/decorator_class_default_export_boundary.ets | Pending boundary |
+| DECORATOR-CLASS-0151 | class expression decorator boundary | generated | xts/boundary/decorator_class_expression_boundary.ets | Pending boundary |
+| DECORATOR-CLASS-0155 | abstract class decorator unsupported boundary | generated | xts/boundary/decorator_class_abstract_boundary.ets | Pending boundary |
+| DECORATOR-CLASS-0156 | generic class decorator unsupported boundary | generated | xts/boundary/decorator_class_generic_boundary.ets | Pending boundary |
+| DECORATOR-CLASS-0158 | unsupported class target pending | generated | xts/boundary/decorator_class_expression_boundary.ets | Pending boundary |
+
+Stage 4 notes:
+
+- No sendable-specific class decorator XTS was generated.
+- No PR 10632 bytecode expected was generated.
+- Class decorator target/constructor value, return value, and export lowering remain follow-up candidate areas.
