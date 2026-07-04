@@ -43,3 +43,7 @@
 | DECORATOR-OQ-P2-002 | parameter decorator 是否支持 | 00_decorator_syntax, 08_decorator_with_class_features | unsupported boundary | Pending |
 | DECORATOR-OQ-P2-003 | abstract/generic/class expression 与 decorator 支持范围 | 01_class_decorator, 08_decorator_with_class_features | manual confirmation | Pending |
 | DECORATOR-OQ-P2-004 | circular import 中 decorator/factory 行为 | 09_decorator_module_scope | boundary | Pending |
+
+## PR 10632 Boundary
+
+PR 10632 不作为普通 decorator 主线 open question 扩散；普通目录只保留 transform-like、module-binding-like 的待确认问题。

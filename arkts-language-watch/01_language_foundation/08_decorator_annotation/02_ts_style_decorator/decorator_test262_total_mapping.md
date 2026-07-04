@@ -21,3 +21,7 @@ TS style decorator、decorator transform/lowering、decorator factory、decorato
 | PR 10632 | ArkTS-specific | 否 | 是 | bytecode expected + XTS smoke | sendable-specific regression |
 | ArkUI decorators out of scope | Framework-specific | 否 | 否 | 不纳入本目录 | Out of scope |
 | ArkTS @interface annotation out of current scope | ArkTS-specific | 否 | 否 | 后续在 01_arkts_annotation 展开 | Out of scope |
+
+## PR 10632 Boundary
+
+PR 10632 不属于 test262 覆盖范围；它作为 sendable-specific bytecode regression 归入 `07_decorator_with_sendable`，并与 `05_decorator_transform` 建立根因关联。

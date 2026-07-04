@@ -8,22 +8,28 @@
 | 已汇总 coverage_matrix 数量 | 10 |
 | 缺失 coverage_matrix 数量 | 0 |
 | 原始覆盖项数量 | 1383 |
-| 去重后覆盖项数量 | 1239 |
-| P0 覆盖项数量 | 263 |
-| P1 覆盖项数量 | 670 |
+| 去重后覆盖项数量 | 1234 |
+| P0 覆盖项数量 | 261 |
+| P1 覆盖项数量 | 667 |
 | P2 覆盖项数量 | 306 |
 | P3 覆盖项数量 | 0 |
-| pass 覆盖项数量 | 335 |
-| fail_compile 覆盖项数量 | 104 |
+| pass 覆盖项数量 | 334 |
+| fail_compile 覆盖项数量 | 103 |
 | fail_runtime 覆盖项数量 | 0 |
 | boundary 覆盖项数量 | 314 |
-| integration 覆盖项数量 | 307 |
-| regression 覆盖项数量 | 52 |
-| bytecode regression 覆盖项数量 | 127 |
-| Pending 覆盖项数量 | 303 |
+| integration 覆盖项数量 | 306 |
+| regression 覆盖项数量 | 51 |
+| bytecode regression 覆盖项数量 | 126 |
+| Pending 覆盖项数量 | 301 |
 | Unsupported 覆盖项数量 | 0 |
-| PR 10632 reference 覆盖项数量 | 127 |
-| sendable-specific 覆盖项数量 | 93 |
+| PR 10632 reference 覆盖项数量 | 126 |
+| sendable-specific 覆盖项数量 | 92 |
+
+## Governance Notes
+
+- 5 个 legacy/generic 占位归并项已从总表中移除。
+- PR 10632 主归属仍为 `07_decorator_with_sendable`；普通目录只保留必要 reference，不作为主线扩散。
+- 通用 parser/checker negative 归属 `00_decorator_syntax`；target-specific 负向只保留目录内交叉说明。
 
 ## Total Matrix
 
@@ -150,7 +156,6 @@
 | DECORATOR-TOTAL-0119 | 05_decorator_transform | DECORATOR-TRANSFORM-0002 | static property decorator lowering | static property decorator lowering | ArkTS-specific | bytecode regression | P0 | 否 | 02_property_decorator | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/05_decorator_transform/compiler_expected/decorator_transform_0002.ts | bytecode regression; transform/lowering; Not from test262 |
 | DECORATOR-TOTAL-0120 | 05_decorator_transform | DECORATOR-TRANSFORM-0073 | static property target 正确 | static property target 正确 | ArkTS-specific | bytecode regression | P0 | 否 | 02_property_decorator | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/05_decorator_transform/compiler_expected/decorator_transform_0073.ts | bytecode regression; Not from test262 |
 | DECORATOR-TOTAL-0121 | 05_decorator_transform | DECORATOR-TRANSFORM-0018 | transform 后 class field 初始化仍正确 | transform 后 class field 初始化仍正确 | ArkTS-specific | bytecode regression | P0 | 否 | 02_property_decorator | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/05_decorator_transform/compiler_expected/decorator_transform_0018.ts | bytecode regression; transform/lowering; Not from test262 |
-| DECORATOR-TOTAL-0122 | 05_decorator_transform | 05_decorator_transform:legacy:0003 | transform/lowering | transform/lowering | ArkTS-specific | bytecode regression | P0 | 是 | 00_decorator_syntax, 01_class_decorator, 02_property_decorator, 03_method_decorator, 04_decorator_factory, 06_decorator_execution_order, 07_decorator_with_sendable, 08_decorator_with_class_features, 09_decorator_module_scope | 否 |  | bytecode regression |
 | DECORATOR-TOTAL-0123 | 05_decorator_transform | DECORATOR-TRANSFORM-0078 | 不遗漏 decorator 调用 | 不遗漏 decorator 调用 | ArkTS-specific | bytecode regression | P0 | 否 | 02_property_decorator | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/05_decorator_transform/compiler_expected/decorator_transform_0078.ts | bytecode regression; transform/lowering; Not from test262 |
 | DECORATOR-TOTAL-0124 | 05_decorator_transform | DECORATOR-TRANSFORM-0077 | 不重复生成 decorator 调用 | 不重复生成 decorator 调用 | ArkTS-specific | bytecode regression | P0 | 否 | 02_property_decorator | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/05_decorator_transform/compiler_expected/decorator_transform_0077.ts | bytecode regression; transform/lowering; Not from test262 |
 | DECORATOR-TOTAL-0125 | 05_decorator_transform | DECORATOR-TRANSFORM-0050 | 参数为 IIFE | 参数为 IIFE | ArkTS-specific | bytecode regression | P0 | 否 | 02_property_decorator | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/05_decorator_transform/compiler_expected/decorator_transform_0050.ts | bytecode regression; Not from test262 |
@@ -289,13 +294,11 @@
 | DECORATOR-TOTAL-0258 | 05_decorator_transform | DECORATOR-TRANSFORM-0064 | property decorator + arrow function | property decorator + arrow function | ArkTS-specific | regression | P0 | 否 | 02_property_decorator | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/05_decorator_transform/xts/regression/decorator_transform_property_decorator_regression.ets | AST state pollution; transform/lowering; Not from test262 |
 | DECORATOR-TOTAL-0259 | 05_decorator_transform | DECORATOR-TRANSFORM-0068 | sendable class 交叉 | sendable class 交叉 | ArkTS-specific | regression | P0 | 否 | 07_decorator_with_sendable | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/05_decorator_transform/xts/regression/decorator_transform_sendable_regression.ets | PR 10632; AST state pollution; Not from test262 |
 | DECORATOR-TOTAL-0260 | 07_decorator_with_sendable | DECORATOR-SENDABLE-0016 | decorator 外提函数与真正 sendable 内部函数对照 | decorator 外提函数与真正 sendable 内部函数对照 | ArkTS-specific | regression | P0 | 否 | PR 10632 related | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/07_decorator_with_sendable/xts/regression/decorator_sendable_decorator_regression.ets | PR 10632; Not from test262 |
-| DECORATOR-TOTAL-0261 | 07_decorator_with_sendable | 07_decorator_with_sendable:legacy:0004 | sendable 交叉 | sendable 交叉 | ArkTS-specific | regression | P0 | 是 | 00_decorator_syntax, 01_class_decorator, 02_property_decorator, 03_method_decorator, 04_decorator_factory, 05_decorator_transform, 06_decorator_execution_order, 08_decorator_with_class_features, 09_decorator_module_scope | 否 |  | PR 10632 related |
 | DECORATOR-TOTAL-0262 | 07_decorator_with_sendable | DECORATOR-SENDABLE-0048 | 多 decorator 中 PR 10632 形态重复出现 | 多 decorator 中 PR 10632 形态重复出现 | ArkTS-specific | regression | P0 | 否 | PR 10632 related | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/07_decorator_with_sendable/xts/regression/decorator_sendable_decorator_regression.ets | PR 10632; Not from test262 |
 | DECORATOR-TOTAL-0263 | 07_decorator_with_sendable | DECORATOR-SENDABLE-0047 | 多 decorator 中每个参数函数不应互相污染 | 多 decorator 中每个参数函数不应互相污染 | ArkTS-specific | regression | P0 | 否 | PR 10632 related | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/07_decorator_with_sendable/xts/regression/decorator_sendable_decorator_regression.ets | PR 10632; Not from test262 |
 | DECORATOR-TOTAL-0264 | 00_decorator_syntax | DECORATOR-SYNTAX-0029 | constructor decorator invalid | constructor decorator invalid | TS-compatible | fail_compile | P1 | 否 |  | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/00_decorator_syntax/xts/fail_compile/decorator_syntax_basic_fail_compile.ets | Not from test262 |
 | DECORATOR-TOTAL-0265 | 00_decorator_syntax | DECORATOR-SYNTAX-0095 | invalid token after @ | invalid token after @ | TS-compatible | fail_compile | P1 | 否 |  | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/00_decorator_syntax/xts/fail_compile/decorator_syntax_basic_fail_compile.ets | Not from test262 |
 | DECORATOR-TOTAL-0266 | 00_decorator_syntax | DECORATOR-SYNTAX-0091 | non-callable expression | non-callable expression | TS-compatible | fail_compile | P1 | 否 |  | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/00_decorator_syntax/xts/fail_compile/decorator_syntax_basic_fail_compile.ets | Not from test262 |
-| DECORATOR-TOTAL-0267 | 00_decorator_syntax | 00_decorator_syntax:legacy:0002 | parser/checker 负向 | parser/checker 负向 | Pending | fail_compile | P1 | 是 | 01_class_decorator, 02_property_decorator, 03_method_decorator, 04_decorator_factory, 05_decorator_transform, 06_decorator_execution_order, 07_decorator_with_sendable, 08_decorator_with_class_features, 09_decorator_module_scope | 否 |  | Not from test262 |
 | DECORATOR-TOTAL-0268 | 00_decorator_syntax | DECORATOR-SYNTAX-0090 | unresolved identifier | unresolved identifier | TS-compatible | fail_compile | P1 | 否 |  | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/00_decorator_syntax/xts/fail_compile/decorator_syntax_basic_fail_compile.ets | Not from test262 |
 | DECORATOR-TOTAL-0269 | 00_decorator_syntax | DECORATOR-SYNTAX-0075 | 多 decorators 后缺少声明 | 多 decorators 后缺少声明 | TS-compatible | fail_compile | P1 | 否 |  | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/00_decorator_syntax/xts/fail_compile/decorator_syntax_basic_fail_compile.ets | Not from test262 |
 | DECORATOR-TOTAL-0270 | 01_class_decorator | DECORATOR-CLASS-0072 | class field initializer mismatch + decorator | class field initializer mismatch + decorator | TS-compatible | fail_compile | P1 | 否 | 05_decorator_transform | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/01_class_decorator/xts/fail_compile/decorator_class_0072_class_field_initializer_mismatch_decorator_fail_compile.ets | Related: 05_decorator_transform; Not from test262 |
@@ -403,7 +406,6 @@
 | DECORATOR-TOTAL-0372 | 00_decorator_syntax | DECORATOR-SYNTAX-0105 | unsupported target should produce stable compile failure | unsupported target should produce stable compile failure | TS-compatible | pass | P1 | 否 |  | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/00_decorator_syntax/xts/pass/decorator_syntax_basic_pass.ets | Not from test262 |
 | DECORATOR-TOTAL-0373 | 00_decorator_syntax | DECORATOR-SYNTAX-0067 | 三个 decorators 连续 | 三个 decorators 连续 | TS-compatible | pass | P1 | 否 |  | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/00_decorator_syntax/xts/pass/decorator_syntax_basic_pass.ets | Not from test262 |
 | DECORATOR-TOTAL-0374 | 00_decorator_syntax | DECORATOR-SYNTAX-0066 | 两个 decorators 连续 | 两个 decorators 连续 | TS-compatible | pass | P1 | 否 |  | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/00_decorator_syntax/xts/pass/decorator_syntax_basic_pass.ets | Not from test262 |
-| DECORATOR-TOTAL-0375 | 00_decorator_syntax | 00_decorator_syntax:legacy:0001 | 基础合法场景 | 基础合法场景 | Pending | pass | P1 | 是 | 01_class_decorator, 02_property_decorator, 03_method_decorator, 04_decorator_factory, 05_decorator_transform, 06_decorator_execution_order, 07_decorator_with_sendable, 08_decorator_with_class_features, 09_decorator_module_scope | 否 |  | Not from test262 |
 | DECORATOR-TOTAL-0376 | 00_decorator_syntax | DECORATOR-SYNTAX-0076 | 多 decorators 与 export class | 多 decorators 与 export class | Mixed | pass | P1 | 否 | 01_class_decorator | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/00_decorator_syntax/xts/pass/decorator_syntax_class_export_pass.ets | Related: 01_class_decorator; Not from test262 |
 | DECORATOR-TOTAL-0377 | 00_decorator_syntax | DECORATOR-SYNTAX-0077 | 多 decorators 与 property/method | 多 decorators 与 property/method | Mixed | pass | P1 | 否 | 02_property_decorator | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/00_decorator_syntax/xts/pass/decorator_syntax_property_method_pass.ets | Related: 02_property_decorator; Not from test262 |
 | DECORATOR-TOTAL-0378 | 00_decorator_syntax | DECORATOR-SYNTAX-0073 | 多 decorators 中第一个非法 | 多 decorators 中第一个非法 | TS-compatible | pass | P1 | 否 |  | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/00_decorator_syntax/xts/pass/decorator_syntax_basic_pass.ets | Not from test262 |
@@ -654,7 +656,6 @@
 | DECORATOR-TOTAL-0623 | 03_method_decorator | DECORATOR-METHOD-0112 | method decorator 是否存在 PR10632-like 风险 | method decorator 是否存在 PR10632-like 风险 | ArkTS-specific | bytecode regression | P1 | 否 |  | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/03_method_decorator/compiler_expected/decorator_method_0112.ts | PR 10632 reference only; bytecode regression; Not from test262 |
 | DECORATOR-TOTAL-0624 | 05_decorator_transform | DECORATOR-TRANSFORM-0070 | lowered 节点覆盖旧 binder flag | lowered 节点覆盖旧 binder flag | ArkTS-specific | bytecode regression | P1 | 否 | 02_property_decorator | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/05_decorator_transform/compiler_expected/decorator_transform_0070.ts | bytecode regression; AST state pollution; Not from test262 |
 | DECORATOR-TOTAL-0625 | 05_decorator_transform | DECORATOR-TRANSFORM-0069 | 原始节点保留但不参与错误 codegen | 原始节点保留但不参与错误 codegen | ArkTS-specific | bytecode regression | P1 | 否 | 02_property_decorator | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/05_decorator_transform/compiler_expected/decorator_transform_0069.ts | bytecode regression; AST state pollution; Not from test262 |
-| DECORATOR-TOTAL-0626 | 00_decorator_syntax | 00_decorator_syntax:legacy:0005 | integration 组合 | integration 组合 | Mixed | integration | P1 | 是 | 01_class_decorator, 02_property_decorator, 03_method_decorator, 04_decorator_factory, 05_decorator_transform, 06_decorator_execution_order, 07_decorator_with_sendable, 08_decorator_with_class_features, 09_decorator_module_scope | 否 |  | Not from test262 |
 | DECORATOR-TOTAL-0627 | 01_class_decorator | DECORATOR-CLASS-0142 | class decorator 与 moduleVar | class decorator 与 moduleVar | Mixed | integration | P1 | 否 | 09_decorator_module_scope | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/01_class_decorator/xts/integration/decorator_class_0142_class_decorator_modulevar_integration.ets | Related: 09_decorator_module_scope; Not from test262 |
 | DECORATOR-TOTAL-0628 | 01_class_decorator | DECORATOR-CLASS-0089 | decorated class extends normal base | decorated class extends normal base | TS-compatible | integration | P1 | 否 | 05_decorator_transform | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/01_class_decorator/xts/integration/decorator_class_0089_decorated_class_extends_normal_base_integration.ets | Related: 05_decorator_transform; Not from test262 |
 | DECORATOR-TOTAL-0629 | 01_class_decorator | DECORATOR-CLASS-0093 | decorated class implements interface | decorated class implements interface | TS-compatible | integration | P1 | 否 | 05_decorator_transform | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/01_class_decorator/xts/integration/decorator_class_0093_decorated_class_implements_interface_integration.ets | Related: 05_decorator_transform; Not from test262 |
@@ -1269,13 +1270,48 @@
 | DECORATOR-TOTAL-1238 | 09_decorator_module_scope | DECORATOR-MODULE-0046 | 参数引用 imported let boundary | 参数引用 imported let boundary | Pending | boundary | P2 | 否 | 04_decorator_factory | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/09_decorator_module_scope/xts/boundary/decorator_module_0046_imported_let_boundary_boundary.ets | Pending target support; Related: 04_decorator_factory; Not from test262 |
 | DECORATOR-TOTAL-1239 | 09_decorator_module_scope | DECORATOR-MODULE-0048 | 参数引用 namespace import boundary | 参数引用 namespace import boundary | Pending | boundary | P2 | 否 | 04_decorator_factory | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/09_decorator_module_scope/xts/boundary/decorator_module_0048_namespace_import_boundary_boundary.ets | Pending target support; Related: 04_decorator_factory; Not from test262 |
 
+## Stage 9 Class Features Generation Updates
+
+The following DECORATOR-TOTAL rows now have XTS artifacts created in Stage 9:
+
+| Global ID | Coverage ID | Original Test Type | Stage 9 Actual Type | Original 是否已有 | Stage 9 是否已有 | Stage 9 Path |
+|---|---|---|---|---|---|---|
+| DECORATOR-TOTAL-0246 | DECORATOR-CLASS-FEATURE-0001 | integration | pass | 否 | created | 08_decorator_with_class_features/xts/pass/decorator_class_feature_static_property_pass.ets |
+| DECORATOR-TOTAL-0903 | DECORATOR-CLASS-FEATURE-0002 | integration | pass | 否 | created | 08_decorator_with_class_features/xts/pass/decorator_class_feature_static_method_pass.ets |
+| DECORATOR-TOTAL-0824 | DECORATOR-CLASS-FEATURE-0019 | integration | pass + fail_compile | 否 | created | 08_decorator_with_class_features/xts/pass/decorator_class_feature_readonly_property_pass.ets; xts/fail_compile/decorator_class_feature_readonly_assignment_fail.ets |
+| DECORATOR-TOTAL-0963 | DECORATOR-CLASS-FEATURE-0020 | integration | pass | 否 | created | 08_decorator_with_class_features/xts/pass/decorator_class_feature_field_initializer_pass.ets |
+| DECORATOR-TOTAL-0971 | DECORATOR-CLASS-FEATURE-0027 | pass | pass | 否 | created | 08_decorator_with_class_features/xts/pass/decorator_class_feature_field_initializer_pass.ets |
+| DECORATOR-TOTAL-0968 | DECORATOR-CLASS-FEATURE-0029 | pass | boundary | 否 | created | 08_decorator_with_class_features/xts/boundary/decorator_class_feature_accessor_boundary.ets |
+| DECORATOR-TOTAL-1094 | DECORATOR-CLASS-FEATURE-0054 | pass | pass | 否 | created | 08_decorator_with_class_features/xts/pass/decorator_class_feature_constructor_pass.ets |
+| DECORATOR-TOTAL-1103 | DECORATOR-CLASS-FEATURE-0063 | integration | boundary | 否 | created | 08_decorator_with_class_features/xts/boundary/decorator_class_feature_private_member_boundary.ets |
+| DECORATOR-TOTAL-1104 | DECORATOR-CLASS-FEATURE-0064 | integration | boundary | 否 | created | 08_decorator_with_class_features/xts/boundary/decorator_class_feature_abstract_class_boundary.ets |
+| DECORATOR-TOTAL-1112 | DECORATOR-CLASS-FEATURE-0074 | integration | integration | 否 | created | 08_decorator_with_class_features/xts/integration/decorator_class_feature_inherited_property_integration.ets |
+| DECORATOR-TOTAL-1114 | DECORATOR-CLASS-FEATURE-0076 | integration | integration + fail_compile | 否 | created | 08_decorator_with_class_features/xts/integration/decorator_class_feature_inherited_method_integration.ets; xts/fail_compile/decorator_class_feature_method_return_mismatch_fail.ets |
+| DECORATOR-TOTAL-1127 | DECORATOR-CLASS-FEATURE-0087 | integration | smoke + fail_compile | 否 | created | 08_decorator_with_class_features/xts/smoke/decorator_class_feature_override_method_smoke.ets; xts/fail_compile/decorator_class_feature_override_parameter_mismatch_fail.ets; xts/fail_compile/decorator_class_feature_override_return_mismatch_fail.ets |
+| DECORATOR-TOTAL-1128 | DECORATOR-CLASS-FEATURE-0088 | pass | boundary | 否 | created | 08_decorator_with_class_features/xts/boundary/decorator_class_feature_overload_method_boundary.ets |
+| DECORATOR-TOTAL-1170 | DECORATOR-CLASS-FEATURE-0131 | integration | smoke + fail_compile | 否 | created | 08_decorator_with_class_features/xts/smoke/decorator_class_feature_implements_smoke.ets; xts/fail_compile/decorator_class_feature_implements_missing_method_fail.ets |
+| DECORATOR-TOTAL-1185 | DECORATOR-CLASS-FEATURE-0134 | integration | boundary | 否 | created | 08_decorator_with_class_features/xts/boundary/decorator_class_feature_class_expression_boundary.ets |
+| DECORATOR-TOTAL-1175 | DECORATOR-CLASS-FEATURE-0135 | integration | boundary | 否 | created | 08_decorator_with_class_features/xts/boundary/decorator_class_feature_nested_class_boundary.ets |
+
+Stage 9 compiler expected candidates:
+
+| Candidate File | Coverage IDs |
+|---|---|
+| 08_decorator_with_class_features/compiler_expected_candidates/static_property_decorator_compiler_candidate.md | 0001 |
+| 08_decorator_with_class_features/compiler_expected_candidates/readonly_visibility_decorator_compiler_candidate.md | 0019 |
+| 08_decorator_with_class_features/compiler_expected_candidates/inheritance_override_decorator_compiler_candidate.md | 0087/0074/0076 |
+| 08_decorator_with_class_features/compiler_expected_candidates/generic_class_decorator_compiler_candidate.md | 0066 |
+| 08_decorator_with_class_features/compiler_expected_candidates/interface_implements_decorator_compiler_candidate.md | 0131 |
+
 ## Deduplication Rule
 
 1. 完全相同测试点只保留一条；
 2. 语义相同但来源不同的，保留更具体的描述；
-3. 普通 decorator 主线优先保留在对应主目录；
-4. sendable-specific 项统一保留在 `07_decorator_with_sendable`；
-5. PR 10632 不删除，主归属保留在 regression index 和 `07_decorator_with_sendable`，其他目录只保留 reference；
-6. bytecode regression 不与普通 pass 合并；
-7. Pending/Unsupported 不与 pass 合并；
-8. 不确定是否重复的标记 `Need Review`。
+3. 通用 syntax/parser/checker negative 归属 `00_decorator_syntax`；
+4. factory 基础能力归属 `04_decorator_factory`；
+5. transform/lowering 归属 `05_decorator_transform`；
+6. module scope 归属 `09_decorator_module_scope`；
+7. class feature integration 归属 `08_decorator_with_class_features`；
+8. sendable-specific 统一归属 `07_decorator_with_sendable`；
+9. PR 10632 保留在 regression index 与 `07_decorator_with_sendable`，其他目录只保留必要 reference；
+10. bytecode regression 不与普通 pass 合并，Pending/Unsupported 不与 pass 合并。
