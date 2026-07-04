@@ -191,3 +191,38 @@
 | DECORATOR-CLASS-FEATURE-0175 | PR 10632 涉及 transform/lowering | ArkTS-specific | regression | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/08_decorator_with_class_features/xts/regression/decorator_class_feature_0175_pr_10632_transform_lowering_regression.ets | P1 | 05_decorator_transform | PR 10632 reference only; Related: 05_decorator_transform; Not from test262 |
 | DECORATOR-CLASS-FEATURE-0176 | PR 10632 核心归入 transform/sendable/codegen | ArkTS-specific | regression | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/08_decorator_with_class_features/xts/regression/decorator_class_feature_0176_pr_10632_transform_sendable_codegen_regression.ets | P1 | 05_decorator_transform | PR 10632 reference only; Related: 05_decorator_transform; Not from test262 |
 | DECORATOR-CLASS-FEATURE-0177 | sendable-specific 扩展转交 07_decorator_with_sendable | ArkTS-specific | regression | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/08_decorator_with_class_features/xts/regression/decorator_class_feature_0177_sendable_specific_07_decorator_with_sendable_regression.ets | P1 | 07_decorator_with_sendable | Related: 07_decorator_with_sendable; Not from test262 |
+
+<!-- STAGE_9_GENERATION_2026_07_04 -->
+
+## Stage 9 Class Features Generation Status
+
+| Coverage ID | 测试点 | 原用例类型 | 原是否已有 | Stage 9 实际用例类型 | Stage 9 是否已有 | 实际路径 | 状态 |
+|---|---|---|---|---|---|---|---|
+| DECORATOR-CLASS-FEATURE-0001 | static property + property decorator | integration | 否 | pass | created | xts/pass/decorator_class_feature_static_property_pass.ets | pass created |
+| DECORATOR-CLASS-FEATURE-0002 | static method + method decorator | integration | 否 | pass | created | xts/pass/decorator_class_feature_static_method_pass.ets | pass created |
+| DECORATOR-CLASS-FEATURE-0019 | readonly property + decorator | integration | 否 | pass + fail_compile | created | xts/pass/decorator_class_feature_readonly_property_pass.ets; xts/fail_compile/decorator_class_feature_readonly_assignment_fail.ets | pass + fail_compile created |
+| DECORATOR-CLASS-FEATURE-0020 | readonly property with initializer | integration | 否 | pass | created | xts/pass/decorator_class_feature_field_initializer_pass.ets | pass created (ordinary contrast) |
+| DECORATOR-CLASS-FEATURE-0027 | number initializer + decorator | pass | 否 | pass | created | xts/pass/decorator_class_feature_field_initializer_pass.ets | pass created (ordinary contrast) |
+| DECORATOR-CLASS-FEATURE-0029 | accessor (getter/setter) + property decorator | pass | 否 | boundary | created | xts/boundary/decorator_class_feature_accessor_boundary.ets | boundary created; accessor decorator not confirmed |
+| DECORATOR-CLASS-FEATURE-0054 | decorated class constructor one arg | pass | 否 | pass | created | xts/pass/decorator_class_feature_constructor_pass.ets | pass created |
+| DECORATOR-CLASS-FEATURE-0063 | constructor + field initializer + decorator | integration | 否 | boundary | created | xts/boundary/decorator_class_feature_private_member_boundary.ets | boundary created; private + decorator not confirmed |
+| DECORATOR-CLASS-FEATURE-0064 | constructor + inheritance + decorator | integration | 否 | boundary | created | xts/boundary/decorator_class_feature_abstract_class_boundary.ets | boundary created; abstract class decorator not confirmed |
+| DECORATOR-CLASS-FEATURE-0074 | decorated property in base class | integration | 否 | integration | created | xts/integration/decorator_class_feature_inherited_property_integration.ets | integration created |
+| DECORATOR-CLASS-FEATURE-0076 | decorated method in base class | integration | 否 | integration + fail_compile | created | xts/integration/decorator_class_feature_inherited_method_integration.ets; xts/fail_compile/decorator_class_feature_method_return_mismatch_fail.ets | integration + fail_compile created |
+| DECORATOR-CLASS-FEATURE-0087 | override method + decorator | integration | 否 | smoke + fail_compile | created | xts/smoke/decorator_class_feature_override_method_smoke.ets; xts/fail_compile/decorator_class_feature_override_parameter_mismatch_fail.ets; xts/fail_compile/decorator_class_feature_override_return_mismatch_fail.ets | smoke + fail_compile created; override stability pending |
+| DECORATOR-CLASS-FEATURE-0088 | decorated override parameter match | pass | 否 | boundary | created | xts/boundary/decorator_class_feature_overload_method_boundary.ets | boundary created; overload + decorator not confirmed |
+| DECORATOR-CLASS-FEATURE-0131 | decorated class implements interface | integration | 否 | smoke + fail_compile | created | xts/smoke/decorator_class_feature_implements_smoke.ets; xts/fail_compile/decorator_class_feature_implements_missing_method_fail.ets | smoke + fail_compile created; implements stability pending |
+| DECORATOR-CLASS-FEATURE-0134 | decorated method implements interface method | integration | 否 | boundary | created | xts/boundary/decorator_class_feature_class_expression_boundary.ets | boundary created; class expression decorator not confirmed |
+| DECORATOR-CLASS-FEATURE-0135 | decorated property implements interface property | integration | 否 | boundary | created | xts/boundary/decorator_class_feature_nested_class_boundary.ets | boundary created; nested class decorator not confirmed |
+
+Stage 9 compiler expected candidates:
+
+| File | Coverage IDs | Status |
+|---|---|---|
+| compiler_expected_candidates/static_property_decorator_compiler_candidate.md | DECORATOR-CLASS-FEATURE-0001 | candidate created |
+| compiler_expected_candidates/readonly_visibility_decorator_compiler_candidate.md | DECORATOR-CLASS-FEATURE-0019 | candidate created |
+| compiler_expected_candidates/inheritance_override_decorator_compiler_candidate.md | DECORATOR-CLASS-FEATURE-0087/0074/0076 | candidate created |
+| compiler_expected_candidates/generic_class_decorator_compiler_candidate.md | DECORATOR-CLASS-FEATURE-0066 | candidate created (pending, no .ets yet) |
+| compiler_expected_candidates/interface_implements_decorator_compiler_candidate.md | DECORATOR-CLASS-FEATURE-0131 | candidate created |
+
+Stage 9 generation report: xts/stage9_decorator_class_features_generation_report.md
