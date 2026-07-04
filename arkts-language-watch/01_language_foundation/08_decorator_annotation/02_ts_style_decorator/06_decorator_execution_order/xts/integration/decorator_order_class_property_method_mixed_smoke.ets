@@ -1,3 +1,9 @@
+function assertTrue(condition: boolean): void {
+  if (!condition) {
+    throw new Error("assertTrue failed")
+  }
+}
+
 // Coverage: DECORATOR-ORDER-0037, DECORATOR-ORDER-TD-0037
 // Stage 7 integration: class/property/method mixed decorator order
 // Tests that class, property, and method decorators are all called.
@@ -39,9 +45,9 @@ class A {
 
 function main(): void {
   let a = new A()
-  // assertTrue(a.getValue() == 7)
-  // assertTrue(classCount == 1)
-  // assertTrue(propertyCount == 1)
-  // assertTrue(methodCount == 1)
-  // assertTrue(order.length == 3)
+  assertTrue(a.getValue() == 7)
+  assertTrue(classCount == 1)
+  assertTrue(propertyCount == 1)
+  assertTrue(methodCount == 1)
+  assertTrue(order.length == 3)
 }

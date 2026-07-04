@@ -1,4 +1,4 @@
-# Stage 9 ‚Äî Decorator with Class Features ‚Äî Generation Report
+# Stage 9 ‚Ä?Decorator with Class Features ‚Ä?Generation Report
 
 ## Stage Overview
 Stage 9 covers TS-style decorator interaction with class features: static members, readonly, constructor, field initializer, override, implements, inheritance, visibility (private), abstract class, accessor, overload, nested class, class expression, and generics.
@@ -29,12 +29,12 @@ Stage 9 covers TS-style decorator interaction with class features: static member
 ### Fail Compile (6 files)
 | File | Coverage IDs | Expected Error |
 |------|-------------|---------------|
-| `decorator_class_feature_readonly_assignment_fail.ets` | DECORATOR-CLASS-FEATURE-0019, TD-0019 | Cannot assign to readonly property |
-| `decorator_class_feature_override_parameter_mismatch_fail.ets` | DECORATOR-CLASS-FEATURE-0087, TD-0087 | Override parameter type mismatch |
-| `decorator_class_feature_override_return_mismatch_fail.ets` | DECORATOR-CLASS-FEATURE-0087, TD-0087 | Override return type mismatch |
-| `decorator_class_feature_implements_missing_method_fail.ets` | DECORATOR-CLASS-FEATURE-0131, TD-0131 | Class does not implement interface method |
-| `decorator_class_feature_field_type_mismatch_fail.ets` | DECORATOR-CLASS-FEATURE-0027, TD-0027 | String not assignable to number |
-| `decorator_class_feature_method_return_mismatch_fail.ets` | DECORATOR-CLASS-FEATURE-0076, TD-0076 | String not assignable to return type number |
+| `decorator_class_feature_readonly_assignment_fail_compile.ets` | DECORATOR-CLASS-FEATURE-0019, TD-0019 | Cannot assign to readonly property |
+| `decorator_class_feature_override_parameter_mismatch_fail_compile.ets` | DECORATOR-CLASS-FEATURE-0087, TD-0087 | Override parameter type mismatch |
+| `decorator_class_feature_override_return_mismatch_fail_compile.ets` | DECORATOR-CLASS-FEATURE-0087, TD-0087 | Override return type mismatch |
+| `decorator_class_feature_implements_missing_method_fail_compile.ets` | DECORATOR-CLASS-FEATURE-0131, TD-0131 | Class does not implement interface method |
+| `decorator_class_feature_field_type_mismatch_fail_compile.ets` | DECORATOR-CLASS-FEATURE-0027, TD-0027 | String not assignable to number |
+| `decorator_class_feature_method_return_mismatch_fail_compile.ets` | DECORATOR-CLASS-FEATURE-0076, TD-0076 | String not assignable to return type number |
 
 ### Boundary (6 files)
 | File | Coverage IDs | Uncertainty |
@@ -66,23 +66,23 @@ Stage 9 covers TS-style decorator interaction with class features: static member
 - No `.expected.txt` files
 
 ## Design Decisions
-1. **Method/property decorator form**: Uses 2-param `(target, key)` form. Descriptor/equivalent structure is pending ‚Äî 3-param support not confirmed.
-2. **Override stability**: override syntax is pending ‚Äî smoke files include fallback note. If unstable, downgrade to boundary.
-3. **Implements stability**: interface/implements + decorator is pending ‚Äî smoke includes fallback note.
-4. **Generic class**: Not generated as .ets ‚Äî only tracked in compiler candidate as pending.
+1. **Method/property decorator form**: Uses 2-param `(target, key)` form. Descriptor/equivalent structure is pending ‚Ä?3-param support not confirmed.
+2. **Override stability**: override syntax is pending ‚Ä?smoke files include fallback note. If unstable, downgrade to boundary.
+3. **Implements stability**: interface/implements + decorator is pending ‚Ä?smoke includes fallback note.
+4. **Generic class**: Not generated as .ets ‚Ä?only tracked in compiler candidate as pending.
 5. **Abstract/accessor/overload/nested/expression/private**: All placed in boundary with no strong assertions.
-6. **Field initializer**: Ordinary class feature contrast ‚Äî not PR10632 regression.
+6. **Field initializer**: Ordinary class feature contrast ‚Ä?not PR10632 regression.
 7. **Fail_compile**: Each file contains exactly one primary expected error point.
 
 ## Coverage Matrix Updates
-The following coverage IDs will be updated from "Âê¶" to "created":
+The following coverage IDs will be updated from "Âê? to "created":
 - DECORATOR-CLASS-FEATURE-0001, 0002, 0019, 0020, 0027, 0029, 0054, 0063, 0064, 0066, 0074, 0076, 0087, 0088, 0131, 0134, 0135
 - Corresponding TD IDs: TD-0001 through TD-0135
 
 ## Pending Items
-- Override syntax stability confirmation ‚Üí may downgrade smoke to boundary
-- Implements + decorator stability confirmation ‚Üí may downgrade smoke to boundary
-- Method decorator descriptor/equivalent structure confirmation ‚Üí may adjust to 3-param
-- Generic class + decorator support confirmation ‚Üí may create smoke
-- Readonly + decorator support confirmation ‚Üí may downgrade pass to boundary
-- Private member + decorator support confirmation ‚Üí may downgrade boundary to fail_compile
+- Override syntax stability confirmation ‚Ü?may downgrade smoke to boundary
+- Implements + decorator stability confirmation ‚Ü?may downgrade smoke to boundary
+- Method decorator descriptor/equivalent structure confirmation ‚Ü?may adjust to 3-param
+- Generic class + decorator support confirmation ‚Ü?may create smoke
+- Readonly + decorator support confirmation ‚Ü?may downgrade pass to boundary
+- Private member + decorator support confirmation ‚Ü?may downgrade boundary to fail_compile

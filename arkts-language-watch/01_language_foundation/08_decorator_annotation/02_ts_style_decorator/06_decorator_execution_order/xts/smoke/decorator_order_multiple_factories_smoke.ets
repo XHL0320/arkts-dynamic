@@ -1,3 +1,9 @@
+function assertTrue(condition: boolean): void {
+  if (!condition) {
+    throw new Error("assertTrue failed")
+  }
+}
+
 // Coverage: DECORATOR-ORDER-0024/0025/0026, DECORATOR-ORDER-TD-0024/0025/0026
 // Stage 7 smoke: multiple factory decorators same target order
 // Tests that multiple factory decorators are all evaluated and all called.
@@ -27,11 +33,11 @@ class A {
 
 function main(): void {
   let a = new A()
-  // assertTrue(a.value == 5)
-  // assertTrue(factoryCount == 2)
-  // assertTrue(decoratorCount == 2)
-  // assertTrue(order.indexOf("F1") >= 0)
-  // assertTrue(order.indexOf("F2") >= 0)
-  // assertTrue(order.indexOf("D1") >= 0)
-  // assertTrue(order.indexOf("D2") >= 0)
+  assertTrue(a.value == 5)
+  assertTrue(factoryCount == 2)
+  assertTrue(decoratorCount == 2)
+  assertTrue(order.indexOf("F1") >= 0)
+  assertTrue(order.indexOf("F2") >= 0)
+  assertTrue(order.indexOf("D1") >= 0)
+  assertTrue(order.indexOf("D2") >= 0)
 }

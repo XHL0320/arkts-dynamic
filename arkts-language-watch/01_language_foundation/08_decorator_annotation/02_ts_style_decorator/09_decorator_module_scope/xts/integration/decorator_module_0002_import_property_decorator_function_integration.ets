@@ -1,3 +1,9 @@
+function assertTrue(condition: boolean): void {
+  if (!condition) {
+    throw new Error("assertTrue failed")
+  }
+}
+
 // Coverage: DECORATOR-MODULE-0002, DECORATOR-MODULE-TD-0002
 // Stage 8 integration: import property decorator function from module
 // Tests that imported property decorator receives correct target and key
@@ -15,8 +21,8 @@ class A {
 
 function main(): void {
   let a = new A()
-  // assertTrue(a.x == 10)
-  // assertTrue(a.y == "hello")
+  assertTrue(a.x == 10)
+  assertTrue(a.y == "hello")
   // Property decorator should be called for both properties
-  // assertTrue(propDecLog == "propDec:xpropDec:y")
+  assertTrue(propDecLog == "propDec:xpropDec:y")
 }

@@ -20,7 +20,7 @@ Stage 6 focuses on PR 10632 root cause: ScriptFunction::SetInSendable() was call
 
 1. Arrow function bytecode does NOT contain InSendable flag markers
 2. Arrow function bytecode does NOT contain SendableFunction markers
-3. Arrow function is at lowered position (outside class body) â€” context is non-sendable
+3. Arrow function is at lowered position (outside class body) â€?context is non-sendable
 4. Arrow function return value is correctly evaluated
 5. Before fix: arrow function would incorrectly have inSendable=true (from binder pollution)
 6. After fix: arrow function should have inSendable=false (binder sets flag explicitly)
@@ -29,7 +29,7 @@ Stage 6 focuses on PR 10632 root cause: ScriptFunction::SetInSendable() was call
 
 **Coverage IDs:** DECORATOR-SENDABLE-0035, DWS-TD-0035
 
-**Status:** candidate created â€” no real .expected.txt generated
+**Status:** candidate created â€?no real .expected.txt generated
 
 ## Candidate 2: IIFE argument inSendable flag
 
@@ -39,16 +39,16 @@ Stage 6 focuses on PR 10632 root cause: ScriptFunction::SetInSendable() was call
 
 1. IIFE bytecode does NOT contain InSendable flag markers
 2. IIFE bytecode does NOT contain SendableFunction markers
-3. IIFE captures binding correctly â€” binding reference is NOT affected by sendable context
-4. IIFE is at lowered position â€” context is non-sendable
+3. IIFE captures binding correctly â€?binding reference is NOT affected by sendable context
+4. IIFE is at lowered position â€?context is non-sendable
 5. Before fix: IIFE would incorrectly have inSendable=true (PR 10632 bug)
 6. After fix: IIFE should have inSendable=false (binder clears flag for non-sendable context)
 
-**Source file:** `07_decorator_with_sendable/xts/regression/decorator_sendable_pr10632_original_shape.ets`
+**Source file:** `07_decorator_with_sendable/xts/regression/decorator_sendable_pr10632_local_binding_source_candidate.ets`
 
 **Coverage IDs:** DECORATOR-SENDABLE-0001, DWS-TD-0001
 
-**Status:** candidate created â€” no real .expected.txt generated; PR 10632 regression target
+**Status:** candidate created â€?no real .expected.txt generated; PR 10632 regression target
 
 ## Candidate 3: transformed decorator node inSendable flag
 
@@ -66,4 +66,4 @@ Stage 6 focuses on PR 10632 root cause: ScriptFunction::SetInSendable() was call
 
 **Coverage IDs:** DECORATOR-SENDABLE-0006, DECORATOR-SENDABLE-0007, DWS-TD-0006, DWS-TD-0007
 
-**Status:** candidate created â€” no real .expected.txt generated
+**Status:** candidate created â€?no real .expected.txt generated

@@ -1,3 +1,9 @@
+function assertTrue(condition: boolean): void {
+  if (!condition) {
+    throw new Error("assertTrue failed")
+  }
+}
+
 // Coverage: DECORATOR-MODULE-0100, DECORATOR-MODULE-TD-0100
 // Stage 8 integration: multiple modules initialization order
 // Tests that decorator module initializes before the consuming module uses it
@@ -16,10 +22,10 @@ class A {
 
 function main(): void {
   let a = new A()
-  // assertTrue(a.value == 42)
+  assertTrue(a.value == 42)
   // Both decorator module and factory module should have initialized before use
-  // assertTrue(classDecLog == "classDec")
-  // assertTrue(classFactoryLog.includes("classFactory:orderTest"))
-  // Initialization order: decorator module â†’ factory module â†’ consuming module
+  assertTrue(classDecLog == "classDec")
+  assertTrue(classFactoryLog.indexOf("classFactory:orderTest") >= 0)
+  // Initialization order: decorator module â†?factory module â†?consuming module
   // Fixed order pending confirmation
 }

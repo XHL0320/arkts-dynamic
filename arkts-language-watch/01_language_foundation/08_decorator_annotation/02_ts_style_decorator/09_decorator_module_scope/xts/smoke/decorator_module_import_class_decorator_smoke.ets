@@ -1,3 +1,9 @@
+function assertTrue(condition: boolean): void {
+  if (!condition) {
+    throw new Error("assertTrue failed")
+  }
+}
+
 // Coverage: DECORATOR-MODULE-0001, DECORATOR-MODULE-TD-0001
 // Stage 8 smoke: import class decorator function from module
 // Tests that imported class decorator can be applied and class value unchanged
@@ -13,5 +19,5 @@ class A {
 
 function main(): void {
   let a = new A()
-  // assertTrue(a.value == 42)
+  assertTrue(a.value == 42)
 }

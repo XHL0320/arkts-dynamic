@@ -1,3 +1,9 @@
+function assertTrue(condition: boolean): void {
+  if (!condition) {
+    throw new Error("assertTrue failed")
+  }
+}
+
 // Coverage: DECORATOR-ORDER-0018, DECORATOR-ORDER-TD-0018
 // Stage 7 smoke: property decorators same target order
 // Tests that both decorators are called on the same property target.
@@ -22,9 +28,9 @@ class A {
 
 function main(): void {
   let a = new A()
-  // assertTrue(a.value == 1)
-  // Both decorators should be called â€” fixed order pending confirmation
-  // assertTrue(order.length == 2)
-  // assertTrue(order.indexOf("1") >= 0)
-  // assertTrue(order.indexOf("2") >= 0)
+  assertTrue(a.value == 1)
+  // Both decorators should be called â€?fixed order pending confirmation
+  assertTrue(order.length == 2)
+  assertTrue(order.indexOf("1") >= 0)
+  assertTrue(order.indexOf("2") >= 0)
 }

@@ -1,11 +1,17 @@
+function assertTrue(condition: boolean): void {
+  if (!condition) {
+    throw new Error("assertTrue failed")
+  }
+}
+
 // Coverage: DECORATOR-CLASS-FEATURE-0020/0027, DECORATOR-CLASS-FEATURE-TD-0020/0027
 // Stage 9 pass: field initializer + property decorator
 // Tests that field initializer evaluates correctly after decorator
 // No sendable, no PR10632, no ArkUI
-// Ordinary class feature contrast â€” not PR10632 regression
+// Ordinary class feature contrast â€?not PR10632 regression
 
 function propDec(target: Object, key: string): void {
-  // Simple property decorator â€” no modification
+  // Simple property decorator â€?no modification
 }
 
 function initValue(): number {
@@ -19,6 +25,6 @@ class A {
 
 function main(): void {
   let a = new A()
-  // assertTrue(a.value == 5)
+  assertTrue(a.value == 5)
   // Ordinary class feature contrast: field initializer evaluates normally with decorator
 }

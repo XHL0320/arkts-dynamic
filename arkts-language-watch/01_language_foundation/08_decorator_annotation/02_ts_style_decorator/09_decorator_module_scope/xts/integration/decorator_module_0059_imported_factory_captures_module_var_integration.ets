@@ -1,3 +1,9 @@
+function assertTrue(condition: boolean): void {
+  if (!condition) {
+    throw new Error("assertTrue failed")
+  }
+}
+
 // Coverage: DECORATOR-MODULE-0059, DECORATOR-MODULE-TD-0059
 // Stage 8 integration: imported factory captures definition module variable
 // Tests that factory defined in another module captures moduleVar from its own module
@@ -14,8 +20,8 @@ class A {
 
 function main(): void {
   let a = new A()
-  // assertTrue(a.value == 42)
+  assertTrue(a.value == 42)
   // Factory should capture moduleVar from its definition module
-  // assertTrue(classFactoryCaptureLog.includes("captured"))
+  assertTrue(classFactoryCaptureLog.indexOf("captured") >= 0)
   // PR10632 ordinary module-binding contrast
 }

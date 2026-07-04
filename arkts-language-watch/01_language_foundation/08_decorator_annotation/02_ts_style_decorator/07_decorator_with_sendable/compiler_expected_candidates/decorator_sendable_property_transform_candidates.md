@@ -27,7 +27,7 @@ Stage 6 focuses on PR 10632 sendable-specific regression. These candidates cover
 
 **Coverage IDs:** DECORATOR-SENDABLE-0009, DWS-TD-0009
 
-**Status:** candidate created â€” no real compiler expected output
+**Status:** candidate created â€?no real compiler expected output
 
 ## Candidate 2: sendable property decorator factory lowering
 
@@ -45,9 +45,9 @@ Stage 6 focuses on PR 10632 sendable-specific regression. These candidates cover
 
 **Coverage IDs:** DECORATOR-SENDABLE-0029, DWS-TD-0029
 
-**Status:** candidate created â€” no real compiler expected output
+**Status:** candidate created â€?no real compiler expected output
 
-## Candidate 3: PR 10632 â€” sendable property decorator factory + IIFE + binding
+## Candidate 3: PR 10632 â€?sendable property decorator factory + IIFE + binding
 
 **Description:** The original PR 10632 shape: sendable class + property decorator factory + IIFE argument capturing a binding. After lowering, the IIFE is at a position outside the class body, but binder context pollution causes inSendable=true to be incorrectly set on the IIFE's ScriptFunction.
 
@@ -59,8 +59,8 @@ Stage 6 focuses on PR 10632 sendable-specific regression. These candidates cover
 4. ScriptFunction inSendable flag matches the ACTUAL lowered context, not the original class body context
 5. Codegen does NOT generate sendable-specific bytecode for the IIFE argument function
 
-**Suggested future file:** `07_decorator_with_sendable/xts/regression/decorator_sendable_pr10632_original_shape.ets` (source candidate created)
+**Suggested future file:** `07_decorator_with_sendable/xts/regression/decorator_sendable_pr10632_local_binding_source_candidate.ets` (source candidate created)
 
 **Coverage IDs:** DECORATOR-SENDABLE-0001, DWS-TD-0001
 
-**Status:** candidate created â€” no real compiler expected output; PR 10632 regression target
+**Status:** candidate created â€?no real compiler expected output; PR 10632 regression target

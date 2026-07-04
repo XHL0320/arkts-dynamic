@@ -1,3 +1,9 @@
+function assertTrue(condition: boolean): void {
+  if (!condition) {
+    throw new Error("assertTrue failed")
+  }
+}
+
 // Coverage: DECORATOR-MODULE-0083, DECORATOR-MODULE-TD-0083
 // Stage 8 integration: decorated class instance member accessible
 // Tests that a decorated exported class instance members are accessible after import
@@ -12,10 +18,10 @@ function main(): void {
   let a = new DecoratedA()
   let p = new DecoratedPropA()
   let m = new DecoratedMethodA()
-  // assertTrue(a.value == 42)
-  // assertTrue(p.prop == "hello")
-  // assertTrue(p.value == 42)
-  // assertTrue(m.value == 42)
-  // assertTrue(m.greet() == "hello")
+  assertTrue(a.value == 42)
+  assertTrue(p.prop == "hello")
+  assertTrue(p.value == 42)
+  assertTrue(m.value == 42)
+  assertTrue(m.greet() == "hello")
   // All instance members should be accessible after import
 }

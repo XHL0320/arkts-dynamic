@@ -1,7 +1,13 @@
+function assertTrue(condition: boolean): void {
+  if (!condition) {
+    throw new Error("assertTrue failed")
+  }
+}
+
 // Coverage: DECORATOR-ORDER-0005/0006, DECORATOR-ORDER-TD-0005/0006
 // Stage 7 smoke: factory argument expression evaluation order
 // Tests that argument expression evaluates before factory body, and factory body before decorator call.
-// Expected order: A1 (argument) â†’ F1 (factory body) â†’ D1 (decorator call)
+// Expected order: A1 (argument) â†?F1 (factory body) â†?D1 (decorator call)
 // No sendable, no PR10632
 
 let order: string = ""
@@ -25,11 +31,11 @@ class A {
 
 function main(): void {
   let a = new A()
-  // assertTrue(a.value == 6)
+  assertTrue(a.value == 6)
   // Argument expression should evaluate before factory body
-  // assertTrue(order.indexOf("A1") >= 0)
-  // assertTrue(order.indexOf("F1") >= 0)
-  // assertTrue(order.indexOf("D1") >= 0)
-  // assertTrue(order.indexOf("A1") < order.indexOf("F1"))
-  // assertTrue(order.indexOf("F1") < order.indexOf("D1"))
+  assertTrue(order.indexOf("A1") >= 0)
+  assertTrue(order.indexOf("F1") >= 0)
+  assertTrue(order.indexOf("D1") >= 0)
+  assertTrue(order.indexOf("A1") < order.indexOf("F1"))
+  assertTrue(order.indexOf("F1") < order.indexOf("D1"))
 }

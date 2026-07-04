@@ -1,3 +1,9 @@
+function assertTrue(condition: boolean): void {
+  if (!condition) {
+    throw new Error("assertTrue failed")
+  }
+}
+
 // Coverage: DECORATOR-ORDER-0003/0004/0005, DECORATOR-ORDER-TD-0003/0004/0005
 // Stage 7 smoke: factory evaluation vs decorator call order
 // Tests that factory body executes before returned decorator function call.
@@ -20,9 +26,9 @@ class A {
 
 function main(): void {
   let a = new A()
-  // assertTrue(a.value == 4)
+  assertTrue(a.value == 4)
   // Factory evaluation should happen before decorator call
-  // assertTrue(order.indexOf("F1") >= 0)
-  // assertTrue(order.indexOf("D1") >= 0)
-  // assertTrue(order.indexOf("F1") < order.indexOf("D1"))
+  assertTrue(order.indexOf("F1") >= 0)
+  assertTrue(order.indexOf("D1") >= 0)
+  assertTrue(order.indexOf("F1") < order.indexOf("D1"))
 }

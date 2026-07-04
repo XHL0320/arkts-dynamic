@@ -1,10 +1,16 @@
+function assertTrue(condition: boolean): void {
+  if (!condition) {
+    throw new Error("assertTrue failed")
+  }
+}
+
 // Coverage: DECORATOR-CLASS-FEATURE-0074, DECORATOR-CLASS-FEATURE-TD-0074
-// Stage 9 integration: decorated property in base class â€” inheritance
+// Stage 9 integration: decorated property in base class â€?inheritance
 // Tests that derived class inherits and can access decorated base property
 // No sendable, no PR10632, no ArkUI
 
 function propDec(target: Object, key: string): void {
-  // Simple property decorator â€” no modification
+  // Simple property decorator â€?no modification
 }
 
 class Base {
@@ -17,6 +23,6 @@ class Derived extends Base {
 
 function main(): void {
   let d = new Derived()
-  // assertTrue(d.value == 6)
+  assertTrue(d.value == 6)
   // Decorator does not break inheritance of property
 }

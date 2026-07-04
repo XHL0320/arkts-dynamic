@@ -28,7 +28,7 @@ Stage 6 focuses on PR 10632 root cause: binder context pollution causing inSenda
 
 **Coverage IDs:** DECORATOR-SENDABLE-0035, DWS-TD-0035
 
-**Status:** candidate created â€” no real compiler expected output
+**Status:** candidate created â€?no real compiler expected output
 
 ## Candidate 2: factory argument IIFE
 
@@ -42,11 +42,11 @@ Stage 6 focuses on PR 10632 root cause: binder context pollution causing inSenda
 4. No sendable-specific bytecode is generated for the IIFE
 5. No duplicate or omitted decorator calls
 
-**Suggested future file:** `07_decorator_with_sendable/xts/regression/decorator_sendable_pr10632_original_shape.ets` (source candidate created)
+**Suggested future file:** `07_decorator_with_sendable/xts/regression/decorator_sendable_pr10632_local_binding_source_candidate.ets` (source candidate created)
 
 **Coverage IDs:** DECORATOR-SENDABLE-0001, DWS-TD-0001
 
-**Status:** candidate created â€” no real compiler expected output; PR 10632 regression target
+**Status:** candidate created â€?no real compiler expected output; PR 10632 regression target
 
 ## Candidate 3: factory argument normal function
 
@@ -59,8 +59,8 @@ Stage 6 focuses on PR 10632 root cause: binder context pollution causing inSenda
 3. No sendable-specific bytecode is generated for the normal function
 4. Function reference binding is correct at lowered position
 
-**Suggested future file:** none (candidate only â€” not yet generated as .ets source)
+**Suggested future file:** none (candidate only â€?not yet generated as .ets source)
 
 **Coverage IDs:** DECORATOR-SENDABLE-0035 (variant), DWS-TD-0035 (variant)
 
-**Status:** candidate created â€” no real compiler expected output
+**Status:** candidate created â€?no real compiler expected output

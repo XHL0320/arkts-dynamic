@@ -1,3 +1,9 @@
+function assertTrue(condition: boolean): void {
+  if (!condition) {
+    throw new Error("assertTrue failed")
+  }
+}
+
 // Coverage: DECORATOR-ORDER-0016, DECORATOR-ORDER-TD-0016
 // Stage 7 smoke: class decorators same target order
 // Tests that both class decorators are called.
@@ -22,7 +28,7 @@ class A {
 
 function main(): void {
   let a = new A()
-  // assertTrue(a.value == 3)
+  assertTrue(a.value == 3)
   // Both class decorators should be called
-  // assertTrue(order.length == 2)
+  assertTrue(order.length == 2)
 }

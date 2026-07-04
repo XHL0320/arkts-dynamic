@@ -1,11 +1,17 @@
+function assertTrue(condition: boolean): void {
+  if (!condition) {
+    throw new Error("assertTrue failed")
+  }
+}
+
 // Coverage: DECORATOR-CLASS-FEATURE-0002, DECORATOR-CLASS-FEATURE-TD-0002
 // Stage 9 pass: static method + method decorator
 // Tests that static method is callable after decorator application
 // No sendable, no PR10632, no ArkUI
-// descriptor/equivalent structure pending â€” uses 2-param form for method decorator
+// descriptor/equivalent structure pending â€?uses 2-param form for method decorator
 
 function methodDec(target: Object, key: string): void {
-  // Simple method decorator â€” no modification
+  // Simple method decorator â€?no modification
 }
 
 class A {
@@ -17,5 +23,5 @@ class A {
 
 function main(): void {
   let v: number = A.getVersion()
-  // assertTrue(v == 2)
+  assertTrue(v == 2)
 }

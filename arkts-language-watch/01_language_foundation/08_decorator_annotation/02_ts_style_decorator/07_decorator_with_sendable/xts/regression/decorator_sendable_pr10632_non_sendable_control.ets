@@ -1,6 +1,12 @@
+function assertTrue(condition: boolean): void {
+  if (!condition) {
+    throw new Error("assertTrue failed")
+  }
+}
+
 // Coverage: DECORATOR-SENDABLE-0010, DWS-TD-0010
 // Stage 6 regression: non-sendable class + factory + IIFE (control for PR 10632)
-// This is the control comparison â€” same decorator pattern but without sendable class.
+// This is the control comparison â€?same decorator pattern but without sendable class.
 // Should NOT generate sendable-specific bytecode in compiler output.
 //
 // Expected: property init value unchanged; IIFE evaluates correctly
@@ -19,5 +25,5 @@ class A {
 
 function main(): void {
   let a = new A()
-  // assertTrue(a.prop == "555")
+  assertTrue(a.prop == "555")
 }

@@ -1,3 +1,9 @@
+function assertTrue(condition: boolean): void {
+  if (!condition) {
+    throw new Error("assertTrue failed")
+  }
+}
+
 // Coverage: DECORATOR-SENDABLE-0005, DWS-TD-0005
 // Stage 6 regression: sendable class + factory + IIFE capturing local binding
 // This is NOT the complete PR 10632 shape (missing imported binding), but tests
@@ -22,5 +28,5 @@ class A {
 
 function main(): void {
   let a = new A()
-  // assertTrue(a.prop == "333")
+  assertTrue(a.prop == "333")
 }

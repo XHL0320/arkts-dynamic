@@ -1,3 +1,9 @@
+function assertTrue(condition: boolean): void {
+  if (!condition) {
+    throw new Error("assertTrue failed")
+  }
+}
+
 // Coverage: DECORATOR-SENDABLE-0035, DWS-TD-0035
 // Stage 6 regression: sendable class + factory + arrow function argument
 // Arrow function passed as decorator factory argument should NOT inherit
@@ -21,5 +27,5 @@ class A {
 
 function main(): void {
   let a = new A()
-  // assertTrue(a.prop == "444")
+  assertTrue(a.prop == "444")
 }

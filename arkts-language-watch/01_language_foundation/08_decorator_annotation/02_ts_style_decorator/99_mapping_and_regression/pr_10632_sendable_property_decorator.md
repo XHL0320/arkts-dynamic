@@ -64,3 +64,11 @@ Property Decorator / Sendable Class / Transformer / Binder / Bytecode
 ## Conclusion
 
 该 PR 属于 TS style property decorator 看护范围，不属于 ArkUI UI decorator，也不属于 `@interface` annotation 主线。
+
+## Stage 10 Quality Review Correction
+
+- `xts/regression/decorator_sendable_pr10632_local_binding_source_candidate.ets` is a local-binding degraded source candidate.
+- It is not the full PR 10632 imported-binding original repro.
+- The full imported-binding shape remains covered only by compiler/bytecode candidate documents.
+- No real bytecode expected output was generated in Stage 10.
+- PR 10632 ownership remains `07_decorator_with_sendable`.

@@ -1,4 +1,4 @@
-# Compiler Expected Candidate â€” Readonly Property + Property Decorator
+# Compiler Expected Candidate â€?Readonly Property + Property Decorator
 
 ## Coverage IDs
 - DECORATOR-CLASS-FEATURE-0019
@@ -6,7 +6,7 @@
 
 ## Source Files
 - `xts/pass/decorator_class_feature_readonly_property_pass.ets`
-- `xts/fail_compile/decorator_class_feature_readonly_assignment_fail.ets`
+- `xts/fail_compile/decorator_class_feature_readonly_assignment_fail_compile.ets`
 
 ## Expected Compiler Behavior
 
@@ -20,8 +20,8 @@
 - Single expected error point only
 
 ### Potential Compiler Issues
-- If readonly + decorator combination is not supported â†’ downgrade pass to boundary
-- If decorator removes readonly constraint â†’ semantic bug, boundary candidate
+- If readonly + decorator combination is not supported â†?downgrade pass to boundary
+- If decorator removes readonly constraint â†?semantic bug, boundary candidate
 
 ### Bytecode Candidate Notes
 - Readonly property initializer should evaluate to `3`

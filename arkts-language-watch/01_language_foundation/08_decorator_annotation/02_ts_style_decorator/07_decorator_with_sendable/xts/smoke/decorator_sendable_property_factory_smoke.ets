@@ -1,3 +1,9 @@
+function assertTrue(condition: boolean): void {
+  if (!condition) {
+    throw new Error("assertTrue failed")
+  }
+}
+
 // Coverage: DECORATOR-SENDABLE-0029, DWS-TD-0029
 // Stage 6 smoke: sendable class + property decorator factory
 // Expected: property init value unchanged after decorator factory application
@@ -5,7 +11,7 @@
 
 function decoratorFactory(): (target: Object, key: string) => void {
   return function(target: Object, key: string): void {
-    // Property decorator returned by factory â€” no modification
+    // Property decorator returned by factory â€?no modification
   }
 }
 
@@ -19,5 +25,5 @@ class A {
 
 function main(): void {
   let a = new A()
-  // assertTrue(a.prop == "222")
+  assertTrue(a.prop == "222")
 }

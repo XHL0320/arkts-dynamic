@@ -31,11 +31,11 @@ Stage 6: non-sendable control cases verify that the same decorator pattern witho
 
 **Coverage IDs:** DECORATOR-SENDABLE-0010, DWS-TD-0010
 
-**Status:** candidate created â€” no real .expected.txt generated
+**Status:** candidate created â€?no real .expected.txt generated
 
 ## Candidate 2: sendable vs non-sendable comparison
 
-**Description:** A direct comparison candidate for bytecode diff between sendable and non-sendable variants of the same decorator pattern. This is a meta-candidate â€” not a single source file, but a comparison specification.
+**Description:** A direct comparison candidate for bytecode diff between sendable and non-sendable variants of the same decorator pattern. This is a meta-candidate â€?not a single source file, but a comparison specification.
 
 **Expected check points (NOT real expected output):**
 
@@ -47,9 +47,9 @@ Stage 6: non-sendable control cases verify that the same decorator pattern witho
 6. This comparison verifies that PR 10632 fix correctly isolates sendable context
 
 **Source files:**
-- Sendable: `07_decorator_with_sendable/xts/regression/decorator_sendable_pr10632_original_shape.ets`
+- Sendable: `07_decorator_with_sendable/xts/regression/decorator_sendable_pr10632_local_binding_source_candidate.ets`
 - Non-sendable: `07_decorator_with_sendable/xts/regression/decorator_sendable_pr10632_non_sendable_control.ets`
 
 **Coverage IDs:** DECORATOR-SENDABLE-0001 vs DECORATOR-SENDABLE-0010
 
-**Status:** candidate created â€” comparison specification only; no real .expected.txt generated
+**Status:** candidate created â€?comparison specification only; no real .expected.txt generated

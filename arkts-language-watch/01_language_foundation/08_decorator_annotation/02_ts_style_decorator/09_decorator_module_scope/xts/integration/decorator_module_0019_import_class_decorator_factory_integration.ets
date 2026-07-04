@@ -1,3 +1,9 @@
+function assertTrue(condition: boolean): void {
+  if (!condition) {
+    throw new Error("assertTrue failed")
+  }
+}
+
 // Coverage: DECORATOR-MODULE-0019, DECORATOR-MODULE-TD-0019
 // Stage 8 integration: import class decorator factory from module
 // Tests that imported class decorator factory evaluates and applies correctly
@@ -19,8 +25,8 @@ class B {
 function main(): void {
   let a = new A()
   let b = new B()
-  // assertTrue(a.value == 42)
-  // assertTrue(b.name == "test")
+  assertTrue(a.value == 42)
+  assertTrue(b.name == "test")
   // Factory and returned decorator should both be called
-  // assertTrue(classFactoryLog == "classFactory:tagAclassFactoryDec:tagAclassFactory:tagBclassFactoryDec:tagB")
+  assertTrue(classFactoryLog == "classFactory:tagAclassFactoryDec:tagAclassFactory:tagBclassFactoryDec:tagB")
 }
