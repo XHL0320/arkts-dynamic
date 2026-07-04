@@ -102,3 +102,107 @@
 | 030 | PR 10632 smoke XTS：编译运行不崩溃 | regression | P0 | XTS smoke |
 | 031 | PR 10632 bytecode expected：无 sendable function 指令 | bytecode regression | P0 | bytecode expected |
 | 032 | PR 10632 bytecode expected：sendable class 指令仍存在 | bytecode regression | P0 | bytecode expected |
+
+<!-- SENDABLE_DEEPENING_2026_07_03 -->
+
+# Test Design
+
+## Goal
+
+围绕 sendable class 与 TS style decorator 的交叉语义建立系统性回归设计。
+
+## Test Categories
+
+- A. PR 10632 原始回归组
+- B. Sendable 对照组
+- C. Property decorator 变体组
+- D. Decorator factory 组
+- E. Multiple decorators 组
+- F. Module scope 组
+- G. Boundary 组
+- H. Bytecode regression 组
+
+## Test Matrix
+
+| ID | 测试点 | 示例形态 | 用例类型 | 优先级 | 建议测试方式 | 关联 PR | 备注 |
+|---|---|---|---|---|---|---|---|
+| DWS-TD-0001 | sendable class + property decorator + arrow function 参数 + module import | property decorator in sendable class | bytecode regression | P0 | bytecode expected | PR 10632 |  |
+| DWS-TD-0002 | sendable class + property decorator + normal function 参数 + module import | property decorator in sendable class | bytecode regression | P0 | bytecode expected | PR 10632 |  |
+| DWS-TD-0003 | sendable class + property decorator + arrow function 参数 + local variable | property decorator in sendable class | bytecode regression | P0 | bytecode expected | PR 10632 |  |
+| DWS-TD-0004 | sendable class + property decorator + immediate invoked arrow function | property decorator in sendable class | bytecode regression | P0 | bytecode expected | PR 10632 |  |
+| DWS-TD-0005 | sendable class + property decorator + factory 返回 decorator function | property decorator in sendable class | bytecode regression | P0 | bytecode expected | PR 10632 |  |
+| DWS-TD-0006 | sendable class 本体仍生成 sendable class 字节码 | property decorator in sendable class | bytecode regression | P0 | bytecode expected | PR 10632 |  |
+| DWS-TD-0007 | decorator 外提后 class 外函数不生成 sendable function 字节码 | property decorator in sendable class | bytecode regression | P0 | bytecode expected | PR 10632 |  |
+| DWS-TD-0008 | 原始 AST 与 transform 节点共享指针时不污染 codegen | property decorator in sendable class | bytecode regression | P0 | bytecode expected | PR 10632 |  |
+| DWS-TD-0009 | 普通 sendable class 无 decorator | contrast sample | pass | P1 | compiler expected | PR 10632 related |  |
+| DWS-TD-0010 | 普通 class + property decorator | contrast sample | pass | P1 | compiler expected | PR 10632 related |  |
+| DWS-TD-0011 | 普通 class + decorator 参数 arrow function | contrast sample | pass | P1 | compiler expected | PR 10632 related |  |
+| DWS-TD-0012 | sendable class 中普通 method 内 arrow function | contrast sample | pass | P1 | compiler expected | PR 10632 related |  |
+| DWS-TD-0013 | sendable class 中 constructor 内 arrow function | contrast sample | pass | P1 | compiler expected | PR 10632 related |  |
+| DWS-TD-0014 | sendable function 内 arrow function | contrast sample | pass | P1 | compiler expected | PR 10632 related |  |
+| DWS-TD-0015 | sendable class 外部普通 function | contrast sample | pass | P1 | compiler expected | PR 10632 related |  |
+| DWS-TD-0016 | decorator 外提函数与真正 sendable 内部函数对照 | contrast sample | regression | P0 | compiler expected | PR 10632 related |  |
+| DWS-TD-0017 | instance property decorator + sendable class | property variant | integration | P1 | XTS smoke | PR 10632 related |  |
+| DWS-TD-0018 | static property decorator + sendable class | property variant | bytecode regression | P0 | bytecode expected | PR 10632 related |  |
+| DWS-TD-0019 | readonly property decorator + sendable class | property variant | integration | P1 | XTS smoke | PR 10632 related |  |
+| DWS-TD-0020 | public property decorator + sendable class | property variant | integration | P1 | XTS smoke | PR 10632 related |  |
+| DWS-TD-0021 | private property decorator + sendable class | property variant | integration | P1 | XTS smoke | PR 10632 related |  |
+| DWS-TD-0022 | protected property decorator + sendable class | property variant | integration | P1 | XTS smoke | PR 10632 related |  |
+| DWS-TD-0023 | property decorator + initializer + sendable class | property variant | bytecode regression | P0 | bytecode expected | PR 10632 related |  |
+| DWS-TD-0024 | property decorator + no initializer + sendable class | property variant | bytecode regression | P0 | bytecode expected | PR 10632 related |  |
+| DWS-TD-0025 | property decorator + number field + sendable class | property variant | integration | P1 | XTS smoke | PR 10632 related |  |
+| DWS-TD-0026 | property decorator + string field + sendable class | property variant | integration | P1 | XTS smoke | PR 10632 related |  |
+| DWS-TD-0027 | property decorator + class type field + sendable class | property variant | integration | P1 | XTS smoke | PR 10632 related |  |
+| DWS-TD-0028 | property decorator + array field + sendable class | property variant | integration | P1 | XTS smoke | PR 10632 related |  |
+| DWS-TD-0029 | 无参 decorator factory + sendable class | decorator factory | integration | P1 | XTS smoke | PR 10632 related |  |
+| DWS-TD-0030 | 单参数 decorator factory + sendable class | decorator factory | integration | P1 | XTS smoke | PR 10632 related |  |
+| DWS-TD-0031 | 多参数 decorator factory + sendable class | decorator factory | integration | P1 | XTS smoke | PR 10632 related |  |
+| DWS-TD-0032 | decorator factory 参数为 string literal | decorator factory | integration | P1 | XTS smoke | PR 10632 related |  |
+| DWS-TD-0033 | decorator factory 参数为 number literal | decorator factory | integration | P1 | XTS smoke | PR 10632 related |  |
+| DWS-TD-0034 | decorator factory 参数为 boolean literal | decorator factory | integration | P1 | XTS smoke | PR 10632 related |  |
+| DWS-TD-0035 | decorator factory 参数为 arrow function | decorator factory | bytecode regression | P0 | bytecode expected | PR 10632 related |  |
+| DWS-TD-0036 | decorator factory 参数为 normal function | decorator factory | bytecode regression | P0 | bytecode expected | PR 10632 related |  |
+| DWS-TD-0037 | decorator factory 参数为 IIFE | decorator factory | bytecode regression | P0 | bytecode expected | PR 10632 related |  |
+| DWS-TD-0038 | decorator factory 参数引用 import binding | decorator factory | integration | P1 | XTS smoke | PR 10632 related |  |
+| DWS-TD-0039 | decorator factory 返回 decorator function | decorator factory | bytecode regression | P0 | bytecode expected | PR 10632 related |  |
+| DWS-TD-0040 | decorator factory 返回非函数 boundary | decorator factory | boundary | P1 | XTS smoke | PR 10632 related |  |
+| DWS-TD-0041 | 单字段多个 decorators + sendable class | multiple decorators | boundary | P1 | manual pending | PR 10632 related |  |
+| DWS-TD-0042 | 多字段各自 decorators + sendable class | multiple decorators | boundary | P1 | manual pending | PR 10632 related |  |
+| DWS-TD-0043 | static + instance decorators + sendable class | multiple decorators | boundary | P1 | manual pending | PR 10632 related |  |
+| DWS-TD-0044 | property decorator + method decorator + sendable boundary | multiple decorators | boundary | P1 | manual pending | PR 10632 related |  |
+| DWS-TD-0045 | class decorator + property decorator + sendable boundary | multiple decorators | boundary | P1 | manual pending | PR 10632 related |  |
+| DWS-TD-0046 | 多 decorator 执行顺序 pending | multiple decorators | boundary | P1 | manual pending | PR 10632 related |  |
+| DWS-TD-0047 | 多 decorator 中每个参数函数不应互相污染 | multiple decorators | regression | P0 | bytecode expected | PR 10632 related |  |
+| DWS-TD-0048 | 多 decorator 中 PR 10632 形态重复出现 | multiple decorators | regression | P0 | bytecode expected | PR 10632 related |  |
+| DWS-TD-0049 | decorator 从模块 import + sendable class | module scope | integration | P1 | XTS smoke | PR 10632 related |  |
+| DWS-TD-0050 | decorator factory 从模块 import + sendable class | module scope | integration | P1 | XTS smoke | PR 10632 related |  |
+| DWS-TD-0051 | decorator 参数引用 moduleVar | module scope | integration | P1 | XTS smoke | PR 10632 related |  |
+| DWS-TD-0052 | decorator 参数 arrow function 引用 moduleVar | module scope | bytecode regression | P0 | bytecode expected | PR 10632 related |  |
+| DWS-TD-0053 | decorator 参数 normal function 引用 moduleVar | module scope | bytecode regression | P0 | bytecode expected | PR 10632 related |  |
+| DWS-TD-0054 | decorator 外提后仍能访问 module binding | module scope | integration | P1 | XTS smoke | PR 10632 related |  |
+| DWS-TD-0055 | circular import + decorator + sendable boundary | module scope | boundary | P1 | XTS smoke | PR 10632 related |  |
+| DWS-TD-0056 | export sendable class + property decorator | module scope | integration | P1 | XTS smoke | PR 10632 related |  |
+| DWS-TD-0057 | class decorator + sendable class | boundary | boundary | P2 | manual pending | PR 10632 related | Pending target support |
+| DWS-TD-0058 | method decorator + sendable class | boundary | boundary | P2 | manual pending | PR 10632 related | Pending target support |
+| DWS-TD-0059 | static method decorator + sendable class | boundary | boundary | P2 | manual pending | PR 10632 related | Pending target support |
+| DWS-TD-0060 | accessor decorator + sendable class | boundary | boundary | P2 | manual pending | PR 10632 related | Pending target support |
+| DWS-TD-0061 | parameter decorator + sendable class | boundary | boundary | P2 | manual pending | PR 10632 related | Pending target support |
+| DWS-TD-0062 | generic sendable class + decorator | boundary | boundary | P2 | manual pending | PR 10632 related | Pending target support |
+| DWS-TD-0063 | abstract sendable class + decorator | boundary | boundary | P2 | manual pending | PR 10632 related | Pending target support |
+| DWS-TD-0064 | inheritance sendable class + decorator | boundary | boundary | P2 | manual pending | PR 10632 related | Pending target support |
+| DWS-TD-0065 | decorator expression throw + sendable class | boundary | boundary | P2 | manual pending | PR 10632 related | Pending target support |
+| DWS-TD-0066 | decorator factory throw + sendable class | boundary | boundary | P2 | manual pending | PR 10632 related | Pending target support |
+| DWS-TD-0067 | decorator return invalid value + sendable class | boundary | boundary | P2 | manual pending | PR 10632 related | Pending target support |
+| DWS-TD-0068 | unsupported decorator target pending | boundary | boundary | P2 | manual pending | PR 10632 related | Pending target support |
+| DWS-TD-0069 | PR 10632 原始 bytecode expected | bytecode expected | bytecode regression | P0 | bytecode expected | PR 10632 |  |
+| DWS-TD-0070 | arrow function 参数不生成 sendable function 字节码 | bytecode expected | bytecode regression | P0 | bytecode expected | PR 10632 |  |
+| DWS-TD-0071 | normal function 参数不生成 sendable function 字节码 | bytecode expected | bytecode regression | P0 | bytecode expected | PR 10632 |  |
+| DWS-TD-0072 | decorator factory 返回函数不生成 sendable function 字节码 | bytecode expected | bytecode regression | P0 | bytecode expected | PR 10632 |  |
+| DWS-TD-0073 | sendable class 本体仍生成 sendable class 字节码 | bytecode expected | bytecode regression | P0 | bytecode expected | PR 10632 |  |
+| DWS-TD-0074 | static property decorator target 正确 | bytecode expected | bytecode regression | P0 | bytecode expected | PR 10632 |  |
+| DWS-TD-0075 | instance property decorator target 正确 | bytecode expected | bytecode regression | P0 | bytecode expected | PR 10632 |  |
+| DWS-TD-0076 | decorator 调用位置在 class definition 后 | bytecode expected | bytecode regression | P0 | bytecode expected | PR 10632 |  |
+| DWS-TD-0077 | 多 decorator 不污染 bytecode | bytecode expected | bytecode regression | P0 | bytecode expected | PR 10632 |  |
+| DWS-TD-0078 | sendable method 内真正函数仍按 sendable 生成 | bytecode expected | bytecode regression | P0 | bytecode expected | PR 10632 |  |
+| DWS-TD-0079 | IIFE 内部函数不生成 sendable function 字节码 | bytecode expected | bytecode regression | P0 | bytecode expected | PR 10632 |  |
+| DWS-TD-0080 | module import binding 访问不改变 sendable 标记 | bytecode expected | bytecode regression | P0 | bytecode expected | PR 10632 |  |

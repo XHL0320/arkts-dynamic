@@ -10,4 +10,4 @@
 | Null Safety | `01_language_foundation/05_null_safety/` | 空安全 |
 | Module | `01_language_foundation/06_module/` | 模块规则 |
 | this Keyword | `01_language_foundation/07_this_keyword/` | this 关键字 |
-| Annotation | `01_language_foundation/08_annotation/` | 注解 |
+| Annotation | `01_language_foundation/08_decorator_annotation/01_arkts_annotation/` | 注解 |

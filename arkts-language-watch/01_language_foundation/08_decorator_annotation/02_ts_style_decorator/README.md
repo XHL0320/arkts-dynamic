@@ -33,3 +33,15 @@ PR 10632:
 `07_decorator_with_sendable`
 和
 `99_mapping_and_regression`
+
+## Control Files
+
+| 文件 | 作用 |
+|---|---|
+| decorator_watch_review.md | 总体一致性审查 |
+| decorator_total_coverage_matrix.md | 总覆盖矩阵 |
+| decorator_xts_generation_plan.md | 后续 XTS / bytecode regression 生成计划 |
+| decorator_priority_index.md | 优先级索引 |
+| decorator_open_questions.md | 总待确认问题 |
+| decorator_regression_index.md | 回归索引 |
+| decorator_test262_total_mapping.md | test262 总映射 |
