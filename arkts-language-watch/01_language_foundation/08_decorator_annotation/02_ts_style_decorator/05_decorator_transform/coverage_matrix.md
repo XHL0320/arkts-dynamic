@@ -119,3 +119,69 @@
 | DECORATOR-TRANSFORM-0103 | transform lowering 扩展矩阵补充 103 | Mixed | integration | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/05_decorator_transform/xts/integration/decorator_transform_transform_integration.ets | P1 | 05_decorator_transform | transform/lowering; Not from test262 |
 | DECORATOR-TRANSFORM-0104 | transform lowering 扩展矩阵补充 104 | Mixed | integration | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/05_decorator_transform/xts/integration/decorator_transform_transform_integration.ets | P1 | 05_decorator_transform | transform/lowering; Not from test262 |
 | DECORATOR-TRANSFORM-0105 | transform lowering 扩展矩阵补充 105 | Mixed | integration | 否 | arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/05_decorator_transform/xts/integration/decorator_transform_transform_integration.ets | P1 | 05_decorator_transform | transform/lowering; Not from test262 |
+
+## Stage 5 Generated Status
+
+This section records actual Stage 5 smoke/integration/boundary artifacts and candidate-only files. It does not mark real compiler expected or bytecode expected output as completed.
+
+| Coverage ID | 测试点 | 生成状态 | 生成文件 | 备注 |
+|---|---|---|---|---|
+| DECORATOR-TRANSFORM-0001 | instance property decorator lowering | generated | xts/smoke/decorator_transform_property_call_once_smoke.ets | ordinary property smoke |
+| DECORATOR-TRANSFORM-0002 | static property decorator lowering | generated | xts/smoke/decorator_transform_static_property_smoke.ets | static target smoke |
+| DECORATOR-TRANSFORM-0003 | property decorator target | candidate created | compiler_expected_candidates/decorator_transform_property_lowering_candidates.md | no expected output generated |
+| DECORATOR-TRANSFORM-0004 | property decorator key | candidate created | compiler_expected_candidates/decorator_transform_property_lowering_candidates.md | no expected output generated |
+| DECORATOR-TRANSFORM-0005 | property decorator factory | generated | xts/smoke/decorator_transform_factory_call_smoke.ets | factory call smoke |
+| DECORATOR-TRANSFORM-0009 | factory argument IIFE | generated | xts/smoke/decorator_transform_factory_argument_smoke.ets | argument expression smoke |
+| DECORATOR-TRANSFORM-0010 | imported binding lowering | candidate created | compiler_expected_candidates/decorator_transform_module_binding_candidates.md | no multi-file generated |
+| DECORATOR-TRANSFORM-0016 | multiple property decorators | generated | xts/smoke/decorator_transform_multiple_no_duplicate_smoke.ets | order not asserted |
+| DECORATOR-TRANSFORM-0017 | no duplicate property decorator call | generated | xts/smoke/decorator_transform_property_call_once_smoke.ets | call once smoke |
+| DECORATOR-TRANSFORM-0021 | instance method decorator lowering | generated | xts/smoke/decorator_transform_method_call_once_smoke.ets | descriptor not asserted |
+| DECORATOR-TRANSFORM-0022 | static method decorator lowering | candidate created | compiler_expected_candidates/decorator_transform_method_lowering_candidates.md | no expected output generated |
+| DECORATOR-TRANSFORM-0023 | method decorator target | generated | xts/smoke/decorator_transform_method_call_once_smoke.ets | target internals not asserted |
+| DECORATOR-TRANSFORM-0024 | method decorator key | generated | xts/smoke/decorator_transform_method_call_once_smoke.ets | key smoke |
+| DECORATOR-TRANSFORM-0025 | method descriptor/equivalent structure | generated | xts/boundary/decorator_transform_method_descriptor_boundary.ets | Pending boundary |
+| DECORATOR-TRANSFORM-0033 | class decorator lowering | generated | xts/smoke/decorator_transform_class_call_once_smoke.ets | class target not asserted |
+| DECORATOR-TRANSFORM-0034 | class decorator factory | candidate created | compiler_expected_candidates/decorator_transform_class_lowering_candidates.md | no expected output generated |
+| DECORATOR-TRANSFORM-0035 | class decorator call position | generated | xts/smoke/decorator_transform_class_call_once_smoke.ets | call once smoke |
+| DECORATOR-TRANSFORM-0041 | class decorator return value boundary | generated | xts/boundary/decorator_transform_class_return_boundary.ets | Pending boundary |
+| DECORATOR-TRANSFORM-0043 | no-arg factory | generated | xts/smoke/decorator_transform_factory_call_smoke.ets | factory call smoke |
+| DECORATOR-TRANSFORM-0046 | primitive factory argument | generated | xts/smoke/decorator_transform_factory_argument_smoke.ets | argument expression smoke |
+| DECORATOR-TRANSFORM-0048 | arrow function factory argument | candidate created | compiler_expected_candidates/decorator_transform_factory_lowering_candidates.md | no expected output generated |
+| DECORATOR-TRANSFORM-0050 | IIFE factory argument | generated | xts/smoke/decorator_transform_factory_argument_smoke.ets | argument expression smoke |
+| DECORATOR-TRANSFORM-0052 | factory returns decorator function | generated | xts/smoke/decorator_transform_factory_call_smoke.ets | returned decorator call smoke |
+| DECORATOR-TRANSFORM-0053 | factory returns non-function boundary | generated | xts/boundary/decorator_transform_factory_invalid_return_boundary.ets | Pending boundary |
+| DECORATOR-TRANSFORM-0057 | AST state pollution risk | generated | xts/boundary/decorator_transform_ast_state_pollution_boundary.ets | no bytecode output |
+| DECORATOR-TRANSFORM-0058 | AST state bytecode risk | candidate created | bytecode_expected_candidates/decorator_transform_bytecode_risk_candidates.md | no real bytecode expected |
+| DECORATOR-TRANSFORM-0059 | binder scope pollution risk | generated | xts/boundary/decorator_transform_binder_context_pollution_boundary.ets | no bytecode output |
+| DECORATOR-TRANSFORM-0060 | checker/type context pollution risk | generated | xts/boundary/decorator_transform_binder_context_pollution_boundary.ets | no bytecode output |
+| DECORATOR-TRANSFORM-0061 | codegen context pollution risk | generated | xts/boundary/decorator_transform_binder_context_pollution_boundary.ets | no bytecode output |
+| DECORATOR-TRANSFORM-0062 | reset lowered node context | generated | xts/boundary/decorator_transform_ast_state_pollution_boundary.ets | no bytecode output |
+| DECORATOR-TRANSFORM-0063 | multiple decorator shared state pollution | generated | xts/boundary/decorator_transform_ast_state_pollution_boundary.ets | no bytecode output |
+| DECORATOR-TRANSFORM-0064 | property decorator + arrow function | generated | xts/boundary/decorator_transform_ast_state_pollution_boundary.ets | ordinary case only |
+| DECORATOR-TRANSFORM-0067 | imported binding pollution risk | candidate created | compiler_expected_candidates/decorator_transform_module_binding_candidates.md | no multi-file generated |
+| DECORATOR-TRANSFORM-0070 | lowered node binder flag risk | generated | xts/boundary/decorator_transform_binder_context_pollution_boundary.ets | no bytecode output |
+| DECORATOR-TRANSFORM-0071 | property decorator call generation | generated | xts/smoke/decorator_transform_property_call_once_smoke.ets | smoke only |
+| DECORATOR-TRANSFORM-0072 | instance property target | candidate created | compiler_expected_candidates/decorator_transform_property_lowering_candidates.md | no expected output generated |
+| DECORATOR-TRANSFORM-0073 | static property target | generated | xts/smoke/decorator_transform_static_property_smoke.ets | smoke only |
+| DECORATOR-TRANSFORM-0074 | key parameter | candidate created | compiler_expected_candidates/decorator_transform_property_lowering_candidates.md | no expected output generated |
+| DECORATOR-TRANSFORM-0075 | factory call | generated | xts/smoke/decorator_transform_factory_call_smoke.ets | smoke only |
+| DECORATOR-TRANSFORM-0076 | decorator function call | generated | xts/smoke/decorator_transform_factory_call_smoke.ets | smoke only |
+| DECORATOR-TRANSFORM-0077 | no duplicate decorator call | generated | xts/smoke/decorator_transform_multiple_no_duplicate_smoke.ets | smoke only |
+| DECORATOR-TRANSFORM-0078 | no missing decorator call | generated | xts/smoke/decorator_transform_multiple_no_duplicate_smoke.ets | smoke only |
+| DECORATOR-TRANSFORM-0079 | class definition and decorator call order | candidate created | compiler_expected_candidates/decorator_transform_class_lowering_candidates.md | order not asserted |
+| DECORATOR-TRANSFORM-0080 | factory argument function bytecode risk | candidate created | bytecode_expected_candidates/decorator_transform_bytecode_risk_candidates.md | no real bytecode expected |
+| DECORATOR-TRANSFORM-0082 | multiple decorator bytecode order | generated | xts/smoke/decorator_transform_multiple_no_duplicate_smoke.ets | order not asserted |
+| DECORATOR-TRANSFORM-0083 | module import binding | candidate created | compiler_expected_candidates/decorator_transform_module_binding_candidates.md | no multi-file generated |
+| DECORATOR-TRANSFORM-0085 | PR 10632 bridge | candidate created | bytecode_expected_candidates/decorator_transform_bytecode_risk_candidates.md | Stage 6 owns original case |
+| DECORATOR-TRANSFORM-0087 | IIFE argument bytecode risk | generated | xts/smoke/decorator_transform_factory_argument_smoke.ets | smoke only |
+| DECORATOR-TRANSFORM-0088 | static property bytecode target risk | generated | xts/smoke/decorator_transform_static_property_smoke.ets | smoke only |
+| DECORATOR-TRANSFORM-0090 | accessor/descriptor boundary | generated | xts/boundary/decorator_transform_method_descriptor_boundary.ets | Pending boundary |
+| DECORATOR-TRANSFORM-0098 | invalid decorator/factory return boundary | generated | xts/boundary/decorator_transform_factory_invalid_return_boundary.ets | Pending boundary |
+| DECORATOR-TRANSFORM-0101 | transform mixed target supplement | generated | xts/integration/decorator_transform_class_property_method_smoke.ets | integration smoke |
+| DECORATOR-TRANSFORM-0102 | transform mixed target supplement | generated | xts/integration/decorator_transform_class_property_method_smoke.ets | integration smoke |
+
+Stage 5 notes:
+
+- No sendable-specific transform XTS was generated.
+- No real bytecode expected output was generated.
+- PR 10632 remains owned by `07_decorator_with_sendable`; Stage 5 only created bridge candidates.
