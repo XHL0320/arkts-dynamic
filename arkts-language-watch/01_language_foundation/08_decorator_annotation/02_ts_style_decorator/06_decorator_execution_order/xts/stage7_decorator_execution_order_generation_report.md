@@ -107,3 +107,7 @@
 - module scope 是剩余核心维度；
 - 需要验证 imported decorator、imported factory、factory 参数 imported binding、export decorated class；
 - 这也是 PR 10632 中 imported binding 维度的普通主线对照。
+
+## Stage 11 Validation Note
+
+Representative positive coverage from this stage was migrated into consolidated DevEco ohosTest Hypium suites and validated with official hvigor build plus `aa test` class-filter execution. Boundary/candidate items were not executed. `fail_compile` files were validated separately through a temporary imported probe and official hvigor compile failure checks.

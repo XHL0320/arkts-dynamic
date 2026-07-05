@@ -162,3 +162,7 @@ Reason:
 Alternatively, if compiler expected verification is available, the next priority should be:
 - Running compiler expected verification on Stage 8 candidates
 - Generating bytecode regression candidates for DECORATOR-MODULE-0058/0069-0072/0089/0110-0128
+
+## Stage 11 Validation Note
+
+Representative positive coverage from this stage was migrated into consolidated DevEco ohosTest Hypium suites and validated with official hvigor build plus `aa test` class-filter execution. Boundary/candidate items were not executed. `fail_compile` files were validated separately through a temporary imported probe and official hvigor compile failure checks.

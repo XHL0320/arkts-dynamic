@@ -242,3 +242,13 @@ Stage 4 notes:
 - No sendable-specific class decorator XTS was generated.
 - No PR 10632 bytecode expected was generated.
 - Class decorator target/constructor value, return value, and export lowering remain follow-up candidate areas.
+
+## Stage 11 DevEco ohosTest Validation Sync
+
+- Added consolidated DevEco ohosTest Hypium suites under `C:\Users\Administrator\DevEcoStudioProjects\MyApplication9\entry\src\ohosTest\ets\test\decorator`.
+- Registered 10 decorator suites in `entry/src/ohosTest/ets/test/List.test.ets`.
+- DevEco/hvigor ohosTest build passed after converting factory-returned decorator function expressions to arrow functions for ArkTS static compliance.
+- 10/10 decorator suites passed with `aa test -s class <decorator_suite>`.
+- Full project run had one pre-existing non-decorator error in `ClassRuntimeBehavior_Boundary_1`; decorator suites passed independently.
+- 25/25 `fail_compile` cases were validated as compile failures using a temporary side-effect imported probe with the official hvigor pipeline.
+- Boundary/candidate files were not executed; no real bytecode expected output was generated.

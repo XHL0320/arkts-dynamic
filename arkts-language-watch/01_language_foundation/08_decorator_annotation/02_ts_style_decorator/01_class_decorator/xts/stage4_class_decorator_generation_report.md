@@ -78,3 +78,7 @@ Reason:
 - decorator lowering, target/key/descriptor passing, and factory call lowering need compiler-chain coverage;
 - PR 10632 real risk belongs to transform/binder/codegen;
 - covering transform/lowering first makes the later sendable-specific bytecode regression safer.
+
+## Stage 11 Validation Note
+
+Representative positive coverage from this stage was migrated into consolidated DevEco ohosTest Hypium suites and validated with official hvigor build plus `aa test` class-filter execution. Boundary/candidate items were not executed. `fail_compile` files were validated separately through a temporary imported probe and official hvigor compile failure checks.

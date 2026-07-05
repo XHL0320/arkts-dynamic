@@ -96,3 +96,7 @@ Stage 7: `06_decorator_execution_order` â€?decorator execution order semantics, 
 - The full imported-binding shape remains covered only by compiler/bytecode candidate documents.
 - No real bytecode expected output was generated in Stage 10.
 - PR 10632 ownership remains `07_decorator_with_sendable`.
+
+## Stage 11 Validation Note
+
+Representative positive coverage from this stage was migrated into consolidated DevEco ohosTest Hypium suites and validated with official hvigor build plus `aa test` class-filter execution. Boundary/candidate items were not executed. `fail_compile` files were validated separately through a temporary imported probe and official hvigor compile failure checks.

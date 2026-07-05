@@ -86,3 +86,7 @@ The following coverage IDs will be updated from "Âê? to "created":
 - Generic class + decorator support confirmation ‚Ü?may create smoke
 - Readonly + decorator support confirmation ‚Ü?may downgrade pass to boundary
 - Private member + decorator support confirmation ‚Ü?may downgrade boundary to fail_compile
+
+## Stage 11 Validation Note
+
+Representative positive coverage from this stage was migrated into consolidated DevEco ohosTest Hypium suites and validated with official hvigor build plus `aa test` class-filter execution. Boundary/candidate items were not executed. `fail_compile` files were validated separately through a temporary imported probe and official hvigor compile failure checks.

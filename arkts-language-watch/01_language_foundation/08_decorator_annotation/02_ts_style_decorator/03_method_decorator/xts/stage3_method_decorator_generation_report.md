@@ -72,3 +72,7 @@ Reason:
 - property / factory / method mainlines now have first batch coverage;
 - class decorator is the remaining core target;
 - class target, export/default, and return value boundary should be covered before transform/lowering and PR10632 bytecode regression work.
+
+## Stage 11 Validation Note
+
+Representative positive coverage from this stage was migrated into consolidated DevEco ohosTest Hypium suites and validated with official hvigor build plus `aa test` class-filter execution. Boundary/candidate items were not executed. `fail_compile` files were validated separately through a temporary imported probe and official hvigor compile failure checks.

@@ -162,3 +162,13 @@
 | DECORATOR-MODULE-0146 | PR 10632 transform �?class �?decorator 调用仍需访问 imported binding | ArkTS-specific | regression | �?| arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/09_decorator_module_scope/xts/regression/decorator_module_0146_pr_10632_transform_class_decorator_imported_binding_regression.ets | P1 | 05_decorator_transform | PR 10632 reference only; Related: 05_decorator_transform; Not from test262 |
 | DECORATOR-MODULE-0147 | PR 10632 核心归入 transform/sendable/codegen | ArkTS-specific | regression | �?| arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/09_decorator_module_scope/xts/regression/decorator_module_0147_pr_10632_transform_sendable_codegen_regression.ets | P1 | 05_decorator_transform | PR 10632 reference only; Related: 05_decorator_transform; Not from test262 |
 | DECORATOR-MODULE-0148 | sendable-specific 扩展转交 07_decorator_with_sendable | ArkTS-specific | regression | �?| arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/09_decorator_module_scope/xts/regression/decorator_module_0148_sendable_specific_07_decorator_with_sendable_regression.ets | P1 | 07_decorator_with_sendable | Related: 07_decorator_with_sendable; Not from test262 |
+
+## Stage 11 DevEco ohosTest Validation Sync
+
+- Added consolidated DevEco ohosTest Hypium suites under `C:\Users\Administrator\DevEcoStudioProjects\MyApplication9\entry\src\ohosTest\ets\test\decorator`.
+- Registered 10 decorator suites in `entry/src/ohosTest/ets/test/List.test.ets`.
+- DevEco/hvigor ohosTest build passed after converting factory-returned decorator function expressions to arrow functions for ArkTS static compliance.
+- 10/10 decorator suites passed with `aa test -s class <decorator_suite>`.
+- Full project run had one pre-existing non-decorator error in `ClassRuntimeBehavior_Boundary_1`; decorator suites passed independently.
+- 25/25 `fail_compile` cases were validated as compile failures using a temporary side-effect imported probe with the official hvigor pipeline.
+- Boundary/candidate files were not executed; no real bytecode expected output was generated.

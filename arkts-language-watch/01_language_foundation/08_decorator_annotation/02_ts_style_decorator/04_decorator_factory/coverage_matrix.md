@@ -138,3 +138,12 @@
 | DECORATOR-FACTORY-0122 | PR 10632 ‰∏?factory ‰∏?property decorator ÂÖ≥ËÅî | ArkTS-specific | regression | Âê?| arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/04_decorator_factory/xts/regression/decorator_factory_factory_property_pr10632_regression.ets | P0 | 02_property_decorator | PR 10632; Related: 02_property_decorator; Not from test262 |
 | DECORATOR-FACTORY-0123 | PR 10632 ‰∏?factory ‰∏?transform AST state pollution ÂÖ≥ËÅî | ArkTS-specific | regression | Âê?| arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/04_decorator_factory/xts/regression/decorator_factory_factory_transform_pr10632_regression.ets | P0 | 05_decorator_transform | PR 10632; Related: 05_decorator_transform; Not from test262 |
 | DECORATOR-FACTORY-0124 | sendable-specific Êâ©Â±ïËΩ¨‰∫§ 07_decorator_with_sendable | ArkTS-specific | regression | Âê?| arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/04_decorator_factory/xts/regression/decorator_factory_basic_regression.ets | P1 | 07_decorator_with_sendable | Related: 07_decorator_with_sendable; Not from test262 |
+## Stage 11 DevEco ohosTest Validation Sync
+
+- Added consolidated DevEco ohosTest Hypium suites under `C:\Users\Administrator\DevEcoStudioProjects\MyApplication9\entry\src\ohosTest\ets\test\decorator`.
+- Registered 10 decorator suites in `entry/src/ohosTest/ets/test/List.test.ets`.
+- DevEco/hvigor ohosTest build passed after converting factory-returned decorator function expressions to arrow functions for ArkTS static compliance.
+- 10/10 decorator suites passed with `aa test -s class <decorator_suite>`.
+- Full project run had one pre-existing non-decorator error in `ClassRuntimeBehavior_Boundary_1`; decorator suites passed independently.
+- 25/25 `fail_compile` cases were validated as compile failures using a temporary side-effect imported probe with the official hvigor pipeline.
+- Boundary/candidate files were not executed; no real bytecode expected output was generated.

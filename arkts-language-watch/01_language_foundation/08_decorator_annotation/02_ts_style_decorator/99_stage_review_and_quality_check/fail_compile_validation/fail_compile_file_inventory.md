@@ -1,0 +1,29 @@
+# Fail Compile File Inventory
+
+| 文件 | 类型 | 验证方式 |
+|---|---|---|
+| `arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/00_decorator_syntax/xts/fail_compile/decorator_syntax_bare_fail_compile.ets` | fail_compile | single-file hvigor probe |
+| `arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/00_decorator_syntax/xts/fail_compile/decorator_syntax_basic_fail_compile.ets` | fail_compile | single-file hvigor probe |
+| `arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/00_decorator_syntax/xts/fail_compile/decorator_syntax_local_var_fail_compile.ets` | fail_compile | single-file hvigor probe |
+| `arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/00_decorator_syntax/xts/fail_compile/decorator_syntax_type_alias_fail_compile.ets` | fail_compile | single-file hvigor probe |
+| `arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/01_class_decorator/xts/fail_compile/decorator_class_constructor_parameter_mismatch_fail_compile.ets` | fail_compile | single-file hvigor probe |
+| `arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/01_class_decorator/xts/fail_compile/decorator_class_field_type_mismatch_fail_compile.ets` | fail_compile | single-file hvigor probe |
+| `arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/01_class_decorator/xts/fail_compile/decorator_class_implements_mismatch_fail_compile.ets` | fail_compile | single-file hvigor probe |
+| `arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/01_class_decorator/xts/fail_compile/decorator_class_method_return_mismatch_fail_compile.ets` | fail_compile | single-file hvigor probe |
+| `arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/01_class_decorator/xts/fail_compile/decorator_class_non_callable_fail_compile.ets` | fail_compile | single-file hvigor probe |
+| `arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/01_class_decorator/xts/fail_compile/decorator_class_unresolved_fail_compile.ets` | fail_compile | single-file hvigor probe |
+| `arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/03_method_decorator/xts/fail_compile/decorator_method_non_callable_fail_compile.ets` | fail_compile | single-file hvigor probe |
+| `arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/03_method_decorator/xts/fail_compile/decorator_method_override_parameter_mismatch_fail_compile.ets` | fail_compile | single-file hvigor probe |
+| `arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/03_method_decorator/xts/fail_compile/decorator_method_override_return_mismatch_fail_compile.ets` | fail_compile | single-file hvigor probe |
+| `arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/03_method_decorator/xts/fail_compile/decorator_method_parameter_mismatch_fail_compile.ets` | fail_compile | single-file hvigor probe |
+| `arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/03_method_decorator/xts/fail_compile/decorator_method_return_mismatch_fail_compile.ets` | fail_compile | single-file hvigor probe |
+| `arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/03_method_decorator/xts/fail_compile/decorator_method_unresolved_fail_compile.ets` | fail_compile | single-file hvigor probe |
+| `arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/04_decorator_factory/xts/fail_compile/decorator_factory_non_callable_fail_compile.ets` | fail_compile | single-file hvigor probe |
+| `arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/04_decorator_factory/xts/fail_compile/decorator_factory_param_type_fail_compile.ets` | fail_compile | single-file hvigor probe |
+| `arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/04_decorator_factory/xts/fail_compile/decorator_factory_undefined_fail_compile.ets` | fail_compile | single-file hvigor probe |
+| `arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/08_decorator_with_class_features/xts/fail_compile/decorator_class_feature_field_type_mismatch_fail_compile.ets` | fail_compile | single-file hvigor probe |
+| `arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/08_decorator_with_class_features/xts/fail_compile/decorator_class_feature_implements_missing_method_fail_compile.ets` | fail_compile | single-file hvigor probe |
+| `arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/08_decorator_with_class_features/xts/fail_compile/decorator_class_feature_method_return_mismatch_fail_compile.ets` | fail_compile | single-file hvigor probe |
+| `arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/08_decorator_with_class_features/xts/fail_compile/decorator_class_feature_override_parameter_mismatch_fail_compile.ets` | fail_compile | single-file hvigor probe |
+| `arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/08_decorator_with_class_features/xts/fail_compile/decorator_class_feature_override_return_mismatch_fail_compile.ets` | fail_compile | single-file hvigor probe |
+| `arkts-language-watch/01_language_foundation/08_decorator_annotation/02_ts_style_decorator/08_decorator_with_class_features/xts/fail_compile/decorator_class_feature_readonly_assignment_fail_compile.ets` | fail_compile | single-file hvigor probe |

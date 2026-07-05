@@ -90,3 +90,7 @@
 - PR 10632 的真实风险在 sendable + property decorator + factory 参数 + imported binding + binder/codegen；
 - 下一阶段应生成 sendable-specific regression candidate 和 bytecode expected 候选；
 - 仍需谨慎，不把 sendable 扩散到普通主线。
+
+## Stage 11 Validation Note
+
+Representative positive coverage from this stage was migrated into consolidated DevEco ohosTest Hypium suites and validated with official hvigor build plus `aa test` class-filter execution. Boundary/candidate items were not executed. `fail_compile` files were validated separately through a temporary imported probe and official hvigor compile failure checks.
