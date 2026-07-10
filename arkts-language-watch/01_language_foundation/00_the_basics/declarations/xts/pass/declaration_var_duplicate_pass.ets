@@ -1,0 +1,19 @@
+/*
+ * Declaration Stage 1
+ * Test point: duplicate var declaration in the same function scope.
+ * Expected: duplicate var declarations are allowed and share one binding.
+ */
+
+function assertTrue(value: boolean, message: string): void {
+  if (!value) {
+    throw new Error(message)
+  }
+}
+
+function main(): void {
+  var value: number = 1
+  var value: number = 2
+  assertTrue(value === 2, 'duplicate var declaration should use the same binding')
+}
+
+main()
