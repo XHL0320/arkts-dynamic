@@ -5,7 +5,7 @@
 | 缺口类型 | 数量 |
 |---|---:|
 | P0 未覆盖 | 6 |
-| P1 未覆盖 | 15 |
+| P1 未覆盖 | 14 |
 | P2 未覆盖 | 0 |
 | boundary 待确认 | 16 |
 | 需要后续 TypeScript / ArkTS 兼容比对 | 27 |
@@ -38,7 +38,6 @@
 | IF-EXT-004 | interface_extends | interface extends 自身 | planned fail_compile | 确认后生成 fail_compile |
 | IF-STRUCT-004 | structural_typing | object literal 可选属性省略 | planned | 生成 pass 用例 |
 | IF-STRUCT-005 | structural_typing | 结构兼容运行时检查 | planned boundary | 确认后生成 |
-| IF-IDX-003 | index_signature | index signature 与属性混合 | planned boundary | 确认后生成 |
 | IF-MERGE-003 | interface_merging | 合并冲突 | planned boundary | 确认后生成 |
 | IF-DUP-002 | duplicate_member | 同名不同类型属性 | planned fail_compile | 确认后生成 fail_compile |
 | IF-TSCOMP-002 | typescript_compatibility_boundary | interface 与 type alias 区别 | planned boundary | 确认后生成 |
