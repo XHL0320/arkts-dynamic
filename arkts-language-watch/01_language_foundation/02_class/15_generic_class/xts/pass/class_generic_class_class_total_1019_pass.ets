@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 15_generic_class
- * CaseType: pass
- * Priority: P1
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-1019
- * Related Spec: export generic class 后 import 并实例化
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-386
+ * Coverage ID:
+ *   - CLASS-TOTAL-1019
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: generic
+ * Spec Source: pending
+ * Description: Verify export generic class 后 import 并实例化
  */
 
 function assertTrue(value: boolean, message: string): void {

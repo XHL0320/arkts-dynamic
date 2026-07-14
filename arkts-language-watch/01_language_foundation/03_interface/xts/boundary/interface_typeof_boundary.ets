@@ -1,8 +1,17 @@
 /*
- * Interface Stage 1
- * Boundary / pending confirmation.
- * Test point: typeof on interface name.
- * Boundary reason: interface is typically erased at runtime; typeof should not return a meaningful value.
+ * Case ID: INTF-BOUND-016
+ * Coverage ID:
+ *   - IF-RT-002
+ * Feature: interface
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 03_interface
+ * Related Chapters: types,operators
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic interface behavior has not been verified.
+ * Description: Verify typeof interface boundary.
  */
 
 function assertTrue(value: boolean, message: string): void {

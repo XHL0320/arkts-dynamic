@@ -1,7 +1,17 @@
 /*
- * Operator Stage 1
- * Test point: nullish coalescing for null and undefined.
- * Expected: null ?? "default" === "default", undefined ?? "default" === "default".
+ * Case ID: OPER-PASS-018
+ * Coverage ID:
+ *   - OP-NULLISH-COALESCING-001
+ *   - OP-NULLISH-COALESCING-002
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify nullish coalescing for null and undefined.. null ?? "default" === "default", undefined ?? "default" === "default".
  */
 
 function assertTrue(value: boolean, message: string): void {

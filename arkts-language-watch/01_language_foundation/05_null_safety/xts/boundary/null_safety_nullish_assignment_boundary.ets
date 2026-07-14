@@ -1,10 +1,20 @@
-/*
- * Null Safety Stage 1
- * Boundary / pending confirmation.
- * Test point: nullish assignment ??= operator.
- * Boundary reason: dynamic ArkTS ??= support needs confirmation.
+﻿/*
+ * Case ID: NULL-BOUND-006
+ * Coverage ID:
+ *   - NS-NA-001
+ *   - NS-NA-002
+ *   - NS-NA-003
+ * Feature: null_safety
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 05_null_safety
+ * Related Chapters: operators
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic null safety behavior has not been verified.
+ * Description: Verify nullish assignment ??= boundary.
  */
-
 function assertTrue(value: boolean, message: string): void {
   if (!value) { throw new Error(message) }
 }

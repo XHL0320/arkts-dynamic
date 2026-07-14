@@ -1,10 +1,21 @@
-/*
- * Module Stage 1
- * Boundary / pending confirmation.
- * Test point: namespace import object mutation.
- * Boundary reason: namespace object is read-only in ES; dynamic ArkTS enforcement needs confirmation.
- */
+﻿/*
+ * Case ID: MODULE-BOUND-009
+ * Coverage ID:
 
+ *   - MOD-NSI-004
+ * Feature: module
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 06_module
+ * Related Chapters: declarations
+ * Helper IDs:
+ *   - MODULE-HELP-006
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic behavior has not been verified.
+ * Description: Verify namespace import object is read-only.
+ */
 import * as ns from '../helpers/named_export/module_named_export_helper'
 
 function assertTrue(value: boolean, message: string): void {

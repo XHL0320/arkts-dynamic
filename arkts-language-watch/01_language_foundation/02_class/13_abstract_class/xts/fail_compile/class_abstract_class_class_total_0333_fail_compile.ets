@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 13_abstract_class
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0333
- * Related Spec: 子类实现 public abstract method 时可见性收窄为 protected，checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-304
+ * Coverage ID:
+ *   - CLASS-TOTAL-0333
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: interface
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify 子类实现 public abstract method 时可见性收窄为 protected，checker 报错
  */
 
 // Expected error: 子类实现 public abstract method 时可见性收窄为 protected，checker 报错

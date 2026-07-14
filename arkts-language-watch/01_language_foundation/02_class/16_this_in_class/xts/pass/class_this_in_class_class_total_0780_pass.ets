@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 16_this_in_class
- * CaseType: pass
- * Priority: P0
- * ECMA Baseline Status: ES2022 / ArkTS-specific
- * Source Coverage ID: CLASS-TOTAL-0780
- * Related Spec: derived constructor 中 super() 后访问 this
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-403
+ * Coverage ID:
+ *   - CLASS-TOTAL-0780
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: this_keyword
+ * Spec Source: pending
+ * Description: Verify derived constructor 中 super() 后访问 this
  */
 
 function assertTrue(value: boolean, message: string): void {

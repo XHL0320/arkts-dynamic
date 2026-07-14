@@ -1,7 +1,16 @@
 /*
- * Generic Stage 1
- * Test point: Array<T> generic type usage.
- * Expected: Array<T> works as a generic type.
+ * Case ID: GEN-PASS-001
+ * Coverage ID:
+ *   - GEN-ARR-001
+ * Feature: generic
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 04_generic
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify Array<T> generic type basic usage.
  */
 
 function assertTrue(value: boolean, message: string): void {

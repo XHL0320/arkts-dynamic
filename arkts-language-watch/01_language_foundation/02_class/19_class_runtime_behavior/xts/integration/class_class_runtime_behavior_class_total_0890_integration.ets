@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 19_class_runtime_behavior
- * CaseType: integration
- * Priority: P0
- * ECMA Baseline Status: ES2022
- * Source Coverage ID: CLASS-TOTAL-0890
- * Related Spec: static method inheritance 与 derived constructor object 组合
- * Expected: Integrated class semantics compile and run with focused assertions.
+ * Case ID: CLASS-INTEG-013
+ * Coverage ID:
+ *   - CLASS-TOTAL-0890
+ * Feature: class
+ * Test Type: integration
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify static method inheritance 与 derived constructor object 组合
  */
 
 function assertTrue(value: boolean, message: string): void {

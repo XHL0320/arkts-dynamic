@@ -1,10 +1,20 @@
-/*
- * Null Safety Stage 1
- * Boundary / pending confirmation.
- * Test point: interface optional member with undefined.
- * Boundary reason: dynamic ArkTS optional member compile-time checking needs confirmation.
+﻿/*
+ * Case ID: NULL-BOUND-003
+ * Coverage ID:
+ *   - NS-IOM-001
+ *   - NS-IOM-002
+ *   - NS-IOM-003
+ * Feature: null_safety
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 05_null_safety
+ * Related Chapters: interface
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic null safety behavior has not been verified.
+ * Description: Verify interface optional member with undefined boundary.
  */
-
 function assertTrue(value: boolean, message: string): void {
   if (!value) { throw new Error(message) }
 }
@@ -16,7 +26,7 @@ interface Partial {
 
 class PartialImpl implements Partial {
   required: string = "present"
-  // optional is omitted — should compile if optional is respected
+  // optional is omitted 鈥?should compile if optional is respected
 }
 
 function main(): void {

@@ -1,7 +1,16 @@
 /*
- * Statement Stage 1
- * Test point: try-finally executes finally block.
- * Expected: finally always executes regardless of exception.
+ * Case ID: STMT-PASS-023
+ * Coverage ID:
+ *   - STMT-TRY-002
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: function
+ * Spec Source: pending
+ * Description: Verify try-finally executes finally block.. finally always executes regardless of exception.
  */
 
 function assertTrue(value: boolean, message: string): void {

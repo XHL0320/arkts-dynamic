@@ -1,6 +1,17 @@
 /*
- * Function Stage 1
- * Test point: rest parameter behaves like an array.
+ * Case ID: FUNC-PASS-035
+ * Coverage ID:
+ *   - FUNCTION-TOTAL-0093
+ *   - REST-PARAMETER-0009
+ * Feature: function
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 01_function
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify function behavior
  */
 
 function assertNumberEqual(actual: number, expected: number, message: string): void {

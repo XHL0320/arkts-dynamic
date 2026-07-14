@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 19_class_runtime_behavior
- * CaseType: regression
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific
- * Source Coverage ID: CLASS-TOTAL-0895
- * Related Spec: 回归：instanceof 非引用类型未被 checker 拦截
- * Expected: High-risk regression scenario remains stable.
+ * Case ID: CLASS-REGR-007
+ * Coverage ID:
+ *   - CLASS-TOTAL-0895
+ * Feature: class
+ * Test Type: regression
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Regression Issue: pending
+ * Description: Verify 回归：instanceof 非引用类型未被 checker 拦截
  */
 
 function assertTrue(value: boolean, message: string): void {

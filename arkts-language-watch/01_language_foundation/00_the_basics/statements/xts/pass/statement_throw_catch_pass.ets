@@ -1,7 +1,18 @@
 /*
- * Statement Stage 1
- * Test point: throw statement and catch clause.
- * Expected: throw inside try is caught by catch.
+ * Case ID: STMT-PASS-021
+ * Coverage ID:
+ *   - STMT-THROW-001
+ *   - STMT-THROW-005
+ *   - STMT-TRY-001
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: function
+ * Spec Source: pending
+ * Description: Verify throw statement and catch clause.. throw inside try is caught by catch.
  */
 
 function assertTrue(value: boolean, message: string): void {

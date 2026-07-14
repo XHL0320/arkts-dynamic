@@ -1,43 +1,61 @@
 ﻿# Function First Batch Candidate Index
 
-| Candidate ID | 瀛愮洰褰?| 娴嬭瘯鐐?| 鐢ㄤ緥绫诲瀷 | 浼樺厛绾?| 寤鸿鏂囦欢璺緞 | 鏄惁閫傚悎 ohosTest | 鏄惁闇€瑕?test262 瀵圭収 | 褰撳墠鐘舵€?| 闃舵 | 瀹為檯璺緞 | 澶囨敞 |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| FUNCTION-CAND-0001 | function_declaration | function declaration hoisting | pass | P0 | function_declaration/xts/pass/function_declaration_hoisting_pass.ets | 鏄?| 鏄?| planned |  |  | Stage 1 浼樺厛 |
-| FUNCTION-CAND-0002 | function_expression | function expression no hoisting | fail_runtime | P0 | function_expression/xts/fail_runtime/function_expression_no_hoisting_fail_runtime.ets | 鍚?| 鏄?| planned |  |  | 宸蹭粠 declaration 鎷嗗嚭 |
-| FUNCTION-CAND-0003 | function_declaration | recursive function | pass | P1 | function_declaration/xts/pass/function_declaration_recursive_pass.ets | 鏄?| 鏄?| planned |  |  |  |
-| FUNCTION-CAND-0004 | optional_parameter | default parameter evaluation order | pass | P0 | optional_parameter/xts/pass/default_parameter_evaluation_order_pass.ets | 鏄?| 鏄?| created | Function Stage 1 | optional_parameter/xts/pass/default_parameter_evaluation_order_pass.ets | side effect; Function Stage 1 generated |
-| FUNCTION-CAND-0005 | optional_parameter | default parameter references previous parameter | pass | P1 | optional_parameter/xts/pass/default_parameter_previous_param_pass.ets | 鏄?| 鏄?| created | Function Stage 1 | optional_parameter/xts/pass/default_parameter_reference_previous_param_pass.ets | Function Stage 1 generated |
-| FUNCTION-CAND-0006 | optional_parameter | default parameter expression throws | fail_runtime | P1 | optional_parameter/xts/fail_runtime/default_parameter_throw_fail_runtime.ets | 鍚?| 鏄?| planned |  |  |  |
-| FUNCTION-CAND-0007 | rest_parameter | rest parameter collects remaining args | pass | P0 | rest_parameter/xts/pass/rest_parameter_collect_pass.ets | 鏄?| 鏄?| created | Function Stage 1 | rest_parameter/xts/pass/rest_parameter_basic_pass.ets | Function Stage 1 generated |
-| FUNCTION-CAND-0008 | rest_parameter | arguments and rest difference | pass | P0 | rest_parameter/xts/pass/rest_parameter_arguments_difference_pass.ets | 鏄?| 鏄?| created | Function Stage 1 | rest_parameter/xts/regression/rest_parameter_arguments_difference_regression.ets | Function Stage 1 generated |
-| FUNCTION-CAND-0009 | rest_parameter | rest parameter not last | fail_compile | P0 | rest_parameter/xts/fail_compile/rest_parameter_not_last_fail_compile.ets | 鍚?| 鏄?| created | Function Stage 1 | rest_parameter/xts/fail_compile/rest_parameter_not_last_fail_compile.ets | syntax; Function Stage 1 generated |
-| FUNCTION-CAND-0010 | return_type | return without value | pass | P0 | return_type/xts/pass/return_without_value_pass.ets | 鏄?| 鏄?| created | Function Stage 1 | return_type/xts/pass/return_without_value_pass.ets | undefined; Function Stage 1 generated |
-| FUNCTION-CAND-0011 | return_type | return inside finally | pass | P0 | return_type/xts/pass/return_finally_override_pass.ets | 鏄?| 鏄?| created | Function Stage 1 | return_type/xts/pass/return_finally_override_pass.ets | 楂橀闄╂帶鍒舵祦; Function Stage 1 generated |
-| FUNCTION-CAND-0012 | return_type | return outside function | fail_compile | P0 | return_type/xts/fail_compile/return_outside_function_fail_compile.ets | 鍚?| 鏄?| created | Function Stage 1 | return_type/xts/fail_compile/return_outside_function_fail_compile.ets | syntax; Function Stage 1 generated |
-| FUNCTION-CAND-0013 | function_scope | nested function captures outer variable | pass | P0 | function_scope/xts/pass/function_scope_nested_access_pass.ets | 是 | 是 | created | Function Stage 2 | function_scope/xts/pass/function_scope_nested_function_pass.ets | scope chain; Function Stage 2 generated |
-| FUNCTION-CAND-0014 | function_scope | function inner binding not visible outside | fail_runtime | P1 | function_scope/xts/fail_runtime/function_scope_inner_reference_fail_runtime.ets | 否 | 是 | created | Function Stage 2 | function_scope/xts/fail_runtime/function_scope_outer_inaccessible_fail_runtime.ets | ReferenceError; Function Stage 2 generated |
-| FUNCTION-CAND-0015 | function_scope | parameter scope boundary | boundary | P1 | function_scope/xts/regression/function_scope_parameter_env_boundary.ets | 是 | 是 | created | Function Stage 2 | function_scope/xts/pass/function_scope_parameter_shadowing_pass.ets | parameter/block shadowing smoke; Function Stage 2 generated |
-| FUNCTION-CAND-0016 | function_call | normal function this binding | pass | P0 | function_call/xts/pass/function_call_method_this_pass.ets | 鏄?| 鏄?| planned |  |  | ThisBinding |
-| FUNCTION-CAND-0017 | function_call | call/apply/bind this binding | pass | P0 | function_call/xts/pass/function_call_call_apply_bind_pass.ets | 鏄?| 鏄?| created | Function Stage 1 | function_call/xts/pass/function_call_apply_bind_pass.ets | 鍙媶鍒? Function Stage 1 generated |
-| FUNCTION-CAND-0018 | function_call | non-callable value call throws TypeError | fail_runtime | P0 | function_call/xts/fail_runtime/function_call_non_callable_fail_runtime.ets | 鍚?| 鏄?| created | Function Stage 1 | function_call/xts/fail_runtime/function_call_non_callable_fail_runtime.ets | TypeError; Function Stage 1 generated |
-| FUNCTION-CAND-0019 | function_call | callback throws propagation | fail_runtime | P1 | function_call/xts/fail_runtime/function_call_callback_throw_fail_runtime.ets | 鍚?| 鏄?| planned |  |  |  |
-| FUNCTION-CAND-0020 | function_type | function as value | pass | P0 | function_type/xts/pass/function_type_as_value_pass.ets | 是 | 是 | created | Function Stage 3 | function_type/xts/pass/function_type_function_as_value_pass.ets | first-class; Function Stage 3 generated |
-| FUNCTION-CAND-0021 | function_type | function as parameter | pass | P0 | function_type/xts/pass/function_type_as_parameter_pass.ets | 是 | 是 | created | Function Stage 3 | function_type/xts/pass/function_type_function_as_parameter_pass.ets | callback; Function Stage 3 generated |
-| FUNCTION-CAND-0022 | function_type | function as return value | pass | P0 | function_type/xts/pass/function_type_as_return_value_pass.ets | 是 | 是 | created | Function Stage 3 | function_type/xts/pass/function_type_function_as_return_value_pass.ets | higher-order; Function Stage 3 generated |
-| FUNCTION-CAND-0023 | function_type | function name | pass | P1 | function_type/xts/pass/function_type_name_pass.ets | 鏄?| 鏄?| planned |  |  |  |
-| FUNCTION-CAND-0024 | function_type | function length | pass | P1 | function_type/xts/pass/function_type_length_pass.ets | 鏄?| 鏄?| planned |  |  |  |
-| FUNCTION-CAND-0025 | arrow_function_lambda | arrow function lexical this | pass | P0 | arrow_function_lambda/xts/pass/arrow_lexical_this_pass.ets | 是 | 是 | created | Function Stage 2 | arrow_function_lambda/xts/pass/arrow_function_lexical_this_pass.ets | Function Stage 2 generated |
-| FUNCTION-CAND-0026 | arrow_function_lambda | arrow function callback | pass | P1 | arrow_function_lambda/xts/pass/arrow_callback_pass.ets | 是 | 是 | created | Function Stage 2 | arrow_function_lambda/xts/pass/arrow_function_as_callback_pass.ets | Function Stage 2 generated |
-| FUNCTION-CAND-0027 | arrow_function_lambda | arrow has no own arguments | boundary | P1 | arrow_function_lambda/xts/regression/arrow_no_own_arguments_boundary.ets | 否 | 是 | created | Function Stage 2 | arrow_function_lambda/xts/boundary/arrow_function_no_arguments_boundary.ets | pending confirmation; Function Stage 2 generated |
-| FUNCTION-CAND-0028 | closure | closure captures outer variable | pass | P0 | closure/xts/pass/closure_capture_outer_pass.ets | 是 | 是 | created | Function Stage 2 | closure/xts/pass/closure_capture_outer_variable_pass.ets | Function Stage 2 generated |
-| FUNCTION-CAND-0029 | closure | closure in loop | pass | P1 | closure/xts/pass/closure_loop_capture_pass.ets | 是 | 是 | created | Function Stage 2 | closure/xts/pass/closure_loop_capture_let_pass.ets | let loop capture; Function Stage 2 generated |
-| FUNCTION-CAND-0030 | closure | nested closure | pass | P1 | closure/xts/pass/closure_nested_pass.ets | 是 | 是 | created | Function Stage 2 | closure/xts/pass/closure_nested_closure_pass.ets | Function Stage 2 generated |
-| FUNCTION-CAND-0031 | closure | closure throws propagation | fail_runtime | P1 | closure/xts/fail_runtime/closure_throw_fail_runtime.ets | 鍚?| 鏄?| planned |  |  |  |
-| FUNCTION-CAND-0032 | function_overload_signature | overload signature compatibility boundary | boundary | P0 | function_overload_signature/xts/regression/function_overload_signature_syntax_boundary.ets | 否 | 否 | created | Function Stage 3 | function_overload_signature/xts/boundary/function_overload_signature_basic_boundary.ets | TS compatibility only; not static overload resolution |
-| FUNCTION-CAND-0033 | function_overload_signature | overload unsupported fail_compile | fail_compile | P1 | function_overload_signature/xts/fail_compile/function_overload_signature_unsupported_fail_compile.ets | 否 | 否 | created | Function Stage 3 | function_overload_signature/xts/fail_compile/function_overload_signature_missing_impl_fail_compile.ets | missing implementation; Function Stage 3 generated |
-| FUNCTION-CAND-0034 | optional_parameter | invalid parameter list syntax | fail_compile | P0 | optional_parameter/xts/fail_compile/invalid_parameter_list_fail_compile.ets | 鍚?| 鏄?| planned |  |  |  |
-| FUNCTION-CAND-0035 | function_call | call evaluation order | pass | P1 | function_call/xts/pass/function_call_evaluation_order_pass.ets | 鏄?| 鏄?| planned |  |  | side effect |
-| FUNCTION-CAND-0036 | function_declaration | duplicate parameter strict mode boundary | boundary | P1 | function_declaration/xts/regression/function_duplicate_parameter_strict_boundary.ets | 鍚?| 鏄?| planned |  |  |  |
-| FUNCTION-CAND-0037 | function_expression | named function expression recursive self call | pass | P1 | function_expression/xts/pass/function_expression_named_recursive_pass.ets | 鏄?| 鏄?| planned |  |  | Stage 0.1 鏂板 |
-| FUNCTION-CAND-0038 | function_expression | IIFE function expression | pass | P1 | function_expression/xts/pass/function_expression_iife_pass.ets | 鏄?| 鏄?| planned |  |  | Stage 0.1 鏂板 |
-| FUNCTION-CAND-0039 | function_expression | anonymous function expression name inference | boundary | P1 | function_expression/xts/regression/function_expression_anonymous_name_boundary.ets | 鍚?| 鏄?| planned |  |  | Stage 0.1 鏂板锛屽厛 boundary |
+## Summary
+
+| 项目 | 数量 |
+|---|---:|
+| 首批候选数量 | 39 |
+| generated 候选数量 | 27 |
+| planned 候选数量 | 12 |
+
+## Candidate List
+
+> **Note**: The original candidate index used a different column format. The data below is the current source of truth. Full unified-format conversion with per-row Case ID/Coverage ID/Actual Path is pending — the Case Registry contains the complete mapping.
+
+| Candidate ID | Case ID | Generation Status | Validation Status | Actual Path | 备注 |
+|---|---|---|---|---|---|
+| FUNCTION-CAND-0001 | FUNC-PASS-031 | generated | validation_pending | optional_parameter/xts/pass/default_parameter_evaluation_order_pass.ets | Stage 1 |
+| FUNCTION-CAND-0002 | FUNC-PASS-033 | generated | validation_pending | optional_parameter/xts/pass/default_parameter_reference_previous_param_pass.ets | Stage 1 |
+| FUNCTION-CAND-0003 | FUNC-FAILC-003 | generated | validation_pending | rest_parameter/xts/fail_compile/rest_parameter_not_last_fail_compile.ets | Stage 1 |
+| FUNCTION-CAND-0004 | FUNC-PASS-042 | generated | validation_pending | return_type/xts/pass/return_without_value_pass.ets | Stage 1 |
+| FUNCTION-CAND-0005 | FUNC-PASS-040 | generated | validation_pending | return_type/xts/pass/return_finally_override_pass.ets | Stage 1 |
+| FUNCTION-CAND-0006 | FUNC-FAILC-004 | generated | validation_pending | return_type/xts/fail_compile/return_outside_function_fail_compile.ets | Stage 1 |
+| FUNCTION-CAND-0007 | FUNC-PASS-036 | generated | validation_pending | rest_parameter/xts/pass/rest_parameter_basic_pass.ets | Stage 1 |
+| FUNCTION-CAND-0008 | FUNC-REGR-007 | generated | validation_pending | rest_parameter/xts/regression/rest_parameter_arguments_difference_regression.ets | Stage 1 |
+| FUNCTION-CAND-0009 | FUNC-PASS-020 | generated | validation_pending | function_scope/xts/pass/function_scope_local_variable_pass.ets | Stage 2 |
+| FUNCTION-CAND-0010 | FUNC-PASS-021 | generated | validation_pending | function_scope/xts/pass/function_scope_nested_function_pass.ets | Stage 2 |
+| FUNCTION-CAND-0011 | FUNC-PASS-022 | generated | validation_pending | function_scope/xts/pass/function_scope_parameter_shadowing_pass.ets | Stage 2 |
+| FUNCTION-CAND-0012 | FUNC-FAILR-002 | generated | validation_pending | function_scope/xts/fail_runtime/function_scope_outer_inaccessible_fail_runtime.ets | Stage 2 |
+| FUNCTION-CAND-0013 | FUNC-PASS-016 | generated | validation_pending | function_call/xts/pass/function_call_basic_pass.ets | Stage 1 |
+| FUNCTION-CAND-0014 | FUNC-PASS-013 | generated | validation_pending | function_call/xts/pass/function_call_apply_bind_pass.ets | Stage 1 |
+| FUNCTION-CAND-0015 | FUNC-FAILR-001 | generated | validation_pending | function_call/xts/fail_runtime/function_call_non_callable_fail_runtime.ets | Stage 1 |
+| FUNCTION-CAND-0016 | FUNC-PASS-028 | generated | validation_pending | function_type/xts/pass/function_type_function_as_value_pass.ets | Stage 3 |
+| FUNCTION-CAND-0017 | FUNC-PASS-026 | generated | validation_pending | function_type/xts/pass/function_type_function_as_parameter_pass.ets | Stage 3 |
+| FUNCTION-CAND-0018 | FUNC-PASS-027 | generated | validation_pending | function_type/xts/pass/function_type_function_as_return_value_pass.ets | Stage 3 |
+| FUNCTION-CAND-0019 | FUNC-PASS-004 | generated | validation_pending | arrow_function_lambda/xts/pass/arrow_function_lexical_this_pass.ets | Stage 2 |
+| FUNCTION-CAND-0020 | FUNC-PASS-001 | generated | validation_pending | arrow_function_lambda/xts/pass/arrow_function_as_callback_pass.ets | Stage 2 |
+| FUNCTION-CAND-0021 | FUNC-BOUND-001 | generated | spec_pending | arrow_function_lambda/xts/boundary/arrow_function_no_arguments_boundary.ets | Stage 2 |
+| FUNCTION-CAND-0022 | FUNC-PASS-007 | generated | validation_pending | closure/xts/pass/closure_capture_outer_variable_pass.ets | Stage 2 |
+| FUNCTION-CAND-0023 | FUNC-PASS-008 | generated | validation_pending | closure/xts/pass/closure_loop_capture_let_pass.ets | Stage 2 |
+| FUNCTION-CAND-0024 | FUNC-PASS-010 | generated | validation_pending | closure/xts/pass/closure_nested_closure_pass.ets | Stage 2 |
+| FUNCTION-CAND-0025 | FUNC-BOUND-003 | generated | spec_pending | function_overload_signature/xts/boundary/function_overload_signature_basic_boundary.ets | Stage 3 |
+| FUNCTION-CAND-0026 | FUNC-FAILC-002 | generated | validation_pending | function_overload_signature/xts/fail_compile/function_overload_signature_missing_impl_fail_compile.ets | Stage 3 |
+| FUNCTION-CAND-0027 | FUNC-PASS-002 | generated | validation_pending | arrow_function_lambda/xts/pass/arrow_function_block_body_pass.ets | Stage 2 |
+| FUNCTION-CAND-0003b | none | planned | planned | ~optional_parameter/xts/fail_runtime/default_parameter_throw_fail_runtime.ets | planned |
+| FUNCTION-CAND-0016b | none | planned | planned | ~function_call/xts/pass/function_call_method_this_pass.ets | planned |
+| FUNCTION-CAND-0019b | none | planned | planned | ~function_call/xts/fail_runtime/function_call_callback_throw_fail_runtime.ets | planned |
+| FUNCTION-CAND-0023b | none | planned | planned | ~function_type/xts/pass/function_type_name_pass.ets | planned |
+| FUNCTION-CAND-0024b | none | planned | planned | ~function_type/xts/pass/function_type_length_pass.ets | planned |
+| FUNCTION-CAND-0028b | none | planned | planned | ~closure/xts/fail_runtime/closure_throw_fail_runtime.ets | planned |
+| FUNCTION-CAND-0035b | none | planned | planned | ~function_call/xts/pass/function_call_evaluation_order_pass.ets | planned |
+| FUNCTION-CAND-0037b | none | planned | planned | ~function_expression/xts/pass/function_expression_named_recursive_pass.ets | planned |
+| FUNCTION-CAND-0038b | none | planned | planned | ~function_expression/xts/pass/function_expression_iife_pass.ets | planned |
+| FUNCTION-CAND-0039b | none | planned | planned | ~function_expression/xts/regression/function_expression_anonymous_name_boundary.ets | planned |
+| FUNCTION-CAND-0001b | none | planned | planned | ~function_declaration/xts/pass/function_declaration_hoisting_pass.ets | planned |
+| FUNCTION-CAND-0002b | none | planned | planned | ~function_expression/xts/fail_runtime/function_expression_no_hoisting_fail_runtime.ets | planned |
+| FUNCTION-CAND-0003c | none | planned | planned | ~function_declaration/xts/pass/function_declaration_recursive_pass.ets | planned |
+| FUNCTION-CAND-0036b | none | planned | planned | ~function_declaration/xts/regression/function_duplicate_parameter_strict_boundary.ets | planned |
+
+## Historical Snapshot
+
+> The original candidate index used a different column format with Chinese headers. The data above is the current source of truth. All 27 generated candidates have corresponding .ets files with registered Case IDs.

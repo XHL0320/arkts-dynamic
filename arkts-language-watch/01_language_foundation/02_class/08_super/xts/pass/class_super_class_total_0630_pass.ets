@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 08_super
- * CaseType: pass
- * Priority: P0
- * ECMA Baseline Status: ES2022
- * Source Coverage ID: CLASS-TOTAL-0630
- * Related Spec: 多层继承中 C constructor 调用 B super，B 调用 A super
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-172
+ * Coverage ID:
+ *   - CLASS-TOTAL-0630
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: this_keyword
+ * Spec Source: pending
+ * Description: Verify 多层继承中 C constructor 调用 B super，B 调用 A super
  */
 
 function assertTrue(value: boolean, message: string): void {

@@ -1,10 +1,21 @@
-/*
- * Module Stage 1
- * Boundary / pending confirmation.
- * Test point: export * as namespace.
- * Boundary reason: ES2020 export * as ns support needs confirmation.
- */
+﻿/*
+ * Case ID: MODULE-BOUND-005
+ * Coverage ID:
 
+ *   - MOD-ESAN-001
+ * Feature: module
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 06_module
+ * Related Chapters: declarations
+ * Helper IDs:
+ *   - MODULE-HELP-007
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic behavior has not been verified.
+ * Description: Verify export * as namespace support.
+ */
 function assertTrue(value: boolean, message: string): void {
   if (!value) { throw new Error(message) }
 }

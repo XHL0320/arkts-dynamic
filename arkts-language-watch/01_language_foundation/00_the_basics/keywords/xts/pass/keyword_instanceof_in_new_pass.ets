@@ -1,7 +1,18 @@
 /*
- * Keyword Stage 1
- * Test point: instanceof/in/new keywords as expression operators.
- * Expected: instanceof/in/new keywords work in expression position.
+ * Case ID: KEYW-PASS-006
+ * Coverage ID:
+ *   - KW-OP-004
+ *   - KW-OP-005
+ *   - KW-OP-006
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: declarations
+ * Spec Source: pending
+ * Description: Verify instanceof/in/new keywords as expression operators.. instanceof/in/new keywords work in expression position.
  */
 
 function assertTrue(value: boolean, message: string): void {

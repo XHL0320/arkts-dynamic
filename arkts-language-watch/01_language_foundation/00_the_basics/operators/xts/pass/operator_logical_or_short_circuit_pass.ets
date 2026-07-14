@@ -1,7 +1,16 @@
 /*
- * Operator Stage 1
- * Test point: logical OR short-circuit evaluation.
- * Expected: true || expr does not evaluate expr.
+ * Case ID: OPER-PASS-017
+ * Coverage ID:
+ *   - OP-LOGICAL-002
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify logical OR short-circuit evaluation.. true || expr does not evaluate expr.
  */
 
 function assertTrue(value: boolean, message: string): void {

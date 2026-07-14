@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 19_class_runtime_behavior
- * CaseType: fail_runtime
- * Priority: P1
- * ECMA Baseline Status: ES2022
- * Source Coverage ID: CLASS-TOTAL-1081
- * Related Spec: super.method 不存在 TypeError
- * Expected: Runtime throws an exception; error message is not asserted.
+ * Case ID: CLASS-FAILR-033
+ * Coverage ID:
+ *   - CLASS-TOTAL-1081
+ * Feature: class
+ * Test Type: fail_runtime
+ * Expected Phase: runtime
+ * Expected Outcome: exception
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Expected Exception: pending
+ * Description: Verify super.method 不存在 TypeError
  */
 
 function assertTrue(value: boolean, message: string): void {

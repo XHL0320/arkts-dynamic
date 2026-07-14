@@ -1,9 +1,17 @@
 /*
- * Statement Stage 1
- * Boundary / pending confirmation.
- * Test point: invalid label reference boundary.
- * Expected in ES: break/continue with non-existent label is SyntaxError.
- * Boundary reason: dynamic ArkTS label support and error detection needs confirmation.
+ * Case ID: STMT-BOUND-003
+ * Coverage ID:
+ *   - STMT-LABEL-004
+ * Feature: language_basics
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: function
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic language behavior has not been verified.
+ * Description: Verify invalid label reference boundary.
  */
 
 function main(): void {

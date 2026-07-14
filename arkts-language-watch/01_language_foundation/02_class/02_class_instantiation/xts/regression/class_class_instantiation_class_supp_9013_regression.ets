@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 02_class_instantiation
- * CaseType: regression
- * Priority: P2
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-SUPP-9013
- * Related Spec: instance field independence after multiple new calls remains stable
- * Expected: High-risk regression scenario remains stable.
+ * Case ID: CLASS-REGR-002
+ * Coverage ID:
+ *   - CLASS-SUPP-9013
+ * Feature: class
+ * Test Type: regression
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Regression Issue: pending
+ * Description: Verify instance field independence after multiple new calls remains stable
  */
 
 function assertTrue(value: boolean, message: string): void {

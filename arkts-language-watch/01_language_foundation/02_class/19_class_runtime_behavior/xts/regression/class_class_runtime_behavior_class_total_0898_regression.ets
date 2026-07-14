@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 19_class_runtime_behavior
- * CaseType: regression
- * Priority: P0
- * ECMA Baseline Status: ES2022
- * Source Coverage ID: CLASS-TOTAL-0898
- * Related Spec: 回归：static initialization 中断后 class 不可用
- * Expected: High-risk regression scenario remains stable.
+ * Case ID: CLASS-REGR-010
+ * Coverage ID:
+ *   - CLASS-TOTAL-0898
+ * Feature: class
+ * Test Type: regression
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Regression Issue: pending
+ * Description: Verify 回归：static initialization 中断后 class 不可用
  */
 
 function assertTrue(value: boolean, message: string): void {

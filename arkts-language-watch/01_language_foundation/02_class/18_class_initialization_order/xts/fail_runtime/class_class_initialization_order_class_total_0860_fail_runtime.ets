@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 18_class_initialization_order
- * CaseType: fail_runtime
- * Priority: P0
- * ECMA Baseline Status: ES2022 / ArkTS-specific
- * Source Coverage ID: CLASS-TOTAL-0860
- * Related Spec: super() 内 base constructor 抛异常后 Derived field 不初始化
- * Expected: Runtime throws an exception; error message is not asserted.
+ * Case ID: CLASS-FAILR-018
+ * Coverage ID:
+ *   - CLASS-TOTAL-0860
+ * Feature: class
+ * Test Type: fail_runtime
+ * Expected Phase: runtime
+ * Expected Outcome: exception
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Expected Exception: pending
+ * Description: Verify super() 内 base constructor 抛异常后 Derived field 不初始化
  */
 
 function assertTrue(value: boolean, message: string): void {

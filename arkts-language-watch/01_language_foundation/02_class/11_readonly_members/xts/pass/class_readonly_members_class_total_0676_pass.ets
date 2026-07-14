@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 11_readonly_members
- * CaseType: pass
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0676
- * Related Spec: readonly bigint field 声明处初始化，如 ArkTS 支持 bigint
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-252
+ * Coverage ID:
+ *   - CLASS-TOTAL-0676
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify readonly bigint field 声明处初始化，如 ArkTS 支持 bigint
  */
 
 function assertTrue(value: boolean, message: string): void {

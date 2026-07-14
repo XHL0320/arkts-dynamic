@@ -1,8 +1,18 @@
 /*
- * Generic Stage 1
- * Boundary / pending confirmation.
- * Test point: generic function with default type parameter.
- * Boundary reason: dynamic ArkTS default type parameter support needs confirmation.
+ * Case ID: GEN-BOUND-006
+ * Coverage ID:
+ *   - GEN-DEF-001
+ *   - GEN-DEF-002
+ * Feature: generic
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 04_generic
+ * Related Chapters: types
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic generic behavior has not been verified.
+ * Description: Verify generic default type parameter declaration and usage boundary.
  */
 
 function assertTrue(value: boolean, message: string): void {

@@ -1,8 +1,18 @@
 /*
- * Generic Stage 1
- * Boundary / pending confirmation.
- * Test point: generic with union type.
- * Boundary reason: dynamic ArkTS generic + union type support needs confirmation.
+ * Case ID: GEN-BOUND-014
+ * Coverage ID:
+ *   - GEN-UNION-001
+ *   - GEN-UNION-004
+ * Feature: generic
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 04_generic
+ * Related Chapters: types, null_safety
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic generic behavior has not been verified.
+ * Description: Verify generic union type and optional property boundary.
  */
 
 function assertTrue(value: boolean, message: string): void {

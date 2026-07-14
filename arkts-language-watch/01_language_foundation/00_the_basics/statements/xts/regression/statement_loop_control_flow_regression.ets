@@ -1,8 +1,17 @@
 /*
- * Statement Stage 1
- * Regression test.
- * Test point: loop control flow with nested loops and break/continue.
- * Regression reason: verify break only exits inner loop, not outer.
+ * Case ID: STMT-REGR-001
+ * Coverage ID:
+ *   - STMT-BREAK-006
+ * Feature: language_basics
+ * Test Type: regression
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: function
+ * Spec Source: pending
+ * Regression Issue: pending
+ * Description: Verify loop control flow with nested loops and break/continue.
  */
 
 function assertTrue(value: boolean, message: string): void {

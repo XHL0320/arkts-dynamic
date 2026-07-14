@@ -1,7 +1,16 @@
 /*
- * Declaration Stage 1
- * Test point: duplicate var declaration in the same function scope.
- * Expected: duplicate var declarations are allowed and share one binding.
+ * Case ID: DECL-PASS-005
+ * Coverage ID:
+ *   - DECL-VAR-002
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify duplicate var declaration in the same function scope.. duplicate var declarations are allowed and share one binding.
  */
 
 function assertTrue(value: boolean, message: string): void {

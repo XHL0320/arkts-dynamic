@@ -1,9 +1,19 @@
-/*
- * Null Safety Stage 1
- * Test point: optional property absent returns undefined.
- * Expected: accessing absent property returns undefined (not an error).
+﻿/*
+ * Case ID: NULL-PASS-013
+ * Coverage ID:
+ *   - NS-OP-001
+ *   - NS-OP-003
+ *   - NS-OP-005
+ * Feature: null_safety
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 05_null_safety
+ * Related Chapters: interface, class
+ * Spec Source: pending
+ * Description: Verify optional property absent returns undefined.
  */
-
 function assertTrue(value: boolean, message: string): void {
   if (!value) { throw new Error(message) }
 }

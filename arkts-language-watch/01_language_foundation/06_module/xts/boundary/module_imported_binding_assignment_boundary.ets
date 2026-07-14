@@ -1,10 +1,21 @@
-/*
- * Module Stage 1
- * Boundary / pending confirmation.
- * Test point: imported binding assignment boundary.
- * Boundary reason: imported bindings are read-only in ES; dynamic ArkTS enforcement needs confirmation.
- */
+﻿/*
+ * Case ID: MODULE-BOUND-007
+ * Coverage ID:
 
+ *   - MOD-LB-004
+ * Feature: module
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 06_module
+ * Related Chapters: declarations
+ * Helper IDs:
+ *   - MODULE-HELP-005
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic behavior has not been verified.
+ * Description: Verify imported binding is read-only.
+ */
 import { liveValue } from '../helpers/live_binding/module_live_binding_helper'
 
 function assertTrue(value: boolean, message: string): void {

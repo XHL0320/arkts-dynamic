@@ -1,8 +1,17 @@
 /*
- * Boundary / pending confirmation
- * Function Stage 2
- * Coverage: block-level function declaration inside function body.
- * Reason: block-level function declaration behavior may differ by strictness and ArkTS dynamic implementation.
+ * Case ID: FUNC-BOUND-007
+ * Coverage ID:
+ *   - FUNCTION-SCOPE-0007
+ * Feature: function
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 01_function
+ * Related Chapters: declarations
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic function behavior has not been verified.
+ * Description: Verify block-level function declaration inside function body.
  */
 function assertTrue(value: boolean, message: string): void {
   if (!value) {

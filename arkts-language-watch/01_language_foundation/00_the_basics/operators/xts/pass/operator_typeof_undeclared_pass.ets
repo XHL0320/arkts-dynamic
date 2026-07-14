@@ -1,7 +1,19 @@
 /*
- * Operator Stage 1
- * Test point: typeof undeclared variable does not throw ReferenceError.
- * Expected: typeof someUndefinedVar === "undefined".
+ * Case ID: OPER-PASS-024
+ * Coverage ID:
+ *   - OP-TYPEOF-OPERATOR-001
+ *   - OP-TYPEOF-OPERATOR-004
+ *   - OP-TYPEOF-OPERATOR-005
+ *   - OP-UNARY-005
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify typeof undeclared variable does not throw ReferenceError.. typeof someUndefinedVar === "undefined".
  */
 
 function assertTrue(value: boolean, message: string): void {

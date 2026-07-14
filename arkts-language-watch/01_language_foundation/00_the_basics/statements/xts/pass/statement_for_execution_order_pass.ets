@@ -1,7 +1,16 @@
 /*
- * Statement Stage 1
- * Test point: for loop init/condition/update execution order.
- * Expected: init once, then cond→body→update→cond→body→update...
+ * Case ID: STMT-PASS-011
+ * Coverage ID:
+ *   - STMT-FOR-001
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: function
+ * Spec Source: pending
+ * Description: Verify for loop init/condition/update execution order.. init once, then cond→body→update→cond→body→update...
  */
 
 function assertTrue(value: boolean, message: string): void {

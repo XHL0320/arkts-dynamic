@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 14_class_and_interface
- * CaseType: pass
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0749
- * Related Spec: interface 类型变量调用 class 实现的方法并返回正确值
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-351
+ * Coverage ID:
+ *   - CLASS-TOTAL-0749
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: interface
+ * Spec Source: pending
+ * Description: Verify interface 类型变量调用 class 实现的方法并返回正确值
  */
 
 function assertTrue(value: boolean, message: string): void {

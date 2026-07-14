@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 14_class_and_interface
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0358
- * Related Spec: interface extends interface 后 class 缺少 base interface 成员，checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-329
+ * Coverage ID:
+ *   - CLASS-TOTAL-0358
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: interface
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify interface extends interface 后 class 缺少 base interface 成员，checker 报错
  */
 
 // Expected error: interface extends interface 后 class 缺少 base interface 成员，checker 报错

@@ -1,7 +1,16 @@
 /*
- * Operator Stage 1
- * Test point: loose equality number and string.
- * Expected: 1 == "1", 0 == "".
+ * Case ID: OPER-PASS-010
+ * Coverage ID:
+ *   - OP-EQUALITY-003
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify loose equality number and string.. 1 == "1", 0 == "".
  */
 
 function assertTrue(value: boolean, message: string): void {

@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 10_static_members
- * CaseType: pass
- * Priority: P1
- * ECMA Baseline Status: ES2022 / ArkTS-specific
- * Source Coverage ID: CLASS-TOTAL-0965
- * Related Spec: derived class 覆盖/遮蔽 base static method
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-236
+ * Coverage ID:
+ *   - CLASS-TOTAL-0965
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify derived class 覆盖/遮蔽 base static method
  */
 
 function assertTrue(value: boolean, message: string): void {

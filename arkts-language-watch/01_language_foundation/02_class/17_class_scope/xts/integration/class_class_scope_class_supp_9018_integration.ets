@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 17_class_scope
- * CaseType: integration
- * Priority: P2
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-SUPP-9018
- * Related Spec: class scope integrates field initializer and method parameter scope
- * Expected: Integrated class semantics compile and run with focused assertions.
+ * Case ID: CLASS-INTEG-004
+ * Coverage ID:
+ *   - CLASS-SUPP-9018
+ * Feature: class
+ * Test Type: integration
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: declarations
+ * Spec Source: pending
+ * Description: Verify class scope integrates field initializer and method parameter scope
  */
 
 function assertTrue(value: boolean, message: string): void {

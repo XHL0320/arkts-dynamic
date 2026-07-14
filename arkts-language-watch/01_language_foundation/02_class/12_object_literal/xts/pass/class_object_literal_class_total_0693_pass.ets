@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 12_object_literal
- * CaseType: pass
- * Priority: P0
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-0693
- * Related Spec: bigint 属性 object literal，如 ArkTS 支持
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-276
+ * Coverage ID:
+ *   - CLASS-TOTAL-0693
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify bigint 属性 object literal，如 ArkTS 支持
  */
 
 function assertTrue(value: boolean, message: string): void {

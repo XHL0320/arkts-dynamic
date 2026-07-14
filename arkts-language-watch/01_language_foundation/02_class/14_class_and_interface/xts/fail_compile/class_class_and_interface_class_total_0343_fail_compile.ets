@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 14_class_and_interface
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-0343
- * Related Spec: class method 参数个数不足导致签名不兼容，checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-318
+ * Coverage ID:
+ *   - CLASS-TOTAL-0343
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: interface
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify class method 参数个数不足导致签名不兼容，checker 报错
  */
 
 // Expected error: class method 参数个数不足导致签名不兼容，checker 报错

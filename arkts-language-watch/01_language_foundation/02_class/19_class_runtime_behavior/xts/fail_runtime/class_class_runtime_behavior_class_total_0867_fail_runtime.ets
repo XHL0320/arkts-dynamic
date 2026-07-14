@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 19_class_runtime_behavior
- * CaseType: fail_runtime
- * Priority: P0
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-0867
- * Related Spec: field initializer 使用 this 导致 runtime error
- * Expected: Runtime throws an exception; error message is not asserted.
+ * Case ID: CLASS-FAILR-025
+ * Coverage ID:
+ *   - CLASS-TOTAL-0867
+ * Feature: class
+ * Test Type: fail_runtime
+ * Expected Phase: runtime
+ * Expected Outcome: exception
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Expected Exception: pending
+ * Description: Verify field initializer 使用 this 导致 runtime error
  */
 
 function assertTrue(value: boolean, message: string): void {

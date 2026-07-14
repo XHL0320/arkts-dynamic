@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 07_inheritance
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-0145
- * Related Spec: 循环继承，checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-132
+ * Coverage ID:
+ *   - CLASS-TOTAL-0145
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify 循环继承，checker 报错
  */
 
 // Expected error: 循环继承，checker 报错

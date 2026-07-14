@@ -1,7 +1,17 @@
 /*
- * Keyword Stage 1
- * Test point: let and const keywords as declaration keywords.
- * Expected: let/const keywords can be used in declaration position.
+ * Case ID: KEYW-PASS-007
+ * Coverage ID:
+ *   - KW-DECL-002
+ *   - KW-DECL-003
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: declarations
+ * Spec Source: pending
+ * Description: Verify let and const keywords as declaration keywords.. let/const keywords can be used in declaration position.
  */
 
 function assertTrue(value: boolean, message: string): void {

@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 09_override
- * CaseType: pass
- * Priority: P0
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-0642
- * Related Spec: public method 覆盖 public method
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-193
+ * Coverage ID:
+ *   - CLASS-TOTAL-0642
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: function
+ * Spec Source: pending
+ * Description: Verify public method 覆盖 public method
  */
 
 function assertTrue(value: boolean, message: string): void {

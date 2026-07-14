@@ -1,7 +1,16 @@
 /*
- * Generic Stage 1
- * Test point: nested generic object.
- * Expected: generic type with generic member compiles.
+ * Case ID: GEN-PASS-013
+ * Coverage ID:
+ *   - GEN-NEST-002
+ * Feature: generic
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 04_generic
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify nested generic object type.
  */
 
 function assertTrue(value: boolean, message: string): void {

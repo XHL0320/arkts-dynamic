@@ -1,8 +1,18 @@
 /*
- * Operator Stage 1
- * Test point: typeof on TDZ variable throws ReferenceError.
- * Expected: typeof x where x is in TDZ throws ReferenceError.
- * Note: typeof does not bypass TDZ for let/const/class.
+ * Case ID: OPER-FAILR-004
+ * Coverage ID:
+ *   - OP-TYPEOF-OPERATOR-006
+ *   - OP-UNARY-006
+ * Feature: language_basics
+ * Test Type: fail_runtime
+ * Expected Phase: runtime
+ * Expected Outcome: exception
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Expected Exception: pending
+ * Description: Verify typeof on TDZ variable throws ReferenceError.. typeof x where x is in TDZ throws ReferenceError.
  */
 
 function assertTrue(value: boolean, message: string): void {

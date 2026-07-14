@@ -1,8 +1,18 @@
 /*
- * Generic Stage 1
- * Boundary / pending confirmation.
- * Test point: generic runtime erasure verification.
- * Boundary reason: generic type parameters are typically erased at runtime; behavior needs confirmation.
+ * Case ID: GEN-BOUND-011
+ * Coverage ID:
+ *   - GEN-RT-001
+ *   - GEN-RT-005
+ * Feature: generic
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 04_generic
+ * Related Chapters: types
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic generic behavior has not been verified.
+ * Description: Verify generic runtime erasure behavior boundary.
  */
 
 function assertTrue(value: boolean, message: string): void {

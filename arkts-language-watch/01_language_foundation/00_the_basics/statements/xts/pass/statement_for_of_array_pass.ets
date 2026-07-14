@@ -1,7 +1,16 @@
 /*
- * Statement Stage 1
- * Test point: for-of iterates array elements.
- * Expected: for-of iterates over array values (not indices).
+ * Case ID: STMT-PASS-013
+ * Coverage ID:
+ *   - STMT-FOROF-001
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: function
+ * Spec Source: pending
+ * Description: Verify for-of iterates array elements.. for-of iterates over array values (not indices).
  */
 
 function assertTrue(value: boolean, message: string): void {

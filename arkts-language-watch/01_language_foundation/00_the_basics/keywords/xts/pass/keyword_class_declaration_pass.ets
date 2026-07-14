@@ -1,7 +1,16 @@
 /*
- * Keyword Stage 1
- * Test point: class keyword as declaration keyword.
- * Expected: class keyword can be used in declaration position.
+ * Case ID: KEYW-PASS-002
+ * Coverage ID:
+ *   - KW-DECL-005
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: declarations
+ * Spec Source: pending
+ * Description: Verify class keyword as declaration keyword.. class keyword can be used in declaration position.
  */
 
 function assertTrue(value: boolean, message: string): void {

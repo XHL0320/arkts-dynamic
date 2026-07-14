@@ -1,7 +1,17 @@
 /*
- * Statement Stage 1
- * Test point: continue with label jumps to outer loop next iteration.
- * Expected: continue label skips to the next iteration of the labelled loop.
+ * Case ID: STMT-PASS-004
+ * Coverage ID:
+ *   - STMT-CONTINUE-002
+ *   - STMT-LABEL-003
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: function
+ * Spec Source: pending
+ * Description: Verify continue with label jumps to outer loop next iteration.. continue label skips to the next iteration of the labelled loop.
  */
 
 function assertTrue(value: boolean, message: string): void {

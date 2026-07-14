@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 07_inheritance
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: ES2022
- * Source Coverage ID: CLASS-TOTAL-0132
- * Related Spec: extends 非 class / 非 constructor，如静态可识别则报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-119
+ * Coverage ID:
+ *   - CLASS-TOTAL-0132
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify extends 非 class / 非 constructor，如静态可识别则报错
  */
 
 // Expected error: extends 非 class / 非 constructor，如静态可识别则报错

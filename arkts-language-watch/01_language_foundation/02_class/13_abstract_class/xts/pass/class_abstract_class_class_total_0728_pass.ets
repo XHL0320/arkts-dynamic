@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 13_abstract_class
- * CaseType: pass
- * Priority: P0
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-0728
- * Related Spec: 通过抽象类引用调用 concrete method
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-320
+ * Coverage ID:
+ *   - CLASS-TOTAL-0728
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: interface
+ * Spec Source: pending
+ * Description: Verify 通过抽象类引用调用 concrete method
  */
 
 function assertTrue(value: boolean, message: string): void {

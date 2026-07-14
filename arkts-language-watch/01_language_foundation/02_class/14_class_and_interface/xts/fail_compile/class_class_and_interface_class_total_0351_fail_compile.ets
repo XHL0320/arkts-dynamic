@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 14_class_and_interface
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific
- * Source Coverage ID: CLASS-TOTAL-0351
- * Related Spec: generic class implements instantiated interface 时字段类型实参错误，checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-324
+ * Coverage ID:
+ *   - CLASS-TOTAL-0351
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: interface
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify generic class implements instantiated interface 时字段类型实参错误，checker 报错
  */
 
 // Expected error: generic class implements instantiated interface 时字段类型实参错误，checker 报错

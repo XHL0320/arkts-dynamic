@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 17_class_scope
- * CaseType: regression
- * Priority: P2
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-SUPP-9019
- * Related Spec: class self-reference inside method remains stable
- * Expected: High-risk regression scenario remains stable.
+ * Case ID: CLASS-REGR-004
+ * Coverage ID:
+ *   - CLASS-SUPP-9019
+ * Feature: class
+ * Test Type: regression
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: declarations
+ * Spec Source: pending
+ * Regression Issue: pending
+ * Description: Verify class self-reference inside method remains stable
  */
 
 function assertTrue(value: boolean, message: string): void {

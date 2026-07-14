@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 04_method
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0051
- * Related Spec: overload 调用无匹配签名，checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-048
+ * Coverage ID:
+ *   - CLASS-TOTAL-0051
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: function
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify overload 调用无匹配签名，checker 报错
  */
 
 // Expected error: overload 调用无匹配签名，checker 报错

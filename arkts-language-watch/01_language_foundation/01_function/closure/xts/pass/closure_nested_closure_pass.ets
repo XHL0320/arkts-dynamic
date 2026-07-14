@@ -1,7 +1,16 @@
 /*
- * Function Stage 2
- * Coverage: nested closure captures multiple lexical levels.
- * Expected: innermost function can read both outer and middle bindings.
+ * Case ID: FUNC-PASS-010
+ * Coverage ID:
+ *   - FUNCTION-TOTAL-0069
+ * Feature: function
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 01_function
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify nested closure captures multiple lexical levels.. innermost function can read both outer and middle bindings.
  */
 function assertStringEqual(actual: string, expected: string, message: string): void {
   if (actual !== expected) {

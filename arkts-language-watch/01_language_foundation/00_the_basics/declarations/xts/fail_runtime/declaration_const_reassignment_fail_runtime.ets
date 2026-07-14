@@ -1,7 +1,17 @@
 /*
- * Declaration Stage 1
- * Test point: const binding cannot be reassigned.
- * Expected: reassignment throws a runtime exception in dynamic ArkTS.
+ * Case ID: DECL-FAILR-002
+ * Coverage ID:
+ *   - DECL-CONST-002
+ * Feature: language_basics
+ * Test Type: fail_runtime
+ * Expected Phase: runtime
+ * Expected Outcome: exception
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Expected Exception: pending
+ * Description: Verify const binding cannot be reassigned.. reassignment throws a runtime exception in dynamic ArkTS.
  */
 
 function assertTrue(value: boolean, message: string): void {

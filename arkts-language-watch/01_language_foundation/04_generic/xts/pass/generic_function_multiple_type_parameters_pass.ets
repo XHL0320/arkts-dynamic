@@ -1,7 +1,17 @@
 /*
- * Generic Stage 1
- * Test point: generic function with multiple type parameters.
- * Expected: pair<K, V> works with two type parameters.
+ * Case ID: GEN-PASS-007
+ * Coverage ID:
+ *   - GEN-FUNC-004
+ *   - GEN-MULTI-002
+ * Feature: generic
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 04_generic
+ * Related Chapters: function
+ * Spec Source: pending
+ * Description: Verify generic function with multiple type parameters.
  */
 
 function assertTrue(value: boolean, message: string): void {

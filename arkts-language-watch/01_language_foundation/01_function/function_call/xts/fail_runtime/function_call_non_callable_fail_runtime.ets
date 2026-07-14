@@ -1,7 +1,18 @@
 /*
- * Function Stage 1
- * Test point: calling a non-callable value.
- * Expected: runtime TypeError or equivalent runtime exception.
+ * Case ID: FUNC-FAILR-001
+ * Coverage ID:
+ *   - FUNCTION-CALL-0002
+ *   - FUNCTION-TOTAL-0042
+ * Feature: function
+ * Test Type: fail_runtime
+ * Expected Phase: runtime
+ * Expected Outcome: exception
+ * Validation Status: validation_pending
+ * Owner Chapter: 01_function
+ * Related Chapters: this_keyword
+ * Spec Source: pending
+ * Expected Exception: pending
+ * Description: Verify function behavior. runtime TypeError or equivalent runtime exception.
  */
 
 function assertTrue(value: boolean, message: string): void {

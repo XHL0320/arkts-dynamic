@@ -1,9 +1,18 @@
-/*
- * Null Safety Stage 1
- * Test point: optional chaining method call.
- * Expected: obj?.method() calls method if obj is not null, returns undefined if null.
+﻿/*
+ * Case ID: NULL-PASS-010
+ * Coverage ID:
+ *   - NS-OC-CALL-001
+ *   - NS-OC-CALL-002
+ * Feature: null_safety
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 05_null_safety
+ * Related Chapters: operators, function
+ * Spec Source: pending
+ * Description: Verify obj?.method() calls method or returns undefined.
  */
-
 function assertTrue(value: boolean, message: string): void {
   if (!value) { throw new Error(message) }
 }

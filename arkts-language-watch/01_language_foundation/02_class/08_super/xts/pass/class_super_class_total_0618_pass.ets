@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 08_super
- * CaseType: pass
- * Priority: P0
- * ECMA Baseline Status: ES2022
- * Source Coverage ID: CLASS-TOTAL-0618
- * Related Spec: abstract class 中 concrete method 被子类通过 super.method() 调用
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-160
+ * Coverage ID:
+ *   - CLASS-TOTAL-0618
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: this_keyword
+ * Spec Source: pending
+ * Description: Verify abstract class 中 concrete method 被子类通过 super.method() 调用
  */
 
 function assertTrue(value: boolean, message: string): void {

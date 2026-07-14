@@ -1,7 +1,18 @@
 /*
- * Interface Stage 1
- * Test point: interface with method signature.
- * Expected: interface method signature compiles and class can implement it.
+ * Case ID: INTF-PASS-006
+ * Coverage ID:
+ *   - IF-DECL-003
+ *   - IF-METHOD-001
+ *   - IF-METHOD-005
+ * Feature: interface
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 03_interface
+ * Related Chapters: function
+ * Spec Source: pending
+ * Description: Verify interface method signature declaration with multiple methods.
  */
 
 function assertTrue(value: boolean, message: string): void {

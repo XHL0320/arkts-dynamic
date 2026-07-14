@@ -1,7 +1,17 @@
 /*
- * Interface Stage 1
- * Test point: interface extends single interface.
- * Expected: sub-interface inherits parent interface members.
+ * Case ID: INTF-PASS-005
+ * Coverage ID:
+ *   - IF-EXT-001
+ *   - IF-EXT-002
+ * Feature: interface
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 03_interface
+ * Related Chapters: interface
+ * Spec Source: pending
+ * Description: Verify interface extends single interface with member inheritance.
  */
 
 function assertTrue(value: boolean, message: string): void {

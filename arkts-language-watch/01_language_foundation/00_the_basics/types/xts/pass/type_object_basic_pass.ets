@@ -1,4 +1,17 @@
-// Type Stage 1. Expected: object property access works for a simple object value.
+/*
+ * Case ID: TYPE-PASS-012
+ * Coverage ID:
+ *   - TYPE-STAGE1-020
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify types behavior
+ */
 function assertTrue(value: boolean, message: string): void {
   if (!value) {
     throw new Error(message)

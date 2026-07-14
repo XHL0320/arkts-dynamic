@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 19_class_runtime_behavior
- * CaseType: pass
- * Priority: P1
- * ECMA Baseline Status: ES2022
- * Source Coverage ID: CLASS-TOTAL-1059
- * Related Spec: static method 中 this 指向 class constructor
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-510
+ * Coverage ID:
+ *   - CLASS-TOTAL-1059
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify static method 中 this 指向 class constructor
  */
 
 function assertTrue(value: boolean, message: string): void {

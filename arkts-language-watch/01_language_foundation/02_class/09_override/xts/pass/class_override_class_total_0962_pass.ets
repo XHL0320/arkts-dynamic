@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 09_override
- * CaseType: pass
- * Priority: P1
- * ECMA Baseline Status: ArkTS-specific
- * Source Coverage ID: CLASS-TOTAL-0962
- * Related Spec: 子类字段与基类字段同名遮蔽
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-215
+ * Coverage ID:
+ *   - CLASS-TOTAL-0962
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: function
+ * Spec Source: pending
+ * Description: Verify 子类字段与基类字段同名遮蔽
  */
 
 function assertTrue(value: boolean, message: string): void {

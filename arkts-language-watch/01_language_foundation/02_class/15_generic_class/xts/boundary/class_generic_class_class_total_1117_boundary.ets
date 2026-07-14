@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 15_generic_class
- * CaseType: boundary
- * Priority: P1
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-1117
- * Related Spec: nested type / local function 中 T 作用域边界
- * Expected: Pending ArkTS behavior confirmation; no strong assertion.
+ * Case ID: CLASS-BOUND-088
+ * Coverage ID:
+ *   - CLASS-TOTAL-1117
+ * Feature: class
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: generic
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic class behavior has not been verified.
+ * Description: Verify nested type / local function 中 T 作用域边界
  */
 
 function assertTrue(value: boolean, message: string): void {

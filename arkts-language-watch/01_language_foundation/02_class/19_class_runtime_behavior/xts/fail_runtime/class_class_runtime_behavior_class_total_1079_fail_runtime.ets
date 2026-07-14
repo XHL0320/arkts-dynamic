@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 19_class_runtime_behavior
- * CaseType: fail_runtime
- * Priority: P1
- * ECMA Baseline Status: ES2022
- * Source Coverage ID: CLASS-TOTAL-1079
- * Related Spec: instanceof 右操作数非 constructor TypeError
- * Expected: Runtime throws an exception; error message is not asserted.
+ * Case ID: CLASS-FAILR-032
+ * Coverage ID:
+ *   - CLASS-TOTAL-1079
+ * Feature: class
+ * Test Type: fail_runtime
+ * Expected Phase: runtime
+ * Expected Outcome: exception
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Expected Exception: pending
+ * Description: Verify instanceof 右操作数非 constructor TypeError
  */
 
 function assertTrue(value: boolean, message: string): void {

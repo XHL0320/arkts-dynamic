@@ -1,7 +1,17 @@
 /*
- * Operator Stage 1
- * Test point: optional chaining property access.
- * Expected: null?.x === undefined, {x:1}?.x === 1.
+ * Case ID: OPER-PASS-020
+ * Coverage ID:
+ *   - OP-OPTIONAL-CHAINING-001
+ *   - OP-OPTIONAL-CHAINING-002
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify optional chaining property access.. null?.x === undefined, {x:1}?.x === 1.
  */
 
 function assertTrue(value: boolean, message: string): void {

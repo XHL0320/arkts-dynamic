@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 12_object_literal
- * CaseType: boundary
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific
- * Source Coverage ID: CLASS-TOTAL-0277
- * Related Spec: index signature 属性类型不一致，checker 报错，如支持 index signature
- * Expected: Pending ArkTS behavior confirmation; no strong assertion.
+ * Case ID: CLASS-BOUND-060
+ * Coverage ID:
+ *   - CLASS-TOTAL-0277
+ * Feature: class
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic class behavior has not been verified.
+ * Description: Verify index signature 属性类型不一致，checker 报错，如支持 index signature
  */
 
 function assertTrue(value: boolean, message: string): void {

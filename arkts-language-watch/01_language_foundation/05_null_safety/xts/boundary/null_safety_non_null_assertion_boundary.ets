@@ -1,10 +1,20 @@
-/*
- * Null Safety Stage 1
- * Boundary / pending confirmation.
- * Test point: non-null assertion operator !.
- * Boundary reason: dynamic ArkTS non-null assertion support needs confirmation.
+﻿/*
+ * Case ID: NULL-BOUND-004
+ * Coverage ID:
+ *   - NS-NNA-001
+ *   - NS-NNA-002
+ *   - NS-NNA-003
+ * Feature: null_safety
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 05_null_safety
+ * Related Chapters: typescript_compatibility
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic null safety behavior has not been verified.
+ * Description: Verify non-null assertion value! boundary.
  */
-
 function assertTrue(value: boolean, message: string): void {
   if (!value) { throw new Error(message) }
 }

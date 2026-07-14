@@ -1,10 +1,20 @@
-/*
- * Module Stage 1
- * Boundary / pending confirmation.
- * Test point: top-level await support.
- * Boundary reason: ES2022 top-level await support in dynamic ArkTS needs confirmation.
- */
+﻿/*
+ * Case ID: MODULE-BOUND-010
+ * Coverage ID:
 
+ *   - MOD-TLA-001
+ *   - MOD-TLA-002
+ * Feature: module
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 06_module
+ * Related Chapters: function
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic behavior has not been verified.
+ * Description: Verify top-level await support.
+ */
 function assertTrue(value: boolean, message: string): void {
   if (!value) { throw new Error(message) }
 }

@@ -1,9 +1,18 @@
 /*
- * Interface Stage 1
- * Boundary / pending confirmation.
- * Test point: interface extends with conflicting property types.
- * Boundary reason: dynamic ArkTS conflict detection in multiple extends needs confirmation.
- * In TypeScript, this would be a compile error (conflicting property types).
+ * Case ID: INTF-BOUND-007
+ * Coverage ID:
+ *   - IF-MULTEXT-003
+ *   - IF-MULTEXT-004
+ * Feature: interface
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 03_interface
+ * Related Chapters: interface
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic interface behavior has not been verified.
+ * Description: Verify multiple extends conflict member and support boundary.
  */
 
 function assertTrue(value: boolean, message: string): void {

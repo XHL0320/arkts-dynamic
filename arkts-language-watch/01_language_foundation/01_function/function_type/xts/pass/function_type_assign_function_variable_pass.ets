@@ -1,7 +1,16 @@
 /*
- * Function Stage 3
- * Coverage: function variable reassignment.
- * Expected: a function-typed variable can point to another compatible function value.
+ * Case ID: FUNC-PASS-024
+ * Coverage ID:
+ *   - FUNCTION-TYPE-0004
+ * Feature: function
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 01_function
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify function variable reassignment.. a function-typed variable can point to another compatible function value.
  */
 function assertNumberEqual(actual: number, expected: number, message: string): void {
   if (actual !== expected) {

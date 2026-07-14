@@ -1,7 +1,17 @@
 /*
- * Operator Stage 1
- * Test point: instanceof class.
- * Expected: new Foo() instanceof Foo === true.
+ * Case ID: OPER-PASS-014
+ * Coverage ID:
+ *   - OP-INSTANCEOF-001
+ *   - OP-INSTANCEOF-002
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify instanceof class.. new Foo() instanceof Foo === true.
  */
 
 class Person {

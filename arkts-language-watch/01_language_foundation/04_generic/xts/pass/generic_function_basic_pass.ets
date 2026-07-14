@@ -1,7 +1,17 @@
 /*
- * Generic Stage 1
- * Test point: generic function basic declaration and usage.
- * Expected: identity<T>(value: T): T compiles and returns the same value.
+ * Case ID: GEN-PASS-004
+ * Coverage ID:
+ *   - GEN-FUNC-001
+ *   - GEN-TYPEPARAM-004
+ * Feature: generic
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 04_generic
+ * Related Chapters: function
+ * Spec Source: pending
+ * Description: Verify generic function basic declaration and type parameter usage.
  */
 
 function assertTrue(value: boolean, message: string): void {

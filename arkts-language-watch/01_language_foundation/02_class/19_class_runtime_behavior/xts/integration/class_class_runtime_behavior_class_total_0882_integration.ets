@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 19_class_runtime_behavior
- * CaseType: integration
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific
- * Source Coverage ID: CLASS-TOTAL-0882
- * Related Spec: class implements interface 运行时无检查
- * Expected: Integrated class semantics compile and run with focused assertions.
+ * Case ID: CLASS-INTEG-005
+ * Coverage ID:
+ *   - CLASS-TOTAL-0882
+ * Feature: class
+ * Test Type: integration
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify class implements interface 运行时无检查
  */
 
 function assertTrue(value: boolean, message: string): void {

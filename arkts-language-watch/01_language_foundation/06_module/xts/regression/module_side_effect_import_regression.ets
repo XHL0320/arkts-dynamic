@@ -1,10 +1,22 @@
-/*
- * Module Stage 1
- * Regression test.
- * Test point: side-effect import execution and module initialization.
- * Regression reason: verify module side-effect execution and import order behavior.
- */
+﻿/*
+ * Case ID: MODULE-REGR-001
+ * Coverage ID:
 
+ *   - MOD-SSI-001
+ *   - MOD-SSI-002
+ * Feature: module
+ * Test Type: regression
+ * Expected Phase: module_load
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 06_module
+ * Related Chapters: statements
+ * Helper IDs:
+ *   - MODULE-HELP-009
+ * Spec Source: pending
+ * Regression Issue: pending
+ * Description: Verify side-effect import executes once and module is cached.
+ */
 import '../helpers/side_effect/module_side_effect_helper'
 import { getCounter } from '../helpers/side_effect/module_side_effect_helper'
 

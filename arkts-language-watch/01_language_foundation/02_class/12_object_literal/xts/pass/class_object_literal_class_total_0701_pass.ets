@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 12_object_literal
- * CaseType: pass
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0701
- * Related Spec: object literal 可满足仅 public 成员的 class/interface
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-284
+ * Coverage ID:
+ *   - CLASS-TOTAL-0701
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify object literal 可满足仅 public 成员的 class/interface
  */
 
 function assertTrue(value: boolean, message: string): void {

@@ -1,9 +1,17 @@
 /*
- * Interface Stage 1
- * Boundary / pending confirmation.
- * Test point: object literal missing required property.
- * Boundary reason: dynamic ArkTS structural compatibility checking needs confirmation.
- * In TypeScript, this would be a compile error.
+ * Case ID: INTF-BOUND-013
+ * Coverage ID:
+ *   - IF-STRUCT-002
+ * Feature: interface
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 03_interface
+ * Related Chapters: types
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic interface behavior has not been verified.
+ * Description: Verify object literal missing required property boundary.
  */
 
 function assertTrue(value: boolean, message: string): void {

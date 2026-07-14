@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 16_this_in_class
- * CaseType: boundary
- * Priority: P0
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-0410
- * Related Spec: call/apply/bind 不支持时使用，checker 报错或边界记录
- * Expected: Pending ArkTS behavior confirmation; no strong assertion.
+ * Case ID: CLASS-BOUND-093
+ * Coverage ID:
+ *   - CLASS-TOTAL-0410
+ * Feature: class
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: this_keyword
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic class behavior has not been verified.
+ * Description: Verify call/apply/bind 不支持时使用，checker 报错或边界记录
  */
 
 function assertTrue(value: boolean, message: string): void {

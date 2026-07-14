@@ -1,9 +1,18 @@
 /*
- * Keyword Stage 1
- * Boundary / pending confirmation.
- * Test point: enum reserved word and TS enum declaration boundary.
- * Boundary reason: enum is ES future reserved word; TS implements as declaration.
- *  Dynamic ArkTS support status needs confirmation.
+ * Case ID: KEYW-BOUND-004
+ * Coverage ID:
+ *   - KW-FUT-001
+ *   - KW-FUT-006
+ * Feature: language_basics
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: declarations
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic language behavior has not been verified.
+ * Description: Verify enum reserved word and TS enum declaration boundary.
  */
 
 function assertTrue(value: boolean, message: string): void {

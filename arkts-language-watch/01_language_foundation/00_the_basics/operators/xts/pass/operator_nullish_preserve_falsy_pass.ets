@@ -1,7 +1,18 @@
 /*
- * Operator Stage 1
- * Test point: nullish coalescing preserves falsy values (difference from ||).
- * Expected: 0 ?? "x" === 0, "" ?? "x" === "", false ?? "x" === false.
+ * Case ID: OPER-PASS-019
+ * Coverage ID:
+ *   - OP-NULLISH-COALESCING-003
+ *   - OP-NULLISH-COALESCING-004
+ *   - OP-NULLISH-COALESCING-005
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify nullish coalescing preserves falsy values (difference from ||).. 0 ?? "x" === 0, "" ?? "x" === "", false ?? "x" === false.
  */
 
 function assertTrue(value: boolean, message: string): void {

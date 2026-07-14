@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 12_object_literal
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-0305
- * Related Spec: object literal 赋给 constructor type 不满足 construct signature，checker 报错或边界记录
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-281
+ * Coverage ID:
+ *   - CLASS-TOTAL-0305
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify object literal 赋给 constructor type 不满足 construct signature，checker 报错或边界记录
  */
 
 // Expected error: object literal 赋给 constructor type 不满足 construct signature，checker 报错或边界记录

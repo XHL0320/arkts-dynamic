@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 09_override
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0206
- * Related Spec: 覆盖基类方法但不写 override 是否报错，按 ArkTS 要求记录
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-188
+ * Coverage ID:
+ *   - CLASS-TOTAL-0206
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: function
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify 覆盖基类方法但不写 override 是否报错，按 ArkTS 要求记录
  */
 
 // Expected error: 覆盖基类方法但不写 override 是否报错，按 ArkTS 要求记录

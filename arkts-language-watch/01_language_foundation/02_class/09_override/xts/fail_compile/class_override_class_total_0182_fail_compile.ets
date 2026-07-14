@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 09_override
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0182
- * Related Spec: abstract public method 实现为 protected/private，checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-170
+ * Coverage ID:
+ *   - CLASS-TOTAL-0182
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: function
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify abstract public method 实现为 protected/private，checker 报错
  */
 
 // Expected error: abstract public method 实现为 protected/private，checker 报错

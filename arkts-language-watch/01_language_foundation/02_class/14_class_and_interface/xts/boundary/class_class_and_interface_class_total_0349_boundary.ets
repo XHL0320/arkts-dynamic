@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 14_class_and_interface
- * CaseType: boundary
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0349
- * Related Spec: constructor signature 不支持时 class implements 构造器接口，checker 报错
- * Expected: Pending ArkTS behavior confirmation; no strong assertion.
+ * Case ID: CLASS-BOUND-079
+ * Coverage ID:
+ *   - CLASS-TOTAL-0349
+ * Feature: class
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: interface
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic class behavior has not been verified.
+ * Description: Verify constructor signature 不支持时 class implements 构造器接口，checker 报错
  */
 
 function assertTrue(value: boolean, message: string): void {

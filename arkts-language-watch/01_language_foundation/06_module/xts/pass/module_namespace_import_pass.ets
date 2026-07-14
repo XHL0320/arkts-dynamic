@@ -1,8 +1,20 @@
-/*
- * Module Stage 1
- * Test point: namespace import * as ns.
- */
+﻿/*
+ * Case ID: MODULE-PASS-007
+ * Coverage ID:
 
+ *   - MOD-NSI-001
+ * Feature: module
+ * Test Type: pass
+ * Expected Phase: module_load
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 06_module
+ * Related Chapters: types
+ * Helper IDs:
+ *   - MODULE-HELP-006
+ * Spec Source: pending
+ * Description: Verify namespace import * as ns.
+ */
 import * as ns from '../helpers/named_export/module_named_export_helper'
 
 function assertTrue(value: boolean, message: string): void {

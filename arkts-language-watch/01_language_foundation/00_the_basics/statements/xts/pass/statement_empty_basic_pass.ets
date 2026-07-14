@@ -1,7 +1,17 @@
 /*
- * Statement Stage 1
- * Test point: empty statement does not affect execution.
- * Expected: empty statements are no-ops.
+ * Case ID: STMT-PASS-006
+ * Coverage ID:
+ *   - STMT-EMPTY-001
+ *   - STMT-EMPTY-003
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: function
+ * Spec Source: pending
+ * Description: Verify empty statement does not affect execution.. empty statements are no-ops.
  */
 
 function assertTrue(value: boolean, message: string): void {

@@ -1,10 +1,20 @@
-/*
- * Null Safety Stage 1
- * Regression test.
- * Test point: optional chaining comprehensive regression.
- * Regression reason: verify optional chaining short-circuit and null safety behavior.
+﻿/*
+ * Case ID: NULL-REGR-002
+ * Coverage ID:
+ *   - NS-OC-PROP-001
+ *   - NS-OC-PROP-002
+ *   - NS-OC-PROP-004
+ * Feature: null_safety
+ * Test Type: regression
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 05_null_safety
+ * Related Chapters: operators
+ * Spec Source: pending
+ * Regression Issue: pending
+ * Description: Verify optional chaining comprehensive regression.
  */
-
 function assertTrue(value: boolean, message: string): void {
   if (!value) { throw new Error(message) }
 }

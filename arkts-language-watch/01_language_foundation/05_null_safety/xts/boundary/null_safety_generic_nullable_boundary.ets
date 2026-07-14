@@ -1,10 +1,18 @@
-/*
- * Null Safety Stage 1
- * Boundary / pending confirmation.
- * Test point: generic with nullable type parameter.
- * Boundary reason: dynamic ArkTS generic nullable type support needs confirmation.
+﻿/*
+ * Case ID: NULL-BOUND-002
+ * Coverage ID:
+ *   - NS-GEN-002
+ * Feature: null_safety
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 05_null_safety
+ * Related Chapters: generic
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic null safety behavior has not been verified.
+ * Description: Verify generic nullable type T|null boundary.
  */
-
 function assertTrue(value: boolean, message: string): void {
   if (!value) { throw new Error(message) }
 }

@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 18_class_initialization_order
- * CaseType: fail_runtime
- * Priority: P0
- * ECMA Baseline Status: ES2022 / ArkTS-specific
- * Source Coverage ID: CLASS-TOTAL-0861
- * Related Spec: this before super 未被静态拦截时运行时 ReferenceError
- * Expected: Runtime throws an exception; error message is not asserted.
+ * Case ID: CLASS-FAILR-019
+ * Coverage ID:
+ *   - CLASS-TOTAL-0861
+ * Feature: class
+ * Test Type: fail_runtime
+ * Expected Phase: runtime
+ * Expected Outcome: exception
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Expected Exception: pending
+ * Description: Verify this before super 未被静态拦截时运行时 ReferenceError
  */
 
 function assertTrue(value: boolean, message: string): void {

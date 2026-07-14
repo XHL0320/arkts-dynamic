@@ -1,10 +1,19 @@
-/*
- * Module Stage 1
- * Boundary / pending confirmation.
- * Test point: top-level this in module context.
- * Boundary reason: module top-level this is undefined in ES; dynamic ArkTS behavior needs confirmation.
- */
+﻿/*
+ * Case ID: MODULE-BOUND-011
+ * Coverage ID:
 
+ *   - MOD-SCOPE-003
+ * Feature: module
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 06_module
+ * Related Chapters: 07_this_keyword
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic behavior has not been verified.
+ * Description: Verify module top-level this is undefined.
+ */
 function assertTrue(value: boolean, message: string): void {
   if (!value) { throw new Error(message) }
 }

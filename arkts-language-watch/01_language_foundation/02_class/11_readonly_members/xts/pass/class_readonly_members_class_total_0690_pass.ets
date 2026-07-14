@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 11_readonly_members
- * CaseType: pass
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0690
- * Related Spec: readonly 字段省略类型并依赖初始化值推断
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-266
+ * Coverage ID:
+ *   - CLASS-TOTAL-0690
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify readonly 字段省略类型并依赖初始化值推断
  */
 
 function assertTrue(value: boolean, message: string): void {

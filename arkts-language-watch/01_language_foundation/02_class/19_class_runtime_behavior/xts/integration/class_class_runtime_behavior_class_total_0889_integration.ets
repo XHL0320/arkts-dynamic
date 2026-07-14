@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 19_class_runtime_behavior
- * CaseType: integration
- * Priority: P0
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-0889
- * Related Spec: readonly 字段与继承组合 runtime behavior
- * Expected: Integrated class semantics compile and run with focused assertions.
+ * Case ID: CLASS-INTEG-012
+ * Coverage ID:
+ *   - CLASS-TOTAL-0889
+ * Feature: class
+ * Test Type: integration
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify readonly 字段与继承组合 runtime behavior
  */
 
 function assertTrue(value: boolean, message: string): void {

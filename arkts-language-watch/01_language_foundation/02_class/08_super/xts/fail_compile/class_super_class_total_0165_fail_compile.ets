@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 08_super
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: ES2022
- * Source Coverage ID: CLASS-TOTAL-0165
- * Related Spec: super() 参数类型与基类 constructor 不匹配，checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-150
+ * Coverage ID:
+ *   - CLASS-TOTAL-0165
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: this_keyword
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify super() 参数类型与基类 constructor 不匹配，checker 报错
  */
 
 // Expected error: super() 参数类型与基类 constructor 不匹配，checker 报错

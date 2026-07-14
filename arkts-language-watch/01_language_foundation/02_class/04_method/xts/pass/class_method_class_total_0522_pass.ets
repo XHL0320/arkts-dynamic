@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 04_method
- * CaseType: pass
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0522
- * Related Spec: protected method 在子类中调用通过
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-056
+ * Coverage ID:
+ *   - CLASS-TOTAL-0522
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: function
+ * Spec Source: pending
+ * Description: Verify protected method 在子类中调用通过
  */
 
 function assertTrue(value: boolean, message: string): void {

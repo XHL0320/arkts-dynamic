@@ -1,9 +1,19 @@
 /*
- * Keyword Stage 1
- * Boundary / pending confirmation.
- * Test point: type/namespace/declare keywords as TS contextual keywords.
- * Boundary reason: these are TS extensions not in ES spec.
- *  Dynamic ArkTS support status needs confirmation.
+ * Case ID: KEYW-BOUND-009
+ * Coverage ID:
+ *   - KW-TS-001
+ *   - KW-TS-002
+ *   - KW-TS-003
+ * Feature: language_basics
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: declarations
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic language behavior has not been verified.
+ * Description: Verify type/namespace/declare keywords as TS contextual keywords.
  */
 
 function assertTrue(value: boolean, message: string): void {

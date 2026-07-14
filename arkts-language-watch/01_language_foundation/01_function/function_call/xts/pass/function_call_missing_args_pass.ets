@@ -1,6 +1,17 @@
 /*
- * Function Stage 1
- * Test point: missing arguments become undefined.
+ * Case ID: FUNC-PASS-018
+ * Coverage ID:
+ *   - FUNCTION-CALL-0010
+ *   - FUNCTION-TOTAL-0095
+ * Feature: function
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 01_function
+ * Related Chapters: this_keyword
+ * Spec Source: pending
+ * Description: Verify function behavior
  */
 
 function assertTrue(value: boolean, message: string): void {

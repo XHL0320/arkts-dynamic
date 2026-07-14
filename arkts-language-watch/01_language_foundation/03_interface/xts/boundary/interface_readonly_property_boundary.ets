@@ -1,8 +1,19 @@
 /*
- * Interface Stage 1
- * Boundary / pending confirmation.
- * Test point: readonly property in interface.
- * Boundary reason: dynamic ArkTS readonly property compile-time enforcement needs confirmation.
+ * Case ID: INTF-BOUND-014
+ * Coverage ID:
+ *   - IF-RO-001
+ *   - IF-RO-004
+ *   - IF-RO-005
+ * Feature: interface
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 03_interface
+ * Related Chapters: types
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic interface behavior has not been verified.
+ * Description: Verify readonly property declaration, runtime mutability, and object content mutability boundary.
  */
 
 function assertTrue(value: boolean, message: string): void {

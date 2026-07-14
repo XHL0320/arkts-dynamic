@@ -1,9 +1,21 @@
-/*
- * Module Stage 1
- * Test point: named export and import basic.
- * Expected: imported values match exported values.
- */
+﻿/*
+ * Case ID: MODULE-PASS-006
+ * Coverage ID:
 
+ *   - MOD-NE-001
+ *   - MOD-NI-001
+ * Feature: module
+ * Test Type: pass
+ * Expected Phase: module_load
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 06_module
+ * Related Chapters: declarations
+ * Helper IDs:
+ *   - MODULE-HELP-006
+ * Spec Source: pending
+ * Description: Verify named export and named import behavior.
+ */
 import { exportedValue, exportedString, exportedFunction, ExportedClass, mutableValue }
   from '../helpers/named_export/module_named_export_helper'
 

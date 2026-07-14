@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 03_field
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-0039
- * Related Spec: 动态属性访问字段 a['x']，如 ArkTS 禁止则报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-039
+ * Coverage ID:
+ *   - CLASS-TOTAL-0039
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify 动态属性访问字段 a['x']，如 ArkTS 禁止则报错
  */
 
 // Expected error: 动态属性访问字段 a['x']，如 ArkTS 禁止则报错

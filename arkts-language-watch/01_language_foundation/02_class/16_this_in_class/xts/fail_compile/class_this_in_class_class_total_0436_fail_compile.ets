@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 16_this_in_class
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: ES2022 / ArkTS-specific
- * Source Coverage ID: CLASS-TOTAL-0436
- * Related Spec: static method 中 this 调用 instance method，checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-403
+ * Coverage ID:
+ *   - CLASS-TOTAL-0436
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: this_keyword
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify static method 中 this 调用 instance method，checker 报错
  */
 
 // Expected error: static method 中 this 调用 instance method，checker 报错

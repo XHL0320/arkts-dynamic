@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 18_class_initialization_order
- * CaseType: fail_runtime
- * Priority: P0
- * ECMA Baseline Status: ES2022 / ArkTS-specific
- * Source Coverage ID: CLASS-TOTAL-0857
- * Related Spec: constructor 抛异常导致对象构造中断
- * Expected: Runtime throws an exception; error message is not asserted.
+ * Case ID: CLASS-FAILR-016
+ * Coverage ID:
+ *   - CLASS-TOTAL-0857
+ * Feature: class
+ * Test Type: fail_runtime
+ * Expected Phase: runtime
+ * Expected Outcome: exception
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Expected Exception: pending
+ * Description: Verify constructor 抛异常导致对象构造中断
  */
 
 function assertTrue(value: boolean, message: string): void {

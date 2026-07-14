@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 18_class_initialization_order
- * CaseType: fail_runtime
- * Priority: P0
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-0862
- * Related Spec: 字段初始化表达式抛异常导致构造中断
- * Expected: Runtime throws an exception; error message is not asserted.
+ * Case ID: CLASS-FAILR-020
+ * Coverage ID:
+ *   - CLASS-TOTAL-0862
+ * Feature: class
+ * Test Type: fail_runtime
+ * Expected Phase: runtime
+ * Expected Outcome: exception
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Expected Exception: pending
+ * Description: Verify 字段初始化表达式抛异常导致构造中断
  */
 
 function assertTrue(value: boolean, message: string): void {

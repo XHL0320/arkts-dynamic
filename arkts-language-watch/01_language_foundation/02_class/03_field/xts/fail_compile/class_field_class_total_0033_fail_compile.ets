@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 03_field
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-0033
- * Related Spec: number[] 字段写入 string[]，checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-034
+ * Coverage ID:
+ *   - CLASS-TOTAL-0033
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify number[] 字段写入 string[]，checker 报错
  */
 
 // Expected error: number[] 字段写入 string[]，checker 报错

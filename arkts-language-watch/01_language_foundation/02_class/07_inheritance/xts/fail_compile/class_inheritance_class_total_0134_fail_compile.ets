@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 07_inheritance
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0134
- * Related Spec: generic 继承中类型参数不满足约束，checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-121
+ * Coverage ID:
+ *   - CLASS-TOTAL-0134
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify generic 继承中类型参数不满足约束，checker 报错
  */
 
 // Expected error: generic 继承中类型参数不满足约束，checker 报错

@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 16_this_in_class
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: ES2022 / ArkTS-specific
- * Source Coverage ID: CLASS-TOTAL-0413
- * Related Spec: constructor 中 this.method() 参数错误，checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-381
+ * Coverage ID:
+ *   - CLASS-TOTAL-0413
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: this_keyword
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify constructor 中 this.method() 参数错误，checker 报错
  */
 
 // Expected error: constructor 中 this.method() 参数错误，checker 报错

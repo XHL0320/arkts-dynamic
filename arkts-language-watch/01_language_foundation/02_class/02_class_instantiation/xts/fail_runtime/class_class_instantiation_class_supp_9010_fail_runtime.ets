@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 02_class_instantiation
- * CaseType: fail_runtime
- * Priority: P2
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-SUPP-9010
- * Related Spec: constructor throwing abrupt completion is observable
- * Expected: Runtime throws an exception; error message is not asserted.
+ * Case ID: CLASS-FAILR-001
+ * Coverage ID:
+ *   - CLASS-SUPP-9010
+ * Feature: class
+ * Test Type: fail_runtime
+ * Expected Phase: runtime
+ * Expected Outcome: exception
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Expected Exception: pending
+ * Description: Verify constructor throwing abrupt completion is observable
  */
 
 function assertTrue(value: boolean, message: string): void {

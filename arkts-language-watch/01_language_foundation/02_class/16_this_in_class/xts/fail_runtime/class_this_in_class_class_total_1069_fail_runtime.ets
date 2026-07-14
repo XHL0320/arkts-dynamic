@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 16_this_in_class
- * CaseType: fail_runtime
- * Priority: P1
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-1069
- * Related Spec: callback 中 this 丢失导致 TypeError
- * Expected: Runtime throws an exception; error message is not asserted.
+ * Case ID: CLASS-FAILR-005
+ * Coverage ID:
+ *   - CLASS-TOTAL-1069
+ * Feature: class
+ * Test Type: fail_runtime
+ * Expected Phase: runtime
+ * Expected Outcome: exception
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: this_keyword
+ * Spec Source: pending
+ * Expected Exception: pending
+ * Description: Verify callback 中 this 丢失导致 TypeError
  */
 
 function assertTrue(value: boolean, message: string): void {

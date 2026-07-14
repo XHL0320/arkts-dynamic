@@ -1,7 +1,19 @@
 /*
- * Operator Stage 1
- * Test point: compound assignment +=.
- * Expected: x += 5 is equivalent to x = x + 5.
+ * Case ID: OPER-PASS-005
+ * Coverage ID:
+ *   - OP-COMPOUND-ASSIGNMENT-001
+ *   - OP-COMPOUND-ASSIGNMENT-002
+ *   - OP-COMPOUND-ASSIGNMENT-003
+ *   - OP-COMPOUND-ASSIGNMENT-004
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify compound assignment +=.. x += 5 is equivalent to x = x + 5.
  */
 
 function assertTrue(value: boolean, message: string): void {

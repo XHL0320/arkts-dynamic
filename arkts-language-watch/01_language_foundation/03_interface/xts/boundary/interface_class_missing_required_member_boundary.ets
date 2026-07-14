@@ -1,9 +1,18 @@
 /*
- * Interface Stage 1
- * Boundary / pending confirmation.
- * Test point: class missing required interface member.
- * Boundary reason: dynamic ArkTS compile-time enforcement of implements needs confirmation.
- * In TypeScript, this would be a compile error.
+ * Case ID: INTF-BOUND-003
+ * Coverage ID:
+ *   - IF-IMPL-002
+ *   - IF-IMPL-005
+ * Feature: interface
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 03_interface
+ * Related Chapters: class
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic interface behavior has not been verified.
+ * Description: Verify class missing required member and runtime erasure boundary.
  */
 
 function assertTrue(value: boolean, message: string): void {

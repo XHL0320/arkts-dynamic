@@ -1,7 +1,16 @@
 /*
- * Generic Stage 1
- * Test point: nested generic array Array<Array<T>>.
- * Expected: nested generic array compiles and works.
+ * Case ID: GEN-PASS-012
+ * Coverage ID:
+ *   - GEN-NEST-001
+ * Feature: generic
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 04_generic
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify nested generic Array<Array<T>>.
  */
 
 function assertTrue(value: boolean, message: string): void {

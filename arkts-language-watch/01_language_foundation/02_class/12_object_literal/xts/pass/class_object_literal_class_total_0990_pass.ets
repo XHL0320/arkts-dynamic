@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 12_object_literal
- * CaseType: pass
- * Priority: P1
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-0990
- * Related Spec: object literal function property 作为 factory method 返回 class instance
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-297
+ * Coverage ID:
+ *   - CLASS-TOTAL-0990
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify object literal function property 作为 factory method 返回 class instance
  */
 
 function assertTrue(value: boolean, message: string): void {

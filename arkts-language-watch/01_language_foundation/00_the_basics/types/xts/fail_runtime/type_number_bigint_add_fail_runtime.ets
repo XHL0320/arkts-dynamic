@@ -1,4 +1,18 @@
-// Type Stage 1. Expected: number + bigint throws at runtime if bigint is supported.
+/*
+ * Case ID: TYPE-FAILR-002
+ * Coverage ID:
+ *   - TYPE-STAGE1-016
+ * Feature: language_basics
+ * Test Type: fail_runtime
+ * Expected Phase: runtime
+ * Expected Outcome: exception
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Expected Exception: pending
+ * Description: Verify types behavior
+ */
 function assertTrue(value: boolean, message: string): void {
   if (!value) {
     throw new Error(message)

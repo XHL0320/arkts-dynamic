@@ -1,8 +1,19 @@
 /*
- * Generic Stage 1
- * Regression test.
- * Test point: generic basic declaration, function, class, interface regression.
- * Regression reason: verify that basic generic syntax continues to work.
+ * Case ID: GEN-REGR-001
+ * Coverage ID:
+ *   - GEN-CLASS-001
+ *   - GEN-FUNC-001
+ *   - GEN-IF-001
+ * Feature: generic
+ * Test Type: regression
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 04_generic
+ * Related Chapters: function, class, interface
+ * Spec Source: pending
+ * Regression Issue: pending
+ * Description: Verify generic function, class, and interface basic regression.
  */
 
 function assertTrue(value: boolean, message: string): void {

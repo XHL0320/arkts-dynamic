@@ -1,9 +1,18 @@
 /*
- * Generic Stage 1
- * Boundary / pending confirmation.
- * Test point: generic constraint violation.
- * Boundary reason: dynamic ArkTS constraint violation compile error needs confirmation.
- * In TypeScript, passing a type that doesn't satisfy constraint is a compile error.
+ * Case ID: GEN-BOUND-003
+ * Coverage ID:
+ *   - GEN-CONST-004
+ *   - GEN-CONST-005
+ * Feature: generic
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 04_generic
+ * Related Chapters: types, interface
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic generic behavior has not been verified.
+ * Description: Verify generic constraint with interface structure and runtime check boundary.
  */
 
 function assertTrue(value: boolean, message: string): void {

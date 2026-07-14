@@ -1,10 +1,22 @@
-/*
- * Module Stage 1
- * Boundary / pending confirmation.
- * Test point: type-only import and export interface/generic boundary.
- * Boundary reason: TS type-only import/export support in dynamic ArkTS needs confirmation.
- */
+﻿/*
+ * Case ID: MODULE-BOUND-012
+ * Coverage ID:
 
+ *   - MOD-TIO-001
+ *   - MOD-TIO-003
+ * Feature: module
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 06_module
+ * Related Chapters: 03_interface, 04_generic
+ * Helper IDs:
+ *   - MODULE-HELP-010
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic behavior has not been verified.
+ * Description: Verify type-only import and export boundary.
+ */
 import { concreteValue, ExportedInterface, ExportedType, genericIdentity }
   from '../helpers/type_only/module_type_only_helper'
 

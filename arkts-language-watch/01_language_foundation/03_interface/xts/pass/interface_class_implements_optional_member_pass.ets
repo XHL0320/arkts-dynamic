@@ -1,7 +1,16 @@
 /*
- * Interface Stage 1
- * Test point: class implements interface with optional member omitted.
- * Expected: optional member can be omitted in class implementation.
+ * Case ID: INTF-PASS-001
+ * Coverage ID:
+ *   - IF-IMPL-001
+ * Feature: interface
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 03_interface
+ * Related Chapters: class
+ * Spec Source: pending
+ * Description: Verify class implements interface with optional member.
  */
 
 function assertTrue(value: boolean, message: string): void {

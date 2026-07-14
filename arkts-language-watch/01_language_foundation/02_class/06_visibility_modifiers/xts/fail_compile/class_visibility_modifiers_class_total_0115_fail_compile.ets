@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 06_visibility_modifiers
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific
- * Source Coverage ID: CLASS-TOTAL-0115
- * Related Spec: protected field 不能满足 interface public property，checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-102
+ * Coverage ID:
+ *   - CLASS-TOTAL-0115
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify protected field 不能满足 interface public property，checker 报错
  */
 
 // Expected error: protected field 不能满足 interface public property，checker 报错

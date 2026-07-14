@@ -1,7 +1,17 @@
 /*
- * Interface Stage 1
- * Test point: interface extends multiple interfaces.
- * Expected: sub-interface inherits all parent interface members.
+ * Case ID: INTF-PASS-004
+ * Coverage ID:
+ *   - IF-MULTEXT-001
+ *   - IF-MULTEXT-002
+ * Feature: interface
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 03_interface
+ * Related Chapters: interface
+ * Spec Source: pending
+ * Description: Verify interface extends multiple interfaces with member merge.
  */
 
 function assertTrue(value: boolean, message: string): void {

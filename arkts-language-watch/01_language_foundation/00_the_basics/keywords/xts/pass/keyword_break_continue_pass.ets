@@ -1,7 +1,16 @@
 /*
- * Keyword Stage 1
- * Test point: break/continue keywords in valid loop positions.
- * Expected: break/continue keywords work as jump statements inside loops.
+ * Case ID: KEYW-PASS-001
+ * Coverage ID:
+ *   - KW-STMT-004
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: declarations
+ * Spec Source: pending
+ * Description: Verify break/continue keywords in valid loop positions.. break/continue keywords work as jump statements inside loops.
  */
 
 function assertTrue(value: boolean, message: string): void {

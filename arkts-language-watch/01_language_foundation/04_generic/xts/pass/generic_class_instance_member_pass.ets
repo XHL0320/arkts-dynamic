@@ -1,7 +1,16 @@
 /*
- * Generic Stage 1
- * Test point: generic class instance member types.
- * Expected: generic class members use type parameter correctly.
+ * Case ID: GEN-PASS-003
+ * Coverage ID:
+ *   - GEN-CLASS-003
+ * Feature: generic
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 04_generic
+ * Related Chapters: class
+ * Spec Source: pending
+ * Description: Verify generic class instance member type.
  */
 
 function assertTrue(value: boolean, message: string): void {

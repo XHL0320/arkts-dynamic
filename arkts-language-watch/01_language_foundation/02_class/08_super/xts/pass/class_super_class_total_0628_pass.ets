@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 08_super
- * CaseType: pass
- * Priority: P0
- * ECMA Baseline Status: ES2022
- * Source Coverage ID: CLASS-TOTAL-0628
- * Related Spec: super.method() 返回 object 并访问对象字段
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-170
+ * Coverage ID:
+ *   - CLASS-TOTAL-0628
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: this_keyword
+ * Spec Source: pending
+ * Description: Verify super.method() 返回 object 并访问对象字段
  */
 
 function assertTrue(value: boolean, message: string): void {

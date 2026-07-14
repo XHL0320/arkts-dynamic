@@ -1,7 +1,17 @@
 /*
- * Generic Stage 1
- * Test point: generic class basic declaration and instantiation.
- * Expected: Container<T> compiles and works.
+ * Case ID: GEN-PASS-002
+ * Coverage ID:
+ *   - GEN-CLASS-001
+ *   - GEN-CLASS-002
+ * Feature: generic
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 04_generic
+ * Related Chapters: class
+ * Spec Source: pending
+ * Description: Verify generic class basic declaration and instantiation.
  */
 
 function assertTrue(value: boolean, message: string): void {

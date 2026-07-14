@@ -1,7 +1,16 @@
 /*
- * Keyword Stage 1
- * Test point: for/while/do keywords in valid positions.
- * Expected: for/while/do keywords work as loop statements.
+ * Case ID: KEYW-PASS-003
+ * Coverage ID:
+ *   - KW-STMT-003
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: declarations
+ * Spec Source: pending
+ * Description: Verify for/while/do keywords in valid positions.. for/while/do keywords work as loop statements.
  */
 
 function assertTrue(value: boolean, message: string): void {

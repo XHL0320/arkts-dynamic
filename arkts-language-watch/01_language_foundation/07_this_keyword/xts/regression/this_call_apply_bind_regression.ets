@@ -1,7 +1,22 @@
 /*
- * This Keyword Stage 1
- * Regression test.
- * Test point: call/apply/bind this regression.
+ * Case ID: THIS-REGR-002
+ * Coverage ID:
+ *   - TK-CAB-001
+ *   - TK-CAB-002
+ *   - TK-CAB-003
+ *   - TK-CAB-004
+ * Feature: this_keyword
+ * Test Type: regression
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Actual Path: arkts-language-watch/01_language_foundation/07_this_keyword/xts/regression/this_call_apply_bind_regression.ets
+ * Owner Chapter: 07_this_keyword
+ * Related Chapters: 01_function, builtin_api_watch
+ * Spec Source: pending
+ * Regression Issue: pending
+ * Description: Verify call/apply/bind this regression.
+ * Notes: Original metadata: This Keyword Stage 1 Regression test. Test point: call/apply/bind this regression.
  */
 
 function assertTrue(value: boolean, message: string): void {

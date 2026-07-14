@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 18_class_initialization_order
- * CaseType: pass
- * Priority: P0
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-0805
- * Related Spec: 字段初始化表达式使用函数调用并记录调用顺序
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-439
+ * Coverage ID:
+ *   - CLASS-TOTAL-0805
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify 字段初始化表达式使用函数调用并记录调用顺序
  */
 
 function assertTrue(value: boolean, message: string): void {

@@ -1,8 +1,18 @@
 /*
- * Keyword Stage 1
- * Boundary / pending confirmation.
- * Test point: import/export module keywords boundary.
- * Boundary reason: module keyword syntax and dynamic ArkTS module support needs confirmation.
+ * Case ID: KEYW-BOUND-005
+ * Coverage ID:
+ *   - KW-MOD-001
+ *   - KW-MOD-002
+ * Feature: language_basics
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: declarations
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic language behavior has not been verified.
+ * Description: Verify import/export module keywords boundary.
  */
 
 function assertTrue(value: boolean, message: string): void {

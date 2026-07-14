@@ -1,9 +1,18 @@
-/*
- * Null Safety Stage 1
- * Test point: default parameter with undefined uses default.
- * Expected: passing undefined triggers default value.
+﻿/*
+ * Case ID: NULL-PASS-002
+ * Coverage ID:
+ *   - NS-DEFPARAM-001
+ *   - NS-DEFPARAM-003
+ * Feature: null_safety
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 05_null_safety
+ * Related Chapters: function
+ * Spec Source: pending
+ * Description: Verify default parameter with undefined uses default value.
  */
-
 function assertTrue(value: boolean, message: string): void {
   if (!value) { throw new Error(message) }
 }

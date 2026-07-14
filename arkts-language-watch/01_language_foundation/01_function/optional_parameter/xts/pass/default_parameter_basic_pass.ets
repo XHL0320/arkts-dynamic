@@ -1,7 +1,17 @@
 /*
- * Function Stage 1
- * Test point: default parameter basic behavior.
- * Expected: default parameter is used when an argument is omitted.
+ * Case ID: FUNC-PASS-030
+ * Coverage ID:
+ *   - FUNCTION-TOTAL-0010
+ *   - OPTIONAL-PARAMETER-0002
+ * Feature: function
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 01_function
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify function behavior. default parameter is used when an argument is omitted.
  */
 
 function assertNumberEqual(actual: number, expected: number, message: string): void {

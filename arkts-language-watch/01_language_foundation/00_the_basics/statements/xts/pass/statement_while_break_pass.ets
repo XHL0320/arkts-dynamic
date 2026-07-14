@@ -1,7 +1,17 @@
 /*
- * Statement Stage 1
- * Test point: while loop with break exits early.
- * Expected: break exits the while loop immediately.
+ * Case ID: STMT-PASS-025
+ * Coverage ID:
+ *   - STMT-BREAK-001
+ *   - STMT-WHILE-003
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: function
+ * Spec Source: pending
+ * Description: Verify while loop with break exits early.. break exits the while loop immediately.
  */
 
 function assertTrue(value: boolean, message: string): void {

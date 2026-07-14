@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 12_object_literal
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific
- * Source Coverage ID: CLASS-TOTAL-0306
- * Related Spec: optional property 类型不匹配，checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-282
+ * Coverage ID:
+ *   - CLASS-TOTAL-0306
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify optional property 类型不匹配，checker 报错
  */
 
 // Expected error: optional property 类型不匹配，checker 报错

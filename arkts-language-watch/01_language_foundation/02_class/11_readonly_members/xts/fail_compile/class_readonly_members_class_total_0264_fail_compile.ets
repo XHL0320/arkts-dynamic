@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 11_readonly_members
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0264
- * Related Spec: readonly 字段类型注解与初始化值不一致，checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-242
+ * Coverage ID:
+ *   - CLASS-TOTAL-0264
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify readonly 字段类型注解与初始化值不一致，checker 报错
  */
 
 // Expected error: readonly 字段类型注解与初始化值不一致，checker 报错

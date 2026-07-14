@@ -1,7 +1,16 @@
 /*
- * Function Stage 2
- * Coverage: closure updates outer variable.
- * Expected: repeated calls observe the same captured binding.
+ * Case ID: FUNC-PASS-012
+ * Coverage ID:
+ *   - FUNCTION-TOTAL-0066
+ * Feature: function
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 01_function
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify closure updates outer variable.. repeated calls observe the same captured binding.
  */
 function assertNumberEqual(actual: number, expected: number, message: string): void {
   if (actual !== expected) {

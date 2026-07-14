@@ -1,7 +1,18 @@
 /*
- * Interface Stage 1
- * Test point: interface with optional property.
- * Expected: optional property can be omitted.
+ * Case ID: INTF-PASS-009
+ * Coverage ID:
+ *   - IF-OPT-001
+ *   - IF-OPT-002
+ *   - IF-OPT-004
+ * Feature: interface
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 03_interface
+ * Related Chapters: types,null_safety
+ * Spec Source: pending
+ * Description: Verify optional property declaration, undefined value, and mixed with required.
  */
 
 function assertTrue(value: boolean, message: string): void {

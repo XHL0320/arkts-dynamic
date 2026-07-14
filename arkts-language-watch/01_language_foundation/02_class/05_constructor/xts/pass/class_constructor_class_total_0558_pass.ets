@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 05_constructor
- * CaseType: pass
- * Priority: P0
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-0558
- * Related Spec: constructor 抛异常可被 catch 捕获
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-092
+ * Coverage ID:
+ *   - CLASS-TOTAL-0558
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify constructor 抛异常可被 catch 捕获
  */
 
 function assertTrue(value: boolean, message: string): void {

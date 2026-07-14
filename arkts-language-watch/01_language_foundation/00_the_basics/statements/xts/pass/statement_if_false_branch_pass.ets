@@ -1,7 +1,16 @@
 /*
- * Statement Stage 1
- * Test point: if false branch does not execute.
- * Expected: when condition is false, the if body is skipped.
+ * Case ID: STMT-PASS-015
+ * Coverage ID:
+ *   - STMT-IF-002
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: function
+ * Spec Source: pending
+ * Description: Verify if false branch does not execute.. when condition is false, the if body is skipped.
  */
 
 function assertTrue(value: boolean, message: string): void {

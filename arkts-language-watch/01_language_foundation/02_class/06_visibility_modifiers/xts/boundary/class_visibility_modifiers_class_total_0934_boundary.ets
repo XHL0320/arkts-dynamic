@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 06_visibility_modifiers
- * CaseType: boundary
- * Priority: P1
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0934
- * Related Spec: getter public setter private 只读暴露模式通过，如 ArkTS 支持
- * Expected: Pending ArkTS behavior confirmation; no strong assertion.
+ * Case ID: CLASS-BOUND-025
+ * Coverage ID:
+ *   - CLASS-TOTAL-0934
+ * Feature: class
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic class behavior has not been verified.
+ * Description: Verify getter public setter private 只读暴露模式通过，如 ArkTS 支持
  */
 
 function assertTrue(value: boolean, message: string): void {

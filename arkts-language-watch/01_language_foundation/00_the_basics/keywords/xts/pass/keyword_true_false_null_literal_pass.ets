@@ -1,7 +1,18 @@
 /*
- * Keyword Stage 1
- * Test point: true/false/null literal keywords.
- * Expected: true/false/null keywords work as literal values.
+ * Case ID: KEYW-PASS-011
+ * Coverage ID:
+ *   - KW-LIT-001
+ *   - KW-LIT-002
+ *   - KW-LIT-003
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: declarations
+ * Spec Source: pending
+ * Description: Verify true/false/null literal keywords.. true/false/null keywords work as literal values.
  */
 
 function assertTrue(value: boolean, message: string): void {

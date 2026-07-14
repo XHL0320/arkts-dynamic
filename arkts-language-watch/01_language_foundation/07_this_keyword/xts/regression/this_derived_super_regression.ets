@@ -1,7 +1,20 @@
 /*
- * This Keyword Stage 1
- * Regression test.
- * Test point: derived super/this regression.
+ * Case ID: THIS-REGR-004
+ * Coverage ID:
+ *   - TK-DCS-002
+ *   - TK-DCS-005
+ * Feature: this_keyword
+ * Test Type: regression
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Actual Path: arkts-language-watch/01_language_foundation/07_this_keyword/xts/regression/this_derived_super_regression.ets
+ * Owner Chapter: 07_this_keyword
+ * Related Chapters: 02_class
+ * Spec Source: pending
+ * Regression Issue: pending
+ * Description: Verify derived super/this regression.
+ * Notes: Original metadata: This Keyword Stage 1 Regression test. Test point: derived super/this regression.
  */
 
 function assertTrue(value: boolean, message: string): void {

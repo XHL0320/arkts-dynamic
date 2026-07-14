@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 19_class_runtime_behavior
- * CaseType: boundary
- * Priority: P1
- * ECMA Baseline Status: ES2022
- * Source Coverage ID: CLASS-TOTAL-1126
- * Related Spec: constructor property 被覆盖后的边界
- * Expected: Pending ArkTS behavior confirmation; no strong assertion.
+ * Case ID: CLASS-BOUND-109
+ * Coverage ID:
+ *   - CLASS-TOTAL-1126
+ * Feature: class
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic class behavior has not been verified.
+ * Description: Verify constructor property 被覆盖后的边界
  */
 
 function assertTrue(value: boolean, message: string): void {

@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 05_constructor
- * CaseType: pass
- * Priority: P0
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-0565
- * Related Spec: 多参数 constructor 调用通过
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-099
+ * Coverage ID:
+ *   - CLASS-TOTAL-0565
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify 多参数 constructor 调用通过
  */
 
 function assertTrue(value: boolean, message: string): void {

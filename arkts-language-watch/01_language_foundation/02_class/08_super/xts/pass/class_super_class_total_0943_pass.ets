@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 08_super
- * CaseType: pass
- * Priority: P1
- * ECMA Baseline Status: ES2022
- * Source Coverage ID: CLASS-TOTAL-0943
- * Related Spec: constructor 内 arrow function 在 super() 后捕获 super.method()，如 ArkTS 支持
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-178
+ * Coverage ID:
+ *   - CLASS-TOTAL-0943
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: this_keyword
+ * Spec Source: pending
+ * Description: Verify constructor 内 arrow function 在 super() 后捕获 super.method()，如 ArkTS 支持
  */
 
 function assertTrue(value: boolean, message: string): void {

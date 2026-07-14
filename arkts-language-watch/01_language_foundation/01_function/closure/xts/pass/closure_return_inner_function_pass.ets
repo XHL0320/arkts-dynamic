@@ -1,7 +1,16 @@
 /*
- * Function Stage 2
- * Coverage: outer function returns inner function.
- * Expected: returned function remains callable after outer returns.
+ * Case ID: FUNC-PASS-011
+ * Coverage ID:
+ *   - CLOSURE-0003
+ * Feature: function
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 01_function
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify outer function returns inner function.. returned function remains callable after outer returns.
  */
 function assertStringEqual(actual: string, expected: string, message: string): void {
   if (actual !== expected) {

@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 19_class_runtime_behavior
- * CaseType: integration
- * Priority: P1
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-1127
- * Related Spec: circular import 中 class evaluation 边界组合
- * Expected: Integrated class semantics compile and run with focused assertions.
+ * Case ID: CLASS-INTEG-015
+ * Coverage ID:
+ *   - CLASS-TOTAL-1127
+ * Feature: class
+ * Test Type: integration
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify circular import 中 class evaluation 边界组合
  */
 
 function assertTrue(value: boolean, message: string): void {

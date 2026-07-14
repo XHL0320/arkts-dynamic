@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 03_field
- * CaseType: pass
- * Priority: P0
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-0509
- * Related Spec: union 字段分别赋值 union 成员通过
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-043
+ * Coverage ID:
+ *   - CLASS-TOTAL-0509
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify union 字段分别赋值 union 成员通过
  */
 
 function assertTrue(value: boolean, message: string): void {

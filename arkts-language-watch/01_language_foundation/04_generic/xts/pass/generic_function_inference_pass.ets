@@ -1,7 +1,17 @@
 /*
- * Generic Stage 1
- * Test point: generic function type argument inference.
- * Expected: type argument inferred from parameter.
+ * Case ID: GEN-PASS-006
+ * Coverage ID:
+ *   - GEN-FUNC-003
+ *   - GEN-INFER-001
+ * Feature: generic
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 04_generic
+ * Related Chapters: function
+ * Spec Source: pending
+ * Description: Verify generic function type inference.
  */
 
 function assertTrue(value: boolean, message: string): void {

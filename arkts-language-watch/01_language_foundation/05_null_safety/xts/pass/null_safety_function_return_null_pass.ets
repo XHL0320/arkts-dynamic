@@ -1,9 +1,17 @@
-/*
- * Null Safety Stage 1
- * Test point: function returning null.
- * Expected: function can explicitly return null.
+﻿/*
+ * Case ID: NULL-PASS-003
+ * Coverage ID:
+ *   - NS-RET-002
+ * Feature: null_safety
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 05_null_safety
+ * Related Chapters: function
+ * Spec Source: pending
+ * Description: Verify function can explicitly return null.
  */
-
 function assertTrue(value: boolean, message: string): void {
   if (!value) { throw new Error(message) }
 }

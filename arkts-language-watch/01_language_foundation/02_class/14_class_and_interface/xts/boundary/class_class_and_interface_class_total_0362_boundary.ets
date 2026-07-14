@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 14_class_and_interface
- * CaseType: boundary
- * Priority: P0
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-0362
- * Related Spec: optional property 不满足 ArkTS 规则时 checker 报错，如支持 optional
- * Expected: Pending ArkTS behavior confirmation; no strong assertion.
+ * Case ID: CLASS-BOUND-083
+ * Coverage ID:
+ *   - CLASS-TOTAL-0362
+ * Feature: class
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: interface
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic class behavior has not been verified.
+ * Description: Verify optional property 不满足 ArkTS 规则时 checker 报错，如支持 optional
  */
 
 function assertTrue(value: boolean, message: string): void {

@@ -1,7 +1,17 @@
 /*
- * Statement Stage 1
- * Test point: for-in enumerates object own properties.
- * Expected: for-in iterates over enumerable property keys.
+ * Case ID: STMT-PASS-012
+ * Coverage ID:
+ *   - STMT-FORIN-001
+ *   - STMT-FORIN-004
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: function
+ * Spec Source: pending
+ * Description: Verify for-in enumerates object own properties.. for-in iterates over enumerable property keys.
  */
 
 function assertTrue(value: boolean, message: string): void {

@@ -1,7 +1,16 @@
 /*
- * Statement Stage 1
- * Test point: try-catch-finally execution order.
- * Expected: try → catch (on exception) → finally.
+ * Case ID: STMT-PASS-022
+ * Coverage ID:
+ *   - STMT-TRY-003
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: function
+ * Spec Source: pending
+ * Description: Verify try-catch-finally execution order.. try → catch (on exception) → finally.
  */
 
 function assertTrue(value: boolean, message: string): void {

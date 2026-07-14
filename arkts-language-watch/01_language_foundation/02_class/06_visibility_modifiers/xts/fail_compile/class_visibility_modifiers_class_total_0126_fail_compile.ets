@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 06_visibility_modifiers
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0126
- * Related Spec: 子类直接 override private method，如 ArkTS 禁止则 checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-112
+ * Coverage ID:
+ *   - CLASS-TOTAL-0126
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify 子类直接 override private method，如 ArkTS 禁止则 checker 报错
  */
 
 // Expected error: 子类直接 override private method，如 ArkTS 禁止则 checker 报错

@@ -1,8 +1,17 @@
 /*
- * Declaration Stage 1
- * Boundary / pending confirmation.
- * Test point: duplicate function declaration in the same scope.
- * Reason: ECMAScript allows function redeclaration in many cases, but dynamic ArkTS support must be confirmed.
+ * Case ID: DECL-BOUND-002
+ * Coverage ID:
+ *   - DECL-FUNC-005
+ * Feature: language_basics
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic language behavior has not been verified.
+ * Description: Verify duplicate function declaration in the same scope.
  */
 
 function assertTrue(value: boolean, message: string): void {

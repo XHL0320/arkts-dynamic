@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 09_override
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0186
- * Related Spec: instance method 不能 override static method，checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-173
+ * Coverage ID:
+ *   - CLASS-TOTAL-0186
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: function
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify instance method 不能 override static method，checker 报错
  */
 
 // Expected error: instance method 不能 override static method，checker 报错

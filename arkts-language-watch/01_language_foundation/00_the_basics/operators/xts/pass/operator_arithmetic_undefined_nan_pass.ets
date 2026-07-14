@@ -1,7 +1,16 @@
 /*
- * Operator Stage 1
- * Test point: undefined arithmetic produces NaN.
- * Expected: undefined + 1 is NaN.
+ * Case ID: OPER-PASS-004
+ * Coverage ID:
+ *   - OP-ARITHMETIC-005
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify undefined arithmetic produces NaN.. undefined + 1 is NaN.
  */
 
 function assertTrue(value: boolean, message: string): void {

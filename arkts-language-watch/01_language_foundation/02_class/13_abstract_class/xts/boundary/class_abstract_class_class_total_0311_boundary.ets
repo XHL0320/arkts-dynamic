@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 13_abstract_class
- * CaseType: boundary
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0311
- * Related Spec: abstract accessor 语法不支持时声明 abstract accessor，parser/checker 报错
- * Expected: Pending ArkTS behavior confirmation; no strong assertion.
+ * Case ID: CLASS-BOUND-072
+ * Coverage ID:
+ *   - CLASS-TOTAL-0311
+ * Feature: class
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: interface
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic class behavior has not been verified.
+ * Description: Verify abstract accessor 语法不支持时声明 abstract accessor，parser/checker 报错
  */
 
 function assertTrue(value: boolean, message: string): void {

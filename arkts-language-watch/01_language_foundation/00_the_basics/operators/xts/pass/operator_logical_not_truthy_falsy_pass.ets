@@ -1,7 +1,16 @@
 /*
- * Operator Stage 1
- * Test point: logical NOT truthy and falsy values.
- * Expected: !false === true, !0 === true, !"" === true, !null === true, !undefined === true, !NaN === true.
+ * Case ID: OPER-PASS-016
+ * Coverage ID:
+ *   - OP-LOGICAL-003
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify logical NOT truthy and falsy values.. !false === true, !0 === true, !"" === true, !null === true, !undefined === true, !NaN === true.
  */
 
 function assertTrue(value: boolean, message: string): void {

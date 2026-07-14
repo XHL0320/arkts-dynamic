@@ -1,72 +1,87 @@
-# Declaration Coverage Matrix
+# declarations Coverage Matrix
 
-| ID | Declaration Type | Test Point | Case Type | Priority | Has Existing Case | Suggested Path | Related Chapter | Risk Point | Notes |
-|---|---|---|---|---|---|---|---|---|---|
-| DECL-VAR-001 | var | var 声明提升后赋值前访问返回 undefined | pass | P0 | yes | `declarations/xts/pass/declaration_var_hoisting_pass.ets` | declarations | 低 | Stage 1 generated |
-| DECL-VAR-002 | var | var 声明在同一函数作用域内重复声明 | pass | P0 | yes | `declarations/xts/pass/declaration_var_duplicate_pass.ets` | declarations | 中 | Stage 1 generated |
-| DECL-VAR-003 | var | var 声明函数作用域遮蔽外层同名 var | pass | P1 | no | `declarations/xts/pass/declaration_var_scope_shadow_pass` | declarations | 低 | 基础遮蔽行为 |
-| DECL-VAR-004 | var | var 声明全局作用域行为（脚本模式） | pass | P1 | no | `declarations/xts/pass/declaration_var_global_pass` | declarations | 中 | 需确认 globalThis 污染 |
-| DECL-VAR-005 | var | var 声明在模块顶层不污染 globalThis | pass | P1 | no | `declarations/xts/pass/declaration_var_module_top_pass` | declarations / 06_module | 中 | 模块 vs 脚本差异 |
-| DECL-VAR-006 | var | var 声明在 for 循环中作用域泄露到函数级 | pass | P1 | no | `declarations/xts/pass/declaration_var_for_scope_leak_pass` | declarations | 低 | ES 经典行为 |
-| DECL-VAR-007 | var | var 声明是否允许在动态 ArkTS 中使用 | boundary | P0 | no | `declarations/xts/boundary/declaration_var_allowed_boundary` | declarations | 高 | 动态 ArkTS 可能限制 var |
-| DECL-VAR-008 | var | var 声明在 catch 子句中的作用域 | pass | P2 | no | `declarations/xts/pass/declaration_var_catch_scope_pass` | declarations | 低 | catch 参数是 var-like |
-| DECL-LET-001 | let | let 声明块级作用域遮蔽外层同名 | pass | P0 | yes | `declarations/xts/pass/declaration_let_block_scope_pass.ets` | declarations | 低 | Stage 1 generated |
-| DECL-LET-002 | let | let 声明无初始化器默认 undefined | pass | P0 | no | `declarations/xts/pass/declaration_let_no_initializer_pass` | declarations | 低 | 基础行为 |
-| DECL-LET-003 | let | let 声明前访问触发 TDZ ReferenceError | fail_runtime | P0 | yes | `declarations/xts/fail_runtime/declaration_let_tdz_fail_runtime.ets` | declarations | 高 | Stage 1 generated |
-| DECL-LET-004 | let | let 同块级作用域重复声明 SyntaxError | fail_compile | P0 | yes | `declarations/xts/fail_compile/declaration_let_duplicate_fail_compile.ets` | declarations | 中 | Stage 1 generated |
-| DECL-LET-005 | let | let + var 同作用域重复声明 SyntaxError | boundary | P0 | yes | `declarations/xts/boundary/declaration_var_let_duplicate_boundary.ets` | declarations | 中 | Stage 1 generated as boundary pending confirmation |
-| DECL-LET-006 | let | TDZ 中 typeof 访问仍抛出 ReferenceError | fail_runtime | P1 | no | `declarations/xts/fail_runtime/declaration_let_tdz_typeof_fail_runtime` | declarations | 中 | 容易误判为安全 |
-| DECL-LET-007 | let | let 声明在 for 循环每次迭代创建新绑定 | pass | P1 | no | `declarations/xts/pass/declaration_let_for_iteration_pass` | declarations | 低 | ES 闭包经典场景 |
-| DECL-LET-008 | let | let 声明在 switch-case 中块级作用域 | pass | P2 | no | `declarations/xts/pass/declaration_let_switch_scope_pass` | declarations | 低 | switch 块级边界 |
-| DECL-LET-009 | let | let 声明初始化器自引用 TDZ | fail_runtime | P1 | no | `declarations/xts/fail_runtime/declaration_let_init_self_ref_fail_runtime` | declarations | 中 | `let x = x` |
-| DECL-CONST-001 | const | const 声明必须初始化 SyntaxError | fail_compile | P0 | yes | `declarations/xts/fail_compile/declaration_const_missing_initializer_fail_compile.ets` | declarations | 低 | Stage 1 generated |
-| DECL-CONST-002 | const | const 声明后值不可重新赋值 TypeError | fail_runtime | P0 | yes | `declarations/xts/fail_runtime/declaration_const_reassignment_fail_runtime.ets` | declarations | 高 | Stage 1 generated; runtime vs compile phase pending validation |
-| DECL-CONST-003 | const | const 声明前访问 TDZ ReferenceError | fail_runtime | P0 | yes | `declarations/xts/fail_runtime/declaration_const_tdz_fail_runtime.ets` | declarations | 高 | Stage 1 generated |
-| DECL-CONST-004 | const | const 声明对象属性可修改 | pass | P0 | no | `declarations/xts/pass/declaration_const_object_mutable_pass` | declarations | 中 | 浅层不可变 |
-| DECL-CONST-005 | const | const 声明数组内容可修改 | pass | P1 | no | `declarations/xts/pass/declaration_const_array_mutable_pass` | declarations | 中 | 浅层不可变 |
-| DECL-CONST-006 | const | const 同块级作用域重复声明 SyntaxError | fail_compile | P0 | yes | `declarations/xts/fail_compile/declaration_const_duplicate_fail_compile.ets` | declarations | 中 | Stage 1 generated |
-| DECL-CONST-007 | const | const + let 同作用域重复声明 SyntaxError | fail_compile | P1 | no | `declarations/xts/fail_compile/declaration_const_let_duplicate_fail_compile` | declarations | 中 | 交叉重复禁止 |
-| DECL-CONST-008 | const | const 重新赋值在动态 ArkTS 中是否为编译期错误 | boundary | P0 | no | `declarations/xts/boundary/declaration_const_reassign_compile_boundary` | declarations | 高 | 运行时 TypeError vs 编译期 error |
-| DECL-CONST-009 | const | const 声明原始值完全不可变 | pass | P0 | no | `declarations/xts/pass/declaration_const_primitive_immutable_pass` | declarations | 低 | 基础行为 |
-| DECL-FUNC-001 | function | 函数声明提升后可在声明前调用 | pass | P0 | yes | `declarations/xts/pass/declaration_function_hoisting_pass.ets` | 01_function | 低 | Stage 1 generated in declarations for binding/hoisting only |
-| DECL-FUNC-002 | function | 函数声明与 var 同名重复声明（函数优先） | pass | P0 | no | `declarations/xts/pass/declaration_func_var_same_name_pass` | declarations + 01_function | 中 | 初始化顺序需确认 |
-| DECL-FUNC-003 | function | 函数声明在块级作用域（严格模式） | boundary | P0 | yes | `declarations/xts/boundary/declaration_block_level_function_boundary.ets` | 01_function + declarations | 高 | Stage 1 generated as boundary |
-| DECL-FUNC-004 | function | 函数声明在块级作用域（非严格模式）提升到函数级 | boundary | P1 | no | `../01_function/function_declaration/xts/boundary/` | 01_function + declarations | 高 | ES 非严格模式特殊行为 |
-| DECL-FUNC-005 | function | 函数声明同名重复声明覆盖 | boundary | P1 | yes | `declarations/xts/boundary/declaration_function_duplicate_boundary.ets` | declarations | 低 | Stage 1 generated as boundary pending confirmation |
-| DECL-FUNC-006 | function | 函数表达式不提升函数体 | pass | P0 | no | `../01_function/function_declaration/xts/pass/` | 01_function | 低 | var 提升 + 函数体不提升 |
-| DECL-FUNC-007 | function | 严格模式块级函数声明 TDZ 访问 | fail_runtime | P1 | no | `../01_function/function_declaration/xts/fail_runtime/` | 01_function + declarations | 高 | TDZ 交互 |
-| DECL-CLASS-001 | class | class 声明 TDZ ReferenceError | fail_runtime | P0 | yes | `declarations/xts/fail_runtime/declaration_class_tdz_fail_runtime.ets` | declarations | 高 | Stage 1 generated |
-| DECL-CLASS-002 | class | class 声明同作用域重复声明 SyntaxError | fail_compile | P0 | yes | `declarations/xts/fail_compile/declaration_class_duplicate_fail_compile.ets` | declarations | 中 | Stage 1 generated |
-| DECL-CLASS-003 | class | class 声明后正常实例化 | pass | P0 | no | `../02_class/xts/pass/` | 02_class | 低 | 基础行为 |
-| DECL-CLASS-004 | class | class + let 同作用域重复声明 SyntaxError | fail_compile | P1 | no | `declarations/xts/fail_compile/declaration_class_let_duplicate_fail_compile` | declarations | 中 | 交叉重复禁止 |
-| DECL-CLASS-005 | class | class + var 同作用域重复声明 SyntaxError | fail_compile | P1 | no | `declarations/xts/fail_compile/declaration_class_var_duplicate_fail_compile` | declarations | 中 | 交叉重复禁止 |
-| DECL-CLASS-006 | class | class 声明在 if 块内的块级作用域 | pass | P1 | no | `declarations/xts/pass/declaration_class_block_scope_pass` | declarations | 低 | 块级绑定 |
-| DECL-CLASS-007 | class | class 声明 TDZ typeof 访问 | fail_runtime | P1 | no | `declarations/xts/fail_runtime/declaration_class_tdz_typeof_fail_runtime` | declarations | 中 | typeof 不绕过 TDZ |
-| DECL-IMPORT-001 | import | import 绑定正常访问目标模块导出值 | integration | P0 | no | `../06_module/import/xts/integration/` | 06_module | 低 | 基础行为 |
-| DECL-IMPORT-002 | import | import live binding 目标模块变量变化可见 | regression | P0 | yes | `declarations/xts/regression/declaration_module_binding_regression.ets` | 06_module | 高 | Stage 1 generated as declaration-level module binding smoke |
-| DECL-IMPORT-003 | import | import 绑定只读，重新赋值 TypeError | fail_runtime | P0 | yes | `declarations/xts/fail_runtime/declaration_import_binding_readonly_fail_runtime.ets` | 06_module + declarations | 高 | Stage 1 generated |
-| DECL-IMPORT-004 | import | import 重复导入同名绑定 SyntaxError | fail_compile | P0 | no | `../06_module/import/xts/fail_compile/` | 06_module | 中 | ES 编译期规则 |
-| DECL-IMPORT-005 | import | import 出现在非模块顶层（函数体内） SyntaxError | fail_compile | P1 | yes | `declarations/xts/fail_compile/declaration_import_not_top_level_fail_compile.ets` | 06_module | 低 | Stage 1 generated |
-| DECL-IMPORT-006 | import | import 绑定在模块顶层声明位置与执行顺序 | pass | P1 | no | `../06_module/import/xts/pass/` | 06_module | 中 | 链接阶段行为 |
-| DECL-IMPORT-007 | import | 循环依赖中 import 声明 TDZ 边界 | boundary | P1 | no | `../06_module/import/xts/boundary/` | 06_module | 高 | 循环依赖风险 |
-| DECL-EXPORT-001 | export | export named 导出本地声明值 | integration | P0 | no | `../06_module/export/xts/integration/` | 06_module | 低 | 基础行为 |
-| DECL-EXPORT-002 | export | export 重复导出同名 SyntaxError | fail_compile | P0 | yes | `declarations/xts/fail_compile/declaration_export_duplicate_fail_compile.ets` | 06_module | 中 | Stage 1 generated |
-| DECL-EXPORT-003 | export | export 出现在非模块顶层 SyntaxError | fail_compile | P1 | no | `../06_module/export/xts/fail_compile/` | 06_module | 低 | 位置限制 |
-| DECL-EXPORT-004 | export | export 声明与本地声明关系（不创建新绑定） | pass | P1 | no | `../06_module/export/xts/pass/` | 06_module | 低 | ES 规范 |
-| DECL-EXPORT-005 | export | export default 与 named export 声明边界 | integration | P1 | no | `../06_module/export/xts/integration/` | 06_module | 中 | default 行为差异 |
-| DECL-EXPORT-006 | export | re-export 声明与本地声明冲突 | fail_compile | P2 | no | `../06_module/export/xts/fail_compile/` | 06_module | 低 | 交叉冲突 |
-| DECL-ANN-001 | annotation | annotation 声明形态映射 | boundary | P1 | no | `../08_annotation/xts/boundary/` | 08_annotation | 高 | ArkTS 扩展声明 |
-| DECL-ANN-002 | annotation | custom annotation 声明运行时行为 | boundary | P2 | no | `../08_annotation/xts/boundary/` | 08_annotation | 高 | 不在 ES 规范内 |
-| DECL-ANN-003 | annotation | annotation 修饰的声明绑定行为是否受影响 | boundary | P1 | no | `../08_decorator_annotation/xts/boundary/` | 08_annotation + declarations | 中 | 装饰器与声明交互 |
-| DECL-CROSS-001 | cross | 嵌套作用域 let/const/var 混合遮蔽 | integration | P1 | no | `declarations/xts/integration/declaration_nested_scope_integration` | declarations | 中 | 作用域组合 |
-| DECL-CROSS-002 | cross | var + function 重复声明初始化顺序 | regression | P1 | no | `declarations/xts/regression/declaration_var_func_init_order_regression` | declarations + 01_function | 中 | 初始化细节 |
-| DECL-CROSS-003 | cross | 声明在 try/catch 中的 TDZ 交互 | integration | P2 | no | `declarations/xts/integration/declaration_try_catch_tdz_integration` | declarations | 低 | 语句交互 |
-| DECL-CROSS-004 | cross | class 声明与函数声明同名边界 | boundary | P2 | no | `declarations/xts/boundary/declaration_class_func_same_name_boundary` | declarations + 01_function + 02_class | 中 | 同名声明组合 |
-| DECL-ENUM-001 | enum | enum 声明绑定语义 | boundary | P1 | no | `declarations/xts/boundary/declaration_enum_binding_boundary` | declarations | 高 | TypeScript 扩展声明 |
-| DECL-ENUM-002 | enum | const enum 声明行为 | boundary | P2 | no | `declarations/xts/boundary/declaration_const_enum_boundary` | declarations | 高 | 编译期替换 vs 运行时对象 |
-| DECL-MOD-001 | module | 模块顶层 let 声明正常访问 | pass | P0 | yes | `declarations/xts/pass/declaration_module_top_level_lexical_pass.ets` | declarations / 06_module | 低 | Stage 1 generated |
-| DECL-CONST-010 | const | const 声明块级作用域遮蔽外层同名 | pass | P1 | yes | `declarations/xts/pass/declaration_const_block_scope_pass.ets` | declarations | 低 | Stage 1 generated |
-| DECL-REG-001 | regression | TDZ 引用不得被优化掉 | regression | P1 | yes | `declarations/xts/regression/declaration_tdz_reference_regression.ets` | declarations | 中 | Stage 1 generated |
-| DECL-MOD-002 | module | 模块顶层 var 不污染 globalThis | boundary | P1 | no | `declarations/xts/boundary/declaration_module_var_global_boundary` | declarations / 06_module | 中 | 模块 vs 脚本差异 |
-| DECL-SCOPE-001 | scope | var 函数作用域 vs let 块级作用域对比 | smoke | P0 | no | `declarations/xts/pass/declaration_var_let_scope_compare_smoke` | declarations | 低 | 核心对比 |
-| DECL-SCOPE-002 | scope | 全局作用域 var 赋值创建 globalThis 属性 | pass | P1 | no | `declarations/xts/pass/declaration_var_global_this_pass` | declarations | 中 | 脚本模式行为 |
+## Coverage Status Summary
+
+| Project | Count |
+|---|---:|
+| Coverage total | 68 |
+| generated | 22 |
+| planned | 46 |
+| validation_pending | 19 |
+| spec_pending | 3 |
+
+## Main Coverage Matrix
+
+| Coverage ID | Basics | Test Point | Case Type | Priority | Coverage Status | Case ID | Actual Path | Validation Status | Related | Risk | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| DECL-VAR-001 | declarations | var 澹版槑鎻愬崌鍚庤祴鍊煎墠璁块棶杩斿洖 undefined | pass | P0 | generated | DECL-PASS-006 | arkts-language-watch/01_language_foundation/00_the_basics/declarations/xts/pass/declaration_var_hoisting_pass.ets | validation_pending | types | declarations | 浣? |
+| DECL-VAR-002 | declarations | var 澹版槑鍦ㄥ悓涓€鍑芥暟浣滅敤鍩熷唴閲嶅澹版槑 | pass | P0 | generated | DECL-PASS-005 | arkts-language-watch/01_language_foundation/00_the_basics/declarations/xts/pass/declaration_var_duplicate_pass.ets | validation_pending | types | declarations | 涓? |
+| DECL-VAR-003 | declarations | var 澹版槑鍑芥暟浣滅敤鍩熼伄钄藉灞傚悓鍚?var | pass | P1 | planned | none | none | planned | types | declarations | 浣? |
+| DECL-VAR-004 | declarations | var 澹版槑鍏ㄥ眬浣滅敤鍩熻涓猴紙鑴氭湰妯″紡锛? | pass | P1 | planned | none | none | planned | types | declarations | 涓? |
+| DECL-VAR-005 | declarations | var 澹版槑鍦ㄦā鍧楅《灞備笉姹℃煋 globalThis | pass | P1 | planned | none | none | planned | types | declarations / 06_module | 涓? |
+| DECL-VAR-006 | declarations | var 澹版槑鍦?for 寰幆涓綔鐢ㄥ煙娉勯湶鍒板嚱鏁扮骇 | pass | P1 | planned | none | none | planned | types | declarations | 浣? |
+| DECL-VAR-007 | declarations | var 澹版槑鏄惁鍏佽鍦ㄥ姩鎬?ArkTS 涓娇鐢? | boundary | P0 | planned | none | none | planned | types | declarations | 楂? |
+| DECL-VAR-008 | declarations | var 澹版槑鍦?catch 瀛愬彞涓殑浣滅敤鍩? | pass | P2 | planned | none | none | planned | types | declarations | 浣? |
+| DECL-LET-001 | declarations | let 澹版槑鍧楃骇浣滅敤鍩熼伄钄藉灞傚悓鍚? | pass | P0 | generated | DECL-PASS-003 | arkts-language-watch/01_language_foundation/00_the_basics/declarations/xts/pass/declaration_let_block_scope_pass.ets | validation_pending | types | declarations | 浣? |
+| DECL-LET-002 | declarations | let 澹版槑鏃犲垵濮嬪寲鍣ㄩ粯璁?undefined | pass | P0 | planned | none | none | planned | types | declarations | 浣? |
+| DECL-LET-003 | declarations | let 澹版槑鍓嶈闂Е鍙?TDZ ReferenceError | fail_runtime | P0 | generated | DECL-FAILR-005 | arkts-language-watch/01_language_foundation/00_the_basics/declarations/xts/fail_runtime/declaration_let_tdz_fail_runtime.ets | validation_pending | types | declarations | 楂? |
+| DECL-LET-004 | declarations | let 鍚屽潡绾т綔鐢ㄥ煙閲嶅澹版槑 SyntaxError | fail_compile | P0 | generated | DECL-FAILC-006 | arkts-language-watch/01_language_foundation/00_the_basics/declarations/xts/fail_compile/declaration_let_duplicate_fail_compile.ets | validation_pending | types | declarations | 涓? |
+| DECL-LET-005 | declarations | let + var 鍚屼綔鐢ㄥ煙閲嶅澹版槑 SyntaxError | boundary | P0 | generated | DECL-BOUND-003 | arkts-language-watch/01_language_foundation/00_the_basics/declarations/xts/boundary/declaration_var_let_duplicate_boundary.ets | spec_pending | types | declarations | 涓? |
+| DECL-LET-006 | declarations | TDZ 涓?typeof 璁块棶浠嶆姏鍑?ReferenceError | fail_runtime | P1 | planned | none | none | planned | types | declarations | 涓? |
+| DECL-LET-007 | declarations | let 澹版槑鍦?for 寰幆姣忔杩唬鍒涘缓鏂扮粦瀹? | pass | P1 | planned | none | none | planned | types | declarations | 浣? |
+| DECL-LET-008 | declarations | let 澹版槑鍦?switch-case 涓潡绾т綔鐢ㄥ煙 | pass | P2 | planned | none | none | planned | types | declarations | 浣? |
+| DECL-LET-009 | declarations | let 澹版槑鍒濆鍖栧櫒鑷紩鐢?TDZ | fail_runtime | P1 | planned | none | none | planned | types | declarations | 涓? |
+| DECL-CONST-001 | declarations | const 澹版槑蹇呴』鍒濆鍖?SyntaxError | fail_compile | P0 | generated | DECL-FAILC-003 | arkts-language-watch/01_language_foundation/00_the_basics/declarations/xts/fail_compile/declaration_const_missing_initializer_fail_compile.ets | validation_pending | types | declarations | 浣? |
+| DECL-CONST-002 | declarations | const 澹版槑鍚庡€间笉鍙噸鏂拌祴鍊?TypeError | fail_runtime | P0 | generated | DECL-FAILR-002 | arkts-language-watch/01_language_foundation/00_the_basics/declarations/xts/fail_runtime/declaration_const_reassignment_fail_runtime.ets | validation_pending | types | declarations | 楂? |
+| DECL-CONST-003 | declarations | const 澹版槑鍓嶈闂?TDZ ReferenceError | fail_runtime | P0 | generated | DECL-FAILR-003 | arkts-language-watch/01_language_foundation/00_the_basics/declarations/xts/fail_runtime/declaration_const_tdz_fail_runtime.ets | validation_pending | types | declarations | 楂? |
+| DECL-CONST-004 | declarations | const 澹版槑瀵硅薄灞炴€у彲淇敼 | pass | P0 | planned | none | none | planned | types | declarations | 涓? |
+| DECL-CONST-005 | declarations | const 澹版槑鏁扮粍鍐呭鍙慨鏀? | pass | P1 | planned | none | none | planned | types | declarations | 涓? |
+| DECL-CONST-006 | declarations | const 鍚屽潡绾т綔鐢ㄥ煙閲嶅澹版槑 SyntaxError | fail_compile | P0 | generated | DECL-FAILC-002 | arkts-language-watch/01_language_foundation/00_the_basics/declarations/xts/fail_compile/declaration_const_duplicate_fail_compile.ets | validation_pending | types | declarations | 涓? |
+| DECL-CONST-007 | declarations | const + let 鍚屼綔鐢ㄥ煙閲嶅澹版槑 SyntaxError | fail_compile | P1 | planned | none | none | planned | types | declarations | 涓? |
+| DECL-CONST-008 | declarations | const 閲嶆柊璧嬪€煎湪鍔ㄦ€?ArkTS 涓槸鍚︿负缂栬瘧鏈熼敊璇? | boundary | P0 | planned | none | none | planned | types | declarations | 楂? |
+| DECL-CONST-009 | declarations | const 澹版槑鍘熷鍊煎畬鍏ㄤ笉鍙彉 | pass | P0 | planned | none | none | planned | types | declarations | 浣? |
+| DECL-FUNC-001 | declarations | 鍑芥暟澹版槑鎻愬崌鍚庡彲鍦ㄥ０鏄庡墠璋冪敤 | pass | P0 | generated | DECL-PASS-002 | arkts-language-watch/01_language_foundation/00_the_basics/declarations/xts/pass/declaration_function_hoisting_pass.ets | validation_pending | types | 01_function | 浣? |
+| DECL-FUNC-002 | declarations | 鍑芥暟澹版槑涓?var 鍚屽悕閲嶅澹版槑锛堝嚱鏁颁紭鍏堬級 | pass | P0 | planned | none | none | planned | types | declarations + 01_function | 涓? |
+| DECL-FUNC-003 | declarations | 鍑芥暟澹版槑鍦ㄥ潡绾т綔鐢ㄥ煙锛堜弗鏍兼ā寮忥級 | boundary | P0 | generated | DECL-BOUND-001 | arkts-language-watch/01_language_foundation/00_the_basics/declarations/xts/boundary/declaration_block_level_function_boundary.ets | spec_pending | types | 01_function + declarations | 楂? |
+| DECL-FUNC-004 | declarations | 鍑芥暟澹版槑鍦ㄥ潡绾т綔鐢ㄥ煙锛堥潪涓ユ牸妯″紡锛夋彁鍗囧埌鍑芥暟绾? | boundary | P1 | planned | none | none | planned | types | 01_function + declarations | 楂? |
+| DECL-FUNC-005 | declarations | 鍑芥暟澹版槑鍚屽悕閲嶅澹版槑瑕嗙洊 | boundary | P1 | generated | DECL-BOUND-002 | arkts-language-watch/01_language_foundation/00_the_basics/declarations/xts/boundary/declaration_function_duplicate_boundary.ets | spec_pending | types | declarations | 浣? |
+| DECL-FUNC-006 | declarations | 鍑芥暟琛ㄨ揪寮忎笉鎻愬崌鍑芥暟浣? | pass | P0 | planned | none | none | planned | types | 01_function | 浣? |
+| DECL-FUNC-007 | declarations | 涓ユ牸妯″紡鍧楃骇鍑芥暟澹版槑 TDZ 璁块棶 | fail_runtime | P1 | planned | none | none | planned | types | 01_function + declarations | 楂? |
+| DECL-CLASS-001 | declarations | class 澹版槑 TDZ ReferenceError | fail_runtime | P0 | generated | DECL-FAILR-001 | arkts-language-watch/01_language_foundation/00_the_basics/declarations/xts/fail_runtime/declaration_class_tdz_fail_runtime.ets | validation_pending | types | declarations | 楂? |
+| DECL-CLASS-002 | declarations | class 澹版槑鍚屼綔鐢ㄥ煙閲嶅澹版槑 SyntaxError | fail_compile | P0 | generated | DECL-FAILC-001 | arkts-language-watch/01_language_foundation/00_the_basics/declarations/xts/fail_compile/declaration_class_duplicate_fail_compile.ets | validation_pending | types | declarations | 涓? |
+| DECL-CLASS-003 | declarations | class 澹版槑鍚庢甯稿疄渚嬪寲 | pass | P0 | planned | none | none | planned | types | 02_class | 浣? |
+| DECL-CLASS-004 | declarations | class + let 鍚屼綔鐢ㄥ煙閲嶅澹版槑 SyntaxError | fail_compile | P1 | planned | none | none | planned | types | declarations | 涓? |
+| DECL-CLASS-005 | declarations | class + var 鍚屼綔鐢ㄥ煙閲嶅澹版槑 SyntaxError | fail_compile | P1 | planned | none | none | planned | types | declarations | 涓? |
+| DECL-CLASS-006 | declarations | class 澹版槑鍦?if 鍧楀唴鐨勫潡绾т綔鐢ㄥ煙 | pass | P1 | planned | none | none | planned | types | declarations | 浣? |
+| DECL-CLASS-007 | declarations | class 澹版槑 TDZ typeof 璁块棶 | fail_runtime | P1 | planned | none | none | planned | types | declarations | 涓? |
+| DECL-IMPORT-001 | declarations | import 缁戝畾姝ｅ父璁块棶鐩爣妯″潡瀵煎嚭鍊? | integration | P0 | planned | none | none | planned | types | 06_module | 浣? |
+| DECL-IMPORT-002 | declarations | import live binding 鐩爣妯″潡鍙橀噺鍙樺寲鍙 | regression | P0 | generated | DECL-REGR-001 | arkts-language-watch/01_language_foundation/00_the_basics/declarations/xts/regression/declaration_module_binding_regression.ets | validation_pending | types | 06_module | 楂? |
+| DECL-IMPORT-003 | declarations | import 缁戝畾鍙锛岄噸鏂拌祴鍊?TypeError | fail_runtime | P0 | generated | DECL-FAILR-004 | arkts-language-watch/01_language_foundation/00_the_basics/declarations/xts/fail_runtime/declaration_import_binding_readonly_fail_runtime.ets | validation_pending | types | 06_module + declarations | 楂? |
+| DECL-IMPORT-004 | declarations | import 閲嶅瀵煎叆鍚屽悕缁戝畾 SyntaxError | fail_compile | P0 | planned | none | none | planned | types | 06_module | 涓? |
+| DECL-IMPORT-005 | declarations | import 鍑虹幇鍦ㄩ潪妯″潡椤跺眰锛堝嚱鏁颁綋鍐咃級 SyntaxError | fail_compile | P1 | generated | DECL-FAILC-005 | arkts-language-watch/01_language_foundation/00_the_basics/declarations/xts/fail_compile/declaration_import_not_top_level_fail_compile.ets | validation_pending | types | 06_module | 浣? |
+| DECL-IMPORT-006 | declarations | import 缁戝畾鍦ㄦā鍧楅《灞傚０鏄庝綅缃笌鎵ц椤哄簭 | pass | P1 | planned | none | none | planned | types | 06_module | 涓? |
+| DECL-IMPORT-007 | declarations | 寰幆渚濊禆涓?import 澹版槑 TDZ 杈圭晫 | boundary | P1 | planned | none | none | planned | types | 06_module | 楂? |
+| DECL-EXPORT-001 | declarations | export named 瀵煎嚭鏈湴澹版槑鍊? | integration | P0 | planned | none | none | planned | types | 06_module | 浣? |
+| DECL-EXPORT-002 | declarations | export 閲嶅瀵煎嚭鍚屽悕 SyntaxError | fail_compile | P0 | generated | DECL-FAILC-004 | arkts-language-watch/01_language_foundation/00_the_basics/declarations/xts/fail_compile/declaration_export_duplicate_fail_compile.ets | validation_pending | types | 06_module | 涓? |
+| DECL-EXPORT-003 | declarations | export 鍑虹幇鍦ㄩ潪妯″潡椤跺眰 SyntaxError | fail_compile | P1 | planned | none | none | planned | types | 06_module | 浣? |
+| DECL-EXPORT-004 | declarations | export 澹版槑涓庢湰鍦板０鏄庡叧绯伙紙涓嶅垱寤烘柊缁戝畾锛? | pass | P1 | planned | none | none | planned | types | 06_module | 浣? |
+| DECL-EXPORT-005 | declarations | export default 涓?named export 澹版槑杈圭晫 | integration | P1 | planned | none | none | planned | types | 06_module | 涓? |
+| DECL-EXPORT-006 | declarations | re-export 澹版槑涓庢湰鍦板０鏄庡啿绐? | fail_compile | P2 | planned | none | none | planned | types | 06_module | 浣? |
+| DECL-ANN-001 | declarations | annotation 澹版槑褰㈡€佹槧灏? | boundary | P1 | planned | none | none | planned | types | 08_annotation | 楂? |
+| DECL-ANN-002 | declarations | custom annotation 澹版槑杩愯鏃惰涓? | boundary | P2 | planned | none | none | planned | types | 08_annotation | 楂? |
+| DECL-ANN-003 | declarations | annotation 淇グ鐨勫０鏄庣粦瀹氳涓烘槸鍚﹀彈褰卞搷 | boundary | P1 | planned | none | none | planned | types | 08_annotation + declarations | 涓? |
+| DECL-CROSS-001 | declarations | 宓屽浣滅敤鍩?let/const/var 娣峰悎閬斀 | integration | P1 | planned | none | none | planned | types | declarations | 涓? |
+| DECL-CROSS-002 | declarations | var + function 閲嶅澹版槑鍒濆鍖栭『搴? | regression | P1 | planned | none | none | planned | types | declarations + 01_function | 涓? |
+| DECL-CROSS-003 | declarations | 澹版槑鍦?try/catch 涓殑 TDZ 浜や簰 | integration | P2 | planned | none | none | planned | types | declarations | 浣? |
+| DECL-CROSS-004 | declarations | class 澹版槑涓庡嚱鏁板０鏄庡悓鍚嶈竟鐣? | boundary | P2 | planned | none | none | planned | types | declarations + 01_function + 02_class | 涓? |
+| DECL-ENUM-001 | declarations | enum 澹版槑缁戝畾璇箟 | boundary | P1 | planned | none | none | planned | types | declarations | 楂? |
+| DECL-ENUM-002 | declarations | const enum 澹版槑琛屼负 | boundary | P2 | planned | none | none | planned | types | declarations | 楂? |
+| DECL-MOD-001 | declarations | 妯″潡椤跺眰 let 澹版槑姝ｅ父璁块棶 | pass | P0 | generated | DECL-PASS-004 | arkts-language-watch/01_language_foundation/00_the_basics/declarations/xts/pass/declaration_module_top_level_lexical_pass.ets | validation_pending | types | declarations / 06_module | 浣? |
+| DECL-CONST-010 | declarations | const 澹版槑鍧楃骇浣滅敤鍩熼伄钄藉灞傚悓鍚? | pass | P1 | generated | DECL-PASS-001 | arkts-language-watch/01_language_foundation/00_the_basics/declarations/xts/pass/declaration_const_block_scope_pass.ets | validation_pending | types | declarations | 浣? |
+| DECL-REG-001 | declarations | TDZ 寮曠敤涓嶅緱琚紭鍖栨帀 | regression | P1 | generated | DECL-REGR-002 | arkts-language-watch/01_language_foundation/00_the_basics/declarations/xts/regression/declaration_tdz_reference_regression.ets | validation_pending | types | declarations | 涓? |
+| DECL-MOD-002 | declarations | 妯″潡椤跺眰 var 涓嶆薄鏌?globalThis | boundary | P1 | planned | none | none | planned | types | declarations / 06_module | 涓? |
+| DECL-SCOPE-001 | declarations | var 鍑芥暟浣滅敤鍩?vs let 鍧楃骇浣滅敤鍩熷姣? | smoke | P0 | planned | none | none | planned | types | declarations | 浣? |
+| DECL-SCOPE-002 | declarations | 鍏ㄥ眬浣滅敤鍩?var 璧嬪€煎垱寤?globalThis 灞炴€? | pass | P1 | planned | none | none | planned | types | declarations | 涓? |
+## Historical Snapshot
+
+> Original format replaced. Main matrix above is source of truth.

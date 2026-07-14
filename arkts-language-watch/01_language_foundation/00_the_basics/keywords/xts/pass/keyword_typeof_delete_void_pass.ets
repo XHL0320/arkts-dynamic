@@ -1,7 +1,18 @@
 /*
- * Keyword Stage 1
- * Test point: typeof/void/delete keywords as expression operators.
- * Expected: typeof/void/delete keywords work in expression position.
+ * Case ID: KEYW-PASS-012
+ * Coverage ID:
+ *   - KW-OP-001
+ *   - KW-OP-002
+ *   - KW-OP-003
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: declarations
+ * Spec Source: pending
+ * Description: Verify typeof/void/delete keywords as expression operators.. typeof/void/delete keywords work in expression position.
  */
 
 function assertTrue(value: boolean, message: string): void {

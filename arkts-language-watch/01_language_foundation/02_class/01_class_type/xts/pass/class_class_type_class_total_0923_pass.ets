@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 01_class_type
- * CaseType: pass
- * Priority: P1
- * ECMA Baseline Status: ArkTS-specific
- * Source Coverage ID: CLASS-TOTAL-0923
- * Related Spec: abstract class type 接收 concrete subclass instance
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-020
+ * Coverage ID:
+ *   - CLASS-TOTAL-0923
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify abstract class type 接收 concrete subclass instance
  */
 
 function assertTrue(value: boolean, message: string): void {

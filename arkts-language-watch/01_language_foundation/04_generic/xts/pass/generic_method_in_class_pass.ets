@@ -1,7 +1,17 @@
 /*
- * Generic Stage 1
- * Test point: generic method in class.
- * Expected: class with generic method compiles and works.
+ * Case ID: GEN-PASS-011
+ * Coverage ID:
+ *   - GEN-METHOD-001
+ *   - GEN-METHOD-002
+ * Feature: generic
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 04_generic
+ * Related Chapters: function, class
+ * Spec Source: pending
+ * Description: Verify generic method in class with explicit type argument.
  */
 
 function assertTrue(value: boolean, message: string): void {

@@ -1,9 +1,18 @@
 /*
- * Keyword Stage 1
- * Boundary / pending confirmation.
- * Test point: interface strict mode reserved word boundary.
- * Boundary reason: interface is strict mode reserved word in ES; TS implements as type declaration.
- *  Dynamic ArkTS support status needs confirmation.
+ * Case ID: KEYW-BOUND-006
+ * Coverage ID:
+ *   - KW-FUT-003
+ *   - KW-STRICT-002
+ * Feature: language_basics
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: declarations
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic language behavior has not been verified.
+ * Description: Verify interface strict mode reserved word boundary.
  */
 
 function assertTrue(value: boolean, message: string): void {

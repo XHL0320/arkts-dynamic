@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 00_class_declaration
- * CaseType: regression
- * Priority: P2
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-SUPP-9005
- * Related Spec: class declaration binding remains stable across refactoring
- * Expected: High-risk regression scenario remains stable.
+ * Case ID: CLASS-REGR-001
+ * Coverage ID:
+ *   - CLASS-SUPP-9005
+ * Feature: class
+ * Test Type: regression
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: declarations
+ * Spec Source: pending
+ * Regression Issue: pending
+ * Description: Verify class declaration binding remains stable across refactoring
  */
 
 function assertTrue(value: boolean, message: string): void {

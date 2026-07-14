@@ -1,8 +1,19 @@
 /*
- * Interface Stage 1
- * Boundary / pending confirmation.
- * Test point: interface as runtime value.
- * Boundary reason: interface is typically erased at runtime; whether it has a runtime value needs confirmation.
+ * Case ID: INTF-BOUND-015
+ * Coverage ID:
+ *   - IF-RT-001
+ *   - IF-RT-004
+ *   - IF-RT-005
+ * Feature: interface
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 03_interface
+ * Related Chapters: types
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic interface behavior has not been verified.
+ * Description: Verify interface runtime erasure, name-as-value, and no-runtime-code boundary.
  */
 
 function assertTrue(value: boolean, message: string): void {

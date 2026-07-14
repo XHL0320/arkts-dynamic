@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 13_abstract_class
- * CaseType: boundary
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0324
- * Related Spec: abstract static method 不支持时声明 abstract static method，checker 报错
- * Expected: Pending ArkTS behavior confirmation; no strong assertion.
+ * Case ID: CLASS-BOUND-076
+ * Coverage ID:
+ *   - CLASS-TOTAL-0324
+ * Feature: class
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: interface
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic class behavior has not been verified.
+ * Description: Verify abstract static method 不支持时声明 abstract static method，checker 报错
  */
 
 function assertTrue(value: boolean, message: string): void {

@@ -1,7 +1,18 @@
 /*
- * Function Stage 1
- * Regression candidate.
- * Test point: default parameter side effect should run once per omitted argument.
+ * Case ID: FUNC-REGR-006
+ * Coverage ID:
+ *   - FUNCTION-TOTAL-0092
+ *   - OPTIONAL-PARAMETER-0010
+ * Feature: function
+ * Test Type: regression
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 01_function
+ * Related Chapters: types
+ * Spec Source: pending
+ * Regression Issue: pending
+ * Description: Verify function behavior
  */
 
 function assertNumberEqual(actual: number, expected: number, message: string): void {

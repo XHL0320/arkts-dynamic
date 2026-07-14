@@ -1,7 +1,16 @@
 /*
- * Operator Stage 1
- * Test point: number addition.
- * Expected: 1 + 2 === 3.
+ * Case ID: OPER-PASS-002
+ * Coverage ID:
+ *   - OP-ARITHMETIC-001
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify number addition.. 1 + 2 === 3.
  */
 
 function assertTrue(value: boolean, message: string): void {

@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 15_generic_class
- * CaseType: pass
- * Priority: P0
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-0767
- * Related Spec: 类型实参为 array type
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-379
+ * Coverage ID:
+ *   - CLASS-TOTAL-0767
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: generic
+ * Spec Source: pending
+ * Description: Verify 类型实参为 array type
  */
 
 function assertTrue(value: boolean, message: string): void {

@@ -1,7 +1,16 @@
 /*
- * Declaration Stage 1
- * Test point: function declaration hoisting as a declaration binding rule.
- * Expected: function declaration can be called before its declaration.
+ * Case ID: DECL-PASS-002
+ * Coverage ID:
+ *   - DECL-FUNC-001
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify function declaration hoisting as a declaration binding rule.. function declaration can be called before its declaration.
  */
 
 function assertTrue(value: boolean, message: string): void {

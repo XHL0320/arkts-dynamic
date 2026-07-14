@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 04_method
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0065
- * Related Spec: 返回 interface 类型方法缺少成员，checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-061
+ * Coverage ID:
+ *   - CLASS-TOTAL-0065
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: function
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify 返回 interface 类型方法缺少成员，checker 报错
  */
 
 // Expected error: 返回 interface 类型方法缺少成员，checker 报错

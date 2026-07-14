@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 13_abstract_class
- * CaseType: boundary
- * Priority: P1
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-0911
- * Related Spec: abstract class private constructor 阻止子类 super()，如支持 constructor visibility 则 checker 报错
- * Expected: Pending ArkTS behavior confirmation; no strong assertion.
+ * Case ID: CLASS-BOUND-077
+ * Coverage ID:
+ *   - CLASS-TOTAL-0911
+ * Feature: class
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: interface
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic class behavior has not been verified.
+ * Description: Verify abstract class private constructor 阻止子类 super()，如支持 constructor visibility 则 checker 报错
  */
 
 function assertTrue(value: boolean, message: string): void {

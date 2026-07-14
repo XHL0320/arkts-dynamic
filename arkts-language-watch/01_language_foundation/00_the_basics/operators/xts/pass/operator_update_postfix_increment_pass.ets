@@ -1,7 +1,16 @@
 /*
- * Operator Stage 1
- * Test point: postfix increment.
- * Expected: x++ returns the old value and increments after returning.
+ * Case ID: OPER-PASS-025
+ * Coverage ID:
+ *   - OP-UPDATE-002
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify postfix increment.. x++ returns the old value and increments after returning.
  */
 
 function assertTrue(value: boolean, message: string): void {

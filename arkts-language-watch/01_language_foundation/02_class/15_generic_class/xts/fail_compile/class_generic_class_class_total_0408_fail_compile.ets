@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 15_generic_class
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0408
- * Related Spec: 跨模块 generic class 类型实参错误，checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-377
+ * Coverage ID:
+ *   - CLASS-TOTAL-0408
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: generic
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify 跨模块 generic class 类型实参错误，checker 报错
  */
 
 // Expected error: 跨模块 generic class 类型实参错误，checker 报错

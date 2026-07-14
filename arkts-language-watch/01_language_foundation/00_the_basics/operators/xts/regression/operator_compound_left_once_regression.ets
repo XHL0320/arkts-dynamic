@@ -1,10 +1,17 @@
 /*
- * Operator Stage 1
- * Regression test.
- * Test point: compound assignment evaluates left-hand reference only once.
- * Expected: obj[i++] += 1 should only increment i once per evaluation.
- * Regression reason: verify that compound assignment does not evaluate the left
- * reference twice, which would cause double side effects.
+ * Case ID: OPER-REGR-001
+ * Coverage ID:
+ *   - OP-COMPOUND-ASSIGNMENT-006
+ * Feature: language_basics
+ * Test Type: regression
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Regression Issue: pending
+ * Description: Verify compound assignment evaluates left-hand reference only once.. obj[i++] += 1 should only increment i once per evaluation.
  */
 
 function assertTrue(value: boolean, message: string): void {

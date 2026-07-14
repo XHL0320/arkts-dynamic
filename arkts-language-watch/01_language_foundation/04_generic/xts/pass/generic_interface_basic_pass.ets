@@ -1,7 +1,17 @@
 /*
- * Generic Stage 1
- * Test point: generic interface basic declaration.
- * Expected: KeyedStore<K, V> compiles and can be implemented.
+ * Case ID: GEN-PASS-008
+ * Coverage ID:
+ *   - GEN-IF-001
+ *   - GEN-IF-004
+ * Feature: generic
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 04_generic
+ * Related Chapters: interface
+ * Spec Source: pending
+ * Description: Verify generic interface basic declaration and class implements.
  */
 
 function assertTrue(value: boolean, message: string): void {

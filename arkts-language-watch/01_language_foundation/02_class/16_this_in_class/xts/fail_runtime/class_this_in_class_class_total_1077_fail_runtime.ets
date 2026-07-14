@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 16_this_in_class
- * CaseType: fail_runtime
- * Priority: P1
- * ECMA Baseline Status: ES2022 / ArkTS-specific
- * Source Coverage ID: CLASS-TOTAL-1077
- * Related Spec: 非法 receiver 调用方法导致 this 类型不匹配
- * Expected: Runtime throws an exception; error message is not asserted.
+ * Case ID: CLASS-FAILR-013
+ * Coverage ID:
+ *   - CLASS-TOTAL-1077
+ * Feature: class
+ * Test Type: fail_runtime
+ * Expected Phase: runtime
+ * Expected Outcome: exception
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: this_keyword
+ * Spec Source: pending
+ * Expected Exception: pending
+ * Description: Verify 非法 receiver 调用方法导致 this 类型不匹配
  */
 
 function assertTrue(value: boolean, message: string): void {

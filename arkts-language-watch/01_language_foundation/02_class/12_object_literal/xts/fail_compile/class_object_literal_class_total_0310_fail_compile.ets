@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 12_object_literal
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0310
- * Related Spec: 通过 readonly interface 引用修改属性，checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-286
+ * Coverage ID:
+ *   - CLASS-TOTAL-0310
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify 通过 readonly interface 引用修改属性，checker 报错
  */
 
 // Expected error: 通过 readonly interface 引用修改属性，checker 报错

@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 19_class_runtime_behavior
- * CaseType: pass
- * Priority: P0
- * ECMA Baseline Status: ES2022
- * Source Coverage ID: CLASS-TOTAL-0828
- * Related Spec: derived instance 原型链包含 Derived.prototype
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-475
+ * Coverage ID:
+ *   - CLASS-TOTAL-0828
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify derived instance 原型链包含 Derived.prototype
  */
 
 function assertTrue(value: boolean, message: string): void {

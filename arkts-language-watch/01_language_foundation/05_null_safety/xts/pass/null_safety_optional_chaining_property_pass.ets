@@ -1,9 +1,19 @@
-/*
- * Null Safety Stage 1
- * Test point: optional chaining property access.
- * Expected: obj?.prop returns value if obj is not null, undefined if null.
+﻿/*
+ * Case ID: NULL-PASS-011
+ * Coverage ID:
+ *   - NS-OC-PROP-001
+ *   - NS-OC-PROP-002
+ *   - NS-OC-PROP-003
+ * Feature: null_safety
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 05_null_safety
+ * Related Chapters: operators
+ * Spec Source: pending
+ * Description: Verify obj?.prop returns value or undefined for non-null and null.
  */
-
 function assertTrue(value: boolean, message: string): void {
   if (!value) { throw new Error(message) }
 }

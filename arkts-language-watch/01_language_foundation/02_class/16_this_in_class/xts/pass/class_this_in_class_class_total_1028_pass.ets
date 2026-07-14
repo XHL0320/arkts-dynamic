@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 16_this_in_class
- * CaseType: pass
- * Priority: P1
- * ECMA Baseline Status: ES2022 / ArkTS-specific
- * Source Coverage ID: CLASS-TOTAL-1028
- * Related Spec: base method 被 derived instance 调用时 this 指向 derived instance
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-415
+ * Coverage ID:
+ *   - CLASS-TOTAL-1028
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: this_keyword
+ * Spec Source: pending
+ * Description: Verify base method 被 derived instance 调用时 this 指向 derived instance
  */
 
 function assertTrue(value: boolean, message: string): void {

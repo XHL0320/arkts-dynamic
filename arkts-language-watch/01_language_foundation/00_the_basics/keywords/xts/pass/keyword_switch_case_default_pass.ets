@@ -1,7 +1,16 @@
 /*
- * Keyword Stage 1
- * Test point: switch/case/default keywords in valid positions.
- * Expected: switch/case/default keywords work as multi-branch statement.
+ * Case ID: KEYW-PASS-009
+ * Coverage ID:
+ *   - KW-STMT-002
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: declarations
+ * Spec Source: pending
+ * Description: Verify switch/case/default keywords in valid positions.. switch/case/default keywords work as multi-branch statement.
  */
 
 function assertTrue(value: boolean, message: string): void {

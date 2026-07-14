@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 13_abstract_class
- * CaseType: pass
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0721
- * Related Spec: abstract class 同时包含 abstract method 和 concrete field，子类继承字段并实现方法
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-313
+ * Coverage ID:
+ *   - CLASS-TOTAL-0721
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: interface
+ * Spec Source: pending
+ * Description: Verify abstract class 同时包含 abstract method 和 concrete field，子类继承字段并实现方法
  */
 
 function assertTrue(value: boolean, message: string): void {

@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 19_class_runtime_behavior
- * CaseType: fail_runtime
- * Priority: P0
- * ECMA Baseline Status: ES2022
- * Source Coverage ID: CLASS-TOTAL-0871
- * Related Spec: static initializer 抛异常导致 class evaluation 失败
- * Expected: Runtime throws an exception; error message is not asserted.
+ * Case ID: CLASS-FAILR-029
+ * Coverage ID:
+ *   - CLASS-TOTAL-0871
+ * Feature: class
+ * Test Type: fail_runtime
+ * Expected Phase: runtime
+ * Expected Outcome: exception
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Expected Exception: pending
+ * Description: Verify static initializer 抛异常导致 class evaluation 失败
  */
 
 function assertTrue(value: boolean, message: string): void {

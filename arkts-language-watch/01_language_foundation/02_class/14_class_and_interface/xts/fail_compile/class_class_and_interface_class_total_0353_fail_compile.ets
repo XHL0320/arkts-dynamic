@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 14_class_and_interface
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific
- * Source Coverage ID: CLASS-TOTAL-0353
- * Related Spec: generic method in interface 由 class generic method 实现时约束不兼容，checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-326
+ * Coverage ID:
+ *   - CLASS-TOTAL-0353
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: interface
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify generic method in interface 由 class generic method 实现时约束不兼容，checker 报错
  */
 
 // Expected error: generic method in interface 由 class generic method 实现时约束不兼容，checker 报错

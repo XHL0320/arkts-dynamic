@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 19_class_runtime_behavior
- * CaseType: regression
- * Priority: P0
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-0894
- * Related Spec: 回归：field initializer 使用 this 导致 runtime error
- * Expected: High-risk regression scenario remains stable.
+ * Case ID: CLASS-REGR-006
+ * Coverage ID:
+ *   - CLASS-TOTAL-0894
+ * Feature: class
+ * Test Type: regression
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Regression Issue: pending
+ * Description: Verify 回归：field initializer 使用 this 导致 runtime error
  */
 
 function assertTrue(value: boolean, message: string): void {

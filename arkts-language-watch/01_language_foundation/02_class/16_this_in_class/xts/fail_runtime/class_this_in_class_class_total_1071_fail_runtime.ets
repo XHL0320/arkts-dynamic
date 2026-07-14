@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 16_this_in_class
- * CaseType: fail_runtime
- * Priority: P1
- * ECMA Baseline Status: ES2022 / ArkTS-specific
- * Source Coverage ID: CLASS-TOTAL-1071
- * Related Spec: field initializer 中 this.method 抛异常导致初始化中断
- * Expected: Runtime throws an exception; error message is not asserted.
+ * Case ID: CLASS-FAILR-007
+ * Coverage ID:
+ *   - CLASS-TOTAL-1071
+ * Feature: class
+ * Test Type: fail_runtime
+ * Expected Phase: runtime
+ * Expected Outcome: exception
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: this_keyword
+ * Spec Source: pending
+ * Expected Exception: pending
+ * Description: Verify field initializer 中 this.method 抛异常导致初始化中断
  */
 
 function assertTrue(value: boolean, message: string): void {

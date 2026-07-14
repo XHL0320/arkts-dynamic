@@ -1,7 +1,17 @@
 /*
- * Statement Stage 1
- * Test point: for loop with continue skips current iteration.
- * Expected: continue jumps to update, skipping remaining body.
+ * Case ID: STMT-PASS-010
+ * Coverage ID:
+ *   - STMT-CONTINUE-001
+ *   - STMT-FOR-004
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: function
+ * Spec Source: pending
+ * Description: Verify for loop with continue skips current iteration.. continue jumps to update, skipping remaining body.
  */
 
 function assertTrue(value: boolean, message: string): void {

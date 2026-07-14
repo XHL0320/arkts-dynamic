@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 02_class_instantiation
- * CaseType: pass
- * Priority: P2
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-SUPP-9006
- * Related Spec: new class with default constructor creates an instance
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-030
+ * Coverage ID:
+ *   - CLASS-SUPP-9006
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify new class with default constructor creates an instance
  */
 
 function assertTrue(value: boolean, message: string): void {

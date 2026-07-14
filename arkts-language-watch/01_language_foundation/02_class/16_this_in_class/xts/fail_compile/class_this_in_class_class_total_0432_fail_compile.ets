@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 16_this_in_class
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: ES2022 / ArkTS-specific
- * Source Coverage ID: CLASS-TOTAL-0432
- * Related Spec: method 返回 this 但声明返回不兼容类型，checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-399
+ * Coverage ID:
+ *   - CLASS-TOTAL-0432
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: this_keyword
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify method 返回 this 但声明返回不兼容类型，checker 报错
  */
 
 // Expected error: method 返回 this 但声明返回不兼容类型，checker 报错

@@ -1,10 +1,20 @@
-/*
- * Null Safety Stage 1
- * Regression test.
- * Test point: null safety basic regression — null/undefined/typeof/equality/optional chaining/??.
- * Regression reason: verify core null safety behaviors remain stable.
+﻿/*
+ * Case ID: NULL-REGR-001
+ * Coverage ID:
+ *   - NS-EQ-001
+ *   - NS-NC-001
+ *   - NS-NULL-001
+ * Feature: null_safety
+ * Test Type: regression
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 05_null_safety
+ * Related Chapters: types, operators
+ * Spec Source: pending
+ * Regression Issue: pending
+ * Description: Verify null/undefined basics, typeof, equality, ?? regression.
  */
-
 function assertTrue(value: boolean, message: string): void {
   if (!value) { throw new Error(message) }
 }

@@ -1,9 +1,18 @@
 /*
- * Keyword Stage 1
- * Boundary / pending confirmation.
- * Test point: abstract/readonly keywords as TS class modifiers.
- * Boundary reason: these are TS extensions not in ES spec.
- *  Dynamic ArkTS support status needs confirmation.
+ * Case ID: KEYW-BOUND-001
+ * Coverage ID:
+ *   - KW-TS-004
+ *   - KW-TS-005
+ * Feature: language_basics
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: declarations
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic language behavior has not been verified.
+ * Description: Verify abstract/readonly keywords as TS class modifiers.
  */
 
 function assertTrue(value: boolean, message: string): void {

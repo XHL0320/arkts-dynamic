@@ -1,8 +1,8 @@
 # Module Coverage Matrix
 
-| ID | Module 方向 | 测试点 | 用例类型 | 优先级 | 是否已有用例 | 建议路径 | 关联章节 | 风险点 | 备注 |
-|---|---|---|---|---|---|---|---|---|---|
-| MOD-SCOPE-001 | module_scope | 模块作用域隔离 var 不泄露 | integration | P0 | no | `06_module/xts/pass/module_scope_isolation_pass` | module / declarations | 低 | ES 核心行为 |
+| Coverage ID | Module 方向 | 测试点 | 用例类型 | 优先级 | Coverage Status | Case ID | Actual Path | Validation Status | Helper ID | 关联章节 | 风险点 | 备注 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| MOD-SCOPE-001 | module_scope | 模块作用域隔离 | integration | P0 | generated | MODULE-PASS-009 | `06_module/xts/pass/module_scope_isolation_pass.ets` | validation_pending | MODULE-HELP-006 | module / declarations | 低 | ES 核心行为 |
 | MOD-SCOPE-002 | module_scope | 模块自动严格模式 | integration | P0 | no | `06_module/xts/pass/module_strict_mode_pass` | module | 低 | ES 核心行为 |
 | MOD-SCOPE-003 | module_scope | 顶层 this 为 undefined | integration | P0 | no | `06_module/xts/pass/module_top_this_undefined_pass` | module | 低 | ES 核心行为 |
 | MOD-SCOPE-004 | module_scope | 模块顶层声明隔离 | integration | P1 | no | `06_module/xts/pass/module_decl_isolation_pass` | module / declarations | 低 | 隔离 |

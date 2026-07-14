@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 09_override
- * CaseType: fail_runtime
- * Priority: P1
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-1068
- * Related Spec: super.method 动态变为非 callable 时运行时 TypeError
- * Expected: Runtime throws an exception; error message is not asserted.
+ * Case ID: CLASS-FAILR-004
+ * Coverage ID:
+ *   - CLASS-TOTAL-1068
+ * Feature: class
+ * Test Type: fail_runtime
+ * Expected Phase: runtime
+ * Expected Outcome: exception
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: function
+ * Spec Source: pending
+ * Expected Exception: pending
+ * Description: Verify super.method 动态变为非 callable 时运行时 TypeError
  */
 
 function assertTrue(value: boolean, message: string): void {

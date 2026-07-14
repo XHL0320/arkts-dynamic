@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 07_inheritance
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-0154
- * Related Spec: 覆盖方法返回类型不兼容，checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-140
+ * Coverage ID:
+ *   - CLASS-TOTAL-0154
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify 覆盖方法返回类型不兼容，checker 报错
  */
 
 // Expected error: 覆盖方法返回类型不兼容，checker 报错

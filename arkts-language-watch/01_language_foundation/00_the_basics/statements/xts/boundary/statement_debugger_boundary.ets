@@ -1,9 +1,18 @@
 /*
- * Statement Stage 1
- * Boundary / pending confirmation.
- * Test point: debugger statement in non-debug environment.
- * Expected in ES: debugger is a no-op without a debugger attached.
- * Boundary reason: dynamic ArkTS debugger statement runtime behavior needs confirmation.
+ * Case ID: STMT-BOUND-001
+ * Coverage ID:
+ *   - STMT-DEBUG-001
+ *   - STMT-DEBUG-002
+ * Feature: language_basics
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: function
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic language behavior has not been verified.
+ * Description: Verify debugger statement in non-debug environment.
  */
 
 function assertTrue(value: boolean, message: string): void {

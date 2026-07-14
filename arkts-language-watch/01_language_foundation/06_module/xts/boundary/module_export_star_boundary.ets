@@ -1,10 +1,22 @@
-/*
- * Module Stage 1
- * Boundary / pending confirmation.
- * Test point: export * from module.
- * Boundary reason: export star support in dynamic ArkTS needs confirmation.
- */
+﻿/*
+ * Case ID: MODULE-BOUND-006
+ * Coverage ID:
 
+ *   - MOD-ES-001
+ *   - MOD-ES-005
+ * Feature: module
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 06_module
+ * Related Chapters: declarations
+ * Helper IDs:
+ *   - MODULE-HELP-007
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic behavior has not been verified.
+ * Description: Verify export * from module.
+ */
 import * as ns from '../helpers/re_export/module_re_export_named_helper'
 
 function assertTrue(value: boolean, message: string): void {

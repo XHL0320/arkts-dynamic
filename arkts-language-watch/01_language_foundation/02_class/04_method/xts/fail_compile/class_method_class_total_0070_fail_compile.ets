@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 04_method
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-0070
- * Related Spec: 非 void 方法缺少 return，checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-065
+ * Coverage ID:
+ *   - CLASS-TOTAL-0070
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: function
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify 非 void 方法缺少 return，checker 报错
  */
 
 // Expected error: 非 void 方法缺少 return，checker 报错

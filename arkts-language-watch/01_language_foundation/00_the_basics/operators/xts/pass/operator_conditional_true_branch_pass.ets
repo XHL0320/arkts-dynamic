@@ -1,7 +1,16 @@
 /*
- * Operator Stage 1
- * Test point: conditional operator true branch only.
- * Expected: true ? "yes" : "no" === "yes", false branch not evaluated.
+ * Case ID: OPER-PASS-007
+ * Coverage ID:
+ *   - OP-CONDITIONAL-001
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify conditional operator true branch only.. true ? "yes" : "no" === "yes", false branch not evaluated.
  */
 
 function assertTrue(value: boolean, message: string): void {

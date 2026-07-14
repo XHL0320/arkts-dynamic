@@ -1,8 +1,19 @@
 /*
- * Interface Stage 1
- * Boundary / pending confirmation.
- * Test point: call signature in interface.
- * Boundary reason: dynamic ArkTS call signature support needs confirmation.
+ * Case ID: INTF-BOUND-001
+ * Coverage ID:
+ *   - IF-CALL-001
+ *   - IF-CALL-002
+ *   - IF-CALL-003
+ * Feature: interface
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 03_interface
+ * Related Chapters: function
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic interface behavior has not been verified.
+ * Description: Verify call signature declaration, callable assignment, and runtime call boundary.
  */
 
 function assertTrue(value: boolean, message: string): void {

@@ -1,7 +1,16 @@
 /*
- * Generic Stage 1
- * Test point: generic interface with method signature.
- * Expected: generic interface method uses type parameter.
+ * Case ID: GEN-PASS-009
+ * Coverage ID:
+ *   - GEN-IF-003
+ * Feature: generic
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 04_generic
+ * Related Chapters: interface, function
+ * Spec Source: pending
+ * Description: Verify generic interface method signature.
  */
 
 function assertTrue(value: boolean, message: string): void {

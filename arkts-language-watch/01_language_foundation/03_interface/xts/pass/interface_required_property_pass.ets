@@ -1,7 +1,17 @@
 /*
- * Interface Stage 1
- * Test point: interface with required property.
- * Expected: interface with required property compiles and enforces structure.
+ * Case ID: INTF-PASS-010
+ * Coverage ID:
+ *   - IF-DECL-002
+ *   - IF-PROP-001
+ * Feature: interface
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 03_interface
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify interface with required property declaration and signature.
  */
 
 function assertTrue(value: boolean, message: string): void {

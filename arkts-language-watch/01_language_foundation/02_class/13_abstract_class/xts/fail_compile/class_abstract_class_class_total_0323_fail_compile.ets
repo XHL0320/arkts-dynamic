@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 13_abstract_class
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0323
- * Related Spec: abstract method 重复声明且非合法 overload，checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-295
+ * Coverage ID:
+ *   - CLASS-TOTAL-0323
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: interface
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify abstract method 重复声明且非合法 overload，checker 报错
  */
 
 // Expected error: abstract method 重复声明且非合法 overload，checker 报错

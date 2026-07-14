@@ -1,7 +1,16 @@
 /*
- * Statement Stage 1
- * Test point: for loop with break exits early.
- * Expected: break exits the for loop immediately.
+ * Case ID: STMT-PASS-009
+ * Coverage ID:
+ *   - STMT-FOR-003
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: function
+ * Spec Source: pending
+ * Description: Verify for loop with break exits early.. break exits the for loop immediately.
  */
 
 function assertTrue(value: boolean, message: string): void {

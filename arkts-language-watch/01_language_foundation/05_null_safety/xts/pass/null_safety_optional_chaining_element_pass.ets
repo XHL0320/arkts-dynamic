@@ -1,9 +1,18 @@
-/*
- * Null Safety Stage 1
- * Test point: optional chaining element access.
- * Expected: arr?.[index] returns element if arr is not null, undefined if null.
+﻿/*
+ * Case ID: NULL-PASS-009
+ * Coverage ID:
+ *   - NS-OC-ELEM-001
+ *   - NS-OC-ELEM-002
+ * Feature: null_safety
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 05_null_safety
+ * Related Chapters: operators
+ * Spec Source: pending
+ * Description: Verify arr element access on non-null and null array.
  */
-
 function assertTrue(value: boolean, message: string): void {
   if (!value) { throw new Error(message) }
 }

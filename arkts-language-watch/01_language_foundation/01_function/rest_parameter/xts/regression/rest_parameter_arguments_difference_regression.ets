@@ -1,7 +1,18 @@
 /*
- * Function Stage 1
- * Regression candidate.
- * Test point: rest parameter is an array and differs from arguments object identity.
+ * Case ID: FUNC-REGR-007
+ * Coverage ID:
+ *   - FUNCTION-TOTAL-0020
+ *   - REST-PARAMETER-0004
+ * Feature: function
+ * Test Type: regression
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 01_function
+ * Related Chapters: types
+ * Spec Source: pending
+ * Regression Issue: pending
+ * Description: Verify function behavior
  */
 
 function assertTrue(value: boolean, message: string): void {

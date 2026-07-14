@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 14_class_and_interface
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0373
- * Related Spec: 跨文件 interface 成员新增后 class implements 缺少成员，checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-342
+ * Coverage ID:
+ *   - CLASS-TOTAL-0373
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: interface
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify 跨文件 interface 成员新增后 class implements 缺少成员，checker 报错
  */
 
 // Expected error: 跨文件 interface 成员新增后 class implements 缺少成员，checker 报错

@@ -1,7 +1,17 @@
 /*
- * Declaration Stage 1
- * Regression candidate.
- * Test point: TDZ reference should be observable as runtime exception and should not be optimized away.
+ * Case ID: DECL-REGR-002
+ * Coverage ID:
+ *   - DECL-REG-001
+ * Feature: language_basics
+ * Test Type: regression
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Regression Issue: pending
+ * Description: Verify TDZ reference should be observable as runtime exception and should not be optimized away.
  */
 
 function assertTrue(value: boolean, message: string): void {

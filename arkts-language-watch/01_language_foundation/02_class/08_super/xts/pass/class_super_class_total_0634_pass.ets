@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 08_super
- * CaseType: pass
- * Priority: P0
- * ECMA Baseline Status: ES2022
- * Source Coverage ID: CLASS-TOTAL-0634
- * Related Spec: 派生类无显式 constructor 时默认调用基类 constructor
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-176
+ * Coverage ID:
+ *   - CLASS-TOTAL-0634
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: this_keyword
+ * Spec Source: pending
+ * Description: Verify 派生类无显式 constructor 时默认调用基类 constructor
  */
 
 function assertTrue(value: boolean, message: string): void {

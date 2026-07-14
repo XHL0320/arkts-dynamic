@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 06_visibility_modifiers
- * CaseType: pass
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific
- * Source Coverage ID: CLASS-TOTAL-0588
- * Related Spec: public 成员满足 interface public property/method
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-122
+ * Coverage ID:
+ *   - CLASS-TOTAL-0588
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify public 成员满足 interface public property/method
  */
 
 function assertTrue(value: boolean, message: string): void {

@@ -1,9 +1,20 @@
-/*
- * Null Safety Stage 1
- * Test point: null and undefined equality.
- * Expected: null == undefined is true, null === undefined is false.
+﻿/*
+ * Case ID: NULL-PASS-006
+ * Coverage ID:
+ *   - NS-EQ-001
+ *   - NS-EQ-002
+ *   - NS-EQ-003
+ *   - NS-EQ-004
+ * Feature: null_safety
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 05_null_safety
+ * Related Chapters: operators
+ * Spec Source: pending
+ * Description: Verify null==undefined, null===undefined, null==0, undefined==0.
  */
-
 function assertTrue(value: boolean, message: string): void {
   if (!value) { throw new Error(message) }
 }

@@ -1,7 +1,16 @@
 /*
- * Operator Stage 1
- * Test point: relational comparison between number and bigint.
- * Expected: 1 < 2n, 2n > 1, comparison is allowed (no TypeError).
+ * Case ID: OPER-PASS-022
+ * Coverage ID:
+ *   - OP-RELATIONAL-006
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify relational comparison between number and bigint.. 1 < 2n, 2n > 1, comparison is allowed (no TypeError).
  */
 
 function assertTrue(value: boolean, message: string): void {

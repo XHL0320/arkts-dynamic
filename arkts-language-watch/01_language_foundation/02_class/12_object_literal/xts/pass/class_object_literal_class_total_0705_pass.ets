@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 12_object_literal
- * CaseType: pass
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0705
- * Related Spec: object literal 方法匹配 interface method
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-287
+ * Coverage ID:
+ *   - CLASS-TOTAL-0705
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify object literal 方法匹配 interface method
  */
 
 function assertTrue(value: boolean, message: string): void {

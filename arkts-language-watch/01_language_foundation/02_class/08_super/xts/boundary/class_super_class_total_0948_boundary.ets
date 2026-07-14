@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 08_super
- * CaseType: boundary
- * Priority: P1
- * ECMA Baseline Status: ES2022
- * Source Coverage ID: CLASS-TOTAL-0948
- * Related Spec: super 调用基类 setter 写入值，如 ArkTS 支持 setter
- * Expected: Pending ArkTS behavior confirmation; no strong assertion.
+ * Case ID: CLASS-BOUND-037
+ * Coverage ID:
+ *   - CLASS-TOTAL-0948
+ * Feature: class
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: this_keyword
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic class behavior has not been verified.
+ * Description: Verify super 调用基类 setter 写入值，如 ArkTS 支持 setter
  */
 
 function assertTrue(value: boolean, message: string): void {

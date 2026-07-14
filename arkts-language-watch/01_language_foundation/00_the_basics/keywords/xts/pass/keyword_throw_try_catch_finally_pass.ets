@@ -1,7 +1,16 @@
 /*
- * Keyword Stage 1
- * Test point: throw/try/catch/finally keywords in valid positions.
- * Expected: throw/try/catch/finally keywords work as exception handling.
+ * Case ID: KEYW-PASS-010
+ * Coverage ID:
+ *   - KW-STMT-006
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: declarations
+ * Spec Source: pending
+ * Description: Verify throw/try/catch/finally keywords in valid positions.. throw/try/catch/finally keywords work as exception handling.
  */
 
 function assertTrue(value: boolean, message: string): void {

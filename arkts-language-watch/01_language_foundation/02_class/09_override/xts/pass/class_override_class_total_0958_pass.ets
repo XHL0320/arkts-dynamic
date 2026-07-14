@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 09_override
- * CaseType: pass
- * Priority: P1
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0958
- * Related Spec: override 方法返回 this / 多态 this，如 ArkTS 支持
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-211
+ * Coverage ID:
+ *   - CLASS-TOTAL-0958
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: function
+ * Spec Source: pending
+ * Description: Verify override 方法返回 this / 多态 this，如 ArkTS 支持
  */
 
 function assertTrue(value: boolean, message: string): void {

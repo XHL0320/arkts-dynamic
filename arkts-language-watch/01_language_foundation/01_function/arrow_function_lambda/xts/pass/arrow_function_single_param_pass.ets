@@ -1,7 +1,16 @@
 /*
- * Function Stage 2
- * Coverage: arrow function with a single parameter.
- * Expected: single parameter is bound correctly.
+ * Case ID: FUNC-PASS-006
+ * Coverage ID:
+ *   - ARROW-FUNCTION-LAMBDA-0003
+ * Feature: function
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 01_function
+ * Related Chapters: this_keyword
+ * Spec Source: pending
+ * Description: Verify arrow function with a single parameter.. single parameter is bound correctly.
  */
 function assertStringEqual(actual: string, expected: string, message: string): void {
   if (actual !== expected) {

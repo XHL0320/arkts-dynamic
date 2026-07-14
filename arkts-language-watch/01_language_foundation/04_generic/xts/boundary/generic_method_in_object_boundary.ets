@@ -1,8 +1,17 @@
 /*
- * Generic Stage 1
- * Boundary / pending confirmation.
- * Test point: generic method in object literal.
- * Boundary reason: dynamic ArkTS object method generic support needs confirmation.
+ * Case ID: GEN-BOUND-008
+ * Coverage ID:
+ *   - GEN-METHOD-004
+ * Feature: generic
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 04_generic
+ * Related Chapters: function
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic generic behavior has not been verified.
+ * Description: Verify generic method in object literal boundary.
  */
 
 function assertTrue(value: boolean, message: string): void {

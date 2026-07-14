@@ -1,8 +1,18 @@
 /*
- * Interface Stage 1
- * Boundary / pending confirmation.
- * Test point: class method signature mismatch with interface.
- * Boundary reason: dynamic ArkTS method signature compatibility checking needs confirmation.
+ * Case ID: INTF-BOUND-002
+ * Coverage ID:
+ *   - IF-IMPL-004
+ *   - IF-IMPL-005
+ * Feature: interface
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 03_interface
+ * Related Chapters: class
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic interface behavior has not been verified.
+ * Description: Verify class method signature mismatch and runtime erasure boundary.
  */
 
 function assertTrue(value: boolean, message: string): void {

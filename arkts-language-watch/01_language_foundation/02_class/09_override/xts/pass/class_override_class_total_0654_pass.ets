@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 09_override
- * CaseType: pass
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific
- * Source Coverage ID: CLASS-TOTAL-0654
- * Related Spec: 覆盖方法返回派生类类型覆盖基类返回基类类型，如协变支持
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-205
+ * Coverage ID:
+ *   - CLASS-TOTAL-0654
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: function
+ * Spec Source: pending
+ * Description: Verify 覆盖方法返回派生类类型覆盖基类返回基类类型，如协变支持
  */
 
 function assertTrue(value: boolean, message: string): void {

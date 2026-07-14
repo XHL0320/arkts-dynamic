@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 04_method
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-0062
- * Related Spec: 未声明方法调用，checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-058
+ * Coverage ID:
+ *   - CLASS-TOTAL-0062
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: function
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify 未声明方法调用，checker 报错
  */
 
 // Expected error: 未声明方法调用，checker 报错

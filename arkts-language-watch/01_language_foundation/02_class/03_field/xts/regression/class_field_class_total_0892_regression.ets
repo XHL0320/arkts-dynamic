@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 03_field
- * CaseType: regression
- * Priority: P0
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-0892
- * Related Spec: 回归用例
- * Expected: High-risk regression scenario remains stable.
+ * Case ID: CLASS-REGR-003
+ * Coverage ID:
+ *   - CLASS-TOTAL-0892
+ * Feature: class
+ * Test Type: regression
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Regression Issue: pending
+ * Description: Verify 回归用例
  */
 
 function assertTrue(value: boolean, message: string): void {

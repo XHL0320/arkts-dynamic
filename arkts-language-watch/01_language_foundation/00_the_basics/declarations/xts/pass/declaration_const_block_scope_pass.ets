@@ -1,7 +1,16 @@
 /*
- * Declaration Stage 1
- * Test point: const block scope.
- * Expected: inner block const shadows outer const without changing it.
+ * Case ID: DECL-PASS-001
+ * Coverage ID:
+ *   - DECL-CONST-010
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify const block scope.. inner block const shadows outer const without changing it.
  */
 
 function assertTrue(value: boolean, message: string): void {

@@ -1,7 +1,16 @@
 /*
- * Function Stage 3
- * Coverage: nested callback execution.
- * Expected: callbacks can be composed through nested function calls.
+ * Case ID: FUNC-PASS-029
+ * Coverage ID:
+ *   - FUNCTION-TYPE-0006
+ * Feature: function
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 01_function
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify nested callback execution.. callbacks can be composed through nested function calls.
  */
 function assertNumberEqual(actual: number, expected: number, message: string): void {
   if (actual !== expected) {

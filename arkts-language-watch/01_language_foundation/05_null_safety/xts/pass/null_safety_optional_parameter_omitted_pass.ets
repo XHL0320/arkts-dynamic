@@ -1,9 +1,18 @@
-/*
- * Null Safety Stage 1
- * Test point: optional parameter omitted is undefined.
- * Expected: omitted optional parameter is undefined.
+﻿/*
+ * Case ID: NULL-PASS-012
+ * Coverage ID:
+ *   - NS-OPTPARAM-001
+ *   - NS-OPTPARAM-002
+ * Feature: null_safety
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 05_null_safety
+ * Related Chapters: function
+ * Spec Source: pending
+ * Description: Verify optional parameter omitted and passed undefined.
  */
-
 function assertTrue(value: boolean, message: string): void {
   if (!value) { throw new Error(message) }
 }

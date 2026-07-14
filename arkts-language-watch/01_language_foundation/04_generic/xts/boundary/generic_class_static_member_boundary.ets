@@ -1,8 +1,17 @@
 /*
- * Generic Stage 1
- * Boundary / pending confirmation.
- * Test point: generic class static member with type parameter.
- * Boundary reason: static members cannot use class type parameters in TS; dynamic ArkTS behavior needs confirmation.
+ * Case ID: GEN-BOUND-002
+ * Coverage ID:
+ *   - GEN-CLASS-005
+ * Feature: generic
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 04_generic
+ * Related Chapters: class
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic generic behavior has not been verified.
+ * Description: Verify generic class static member boundary.
  */
 
 function assertTrue(value: boolean, message: string): void {

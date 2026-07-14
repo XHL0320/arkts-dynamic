@@ -1,9 +1,18 @@
-/*
- * Null Safety Stage 1
- * Test point: optional property with explicit undefined value.
- * Expected: optional property can exist with value undefined.
+﻿/*
+ * Case ID: NULL-PASS-014
+ * Coverage ID:
+ *   - NS-OP-002
+ *   - NS-OP-005
+ * Feature: null_safety
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 05_null_safety
+ * Related Chapters: interface, class
+ * Spec Source: pending
+ * Description: Verify optional property with explicit undefined value.
  */
-
 function assertTrue(value: boolean, message: string): void {
   if (!value) { throw new Error(message) }
 }

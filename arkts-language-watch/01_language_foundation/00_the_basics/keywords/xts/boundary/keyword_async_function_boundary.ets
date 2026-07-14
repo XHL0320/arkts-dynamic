@@ -1,8 +1,17 @@
 /*
- * Keyword Stage 1
- * Boundary / pending confirmation.
- * Test point: async keyword as function modifier.
- * Boundary reason: dynamic ArkTS async/await support status needs confirmation.
+ * Case ID: KEYW-BOUND-002
+ * Coverage ID:
+ *   - KW-ASYNC-001
+ * Feature: language_basics
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: declarations
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic language behavior has not been verified.
+ * Description: Verify async keyword as function modifier.
  */
 
 function assertTrue(value: boolean, message: string): void {

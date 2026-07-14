@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 16_this_in_class
- * CaseType: fail_runtime
- * Priority: P1
- * ECMA Baseline Status: ES2022 / ArkTS-specific
- * Source Coverage ID: CLASS-TOTAL-1075
- * Related Spec: super.method 内部 this 为错误 receiver 的动态边界
- * Expected: Runtime throws an exception; error message is not asserted.
+ * Case ID: CLASS-FAILR-011
+ * Coverage ID:
+ *   - CLASS-TOTAL-1075
+ * Feature: class
+ * Test Type: fail_runtime
+ * Expected Phase: runtime
+ * Expected Outcome: exception
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: this_keyword
+ * Spec Source: pending
+ * Expected Exception: pending
+ * Description: Verify super.method 内部 this 为错误 receiver 的动态边界
  */
 
 function assertTrue(value: boolean, message: string): void {

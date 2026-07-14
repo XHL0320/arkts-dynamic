@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 01_class_type
- * CaseType: pass
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0494
- * Related Spec: nullable class type A
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-016
+ * Coverage ID:
+ *   - CLASS-TOTAL-0494
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify nullable class type A
  */
 
 function assertTrue(value: boolean, message: string): void {

@@ -1,7 +1,16 @@
 /*
- * Operator Stage 1
- * Test point: NaN relational comparison is always false.
- * Expected: NaN < 1 === false, NaN > 1 === false, NaN <= 1 === false, NaN >= 1 === false.
+ * Case ID: OPER-PASS-021
+ * Coverage ID:
+ *   - OP-RELATIONAL-005
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify NaN relational comparison is always false.. NaN < 1 === false, NaN > 1 === false, NaN <= 1 === false, NaN >= 1 === false.
  */
 
 function assertTrue(value: boolean, message: string): void {

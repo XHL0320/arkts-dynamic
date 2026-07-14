@@ -1,9 +1,18 @@
 /*
- * Generic Stage 1
- * Boundary / pending confirmation.
- * Test point: export generic function/class.
- * Boundary reason: dynamic ArkTS generic export support needs confirmation.
- * Module resolution and binding behavior are covered in 06_module.
+ * Case ID: GEN-BOUND-004
+ * Coverage ID:
+ *   - GEN-MOD-001
+ *   - GEN-MOD-002
+ * Feature: generic
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 04_generic
+ * Related Chapters: module
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic generic behavior has not been verified.
+ * Description: Verify generic function and class export boundary.
  */
 
 function assertTrue(value: boolean, message: string): void {

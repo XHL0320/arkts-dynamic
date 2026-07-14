@@ -1,7 +1,17 @@
 /*
- * Keyword Stage 1
- * Test point: reserved word as object property name.
- * Expected: keywords can be used as object property names using computed access.
+ * Case ID: KEYW-PASS-008
+ * Coverage ID:
+ *   - KW-PROP-003
+ *   - KW-RES-007
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: declarations
+ * Spec Source: pending
+ * Description: Verify reserved word as object property name.. keywords can be used as object property names using computed access.
  */
 
 function assertTrue(value: boolean, message: string): void {

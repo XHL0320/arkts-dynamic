@@ -1,8 +1,20 @@
-/*
- * Module Stage 1
- * Test point: export list and import multiple.
- */
+﻿/*
+ * Case ID: MODULE-PASS-003
+ * Coverage ID:
 
+ *   - MOD-EL-001
+ * Feature: module
+ * Test Type: pass
+ * Expected Phase: module_load
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 06_module
+ * Related Chapters: declarations
+ * Helper IDs:
+ *   - MODULE-HELP-008
+ * Spec Source: pending
+ * Description: Verify export list and import multiple bindings.
+ */
 import { sourceValue, sourceFunction, SourceClass }
   from '../helpers/re_export/module_re_export_source_helper'
 

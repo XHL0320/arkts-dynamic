@@ -1,8 +1,19 @@
 /*
- * Interface Stage 1
- * Boundary / pending confirmation.
- * Test point: duplicate property in same interface.
- * Boundary reason: dynamic ArkTS duplicate property detection needs confirmation.
+ * Case ID: INTF-BOUND-005
+ * Coverage ID:
+ *   - IF-DUP-001
+ *   - IF-DUP-003
+ *   - IF-MERGE-002
+ * Feature: interface
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 03_interface
+ * Related Chapters: declarations
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic interface behavior has not been verified.
+ * Description: Verify duplicate same-type property, duplicate method, and merged member completeness boundary.
  */
 
 function assertTrue(value: boolean, message: string): void {

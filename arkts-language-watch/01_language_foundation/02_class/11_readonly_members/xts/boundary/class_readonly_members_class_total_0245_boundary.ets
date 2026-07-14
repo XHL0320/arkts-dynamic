@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 11_readonly_members
- * CaseType: boundary
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific
- * Source Coverage ID: CLASS-TOTAL-0245
- * Related Spec: abstract readonly field 不支持时声明，parser/checker 报错
- * Expected: Pending ArkTS behavior confirmation; no strong assertion.
+ * Case ID: CLASS-BOUND-050
+ * Coverage ID:
+ *   - CLASS-TOTAL-0245
+ * Feature: class
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic class behavior has not been verified.
+ * Description: Verify abstract readonly field 不支持时声明，parser/checker 报错
  */
 
 function assertTrue(value: boolean, message: string): void {

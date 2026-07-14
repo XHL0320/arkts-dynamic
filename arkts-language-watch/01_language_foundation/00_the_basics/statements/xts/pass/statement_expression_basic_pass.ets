@@ -1,7 +1,18 @@
 /*
- * Statement Stage 1
- * Test point: expression statement executes and discards result.
- * Expected: assignment and call expressions work as statements.
+ * Case ID: STMT-PASS-007
+ * Coverage ID:
+ *   - STMT-EXPR-001
+ *   - STMT-EXPR-002
+ *   - STMT-EXPR-003
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: function
+ * Spec Source: pending
+ * Description: Verify expression statement executes and discards result.. assignment and call expressions work as statements.
  */
 
 function assertTrue(value: boolean, message: string): void {

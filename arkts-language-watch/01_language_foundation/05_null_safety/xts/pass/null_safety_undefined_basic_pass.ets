@@ -1,9 +1,19 @@
-/*
- * Null Safety Stage 1
- * Test point: undefined basic value behavior.
- * Expected: undefined is a value, typeof undefined is "undefined".
+﻿/*
+ * Case ID: NULL-PASS-016
+ * Coverage ID:
+ *   - NS-UNDEF-001
+ *   - NS-UNDEF-003
+ *   - NS-UNDEF-004
+ * Feature: null_safety
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 05_null_safety
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify undefined basic value, typeof undefined, Boolean, Number, String.
  */
-
 function assertTrue(value: boolean, message: string): void {
   if (!value) { throw new Error(message) }
 }

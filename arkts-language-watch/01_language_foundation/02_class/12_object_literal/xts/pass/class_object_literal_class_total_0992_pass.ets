@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 12_object_literal
- * CaseType: pass
- * Priority: P1
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-0992
- * Related Spec: object literal property access 运行时读取成功
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-299
+ * Coverage ID:
+ *   - CLASS-TOTAL-0992
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify object literal property access 运行时读取成功
  */
 
 function assertTrue(value: boolean, message: string): void {

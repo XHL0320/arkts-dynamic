@@ -1,10 +1,19 @@
-/*
- * Null Safety Stage 1
- * Boundary / pending confirmation.
- * Test point: class field initialized to null.
- * Boundary reason: dynamic ArkTS class field null initialization needs confirmation.
+﻿/*
+ * Case ID: NULL-BOUND-001
+ * Coverage ID:
+ *   - NS-CF-001
+ *   - NS-CF-002
+ * Feature: null_safety
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 05_null_safety
+ * Related Chapters: class
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic null safety behavior has not been verified.
+ * Description: Verify class field initialized to null boundary.
  */
-
 function assertTrue(value: boolean, message: string): void {
   if (!value) { throw new Error(message) }
 }

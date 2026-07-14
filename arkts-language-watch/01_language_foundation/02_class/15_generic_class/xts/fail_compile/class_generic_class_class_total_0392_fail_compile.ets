@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 15_generic_class
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0392
- * Related Spec: generic static field 使用 T，checker 报错或边界记录
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-361
+ * Coverage ID:
+ *   - CLASS-TOTAL-0392
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: generic
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify generic static field 使用 T，checker 报错或边界记录
  */
 
 // Expected error: generic static field 使用 T，checker 报错或边界记录

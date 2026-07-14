@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 08_super
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: ES2022
- * Source Coverage ID: CLASS-TOTAL-0179
- * Related Spec: 非派生类 constructor 中调用 super()，checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-164
+ * Coverage ID:
+ *   - CLASS-TOTAL-0179
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: this_keyword
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify 非派生类 constructor 中调用 super()，checker 报错
  */
 
 // Expected error: 非派生类 constructor 中调用 super()，checker 报错

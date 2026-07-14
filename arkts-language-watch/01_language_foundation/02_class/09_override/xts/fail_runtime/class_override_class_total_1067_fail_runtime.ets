@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 09_override
- * CaseType: fail_runtime
- * Priority: P1
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-1067
- * Related Spec: super.method 不存在且未被静态拦截时运行时 TypeError
- * Expected: Runtime throws an exception; error message is not asserted.
+ * Case ID: CLASS-FAILR-003
+ * Coverage ID:
+ *   - CLASS-TOTAL-1067
+ * Feature: class
+ * Test Type: fail_runtime
+ * Expected Phase: runtime
+ * Expected Outcome: exception
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: function
+ * Spec Source: pending
+ * Expected Exception: pending
+ * Description: Verify super.method 不存在且未被静态拦截时运行时 TypeError
  */
 
 function assertTrue(value: boolean, message: string): void {

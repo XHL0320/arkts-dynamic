@@ -1,8 +1,17 @@
 /*
- * Keyword Stage 1
- * Boundary / pending confirmation.
- * Test point: super keyword in class context.
- * Boundary reason: dynamic ArkTS super keyword and class inheritance support needs confirmation.
+ * Case ID: KEYW-BOUND-008
+ * Coverage ID:
+ *   - KW-OP-007
+ * Feature: language_basics
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: declarations
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic language behavior has not been verified.
+ * Description: Verify super keyword in class context.
  */
 
 function assertTrue(value: boolean, message: string): void {

@@ -1,9 +1,18 @@
 /*
- * Interface Stage 1
- * Boundary / pending confirmation.
- * Test point: interface merging (same name interface declarations).
- * Boundary reason: dynamic ArkTS interface merging support needs confirmation.
- * In TypeScript, same-name interfaces are merged automatically.
+ * Case ID: INTF-BOUND-010
+ * Coverage ID:
+ *   - IF-MERGE-001
+ *   - IF-MERGE-002
+ * Feature: interface
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 03_interface
+ * Related Chapters: declarations
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic interface behavior has not been verified.
+ * Description: Verify interface merging declaration and merged member completeness boundary.
  */
 
 function assertTrue(value: boolean, message: string): void {

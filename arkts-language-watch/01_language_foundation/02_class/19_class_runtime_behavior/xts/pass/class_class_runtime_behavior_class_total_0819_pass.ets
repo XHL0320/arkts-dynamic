@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 19_class_runtime_behavior
- * CaseType: pass
- * Priority: P0
- * ECMA Baseline Status: ES2022
- * Source Coverage ID: CLASS-TOTAL-0819
- * Related Spec: class value 作为函数返回值
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-466
+ * Coverage ID:
+ *   - CLASS-TOTAL-0819
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify class value 作为函数返回值
  */
 
 function assertTrue(value: boolean, message: string): void {

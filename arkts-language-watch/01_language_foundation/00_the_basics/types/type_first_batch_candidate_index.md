@@ -1,92 +1,82 @@
-# Type First Batch Candidate Index
+# types Candidate Index
 
 ## Summary
 
-首批候选聚焦 P0 / P1 类型体系测试点，用于后续生成 XTS / ohosTest 用例。所有候选状态为 `planned`，本阶段不生成 `.ets` 用例。
-
-| 项目 | 数量 |
+| Project | Count |
 |---|---:|
-| P0 候选 | 22 |
-| P1 候选 | 16 |
-| P2 候选 | 2 |
-| 总候选数量 | 40 |
-| ohosTest 适用候选 | 35 |
-| 需要 test262 对照候选 | 25 |
+| Candidate total | 65 |
+| generated | 38 |
+| planned | 27 |
 
 ## Candidate List
 
-| Candidate ID | 类型方向 | Test Point | Case Type | Priority | Suggested File Path | Suitable for ohosTest | Needs test262 Comparison | Related Chapter | Current Status | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|
-| TYPE-CAND-001 | typeof | typeof undefined 返回 "undefined" | pass | P0 | `types/xts/pass/type_typeof_undefined_pass.ets` | yes | yes | types | planned | ES 核心行为 |
-| TYPE-CAND-002 | typeof | typeof null 返回 "object" | pass | P0 | `types/xts/pass/type_typeof_null_pass.ets` | yes | yes | types | planned | 历史遗留行为 |
-| TYPE-CAND-003 | typeof | typeof function 返回 "function" | pass | P0 | `types/xts/pass/type_typeof_function_pass.ets` | yes | yes | types | planned | 可调用对象标识 |
-| TYPE-CAND-004 | typeof | typeof array 返回 "object" | pass | P0 | `types/xts/pass/type_typeof_array_pass.ets` | yes | yes | types | planned | 数组是对象 |
-| TYPE-CAND-005 | typeof | typeof bigint 返回 "bigint" | pass | P0 | `types/xts/pass/type_typeof_bigint_pass.ets` | yes | yes | types | planned | 类型识别 |
-| TYPE-CAND-006 | typeof | typeof symbol 返回 "symbol" | pass | P0 | `types/xts/pass/type_typeof_symbol_pass.ets` | yes | yes | types | planned | 类型识别 |
-| TYPE-CAND-007 | null_undefined | null 与 undefined 抽象相等 | pass | P0 | `types/xts/pass/type_null_undefined_equal_pass.ets` | yes | yes | types | planned | null == undefined true |
-| TYPE-CAND-008 | null_undefined | null 与 undefined 严格不等 | pass | P0 | `types/xts/pass/type_null_undefined_strict_pass.ets` | yes | yes | types | planned | null === undefined false |
-| TYPE-CAND-009 | number | number 基础值（整数/浮点） | pass | P0 | `types/xts/pass/type_number_basic_pass.ets` | yes | yes | types | planned | ES 核心行为 |
-| TYPE-CAND-010 | number | number NaN 值 | pass | P0 | `types/xts/pass/type_number_nan_pass.ets` | yes | yes | types | planned | NaN !== NaN |
-| TYPE-CAND-011 | number | number Infinity / -Infinity | pass | P1 | `types/xts/pass/type_number_infinity_pass.ets` | yes | yes | types | planned | 特殊值 |
-| TYPE-CAND-012 | bigint | bigint 基础值 | pass | P0 | `types/xts/pass/type_bigint_basic_pass.ets` | yes | yes | types | planned | 字面量后缀 n |
-| TYPE-CAND-013 | bigint | number 与 bigint 比较（1 == 1n） | pass | P1 | `types/xts/pass/type_bigint_equal_pass.ets` | yes | yes | types | planned | 抽象相等 true |
-| TYPE-CAND-014 | bigint | number + bigint 混合运算 TypeError | fail_runtime | P0 | `types/xts/fail_runtime/type_bigint_mixed_type_error_fail_runtime.ets` | yes | yes | types | planned | 不能混合运算 |
-| TYPE-CAND-015 | string | string 基础值 | pass | P0 | `types/xts/pass/type_string_basic_pass.ets` | yes | yes | types | planned | ES 核心行为 |
-| TYPE-CAND-016 | boolean | boolean true/false 基础值 | pass | P0 | `types/xts/pass/type_boolean_basic_pass.ets` | yes | yes | types | planned | ES 核心行为 |
-| TYPE-CAND-017 | boolean | ToBoolean falsy 值列表 | pass | P0 | `types/xts/pass/type_boolean_falsy_pass.ets` | yes | yes | types | planned | 6 个 falsy 值 |
-| TYPE-CAND-018 | boolean | ToBoolean truthy 值（[]/{}） | pass | P0 | `types/xts/pass/type_boolean_truthy_pass.ets` | yes | yes | types | planned | 常见误判 |
-| TYPE-CAND-019 | object | object 基础属性访问 | pass | P0 | `types/xts/pass/type_object_property_pass.ets` | yes | yes | types | planned | 基础行为 |
-| TYPE-CAND-020 | array | array 运行时类型（typeof + isArray） | pass | P0 | `types/xts/pass/type_array_typeof_pass.ets` | yes | yes | types | planned | typeof + isArray |
-| TYPE-CAND-021 | function_object | function object 运行时类型 | pass | P0 | `types/xts/pass/type_function_typeof_pass.ets` | yes | yes | types | planned | typeof "function" |
-| TYPE-CAND-022 | instanceof | instanceof class instance | pass | P0 | `types/xts/pass/type_instanceof_class_pass.ets` | yes | yes | types / class | planned | 原型链判断 |
-| TYPE-CAND-023 | instanceof | instanceof array | pass | P0 | `types/xts/pass/type_instanceof_array_pass.ets` | yes | yes | types / class | planned | Array 判断 |
-| TYPE-CAND-024 | instanceof | instanceof 右侧非函数 TypeError | fail_runtime | P1 | `types/xts/fail_runtime/type_instanceof_non_function_fail_runtime.ets` | yes | yes | types | planned | 运行时异常 |
-| TYPE-CAND-025 | conversion | ToBoolean false values | pass | P0 | `types/xts/pass/type_conv_toboolean_falsy_pass.ets` | yes | yes | types / conversion | planned | 6 个 falsy 值 |
-| TYPE-CAND-026 | conversion | ToBoolean true values | pass | P0 | `types/xts/pass/type_conv_toboolean_truthy_pass.ets` | yes | yes | types / conversion | planned | []/{} truthy |
-| TYPE-CAND-027 | conversion | ToNumber string | pass | P0 | `types/xts/pass/type_conv_tonumber_string_pass.ets` | yes | yes | types / conversion | planned | "123" → 123 |
-| TYPE-CAND-028 | conversion | ToString number | pass | P0 | `types/xts/pass/type_conv_tostring_number_pass.ets` | yes | yes | types / conversion | planned | 123 → "123" |
-| TYPE-CAND-029 | typescript_type_syntax | TypeScript 类型标注兼容边界 | boundary | P0 | `types/xts/boundary/type_ts_annotation_boundary.ets` | yes | no | types | planned | 运行时是否擦除 |
-| TYPE-CAND-030 | typescript_type_syntax | union type 语法边界 | boundary | P0 | `types/xts/boundary/type_ts_union_boundary.ets` | yes | no | types | planned | 是否允许 |
-| TYPE-CAND-031 | typescript_type_syntax | literal type 语法边界 | boundary | P0 | `types/xts/boundary/type_ts_literal_boundary.ets` | yes | no | types | planned | 是否允许 |
-| TYPE-CAND-032 | typescript_type_syntax | type alias 语法边界 | boundary | P0 | `types/xts/boundary/type_ts_alias_boundary.ets` | yes | no | types | planned | 是否允许 |
-| TYPE-CAND-033 | typescript_type_syntax | any / unknown 边界 | boundary | P0 | `types/xts/boundary/type_ts_any_unknown_boundary.ets` | yes | no | types | planned | 是否允许 |
-| TYPE-CAND-034 | symbol | symbol 创建和唯一性 | pass | P0 | `types/xts/pass/type_symbol_unique_pass.ets` | yes | yes | types | planned | Symbol() |
-| TYPE-CAND-035 | symbol | new Symbol() TypeError | fail_runtime | P1 | `types/xts/fail_runtime/type_symbol_new_fail_runtime.ets` | yes | yes | types | planned | Symbol 不是构造器 |
-| TYPE-CAND-036 | number | NaN !== NaN 行为 | regression | P0 | `types/xts/regression/type_number_nan_not_equal_regression.ets` | yes | yes | types | planned | 规范核心验证 |
-| TYPE-CAND-037 | number | number +0 / -0 区分 | boundary | P1 | `types/xts/boundary/type_number_zero_boundary.ets` | yes | yes | types | planned | 0 === -0 |
-| TYPE-CAND-038 | boolean | Boolean([]) 为 true | boundary | P1 | `types/xts/boundary/type_boolean_empty_array_boundary.ets` | yes | yes | types | planned | 空数组 truthy |
-| TYPE-CAND-039 | boolean | Boolean({}) 为 true | boundary | P1 | `types/xts/boundary/type_boolean_empty_object_boundary.ets` | yes | yes | types | planned | 空对象 truthy |
-| TYPE-CAND-040 | instanceof | Symbol.hasInstance 自定义 instanceof | boundary | P2 | `types/xts/boundary/type_instanceof_custom_boundary.ets` | yes | no | types | planned | 是否支持 |
+| Candidate ID | Case ID | Basics | Test Point | Case Type | Priority | Generation Status | Validation Status | Actual Path | Coverage ID | Stage | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| TYPE-CAND-001 | TYPE-PASS-018 | types | typeof undefined 杩斿洖 "undefined" | pass | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/pass/type_typeof_undefined_pass.ets | TYPE-STAGE1-001 |  | exact_path_match |
+| TYPE-CAND-002 | TYPE-PASS-016 | types | typeof null 杩斿洖 "object" | pass | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/pass/type_typeof_null_pass.ets | TYPE-STAGE1-002 |  | exact_path_match |
+| TYPE-CAND-003 | TYPE-PASS-015 | types | typeof function 杩斿洖 "function" | pass | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/pass/type_typeof_function_pass.ets | TYPE-STAGE1-003 |  | exact_path_match |
+| TYPE-CAND-004 | none | types | typeof array 杩斿洖 "object" | pass | P0 | planned | planned | none | none |  | no_implementation |
+| TYPE-CAND-005 | TYPE-PASS-014 | types | typeof bigint 杩斿洖 "bigint" | pass | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/pass/type_typeof_bigint_pass.ets | TYPE-STAGE1-005 |  | exact_path_match |
+| TYPE-CAND-006 | none | types | typeof symbol 杩斿洖 "symbol" | pass | P0 | planned | planned | none | none |  | no_implementation |
+| TYPE-CAND-007 | none | types | null 涓?undefined 鎶借薄鐩哥瓑 | pass | P0 | planned | planned | none | none |  | no_implementation |
+| TYPE-CAND-008 | none | types | null 涓?undefined 涓ユ牸涓嶇瓑 | pass | P0 | planned | planned | none | none |  | no_implementation |
+| TYPE-CAND-009 | TYPE-PASS-008 | types | number 鍩虹鍊硷紙鏁存暟/娴偣锛? | pass | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/pass/type_number_basic_pass.ets | TYPE-STAGE1-011 |  | exact_path_match |
+| TYPE-CAND-010 | TYPE-PASS-011 | types | number NaN 鍊? | pass | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/pass/type_number_nan_pass.ets | TYPE-STAGE1-012 |  | exact_path_match |
+| TYPE-CAND-011 | TYPE-PASS-010 | types | number Infinity / -Infinity | pass | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/pass/type_number_infinity_pass.ets | TYPE-STAGE1-013 |  | exact_path_match |
+| TYPE-CAND-012 | TYPE-PASS-002 | types | bigint 鍩虹鍊? | pass | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/pass/type_bigint_basic_pass.ets | TYPE-STAGE1-014 |  | exact_path_match |
+| TYPE-CAND-013 | none | types | number 涓?bigint 姣旇緝锛? == 1n锛? | pass | P0 | planned | planned | none | none |  | no_implementation |
+| TYPE-CAND-014 | none | types | number + bigint 娣峰悎杩愮畻 TypeError | pass | P0 | planned | planned | none | none |  | no_implementation |
+| TYPE-CAND-015 | TYPE-PASS-013 | types | string 鍩虹鍊? | pass | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/pass/type_string_basic_pass.ets | TYPE-STAGE1-018 |  | exact_path_match |
+| TYPE-CAND-016 | TYPE-PASS-003 | types | boolean true/false 鍩虹鍊? | pass | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/pass/type_boolean_basic_pass.ets | TYPE-STAGE1-019 |  | exact_path_match |
+| TYPE-CAND-017 | none | types | ToBoolean falsy 鍊煎垪琛? | pass | P0 | planned | planned | none | none |  | no_implementation |
+| TYPE-CAND-018 | none | types | ToBoolean truthy 鍊硷紙[]/{}锛? | pass | P0 | planned | planned | none | none |  | no_implementation |
+| TYPE-CAND-019 | none | types | object 鍩虹灞炴€ц闂? | pass | P0 | planned | planned | none | none |  | no_implementation |
+| TYPE-CAND-020 | none | types | array 杩愯鏃剁被鍨嬶紙typeof + isArray锛? | pass | P0 | planned | planned | none | none |  | no_implementation |
+| TYPE-CAND-021 | none | types | function object 杩愯鏃剁被鍨? | pass | P0 | planned | planned | none | none |  | no_implementation |
+| TYPE-CAND-022 | TYPE-PASS-005 | types | instanceof class instance | pass | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/pass/type_instanceof_class_pass.ets | TYPE-STAGE1-023 |  | exact_path_match |
+| TYPE-CAND-023 | TYPE-PASS-004 | types | instanceof array | pass | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/pass/type_instanceof_array_pass.ets | TYPE-STAGE1-022 |  | exact_path_match |
+| TYPE-CAND-024 | none | types | instanceof 鍙充晶闈炲嚱鏁?TypeError | pass | P0 | planned | planned | none | none |  | no_implementation |
+| TYPE-CAND-025 | none | types | ToBoolean false values | pass | P0 | planned | planned | none | none |  | no_implementation |
+| TYPE-CAND-026 | none | types | ToBoolean true values | pass | P0 | planned | planned | none | none |  | no_implementation |
+| TYPE-CAND-027 | none | types | ToNumber string | pass | P0 | planned | planned | none | none |  | no_implementation |
+| TYPE-CAND-028 | none | types | ToString number | pass | P0 | planned | planned | none | none |  | no_implementation |
+| TYPE-CAND-029 | TYPE-BOUND-005 | types | TypeScript 绫诲瀷鏍囨敞鍏煎杈圭晫 | boundary | P0 | generated | spec_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/boundary/type_ts_annotation_boundary.ets | TYPE-STAGE1-024 |  | exact_path_match |
+| TYPE-CAND-030 | none | types | union type 璇硶杈圭晫 | pass | P0 | planned | planned | none | none |  | no_implementation |
+| TYPE-CAND-031 | none | types | literal type 璇硶杈圭晫 | pass | P0 | planned | planned | none | none |  | no_implementation |
+| TYPE-CAND-032 | none | types | type alias 璇硶杈圭晫 | pass | P0 | planned | planned | none | none |  | no_implementation |
+| TYPE-CAND-033 | none | types | any / unknown 杈圭晫 | pass | P0 | planned | planned | none | none |  | no_implementation |
+| TYPE-CAND-034 | none | types | symbol 鍒涘缓鍜屽敮涓€鎬? | pass | P0 | planned | planned | none | none |  | no_implementation |
+| TYPE-CAND-035 | none | types | new Symbol() TypeError | pass | P0 | planned | planned | none | none |  | no_implementation |
+| TYPE-CAND-036 | none | types | NaN !== NaN 琛屼负 | pass | P0 | planned | planned | none | none |  | no_implementation |
+| TYPE-CAND-037 | none | types | number +0 / -0 鍖哄垎 | pass | P0 | planned | planned | none | none |  | no_implementation |
+| TYPE-CAND-038 | none | types | Boolean([]) 涓?true | pass | P0 | planned | planned | none | none |  | no_implementation |
+| TYPE-CAND-039 | none | types | Boolean({}) 涓?true | pass | P0 | planned | planned | none | none |  | no_implementation |
+| TYPE-CAND-040 | none | types | Symbol.hasInstance 鑷畾涔?instanceof | pass | P0 | planned | planned | none | none |  | no_implementation |
+| TYPE-CAND-001 | TYPE-PASS-018 | types | typeof undefined 杩斿洖 "undefined" | pass | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/pass/type_typeof_undefined_pass.ets | TYPE-STAGE1-001 | Types Stage 1 | exact_path_match |
+| TYPE-CAND-002 | TYPE-PASS-016 | types | typeof null 杩斿洖 "object" | pass | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/pass/type_typeof_null_pass.ets | TYPE-STAGE1-002 | Types Stage 1 | exact_path_match |
+| TYPE-CAND-003 | TYPE-PASS-015 | types | typeof function 杩斿洖 "function" | pass | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/pass/type_typeof_function_pass.ets | TYPE-STAGE1-003 | Types Stage 1 | exact_path_match |
+| TYPE-CAND-004 | TYPE-PASS-017 | types | typeof array 杩斿洖 "object" | pass | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/pass/type_typeof_object_array_pass.ets | TYPE-STAGE1-004 | Types Stage 1 | exact_path_match |
+| TYPE-CAND-005 | TYPE-PASS-014 | types | typeof bigint 杩斿洖 "bigint" | pass | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/pass/type_typeof_bigint_pass.ets | TYPE-STAGE1-005 | Types Stage 1 | exact_path_match |
+| TYPE-CAND-006 | TYPE-BOUND-006 | types | typeof symbol 杩斿洖 "symbol" | boundary | P0 | generated | spec_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/boundary/type_typeof_symbol_boundary.ets | TYPE-STAGE1-006 | Types Stage 1 | exact_path_match |
+| TYPE-CAND-007 | TYPE-PASS-006 | types | null == undefined | pass | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/pass/type_null_undefined_loose_equal_pass.ets | TYPE-STAGE1-007 | Types Stage 1 | exact_path_match |
+| TYPE-CAND-008 | TYPE-PASS-007 | types | null !== undefined | pass | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/pass/type_null_undefined_strict_not_equal_pass.ets | TYPE-STAGE1-008 | Types Stage 1 | exact_path_match |
+| TYPE-CAND-009 | TYPE-PASS-008 | types | number 鍩虹鍊? | pass | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/pass/type_number_basic_pass.ets | TYPE-STAGE1-011 | Types Stage 1 | exact_path_match |
+| TYPE-CAND-010 | TYPE-PASS-011 | types | number NaN 鍊? | pass | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/pass/type_number_nan_pass.ets | TYPE-STAGE1-012 | Types Stage 1 | exact_path_match |
+| TYPE-CAND-011 | TYPE-PASS-010 | types | number Infinity / -Infinity | pass | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/pass/type_number_infinity_pass.ets | TYPE-STAGE1-013 | Types Stage 1 | exact_path_match |
+| TYPE-CAND-012 | TYPE-PASS-002 | types | bigint 鍩虹鍊? | pass | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/pass/type_bigint_basic_pass.ets | TYPE-STAGE1-014 | Types Stage 1 | exact_path_match |
+| TYPE-CAND-013 | TYPE-PASS-009 | types | number 涓?bigint 姣旇緝 | pass | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/pass/type_number_bigint_compare_pass.ets | TYPE-STAGE1-015 | Types Stage 1 | exact_path_match |
+| TYPE-CAND-014 | TYPE-FAILR-002 | types | number + bigint TypeError | fail_runtime | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/fail_runtime/type_number_bigint_add_fail_runtime.ets | TYPE-STAGE1-016 | Types Stage 1 | exact_path_match |
+| TYPE-CAND-015 | TYPE-PASS-013 | types | string 鍩虹鍊? | pass | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/pass/type_string_basic_pass.ets | TYPE-STAGE1-018 | Types Stage 1 | exact_path_match |
+| TYPE-CAND-016 | TYPE-PASS-003 | types | boolean true/false 鍩虹鍊? | pass | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/pass/type_boolean_basic_pass.ets | TYPE-STAGE1-019 | Types Stage 1 | exact_path_match |
+| TYPE-CAND-019 | TYPE-PASS-012 | types | object 鍩虹灞炴€ц闂? | pass | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/pass/type_object_basic_pass.ets | TYPE-STAGE1-020 | Types Stage 1 | exact_path_match |
+| TYPE-CAND-020 | TYPE-PASS-001 | types | array 杩愯鏃剁被鍨? | pass | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/pass/type_array_runtime_type_pass.ets | TYPE-STAGE1-021 | Types Stage 1 | exact_path_match |
+| TYPE-CAND-022 | TYPE-PASS-005 | types | instanceof class instance | pass | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/pass/type_instanceof_class_pass.ets | TYPE-STAGE1-023 | Types Stage 1 | exact_path_match |
+| TYPE-CAND-023 | TYPE-PASS-004 | types | instanceof array | pass | P0 | generated | validation_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/pass/type_instanceof_array_pass.ets | TYPE-STAGE1-022 | Types Stage 1 | exact_path_match |
+| TYPE-CAND-029 | TYPE-BOUND-005 | types | TypeScript 绫诲瀷鏍囨敞鍏煎杈圭晫 | boundary | P0 | generated | spec_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/boundary/type_ts_annotation_boundary.ets | TYPE-STAGE1-024 | Types Stage 1 | exact_path_match |
+| TYPE-CAND-030 | TYPE-BOUND-007 | types | union type 璇硶杈圭晫 | boundary | P0 | generated | spec_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/boundary/type_union_syntax_boundary.ets | TYPE-STAGE1-025 | Types Stage 1 | exact_path_match |
+| TYPE-CAND-031 | TYPE-BOUND-004 | types | literal type 璇硶杈圭晫 | boundary | P0 | generated | spec_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/boundary/type_literal_syntax_boundary.ets | TYPE-STAGE1-026 | Types Stage 1 | exact_path_match |
+| TYPE-CAND-032 | TYPE-BOUND-001 | types | type alias 璇硶杈圭晫 | boundary | P0 | generated | spec_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/boundary/type_alias_syntax_boundary.ets | TYPE-STAGE1-027 | Types Stage 1 | exact_path_match |
+| TYPE-CAND-033 | TYPE-BOUND-002 | types | any / unknown 杈圭晫 | boundary | P0 | generated | spec_pending | arkts-language-watch/01_language_foundation/00_the_basics/types/xts/boundary/type_any_unknown_boundary.ets | TYPE-STAGE1-028 | Types Stage 1 | exact_path_match |
+## Historical Snapshot
 
-## Types Stage 1 Candidate Status
-
-| Candidate ID | 类型方向 | Test Point | Case Type | Priority | 当前状态 | 阶段 | 实际路径 | Notes |
-|---|---|---|---|---|---|---|---|---|
-| TYPE-CAND-001 | typeof | typeof undefined 返回 "undefined" | pass | P0 | created | Types Stage 1 | `xts/pass/type_typeof_undefined_pass.ets` | generated |
-| TYPE-CAND-002 | typeof | typeof null 返回 "object" | pass | P0 | created | Types Stage 1 | `xts/pass/type_typeof_null_pass.ets` | generated |
-| TYPE-CAND-003 | typeof | typeof function 返回 "function" | pass | P0 | created | Types Stage 1 | `xts/pass/type_typeof_function_pass.ets` | generated |
-| TYPE-CAND-004 | typeof | typeof array 返回 "object" | pass | P0 | created | Types Stage 1 | `xts/pass/type_typeof_object_array_pass.ets` | merged with object typeof |
-| TYPE-CAND-005 | typeof | typeof bigint 返回 "bigint" | pass | P0 | created | Types Stage 1 | `xts/pass/type_typeof_bigint_pass.ets` | generated |
-| TYPE-CAND-006 | typeof | typeof symbol 返回 "symbol" | boundary | P0 | boundary created | Types Stage 1 | `xts/boundary/type_typeof_symbol_boundary.ets` | pending confirmation |
-| TYPE-CAND-007 | null_undefined | null == undefined | pass | P0 | created | Types Stage 1 | `xts/pass/type_null_undefined_loose_equal_pass.ets` | generated |
-| TYPE-CAND-008 | null_undefined | null !== undefined | pass | P0 | created | Types Stage 1 | `xts/pass/type_null_undefined_strict_not_equal_pass.ets` | generated |
-| TYPE-CAND-009 | number | number 基础值 | pass | P0 | created | Types Stage 1 | `xts/pass/type_number_basic_pass.ets` | generated |
-| TYPE-CAND-010 | number | number NaN 值 | pass | P0 | created | Types Stage 1 | `xts/pass/type_number_nan_pass.ets` | generated |
-| TYPE-CAND-011 | number | number Infinity / -Infinity | pass | P1 | created | Types Stage 1 | `xts/pass/type_number_infinity_pass.ets` | generated |
-| TYPE-CAND-012 | bigint | bigint 基础值 | pass | P0 | created | Types Stage 1 | `xts/pass/type_bigint_basic_pass.ets` | generated |
-| TYPE-CAND-013 | bigint | number 与 bigint 比较 | pass | P1 | created | Types Stage 1 | `xts/pass/type_number_bigint_compare_pass.ets` | generated |
-| TYPE-CAND-014 | bigint | number + bigint TypeError | fail_runtime | P0 | created | Types Stage 1 | `xts/fail_runtime/type_number_bigint_add_fail_runtime.ets` | generated |
-| TYPE-CAND-015 | string | string 基础值 | pass | P0 | created | Types Stage 1 | `xts/pass/type_string_basic_pass.ets` | generated |
-| TYPE-CAND-016 | boolean | boolean true/false 基础值 | pass | P0 | created | Types Stage 1 | `xts/pass/type_boolean_basic_pass.ets` | generated |
-| TYPE-CAND-019 | object | object 基础属性访问 | pass | P0 | created | Types Stage 1 | `xts/pass/type_object_basic_pass.ets` | generated |
-| TYPE-CAND-020 | array | array 运行时类型 | pass | P0 | created | Types Stage 1 | `xts/pass/type_array_runtime_type_pass.ets` | generated |
-| TYPE-CAND-022 | instanceof | instanceof class instance | pass | P0 | created | Types Stage 1 | `xts/pass/type_instanceof_class_pass.ets` | generated |
-| TYPE-CAND-023 | instanceof | instanceof array | pass | P0 | created | Types Stage 1 | `xts/pass/type_instanceof_array_pass.ets` | generated |
-| TYPE-CAND-029 | typescript_type_syntax | TypeScript 类型标注兼容边界 | boundary | P0 | boundary created | Types Stage 1 | `xts/boundary/type_ts_annotation_boundary.ets` | pending confirmation |
-| TYPE-CAND-030 | typescript_type_syntax | union type 语法边界 | boundary | P0 | boundary created | Types Stage 1 | `xts/boundary/type_union_syntax_boundary.ets` | pending confirmation |
-| TYPE-CAND-031 | typescript_type_syntax | literal type 语法边界 | boundary | P0 | boundary created | Types Stage 1 | `xts/boundary/type_literal_syntax_boundary.ets` | pending confirmation |
-| TYPE-CAND-032 | typescript_type_syntax | type alias 语法边界 | boundary | P0 | boundary created | Types Stage 1 | `xts/boundary/type_alias_syntax_boundary.ets` | pending confirmation |
-| TYPE-CAND-033 | typescript_type_syntax | any / unknown 边界 | boundary | P0 | boundary created | Types Stage 1 | `xts/boundary/type_any_unknown_boundary.ets` | pending confirmation |
-| TYPE-CAND-STAGE1-001 | null_undefined | undefined property access runtime error | fail_runtime | P0 | created | Types Stage 1 | `xts/fail_runtime/type_undefined_property_access_fail_runtime.ets` | appended Stage 1 candidate |
-| TYPE-CAND-STAGE1-002 | null_undefined | null property access runtime error | fail_runtime | P0 | created | Types Stage 1 | `xts/fail_runtime/type_null_property_access_fail_runtime.ets` | appended Stage 1 candidate |
-| TYPE-CAND-STAGE1-003 | bigint | bigint literal support boundary | boundary | P0 | boundary created | Types Stage 1 | `xts/boundary/type_bigint_literal_boundary.ets` | appended Stage 1 candidate |
+> Original format replaced.

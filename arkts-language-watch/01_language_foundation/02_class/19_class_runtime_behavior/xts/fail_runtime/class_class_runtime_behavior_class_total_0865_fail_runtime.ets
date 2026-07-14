@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 19_class_runtime_behavior
- * CaseType: fail_runtime
- * Priority: P0
- * ECMA Baseline Status: ES2022
- * Source Coverage ID: CLASS-TOTAL-0865
- * Related Spec: constructor 普通调用 TypeError（如未被 checker 拦截）
- * Expected: Runtime throws an exception; error message is not asserted.
+ * Case ID: CLASS-FAILR-023
+ * Coverage ID:
+ *   - CLASS-TOTAL-0865
+ * Feature: class
+ * Test Type: fail_runtime
+ * Expected Phase: runtime
+ * Expected Outcome: exception
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Expected Exception: pending
+ * Description: Verify constructor 普通调用 TypeError（如未被 checker 拦截）
  */
 
 function assertTrue(value: boolean, message: string): void {

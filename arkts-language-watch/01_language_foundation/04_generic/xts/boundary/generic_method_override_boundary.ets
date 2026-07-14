@@ -1,8 +1,17 @@
 /*
- * Generic Stage 1
- * Boundary / pending confirmation.
- * Test point: generic method override in subclass.
- * Boundary reason: dynamic ArkTS generic method override behavior needs confirmation.
+ * Case ID: GEN-BOUND-009
+ * Coverage ID:
+ *   - GEN-METHOD-005
+ * Feature: generic
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 04_generic
+ * Related Chapters: function, class
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic generic behavior has not been verified.
+ * Description: Verify generic method override boundary.
  */
 
 function assertTrue(value: boolean, message: string): void {

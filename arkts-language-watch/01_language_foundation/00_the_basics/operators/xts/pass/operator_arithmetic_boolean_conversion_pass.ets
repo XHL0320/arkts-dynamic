@@ -1,7 +1,16 @@
 /*
- * Operator Stage 1
- * Test point: boolean numeric conversion in arithmetic.
- * Expected: true + true === 2, false + 1 === 1.
+ * Case ID: OPER-PASS-001
+ * Coverage ID:
+ *   - OP-ARITHMETIC-003
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify boolean numeric conversion in arithmetic.. true + true === 2, false + 1 === 1.
  */
 
 function assertTrue(value: boolean, message: string): void {

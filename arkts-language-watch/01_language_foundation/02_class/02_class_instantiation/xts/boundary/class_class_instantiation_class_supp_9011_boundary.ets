@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 02_class_instantiation
- * CaseType: boundary
- * Priority: P2
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-SUPP-9011
- * Related Spec: calling class without new is compile-time or runtime boundary
- * Expected: Pending ArkTS behavior confirmation; no strong assertion.
+ * Case ID: CLASS-BOUND-005
+ * Coverage ID:
+ *   - CLASS-SUPP-9011
+ * Feature: class
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic class behavior has not been verified.
+ * Description: Verify calling class without new is compile-time or runtime boundary
  */
 
 function assertTrue(value: boolean, message: string): void {

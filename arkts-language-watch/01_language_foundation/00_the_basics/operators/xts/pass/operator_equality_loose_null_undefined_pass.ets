@@ -1,7 +1,16 @@
 /*
- * Operator Stage 1
- * Test point: loose equality null and undefined.
- * Expected: null == undefined, null == null, undefined == undefined.
+ * Case ID: OPER-PASS-009
+ * Coverage ID:
+ *   - OP-EQUALITY-002
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify loose equality null and undefined.. null == undefined, null == null, undefined == undefined.
  */
 
 function assertTrue(value: boolean, message: string): void {

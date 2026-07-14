@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 08_super
- * CaseType: pass
- * Priority: P1
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0944
- * Related Spec: generic base constructor 参数通过 super(value) 传递
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-179
+ * Coverage ID:
+ *   - CLASS-TOTAL-0944
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: this_keyword
+ * Spec Source: pending
+ * Description: Verify generic base constructor 参数通过 super(value) 传递
  */
 
 function assertTrue(value: boolean, message: string): void {

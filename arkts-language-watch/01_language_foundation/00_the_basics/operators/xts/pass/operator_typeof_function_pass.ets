@@ -1,7 +1,17 @@
 /*
- * Operator Stage 1
- * Test point: typeof function returns "function".
- * Expected: typeof function(){} === "function", typeof class {} === "function".
+ * Case ID: OPER-PASS-023
+ * Coverage ID:
+ *   - OP-TYPEOF-OPERATOR-002
+ *   - OP-TYPEOF-OPERATOR-003
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify typeof function returns "function".. typeof function(){} === "function", typeof class {} === "function".
  */
 
 function assertTrue(value: boolean, message: string): void {

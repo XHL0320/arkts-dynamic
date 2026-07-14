@@ -1,7 +1,16 @@
 /*
- * Declaration Stage 1
- * Test point: var declaration hoisting.
- * Expected: reading a var binding before its declaration returns undefined.
+ * Case ID: DECL-PASS-006
+ * Coverage ID:
+ *   - DECL-VAR-001
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify var declaration hoisting.. reading a var binding before its declaration returns undefined.
  */
 
 function assertTrue(value: boolean, message: string): void {

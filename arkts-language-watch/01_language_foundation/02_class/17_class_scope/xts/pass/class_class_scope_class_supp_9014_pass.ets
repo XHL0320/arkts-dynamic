@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 17_class_scope
- * CaseType: pass
- * Priority: P2
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-SUPP-9014
- * Related Spec: class member scope and local scope are distinct
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-425
+ * Coverage ID:
+ *   - CLASS-SUPP-9014
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: declarations
+ * Spec Source: pending
+ * Description: Verify class member scope and local scope are distinct
  */
 
 function assertTrue(value: boolean, message: string): void {

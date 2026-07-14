@@ -1,7 +1,16 @@
 /*
- * Function Stage 2
- * Coverage: multiple closure instances are isolated.
- * Expected: each closure owns its captured environment.
+ * Case ID: FUNC-PASS-009
+ * Coverage ID:
+ *   - CLOSURE-0004
+ * Feature: function
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 01_function
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify multiple closure instances are isolated.. each closure owns its captured environment.
  */
 function assertNumberEqual(actual: number, expected: number, message: string): void {
   if (actual !== expected) {

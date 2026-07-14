@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 08_super
- * CaseType: pass
- * Priority: P1
- * ECMA Baseline Status: ES2022
- * Source Coverage ID: CLASS-TOTAL-0946
- * Related Spec: static method 中 super.staticMethod() 的 this 绑定为派生类 constructor
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-181
+ * Coverage ID:
+ *   - CLASS-TOTAL-0946
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: this_keyword
+ * Spec Source: pending
+ * Description: Verify static method 中 super.staticMethod() 的 this 绑定为派生类 constructor
  */
 
 function assertTrue(value: boolean, message: string): void {

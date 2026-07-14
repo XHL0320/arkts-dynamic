@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 08_super
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0162
- * Related Spec: super 访问基类 private field，checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-147
+ * Coverage ID:
+ *   - CLASS-TOTAL-0162
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: this_keyword
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify super 访问基类 private field，checker 报错
  */
 
 // Expected error: super 访问基类 private field，checker 报错

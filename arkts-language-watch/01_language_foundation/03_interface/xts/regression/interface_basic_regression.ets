@@ -1,8 +1,20 @@
 /*
- * Interface Stage 1
- * Regression test.
- * Test point: interface basic declaration, property, method, and implements regression.
- * Regression reason: verify that basic interface syntax continues to work after changes.
+ * Case ID: INTF-REGR-001
+ * Coverage ID:
+ *   - IF-DECL-002
+ *   - IF-METHOD-001
+ *   - IF-OPT-001
+ *   - IF-PROP-001
+ * Feature: interface
+ * Test Type: regression
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 03_interface
+ * Related Chapters: types,function,null_safety
+ * Spec Source: pending
+ * Regression Issue: pending
+ * Description: Verify interface declaration, property, method, optional property, and implements regression.
  */
 
 function assertTrue(value: boolean, message: string): void {

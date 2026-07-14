@@ -1,7 +1,16 @@
 /*
- * Operator Stage 1
- * Test point: NaN equality is always false.
- * Expected: NaN !== NaN, NaN != NaN.
+ * Case ID: OPER-PASS-011
+ * Coverage ID:
+ *   - OP-EQUALITY-004
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify NaN equality is always false.. NaN !== NaN, NaN != NaN.
  */
 
 function assertTrue(value: boolean, message: string): void {

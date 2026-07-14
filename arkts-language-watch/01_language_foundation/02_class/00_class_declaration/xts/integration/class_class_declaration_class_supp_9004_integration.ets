@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 00_class_declaration
- * CaseType: integration
- * Priority: P2
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-SUPP-9004
- * Related Spec: class declaration integrates with instance field and method
- * Expected: Integrated class semantics compile and run with focused assertions.
+ * Case ID: CLASS-INTEG-001
+ * Coverage ID:
+ *   - CLASS-SUPP-9004
+ * Feature: class
+ * Test Type: integration
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: declarations
+ * Spec Source: pending
+ * Description: Verify class declaration integrates with instance field and method
  */
 
 function assertTrue(value: boolean, message: string): void {

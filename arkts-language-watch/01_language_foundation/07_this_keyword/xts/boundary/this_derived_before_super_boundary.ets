@@ -1,8 +1,20 @@
 /*
- * This Keyword Stage 1
- * Boundary / pending confirmation.
- * Test point: derived class this before super.
- * Boundary reason: accessing this before super() should throw ReferenceError.
+ * Case ID: THIS-BOUND-005
+ * Coverage ID:
+ *   - TK-DCS-001
+ *   - TK-DCS-003
+ * Feature: this_keyword
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Actual Path: arkts-language-watch/01_language_foundation/07_this_keyword/xts/boundary/this_derived_before_super_boundary.ets
+ * Owner Chapter: 07_this_keyword
+ * Related Chapters: 02_class
+ * Spec Source: pending
+ * Boundary Reason: accessing this before super() should throw ReferenceError.
+ * Description: Verify derived class this before super.
+ * Notes: Original metadata: This Keyword Stage 1 Boundary / pending confirmation. Test point: derived class this before super. Boundary reason: accessing this before super() should throw ReferenceError.
  */
 
 function assertTrue(value: boolean, message: string): void {

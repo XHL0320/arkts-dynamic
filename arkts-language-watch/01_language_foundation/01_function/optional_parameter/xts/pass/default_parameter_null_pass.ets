@@ -1,7 +1,17 @@
 /*
- * Function Stage 1
- * Test point: null does not trigger default parameter.
- * Expected: null is passed as the actual argument.
+ * Case ID: FUNC-PASS-032
+ * Coverage ID:
+ *   - FUNCTION-TOTAL-0091
+ *   - OPTIONAL-PARAMETER-0009
+ * Feature: function
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 01_function
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify function behavior. null is passed as the actual argument.
  */
 
 function assertTrue(value: boolean, message: string): void {

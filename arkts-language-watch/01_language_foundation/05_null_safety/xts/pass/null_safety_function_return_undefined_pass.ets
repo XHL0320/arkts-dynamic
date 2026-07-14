@@ -1,9 +1,18 @@
-/*
- * Null Safety Stage 1
- * Test point: function without return returns undefined.
- * Expected: function with no return statement returns undefined.
+﻿/*
+ * Case ID: NULL-PASS-004
+ * Coverage ID:
+ *   - NS-RET-001
+ *   - NS-RET-003
+ * Feature: null_safety
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 05_null_safety
+ * Related Chapters: function
+ * Spec Source: pending
+ * Description: Verify function without return returns undefined.
  */
-
 function assertTrue(value: boolean, message: string): void {
   if (!value) { throw new Error(message) }
 }

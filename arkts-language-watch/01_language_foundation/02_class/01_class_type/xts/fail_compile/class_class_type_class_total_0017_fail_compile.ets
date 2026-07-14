@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 01_class_type
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific
- * Source Coverage ID: CLASS-TOTAL-0017
- * Related Spec: interface type 不能直接 new，checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-014
+ * Coverage ID:
+ *   - CLASS-TOTAL-0017
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify interface type 不能直接 new，checker 报错
  */
 
 // Expected error: interface type 不能直接 new，checker 报错

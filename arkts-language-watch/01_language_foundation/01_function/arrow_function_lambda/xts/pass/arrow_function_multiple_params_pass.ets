@@ -1,7 +1,16 @@
 /*
- * Function Stage 2
- * Coverage: arrow function with multiple parameters.
- * Expected: all parameters are bound in order.
+ * Case ID: FUNC-PASS-005
+ * Coverage ID:
+ *   - ARROW-FUNCTION-LAMBDA-0004
+ * Feature: function
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 01_function
+ * Related Chapters: this_keyword
+ * Spec Source: pending
+ * Description: Verify arrow function with multiple parameters.. all parameters are bound in order.
  */
 function assertNumberEqual(actual: number, expected: number, message: string): void {
   if (actual !== expected) {

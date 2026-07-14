@@ -1,8 +1,17 @@
 /*
- * Generic Stage 1
- * Boundary / pending confirmation.
- * Test point: generic interface extends.
- * Boundary reason: dynamic ArkTS generic interface extends support needs confirmation.
+ * Case ID: GEN-BOUND-007
+ * Coverage ID:
+ *   - GEN-IF-005
+ * Feature: generic
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 04_generic
+ * Related Chapters: interface, types
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic generic behavior has not been verified.
+ * Description: Verify generic interface runtime erasure boundary.
  */
 
 function assertTrue(value: boolean, message: string): void {

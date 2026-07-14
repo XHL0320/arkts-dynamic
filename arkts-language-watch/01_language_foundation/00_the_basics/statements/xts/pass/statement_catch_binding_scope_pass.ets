@@ -1,7 +1,16 @@
 /*
- * Statement Stage 1
- * Test point: catch binding scope is block-level.
- * Expected: catch parameter is only visible inside catch block.
+ * Case ID: STMT-PASS-003
+ * Coverage ID:
+ *   - STMT-TRY-006
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: function
+ * Spec Source: pending
+ * Description: Verify catch binding scope is block-level.. catch parameter is only visible inside catch block.
  */
 
 function assertTrue(value: boolean, message: string): void {

@@ -1,7 +1,17 @@
 /*
- * Interface Stage 1
- * Test point: interface with optional method.
- * Expected: optional method can be omitted in implementation.
+ * Case ID: INTF-PASS-008
+ * Coverage ID:
+ *   - IF-OPTMETHOD-001
+ *   - IF-OPTMETHOD-002
+ * Feature: interface
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 03_interface
+ * Related Chapters: function
+ * Spec Source: pending
+ * Description: Verify optional method declaration and omission behavior.
  */
 
 function assertTrue(value: boolean, message: string): void {

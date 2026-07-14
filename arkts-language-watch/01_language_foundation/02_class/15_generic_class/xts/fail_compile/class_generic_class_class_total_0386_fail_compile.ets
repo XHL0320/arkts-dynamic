@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 15_generic_class
- * CaseType: fail_compile
- * Priority: P0
- * ECMA Baseline Status: ArkTS-specific / TS-compatible
- * Source Coverage ID: CLASS-TOTAL-0386
- * Related Spec: generic interface 约束与 class 约束不一致，checker 报错
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-355
+ * Coverage ID:
+ *   - CLASS-TOTAL-0386
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: generic
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify generic interface 约束与 class 约束不一致，checker 报错
  */
 
 // Expected error: generic interface 约束与 class 约束不一致，checker 报错

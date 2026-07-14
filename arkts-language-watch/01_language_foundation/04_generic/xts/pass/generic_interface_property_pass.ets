@@ -1,7 +1,16 @@
 /*
- * Generic Stage 1
- * Test point: generic interface with property.
- * Expected: generic interface property uses type parameter.
+ * Case ID: GEN-PASS-010
+ * Coverage ID:
+ *   - GEN-IF-002
+ * Feature: generic
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 04_generic
+ * Related Chapters: interface
+ * Spec Source: pending
+ * Description: Verify generic interface property type.
  */
 
 function assertTrue(value: boolean, message: string): void {

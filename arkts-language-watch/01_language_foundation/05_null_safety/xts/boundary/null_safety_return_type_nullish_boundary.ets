@@ -1,10 +1,18 @@
-/*
- * Null Safety Stage 1
- * Boundary / pending confirmation.
- * Test point: return type with nullish union.
- * Boundary reason: dynamic ArkTS strict null return type checking needs confirmation.
+﻿/*
+ * Case ID: NULL-BOUND-007
+ * Coverage ID:
+ *   - NS-RET-004
+ * Feature: null_safety
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 05_null_safety
+ * Related Chapters: function
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic null safety behavior has not been verified.
+ * Description: Verify return type with nullish union boundary.
  */
-
 function assertTrue(value: boolean, message: string): void {
   if (!value) { throw new Error(message) }
 }

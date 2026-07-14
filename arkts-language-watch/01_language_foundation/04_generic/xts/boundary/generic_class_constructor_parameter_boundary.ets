@@ -1,8 +1,17 @@
 /*
- * Generic Stage 1
- * Boundary / pending confirmation.
- * Test point: generic class constructor parameter type.
- * Boundary reason: constructor parameter generic type checking needs confirmation.
+ * Case ID: GEN-BOUND-001
+ * Coverage ID:
+ *   - GEN-CLASS-004
+ * Feature: generic
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 04_generic
+ * Related Chapters: class
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic generic behavior has not been verified.
+ * Description: Verify generic class constructor parameter type boundary.
  */
 
 function assertTrue(value: boolean, message: string): void {

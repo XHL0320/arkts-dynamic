@@ -1,7 +1,17 @@
 /*
- * Function Stage 2
- * Coverage: parameter value and local block shadowing.
- * Expected: block shadowing does not change the parameter binding.
+ * Case ID: FUNC-PASS-022
+ * Coverage ID:
+ *   - FUNCTION-SCOPE-0005
+ *   - FUNCTION-TOTAL-0037
+ * Feature: function
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 01_function
+ * Related Chapters: declarations
+ * Spec Source: pending
+ * Description: Verify parameter value and local block shadowing.. block shadowing does not change the parameter binding.
  */
 function assertStringEqual(actual: string, expected: string, message: string): void {
   if (actual !== expected) {

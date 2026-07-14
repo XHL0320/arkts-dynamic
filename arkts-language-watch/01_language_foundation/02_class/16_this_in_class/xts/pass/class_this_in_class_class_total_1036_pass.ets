@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 16_this_in_class
- * CaseType: pass
- * Priority: P1
- * ECMA Baseline Status: ES2022 / ArkTS-specific
- * Source Coverage ID: CLASS-TOTAL-1036
- * Related Spec: static method 内 arrow function 访问 this.staticField
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-423
+ * Coverage ID:
+ *   - CLASS-TOTAL-1036
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: this_keyword
+ * Spec Source: pending
+ * Description: Verify static method 内 arrow function 访问 this.staticField
  */
 
 function assertTrue(value: boolean, message: string): void {

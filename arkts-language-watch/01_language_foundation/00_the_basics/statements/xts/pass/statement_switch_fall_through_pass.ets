@@ -1,7 +1,16 @@
 /*
- * Statement Stage 1
- * Test point: switch fall-through without break.
- * Expected: after matching a case, execution continues to next case if no break.
+ * Case ID: STMT-PASS-020
+ * Coverage ID:
+ *   - STMT-SWITCH-003
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: function
+ * Spec Source: pending
+ * Description: Verify switch fall-through without break.. after matching a case, execution continues to next case if no break.
  */
 
 function assertTrue(value: boolean, message: string): void {

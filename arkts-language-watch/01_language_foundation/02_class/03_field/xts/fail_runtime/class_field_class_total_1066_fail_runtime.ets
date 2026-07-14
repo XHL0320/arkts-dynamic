@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 03_field
- * CaseType: fail_runtime
- * Priority: P1
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-1066
- * Related Spec: 运行时异常场景
- * Expected: Runtime throws an exception; error message is not asserted.
+ * Case ID: CLASS-FAILR-002
+ * Coverage ID:
+ *   - CLASS-TOTAL-1066
+ * Feature: class
+ * Test Type: fail_runtime
+ * Expected Phase: runtime
+ * Expected Outcome: exception
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Expected Exception: pending
+ * Description: Verify 运行时异常场景
  */
 
 function assertTrue(value: boolean, message: string): void {

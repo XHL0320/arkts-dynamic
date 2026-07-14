@@ -1,12 +1,17 @@
 /*
- * Feature: Class
- * SubFeature: 17_class_scope
- * CaseType: fail_compile
- * Priority: P2
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-SUPP-9015
- * Related Spec: accessing class local binding outside its scope is rejected
- * Expected: ArkTS parser/checker reports the documented compile-time error.
+ * Case ID: CLASS-FAILC-406
+ * Coverage ID:
+ *   - CLASS-SUPP-9015
+ * Feature: class
+ * Test Type: fail_compile
+ * Expected Phase: pending
+ * Expected Outcome: diagnostic
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: declarations
+ * Spec Source: pending
+ * Expected Diagnostic: pending
+ * Description: Verify accessing class local binding outside its scope is rejected
  */
 
 // Expected error: accessing class local binding outside its scope is rejected

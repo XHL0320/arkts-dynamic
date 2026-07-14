@@ -1,7 +1,19 @@
 /*
- * This Keyword Stage 1
- * Test point: function call this binding (strict mode).
- * Expected: in strict mode, `this` in plain function call is undefined.
+ * Case ID: THIS-PASS-009
+ * Coverage ID:
+ *   - TK-FUNC-001
+ *   - TK-SM-001
+ * Feature: this_keyword
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Actual Path: arkts-language-watch/01_language_foundation/07_this_keyword/xts/pass/this_function_call_basic_pass.ets
+ * Owner Chapter: 07_this_keyword
+ * Related Chapters: 01_function, builtin_api_watch
+ * Spec Source: pending
+ * Description: Verify function call this binding (strict mode).
+ * Notes: Original expected behavior: in strict mode, `this` in plain function call is undefined.
  */
 
 function assertTrue(value: boolean, message: string): void {

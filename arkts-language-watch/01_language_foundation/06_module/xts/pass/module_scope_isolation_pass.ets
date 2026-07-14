@@ -1,8 +1,21 @@
-/*
- * Module Stage 1
- * Test point: module scope isolation — same-named vars in different modules don't conflict.
- */
+﻿/*
+ * Case ID: MODULE-PASS-009
+ * Coverage ID:
 
+ *   - MOD-SCOPE-001
+ *   - MOD-SCOPE-004
+ * Feature: module
+ * Test Type: pass
+ * Expected Phase: module_load
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 06_module
+ * Related Chapters: declarations
+ * Helper IDs:
+ *   - MODULE-HELP-006
+ * Spec Source: pending
+ * Description: Verify module scope isolation across files.
+ */
 import { exportedValue } from '../helpers/named_export/module_named_export_helper'
 
 function assertTrue(value: boolean, message: string): void {

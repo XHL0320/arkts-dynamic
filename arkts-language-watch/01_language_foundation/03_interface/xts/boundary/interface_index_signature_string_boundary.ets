@@ -1,8 +1,18 @@
 /*
- * Interface Stage 1
- * Boundary / pending confirmation.
- * Test point: string index signature in interface.
- * Boundary reason: dynamic ArkTS index signature support needs confirmation.
+ * Case ID: INTF-BOUND-009
+ * Coverage ID:
+ *   - IF-IDX-001
+ *   - IF-IDX-003
+ * Feature: interface
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 03_interface
+ * Related Chapters: typescript
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic interface behavior has not been verified.
+ * Description: Verify string index signature and index-property mix boundary.
  */
 
 function assertTrue(value: boolean, message: string): void {

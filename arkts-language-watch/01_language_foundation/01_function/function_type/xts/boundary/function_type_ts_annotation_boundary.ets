@@ -1,8 +1,18 @@
 /*
- * Boundary / pending confirmation
- * Function Stage 3
- * Coverage: TypeScript-style function type annotation compatibility.
- * Reason: dynamic ArkTS syntax support should be confirmed without treating this as static type-system coverage.
+ * Case ID: FUNC-BOUND-009
+ * Coverage ID:
+ *   - FUNCTION-TOTAL-0052
+ *   - FUNCTION-TYPE-0009
+ * Feature: function
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 01_function
+ * Related Chapters: types
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic function behavior has not been verified.
+ * Description: Verify TypeScript-style function type annotation compatibility.
  */
 function assertNumberEqual(actual: number, expected: number, message: string): void {
   if (actual !== expected) {

@@ -1,7 +1,16 @@
 /*
- * Interface Stage 1
- * Test point: object literal assigned to interface type.
- * Expected: object literal with matching structure can be assigned to interface type.
+ * Case ID: INTF-PASS-007
+ * Coverage ID:
+ *   - IF-STRUCT-001
+ * Feature: interface
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 03_interface
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify object literal structural assignment to interface type.
  */
 
 function assertTrue(value: boolean, message: string): void {

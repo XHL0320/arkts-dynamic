@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 13_abstract_class
- * CaseType: pass
- * Priority: P0
- * ECMA Baseline Status: Mixed
- * Source Coverage ID: CLASS-TOTAL-0727
- * Related Spec: 子类实例 instanceof abstract base class 行为正确
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-319
+ * Coverage ID:
+ *   - CLASS-TOTAL-0727
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: interface
+ * Spec Source: pending
+ * Description: Verify 子类实例 instanceof abstract base class 行为正确
  */
 
 function assertTrue(value: boolean, message: string): void {

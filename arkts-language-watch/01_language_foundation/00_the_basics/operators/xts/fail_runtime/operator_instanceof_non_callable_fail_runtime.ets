@@ -1,7 +1,17 @@
 /*
- * Operator Stage 1
- * Test point: instanceof with non-callable right-hand side throws TypeError.
- * Expected: x instanceof 42 throws TypeError.
+ * Case ID: OPER-FAILR-003
+ * Coverage ID:
+ *   - OP-INSTANCEOF-005
+ * Feature: language_basics
+ * Test Type: fail_runtime
+ * Expected Phase: runtime
+ * Expected Outcome: exception
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Expected Exception: pending
+ * Description: Verify instanceof with non-callable right-hand side throws TypeError.. x instanceof 42 throws TypeError.
  */
 
 function assertTrue(value: boolean, message: string): void {

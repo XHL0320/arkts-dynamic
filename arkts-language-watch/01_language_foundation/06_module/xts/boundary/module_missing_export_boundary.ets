@@ -1,10 +1,19 @@
-/*
- * Module Stage 1
- * Boundary / pending confirmation.
- * Test point: importing a non-existent named export.
- * Boundary reason: dynamic ArkTS missing export error behavior needs confirmation.
- */
+﻿/*
+ * Case ID: MODULE-BOUND-008
+ * Coverage ID:
 
+ *   - MOD-ME-001
+ * Feature: module
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 06_module
+ * Related Chapters: declarations
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic behavior has not been verified.
+ * Description: Verify missing export detection.
+ */
 function assertTrue(value: boolean, message: string): void {
   if (!value) { throw new Error(message) }
 }

@@ -1,8 +1,17 @@
 /*
- * Generic Stage 1
- * Boundary / pending confirmation.
- * Test point: instanceof with generic type parameter.
- * Boundary reason: type parameter T has no runtime prototype; instanceof T is typically a compile error.
+ * Case ID: GEN-BOUND-012
+ * Coverage ID:
+ *   - GEN-RT-003
+ * Feature: generic
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 04_generic
+ * Related Chapters: types, operators
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic generic behavior has not been verified.
+ * Description: Verify instanceof with generic type parameter boundary.
  */
 
 function assertTrue(value: boolean, message: string): void {

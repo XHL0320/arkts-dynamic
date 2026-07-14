@@ -1,7 +1,19 @@
 /*
- * Operator Stage 1
- * Test point: in operator property existence.
- * Expected: "x" in {x:1} === true, "z" in {x:1} === false.
+ * Case ID: OPER-PASS-013
+ * Coverage ID:
+ *   - OP-IN-OPERATOR-001
+ *   - OP-IN-OPERATOR-002
+ *   - OP-IN-OPERATOR-003
+ *   - OP-IN-OPERATOR-004
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify in operator property existence.. "x" in {x:1} === true, "z" in {x:1} === false.
  */
 
 function assertTrue(value: boolean, message: string): void {

@@ -1,7 +1,18 @@
 /*
- * Statement Stage 1
- * Test point: break with label exits outer loop.
- * Expected: break label jumps out of the labelled loop.
+ * Case ID: STMT-PASS-002
+ * Coverage ID:
+ *   - STMT-BREAK-003
+ *   - STMT-LABEL-001
+ *   - STMT-LABEL-002
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: function
+ * Spec Source: pending
+ * Description: Verify break with label exits outer loop.. break label jumps out of the labelled loop.
  */
 
 function assertTrue(value: boolean, message: string): void {

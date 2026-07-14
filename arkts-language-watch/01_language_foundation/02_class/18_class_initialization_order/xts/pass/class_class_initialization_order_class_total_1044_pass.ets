@@ -1,12 +1,16 @@
 /*
- * Feature: Class
- * SubFeature: 18_class_initialization_order
- * CaseType: pass
- * Priority: P1
- * ECMA Baseline Status: ES2022 / ArkTS-specific
- * Source Coverage ID: CLASS-TOTAL-1044
- * Related Spec: static field 初始化表达式调用 static method
- * Expected: Class scenario compiles and runs with focused assertions.
+ * Case ID: CLASS-PASS-454
+ * Coverage ID:
+ *   - CLASS-TOTAL-1044
+ * Feature: class
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 02_class
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify static field 初始化表达式调用 static method
  */
 
 function assertTrue(value: boolean, message: string): void {

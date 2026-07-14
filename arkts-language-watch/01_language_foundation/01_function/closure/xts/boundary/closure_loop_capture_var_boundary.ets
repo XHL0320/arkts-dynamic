@@ -1,8 +1,17 @@
 /*
- * Boundary / pending confirmation
- * Function Stage 2
- * Coverage: closure captures loop var binding.
- * Reason: var loop capture behavior should be checked against dynamic ArkTS implementation.
+ * Case ID: FUNC-BOUND-002
+ * Coverage ID:
+ *   - CLOSURE-0007
+ * Feature: function
+ * Test Type: boundary
+ * Expected Phase: pending
+ * Expected Outcome: pending
+ * Validation Status: spec_pending
+ * Owner Chapter: 01_function
+ * Related Chapters: types
+ * Spec Source: pending
+ * Boundary Reason: ArkTS dynamic function behavior has not been verified.
+ * Description: Verify closure captures loop var binding.
  */
 function assertTrue(value: boolean, message: string): void {
   if (!value) {

@@ -1,7 +1,17 @@
 /*
- * Function Stage 3
- * Coverage: function passed as parameter.
- * Expected: callee can invoke the callback parameter.
+ * Case ID: FUNC-PASS-026
+ * Coverage ID:
+ *   - FUNCTION-TOTAL-0050
+ *   - FUNCTION-TYPE-0002
+ * Feature: function
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 01_function
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify function passed as parameter.. callee can invoke the callback parameter.
  */
 function assertNumberEqual(actual: number, expected: number, message: string): void {
   if (actual !== expected) {

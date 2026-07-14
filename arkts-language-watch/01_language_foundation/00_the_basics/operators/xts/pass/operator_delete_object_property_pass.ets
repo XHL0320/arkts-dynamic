@@ -1,7 +1,18 @@
 /*
- * Operator Stage 1
- * Test point: delete object property.
- * Expected: delete obj.x returns true, property removed.
+ * Case ID: OPER-PASS-008
+ * Coverage ID:
+ *   - OP-DELETE-OPERATOR-001
+ *   - OP-DELETE-OPERATOR-002
+ *   - OP-UNARY-004
+ * Feature: language_basics
+ * Test Type: pass
+ * Expected Phase: runtime
+ * Expected Outcome: value
+ * Validation Status: validation_pending
+ * Owner Chapter: 00_the_basics
+ * Related Chapters: types
+ * Spec Source: pending
+ * Description: Verify delete object property.. delete obj.x returns true, property removed.
  */
 
 function assertTrue(value: boolean, message: string): void {
