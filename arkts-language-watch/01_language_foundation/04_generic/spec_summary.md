@@ -1,215 +1,186 @@
 # Generic Spec Summary
 
-## 1. Feature Scope
+## 1. Scope And Sources
 
-泛型体系看护覆盖以下方面：
+本摘要以仓库本地官方资料 `文档/arkts-language-guide-generics.md` 为 ArkTS 能力入口，以 TypeScript 泛型语义作为兼容参照，以 ECMAScript 2022 描述擦除后的运行行为，并结合 ETS/TS/JS 编译为 ABC、由 Ark Runtime 执行的架构确定验证层次。
 
-- 泛型函数、泛型类、泛型接口、泛型方法
-- 泛型参数声明、多泛型参数、泛型参数默认值
-- 泛型约束 `T extends U`
-- 泛型实参显式传入和推断
-- 嵌套泛型、数组泛型、对象泛型
-- 泛型与 union / intersection / conditional type 的兼容边界
-- 泛型运行时擦除边界
-- TypeScript generic 语法在鸿蒙动态 ArkTS 中的支持状态
-- ArkTS 动态与静态 ArkTS 泛型语义差异
+| 层次 | 负责内容 |
+|---|---|
+| ArkTS 官方泛型规则 | 支持语法、限制、variance、Utility Types 和编译诊断 |
+| TypeScript | 类型参数、推断、约束、默认参数、继承、重写及结构兼容参照 |
+| ECMAScript 2022 | 擦除后的函数、类、对象、模块、异常和求值行为 |
+| ArkCompiler / ABC | 前端降级结果、类型相关元数据和跨实例化代码形态 |
+| Ark Runtime | ABC 执行后的值、identity、constructor、异常及互操作行为 |
 
-**关键认知**：Generic 在 ECMAScript 运行时中没有原生语义，属于 TypeScript / ArkTS 类型语法兼容层。泛型参数在运行时通常被擦除，不参与运行时行为。
+ECMAScript 本身不定义泛型类型参数，因此不能直接从 ECMA 推导 ArkTS 泛型的编译期合法性。
 
-## 2. TypeScript Generic Model
+## 2. Core Model
 
-TypeScript 泛型是一种参数化类型的语法：
-- 编译期用于类型检查和类型安全
-- 运行时通常被完全擦除（不产生类型信息代码）
-- 支持泛型函数、泛型类、泛型接口、泛型方法
-- 支持泛型约束 `T extends U`
-- 支持泛型默认参数 `T = DefaultType`
-- 支持泛型实参推断
-- 支持嵌套泛型
+泛型允许声明以类型参数表示的函数、类、接口和方法。类型参数用于编译期检查，不应被当作普通运行时值。测试必须把以下层次分开：
 
-## 3. ArkTS Dynamic Generic Notes
+1. parse/check：泛型语法、约束和类型兼容；
+2. compile/ABC：类型参数如何擦除或记录为非运行时语义元数据；
+3. runtime：擦除后普通函数、类和对象的可观察行为；
+4. interop：ETS、TS、JS 生产者和消费者之间的声明与运行值行为。
 
-鸿蒙动态 ArkTS 泛型语义需要确认的差异点：
-1. 泛型语法是否允许在源码中出现
-2. 泛型参数是否在运行时完全擦除
-3. 泛型约束是否在编译期检查
-4. 泛型实参推断是否支持
-5. 泛型默认参数是否支持
-6. 嵌套泛型是否支持
-7. `Array<T>` / `Record<K, V>` / `Promise<T>` 等内置泛型是否支持
-8. 泛型与 union type 结合是否支持
-9. `typeof T` / `instanceof T` 对泛型参数的行为
-10. 动态与静态 ArkTS 泛型语义差异
+“泛型擦除”不等于“不需要 ABC 检查”。运行时不应依赖具体 `T`，但编译器仍可能在 ABC 中保留调试或类型相关元数据。
 
-## 4. Generic Function
+## 3. Generic Functions And Methods
 
-```typescript
-function identity<T>(value: T): T { return value }
-let result = identity<number>(42)    // 显式类型实参
-let inferred = identity(42)           // 类型推断
+```ts
+function identity<T>(value: T): T {
+  return value
+}
+
+class Mapper {
+  map<T, R>(value: T, convert: (input: T) => R): R {
+    return convert(value)
+  }
+}
 ```
 
-- 泛型函数使用 `<T>` 声明类型参数
-- 调用时可显式传入类型实参或由推断决定
-- 泛型参数在函数体内可使用
-- 运行时擦除：`T` 不参与运行时
+需要确认显式类型实参、实参推断、多类型参数、callback、rest、optional/default value 参数、async/`Promise<T>`、静态泛型方法、对象方法、函数类型赋值和不同实例化的运行时 identity。ArkTS 对泛型箭头函数的支持应由实际工具链确认。
 
-## 5. Generic Class
+## 4. Generic Classes And Interfaces
 
-```typescript
-class Container<T> {
+```ts
+class Box<T> {
   value: T
-  constructor(v: T) { this.value = v }
-  getValue(): T { return this.value }
+  constructor(value: T) {
+    this.value = value
+  }
 }
-let c = new Container<number>(42)
-```
 
-- 泛型类使用 `<T>` 声明类型参数
-- 实例化时传入类型实参
-- 成员可使用泛型参数
-- 运行时擦除：`T` 不参与运行时
-
-## 6. Generic Interface
-
-```typescript
-interface KeyedStore<K, V> {
+interface Store<K, V> {
   get(key: K): V
-  set(key: K, value: V): void
 }
 ```
 
-- 泛型接口使用 `<K, V>` 声明多个类型参数
-- 实现时传入类型实参
-- 运行时擦除
+类的实例成员可使用类类型参数。静态成员不能直接引用类级类型参数，但静态方法可以声明自己的类型参数。接口仅提供编译期契约，不应产生可实例化的运行时接口对象。
 
-## 7. Generic Method
+重点覆盖构造器兼容、`implements`、interface `extends`、泛型类继承、父类具体化、多层继承、override 契约及不同类型实参实例的普通运行时构造器语义。
 
-```typescript
-class Utils {
-  transform<T>(input: T): T { return input }
+## 5. Inference
+
+类型实参可以从值参数、数组元素、callback 上下文和约束关系中推断。测试不能只验证返回值，还应验证：
+
+- 单参数和多参数独立推断；
+- 字面量 widening；
+- 约束参与推断后是否保留具体子类型；
+- 冲突候选如何处理；
+- 显式类型实参与推断结果的优先关系；
+- 仅在返回位置出现的类型参数是否缺少有效推断来源。
+
+推断是编译期语义，不应在运行时重新选择泛型实例。
+
+## 6. Constraints
+
+```ts
+interface HasId {
+  id: number
+}
+
+function readId<T extends HasId>(value: T): number {
+  return value.id
 }
 ```
 
-- 泛型方法在类方法中声明类型参数
-- 调用时可显式传入或推断
-- 运行时擦除
+`T extends U` 用于限制可接受的类型实参。约束满足或违反应由编译阶段验证；它不会自动生成运行时类型检查。
 
-## 8. Type Parameter Declaration
+覆盖 interface、class、union/composite、dependent constraint、`K extends keyof T` 支持边界、约束下成员访问、单诊断负向、约束与默认类型组合，以及运行时无自动约束检查的对照。
 
-- `<T>` 声明单个类型参数
-- `<T, U>` 声明多个类型参数
-- 类型参数名通常为 `T` / `U` / `K` / `V` / `E` 等
-- 类型参数在声明作用域内可用
+## 7. Default Type Parameters
 
-## 9. Multiple Type Parameters
-
-```typescript
-function pair<K, V>(key: K, value: V): [K, V] { return [key, value] }
-```
-
-- 支持多个类型参数
-- 每个类型参数独立推断
-- 顺序有语义
-
-## 10. Generic Constraints
-
-```typescript
-function getLength<T extends { length: number }>(item: T): number {
-  return item.length
+```ts
+interface Result<T = string> {
+  value: T
 }
 ```
 
-- `T extends U` 约束泛型参数
-- 约束要求类型实参满足结构
-- 编译期检查约束
-- 运行时不检查约束
+默认类型参数只在无法从显式类型实参或有效推断确定参数时使用。调用中传入字符串并推断出 `T = string`，不能证明默认参数已经生效。
 
-## 11. Default Type Parameters
+需要分别验证函数、类和接口默认参数；省略实参时默认值真实生效；显式实参覆盖；推断优先级；多默认参数；必选参数顺序限制；默认类型满足约束。
 
-```typescript
-function create<T = string>(): T[] { return [] }
-```
+## 8. Inheritance, Override And Overload
 
-- `T = DefaultType` 提供默认类型
-- 未传入类型实参时使用默认
-- TypeScript 2.3+ 支持
+- 父类类型参数原样传递或具体化；
+- 子类增加自己的类型参数；
+- 泛型接口 `extends` 和 class `implements`；
+- 泛型方法重写时类型参数名可不同，但契约必须兼容；
+- 参数、返回值或约束不兼容应形成编译负向；
+- overload signatures 只参与编译期选择，运行时调用唯一实现函数。
 
-## 12. Explicit Type Arguments
+不要把 overload 测试写成运行时存在多个泛型实现体。
 
-```typescript
-identity<number>(42)
-```
+## 9. Variance
 
-- 显式传入类型实参
-- 用于推断不准确时
-- 运行时擦除
+官方资料将 `out`、`in` 和 `in out` 列为 ArkTS variance 能力。测试必须通过实际编译器确认支持版本和语法位置，而不是仅依据 TypeScript 的默认结构兼容行为。
 
-## 13. Type Argument Inference
+至少覆盖 covariance producer、contravariance consumer、invariance、正反向赋值、annotation 与成员位置冲突、未显式标注时的推断，以及运行时擦除。
 
-```typescript
-let result = identity(42)  // T 推断为 number
-```
+## 10. Utility And Advanced Types
 
-- 根据参数类型推断类型实参
-- 多参数时取联合推断
-- 推断可能在运行时擦除
+本地官方资料列出的支持范围应逐项验证。当前设计基线将 `Partial`、`Required`、`Readonly`、`Record` 作为支持候选，将 `Pick`、`Omit` 及更多高级 Utility Types 作为限制或负向候选。
 
-## 14. Nested Generic Types
+必须区分：
 
-```typescript
-let matrix: Array<Array<number>> = [[1, 2], [3, 4]]
-let map: Map<string, Array<number>> = new Map()
-```
+- 实际 `Record<K, V>` 与手写索引签名；
+- `Readonly<T>` 的编译期写限制与运行时对象是否冻结；
+- `Partial<T>`、`Required<T>` 的成员可选性；
+- `keyof`、type query、indexed access、conditional、mapped、`infer` 的具体支持状态；
+- 不支持能力应验证稳定诊断，不用注释掉的非法代码冒充覆盖。
 
-- 嵌套泛型支持
-- `Array<T>` / `Map<K, V>` 等内置泛型
-- 运行时擦除
+## 11. Runtime And ABC Semantics
 
-## 15. Generic Runtime Erasure Boundary
+运行时验证关注擦除后的普通 ECMAScript 行为：
 
-- 泛型参数在运行时完全擦除
-- `typeof T` 非法（T 无运行时值）
-- `instanceof T` 非法（T 无运行时原型）
-- 泛型不产生运行时代码
-- `Array<number>` 运行时为 `Array`
-- 鸿蒙动态 ArkTS 是否完全擦除泛型待确认
+- 泛型函数不同类型实参调用的函数 identity；
+- 泛型类不同实例化的 constructor identity 和 `instanceof`；
+- 接口和类型参数不存在可直接观察的运行时值；
+- `typeof T`、`instanceof T` 中的 `T` 是非法值引用，不是运行时泛型检查；
+- 类型参数不改变属性、方法、异常和模块加载语义；
+- ABC 检查不预设 expected，应先记录编译器版本、指令和元数据观察点。
 
-## 16. Generic and Union / Intersection / Conditional Type Boundary
+## 12. ETS/TS/JS Interop
 
-- 泛型与 union type `T | U` 结合边界
-- 泛型与 intersection type `T & U` 结合边界
-- 泛型与 conditional type `T extends U ? X : Y` 结合边界
-- 这些是 TypeScript 高级类型特性
-- 鸿蒙动态 ArkTS 支持状态待确认
-
-## 17. Compile Negative Conditions
-
-| 条件 | TypeScript 行为 | ArkTS 动态预期 |
+| Producer | Consumer | 重点 |
 |---|---|---|
-| 泛型约束不满足 | compile error | compile error（需确认） |
-| 重复类型参数名 | compile error | compile error（需确认） |
-| typeof 泛型参数 | compile error | compile error（需确认） |
-| instanceof 泛型参数 | compile error | compile error（需确认） |
+| ETS | ETS | 泛型声明导入、推断和运行值 |
+| ETS | TS | 声明可见性与类型实参兼容 |
+| TS | ETS | TS 泛型声明被 ArkTS 消费 |
+| JS | ETS | 无泛型元数据输入时的边界 |
+| ETS | JS | 擦除后的普通导出值和异常 |
 
-## 18. Runtime Exception Conditions
+跨模块测试必须记录 helper 路径、编译阶段、链接结果和运行断言。单文件 `export` 只能证明导出语法，不能证明 import/interop 已覆盖。
 
-泛型相关运行时异常较少，因为泛型通常在运行时擦除：
-- 如果泛型有运行时表示，typeof 可能返回意外值
-- 如果 instanceof 泛型被允许（非标准），可能产生 TypeError
-- 泛型约束如果在运行时检查，可能产生 TypeError
+## 13. Compile Negative Conditions
 
-## 19. Pending Questions
+优先建立以下单错误点：
 
-| ID | 问题 | 确认方式 | 优先级 |
-|---|---|---|---|
-| GEN-PQ-P0-001 | 泛型语法是否允许在源码中出现 | compiler | P0 |
-| GEN-PQ-P0-002 | 泛型参数是否在运行时完全擦除 | runtime smoke | P0 |
-| GEN-PQ-P0-003 | 泛型约束是否在编译期检查 | compiler | P0 |
-| GEN-PQ-P0-004 | 泛型实参推断是否支持 | compiler | P0 |
-| GEN-PQ-P1-001 | 泛型默认参数是否支持 | compiler | P1 |
-| GEN-PQ-P1-002 | 嵌套泛型是否支持 | compiler | P1 |
-| GEN-PQ-P1-003 | `Array<T>` / `Promise<T>` 内置泛型是否支持 | compiler | P1 |
-| GEN-PQ-P1-004 | 泛型与 union type 结合是否支持 | compiler | P1 |
-| GEN-PQ-P2-001 | 泛型与 conditional type 结合是否支持 | compiler | P2 |
-| GEN-PQ-P2-002 | typeof/instanceof 泛型参数行为 | runtime smoke | P2 |
+- 重复类型参数名和类型参数超出作用域；
+- 约束违反；
+- static 成员引用类类型参数；
+- 构造器实参与类型实参不兼容；
+- implements 或 override 契约不兼容；
+- 默认类型参数顺序或约束非法；
+- overload 缺少实现或存在多个实现；
+- 类型参数被当作 `typeof` / `instanceof` 的值；
+- 当前 ArkTS 明确不支持的 Utility/高级类型语法。
+
+## 14. Validation Status
+
+当前 28 个 `.ets` 仅代表候选资产，尚未形成完整工具链验证基线。状态必须来自真实编译和运行记录：
+
+- pass：编译通过且断言执行通过；
+- fail_compile：编译失败且主要诊断符合设计；
+- boundary：支持状态或规范归属尚未确认；
+- regression：必须关联真实 issue 或明确历史缺陷；
+- ABC/interop：必须记录编译器、运行时和模块组合。
+
+详细测试点、现有证据和缺口见：
+
+- `generic_test_point_master.md`
+- `generic_test_design_audit.md`
+- `generic_gap_analysis.md`
+- `generic_test_assignment_plan.md`
+
